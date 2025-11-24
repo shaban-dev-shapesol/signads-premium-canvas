@@ -88,7 +88,7 @@ const Services = () => {
                     alt={service.title}
                     className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-b from-background/90 via-background/85 to-background/95 group-hover:from-background/85 group-hover:via-background/80 group-hover:to-background/90 transition-all duration-300" />
+                  <div className="absolute inset-0 bg-gradient-to-b from-background/95 via-background/90 to-background/95 group-hover:from-background/90 group-hover:via-background/85 group-hover:to-background/90 transition-all duration-300" />
                 </div>
 
                 {/* Content */}
@@ -96,21 +96,21 @@ const Services = () => {
                   <div className="w-14 h-14 bg-primary/90 backdrop-blur-sm rounded-xl flex items-center justify-center mb-6 group-hover:bg-accent transition-smooth shadow-lg">
                     <Icon className="w-7 h-7 text-primary-foreground" />
                   </div>
-                  <h3 className="text-2xl font-bold text-white mb-3 drop-shadow-lg">
+                  <h3 className="text-2xl font-bold text-foreground mb-3">
                     {service.title}
                   </h3>
-                  <p className="text-white/90 mb-6 leading-relaxed drop-shadow-md">
+                  <p className="text-muted-foreground mb-6 leading-relaxed">
                     {service.description}
                   </p>
                   <ul className="space-y-2 mb-4 flex-grow">
                     {service.features.map((feature, idx) => (
-                      <li key={idx} className="text-sm text-white/85 flex items-center drop-shadow">
-                        <span className="w-1.5 h-1.5 bg-accent rounded-full mr-2 flex-shrink-0 shadow-glow" />
+                      <li key={idx} className="text-sm text-muted-foreground flex items-center">
+                        <span className="w-1.5 h-1.5 bg-accent rounded-full mr-2 flex-shrink-0" />
                         {feature}
                       </li>
                     ))}
                   </ul>
-                  <div className="text-accent text-sm font-semibold group-hover:underline flex items-center gap-2 drop-shadow-lg">
+                  <div className="text-accent text-sm font-semibold group-hover:underline flex items-center gap-2">
                     View Services →
                   </div>
                 </div>
