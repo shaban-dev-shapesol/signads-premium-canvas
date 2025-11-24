@@ -1,31 +1,31 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
-import projectCorporate from "@/assets/project-corporate.jpg";
-import projectVehicle from "@/assets/project-vehicle.jpg";
-import projectInterior from "@/assets/project-interior.jpg";
-import projectExhibition from "@/assets/project-exhibition.jpg";
+import exterior3DLetters from "@/assets/gallery/exterior-3d-letters-1.jpg";
+import vehicleCarWrap from "@/assets/gallery/vehicle-car-wrap-1.jpg";
+import interiorReception from "@/assets/gallery/interior-reception-1.jpg";
+import exhibitionStandard from "@/assets/gallery/exhibition-standard-1.jpg";
 
 const Gallery = () => {
   const projects = [
     {
-      title: "Corporate Headquarters Signage",
-      category: "Exterior",
-      image: projectCorporate,
+      title: "Premium 3D Built-Up Letters",
+      category: "Exterior Signage",
+      image: exterior3DLetters,
     },
     {
-      title: "Fleet Vehicle Wrap",
+      title: "Professional Car Wrap",
       category: "Vehicle Graphics",
-      image: projectVehicle,
+      image: vehicleCarWrap,
     },
     {
-      title: "Retail Store Interior",
-      category: "Interior",
-      image: projectInterior,
+      title: "Corporate Reception Signs",
+      category: "Interior Signage",
+      image: interiorReception,
     },
     {
-      title: "Exhibition Display",
-      category: "Events",
-      image: projectExhibition,
+      title: "Exhibition Display Stand",
+      category: "Events & Exhibitions",
+      image: exhibitionStandard,
     },
   ];
 
