@@ -1,182 +1,180 @@
+import { Zap } from "lucide-react";
+import { Button } from "@/components/ui/button";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
-import { Button } from "@/components/ui/button";
-import { CheckCircle2, Zap } from "lucide-react";
 import { Link } from "react-router-dom";
 
 const PromotionalLightbox = () => {
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-screen">
       <Navigation />
       
-      {/* Hero Section */}
-      <section className="pt-32 pb-16 px-6 bg-primary">
-        <div className="container mx-auto max-w-6xl">
-          <div className="flex items-center gap-4 mb-6">
-            <Zap className="w-12 h-12 text-accent" />
-            <h1 className="text-5xl md:text-6xl font-bold text-accent">
-              Promotional Light Boxes
+      <section className="pt-32 pb-16 bg-primary text-primary-foreground">
+        <div className="container mx-auto px-6">
+          <div className="max-w-4xl mx-auto text-center">
+            <div className="w-20 h-20 bg-primary-foreground/10 rounded-2xl flex items-center justify-center mx-auto mb-6">
+              <Zap className="w-10 h-10 text-primary-foreground" />
+            </div>
+            <h1 className="text-5xl md:text-6xl font-bold mb-6">
+              Promotional <span className="text-accent">Light Boxes</span>
             </h1>
+            <p className="text-xl text-primary-foreground/80 mb-8">
+              Portable, eye-catching illuminated displays for exhibitions, retail promotions, and point-of-sale marketing. Make your message shine anywhere.
+            </p>
+            <Link to="/#contact">
+              <Button variant="hero" size="xl">
+                Get Custom Quote
+              </Button>
+            </Link>
           </div>
-          <p className="text-xl text-primary-foreground mb-8 max-w-3xl">
-            Portable, eye-catching illuminated displays for exhibitions, retail promotions, and point-of-sale marketing. Make your message shine anywhere.
-          </p>
-          <Link to="/#contact">
-            <Button variant="hero" size="lg">Get Custom Quote</Button>
-          </Link>
         </div>
       </section>
 
-      {/* Image Gallery */}
-      <section className="py-16 px-6 bg-muted/30">
-        <div className="container mx-auto max-w-6xl">
-          <h2 className="text-3xl font-bold text-foreground mb-8">Project Gallery</h2>
-          <div className="grid md:grid-cols-3 gap-6">
-            {[1, 2, 3].map((i) => (
-              <div key={i} className="aspect-video bg-muted rounded-xl overflow-hidden">
-                <div className="w-full h-full flex items-center justify-center text-muted-foreground">
-                  Promotional Lightbox Example {i}
-                </div>
+      <section className="py-24 bg-background">
+        <div className="container mx-auto px-6">
+          <div className="max-w-6xl mx-auto space-y-16">
+            
+            {/* Project Gallery */}
+            <div>
+              <h2 className="text-3xl font-bold text-foreground mb-6">Project Gallery</h2>
+              <div className="grid md:grid-cols-3 gap-6">
+                {[1, 2, 3, 4, 5, 6].map((i) => (
+                  <div key={i} className="aspect-video bg-secondary rounded-2xl border border-border hover:shadow-premium transition-smooth" />
+                ))}
               </div>
-            ))}
-          </div>
-        </div>
-      </section>
+            </div>
 
-      {/* Details Section */}
-      <section className="py-16 px-6">
-        <div className="container mx-auto max-w-6xl">
-          <div className="grid md:grid-cols-2 gap-12">
+            {/* Overview */}
             <div>
               <h2 className="text-3xl font-bold text-foreground mb-6">Overview</h2>
-              <p className="text-muted-foreground mb-6">
-                Promotional light boxes combine portability with visual impact, making them perfect for temporary displays, exhibitions, and rotating marketing campaigns. These lightweight, easy-to-transport units feature quick-change graphic systems, allowing you to update messaging for different events or seasons with minimal effort.
+              <p className="text-lg text-muted-foreground mb-4">
+                Promotional light boxes combine portability with visual impact, making them perfect for temporary displays, exhibitions, and rotating marketing campaigns. These lightweight, easy-to-transport units feature quick-change graphic systems.
               </p>
-              
-              <h3 className="text-2xl font-bold text-foreground mb-4 mt-8">Technical Specifications</h3>
-              <ul className="space-y-3">
-                <li className="flex items-start gap-3">
-                  <CheckCircle2 className="w-5 h-5 text-accent shrink-0 mt-1" />
-                  <span className="text-muted-foreground">Lightweight aluminum frame construction</span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <CheckCircle2 className="w-5 h-5 text-accent shrink-0 mt-1" />
-                  <span className="text-muted-foreground">Snap-frame or SEG (silicone edge graphic) system</span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <CheckCircle2 className="w-5 h-5 text-accent shrink-0 mt-1" />
-                  <span className="text-muted-foreground">Energy-efficient LED edge-lighting</span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <CheckCircle2 className="w-5 h-5 text-accent shrink-0 mt-1" />
-                  <span className="text-muted-foreground">Freestanding, wall-mounted, or hanging options</span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <CheckCircle2 className="w-5 h-5 text-accent shrink-0 mt-1" />
-                  <span className="text-muted-foreground">Carry case included for transport</span>
-                </li>
-              </ul>
+              <p className="text-lg text-muted-foreground">
+                Update messaging for different events or seasons with minimal effort - ideal for businesses attending multiple shows throughout the year.
+              </p>
             </div>
 
-            <div>
-              <h3 className="text-2xl font-bold text-foreground mb-4">Key Benefits</h3>
-              <ul className="space-y-3 mb-8">
-                <li className="flex items-start gap-3">
-                  <CheckCircle2 className="w-5 h-5 text-accent shrink-0 mt-1" />
-                  <span className="text-muted-foreground">Quick graphic changes for seasonal campaigns</span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <CheckCircle2 className="w-5 h-5 text-accent shrink-0 mt-1" />
-                  <span className="text-muted-foreground">Portable for multiple locations</span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <CheckCircle2 className="w-5 h-5 text-accent shrink-0 mt-1" />
-                  <span className="text-muted-foreground">No tools required for setup</span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <CheckCircle2 className="w-5 h-5 text-accent shrink-0 mt-1" />
-                  <span className="text-muted-foreground">Low operating costs with LED technology</span>
-                </li>
-              </ul>
-
-              <h3 className="text-2xl font-bold text-foreground mb-4 mt-8">Ideal Applications</h3>
-              <ul className="space-y-3">
-                <li className="flex items-start gap-3">
-                  <CheckCircle2 className="w-5 h-5 text-accent shrink-0 mt-1" />
-                  <span className="text-muted-foreground">Trade shows and exhibitions</span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <CheckCircle2 className="w-5 h-5 text-accent shrink-0 mt-1" />
-                  <span className="text-muted-foreground">Retail point-of-sale displays</span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <CheckCircle2 className="w-5 h-5 text-accent shrink-0 mt-1" />
-                  <span className="text-muted-foreground">Shopping mall promotional displays</span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <CheckCircle2 className="w-5 h-5 text-accent shrink-0 mt-1" />
-                  <span className="text-muted-foreground">Event and conference branding</span>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Pricing Section */}
-      <section className="py-16 px-6 bg-muted/30">
-        <div className="container mx-auto max-w-6xl">
-          <h2 className="text-3xl font-bold text-foreground mb-8">Pricing Guide</h2>
-          <div className="grid md:grid-cols-3 gap-6">
-            <div className="bg-background border border-border rounded-xl p-8">
-              <h3 className="text-xl font-bold text-foreground mb-2">A1 Snap Frame</h3>
-              <p className="text-3xl font-bold text-accent mb-4">From £220</p>
-              <ul className="space-y-2 text-muted-foreground">
-                <li>• Compact A1 size</li>
-                <li>• Easy graphic changes</li>
-                <li>• Single-sided display</li>
-                <li>• Includes carry case</li>
-              </ul>
-            </div>
-            <div className="bg-background border-2 border-accent rounded-xl p-8 relative">
-              <div className="absolute -top-4 left-1/2 -translate-x-1/2 bg-accent text-accent-foreground px-4 py-1 rounded-full text-sm font-bold">
-                Most Versatile
+            {/* Specifications */}
+            <div className="grid md:grid-cols-2 gap-8">
+              <div className="bg-secondary p-8 rounded-2xl border border-border">
+                <h3 className="text-2xl font-bold text-foreground mb-6">Technical Specifications</h3>
+                <ul className="space-y-3">
+                  <li className="flex items-start gap-3">
+                    <span className="w-2 h-2 bg-accent rounded-full mt-2 flex-shrink-0" />
+                    <span className="text-muted-foreground"><strong>Frame:</strong> Lightweight aluminum construction</span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <span className="w-2 h-2 bg-accent rounded-full mt-2 flex-shrink-0" />
+                    <span className="text-muted-foreground"><strong>System:</strong> Snap-frame or SEG graphic system</span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <span className="w-2 h-2 bg-accent rounded-full mt-2 flex-shrink-0" />
+                    <span className="text-muted-foreground"><strong>Lighting:</strong> Energy-efficient LED edge-lighting</span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <span className="w-2 h-2 bg-accent rounded-full mt-2 flex-shrink-0" />
+                    <span className="text-muted-foreground"><strong>Mount:</strong> Freestanding, wall, or hanging options</span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <span className="w-2 h-2 bg-accent rounded-full mt-2 flex-shrink-0" />
+                    <span className="text-muted-foreground"><strong>Transport:</strong> Carry case included</span>
+                  </li>
+                </ul>
               </div>
-              <h3 className="text-xl font-bold text-foreground mb-2">SEG System</h3>
-              <p className="text-3xl font-bold text-accent mb-4">From £480</p>
-              <ul className="space-y-2 text-muted-foreground">
-                <li>• Various sizes available</li>
-                <li>• Frameless appearance</li>
-                <li>• Double-sided options</li>
-                <li>• Professional fabric graphics</li>
-              </ul>
+
+              <div className="bg-secondary p-8 rounded-2xl border border-border">
+                <h3 className="text-2xl font-bold text-foreground mb-6">Key Benefits</h3>
+                <ul className="space-y-3">
+                  <li className="flex items-start gap-3">
+                    <span className="w-2 h-2 bg-accent rounded-full mt-2 flex-shrink-0" />
+                    <span className="text-muted-foreground">Quick graphic changes for campaigns</span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <span className="w-2 h-2 bg-accent rounded-full mt-2 flex-shrink-0" />
+                    <span className="text-muted-foreground">Portable for multiple locations</span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <span className="w-2 h-2 bg-accent rounded-full mt-2 flex-shrink-0" />
+                    <span className="text-muted-foreground">No tools required for setup</span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <span className="w-2 h-2 bg-accent rounded-full mt-2 flex-shrink-0" />
+                    <span className="text-muted-foreground">Low operating costs with LED</span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <span className="w-2 h-2 bg-accent rounded-full mt-2 flex-shrink-0" />
+                    <span className="text-muted-foreground">Professional appearance every time</span>
+                  </li>
+                </ul>
+              </div>
             </div>
-            <div className="bg-background border border-border rounded-xl p-8">
-              <h3 className="text-xl font-bold text-foreground mb-2">Custom Solution</h3>
-              <p className="text-3xl font-bold text-accent mb-4">From £850</p>
-              <ul className="space-y-2 text-muted-foreground">
-                <li>• Bespoke sizes & shapes</li>
-                <li>• Modular display systems</li>
-                <li>• Multiple graphics included</li>
-                <li>• Exhibition package</li>
-              </ul>
+
+            {/* Pricing Guide */}
+            <div>
+              <h2 className="text-3xl font-bold text-foreground mb-6">Pricing Guide</h2>
+              <div className="grid md:grid-cols-3 gap-6">
+                <div className="bg-secondary p-6 rounded-xl border border-border">
+                  <h4 className="text-xl font-bold text-foreground mb-2">A1 Snap Frame</h4>
+                  <p className="text-3xl font-bold text-accent mb-4">From £220</p>
+                  <ul className="space-y-2 text-sm text-muted-foreground">
+                    <li>• Compact A1 size</li>
+                    <li>• Easy graphic changes</li>
+                    <li>• Single-sided display</li>
+                    <li>• Includes carry case</li>
+                  </ul>
+                </div>
+                <div className="bg-secondary p-6 rounded-xl border-2 border-accent">
+                  <h4 className="text-xl font-bold text-foreground mb-2">SEG System</h4>
+                  <p className="text-3xl font-bold text-accent mb-4">From £480</p>
+                  <ul className="space-y-2 text-sm text-muted-foreground">
+                    <li>• Various sizes available</li>
+                    <li>• Frameless appearance</li>
+                    <li>• Double-sided options</li>
+                    <li>• Professional fabric graphics</li>
+                  </ul>
+                </div>
+                <div className="bg-secondary p-6 rounded-xl border border-border">
+                  <h4 className="text-xl font-bold text-foreground mb-2">Custom Solution</h4>
+                  <p className="text-3xl font-bold text-accent mb-4">From £850</p>
+                  <ul className="space-y-2 text-sm text-muted-foreground">
+                    <li>• Bespoke sizes & shapes</li>
+                    <li>• Modular display systems</li>
+                    <li>• Multiple graphics included</li>
+                    <li>• Exhibition package</li>
+                  </ul>
+                </div>
+              </div>
+              <p className="text-sm text-muted-foreground mt-6 text-center">
+                *Prices are indicative and vary based on size, materials, and features. Contact us for an accurate quote.
+              </p>
+            </div>
+
+            {/* Applications */}
+            <div>
+              <h2 className="text-3xl font-bold text-foreground mb-6">Ideal Applications</h2>
+              <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4">
+                {["Trade Shows", "Exhibitions", "Retail POS", "Mall Displays", "Event Branding", "Conferences", "Product Launches", "Seasonal Campaigns"].map((app) => (
+                  <div key={app} className="bg-secondary p-4 rounded-xl border border-border text-center">
+                    <p className="font-medium text-foreground">{app}</p>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            {/* CTA */}
+            <div className="bg-primary text-primary-foreground p-12 rounded-2xl text-center">
+              <h2 className="text-3xl font-bold mb-4">Make Your Promotions Shine</h2>
+              <p className="text-xl text-primary-foreground/80 mb-8 max-w-2xl mx-auto">
+                Get a quote for portable promotional light box solutions.
+              </p>
+              <Link to="/#contact">
+                <Button variant="hero" size="xl">
+                  Request Quote
+                </Button>
+              </Link>
             </div>
           </div>
-        </div>
-      </section>
-
-      {/* CTA Section */}
-      <section className="py-16 px-6">
-        <div className="container mx-auto max-w-4xl text-center">
-          <h2 className="text-4xl font-bold text-foreground mb-6">
-            Make Your Promotions Shine
-          </h2>
-          <p className="text-xl text-muted-foreground mb-8">
-            Get a quote for portable promotional light box solutions
-          </p>
-          <Link to="/#contact">
-            <Button variant="hero" size="lg">Request Quote</Button>
-          </Link>
         </div>
       </section>
 

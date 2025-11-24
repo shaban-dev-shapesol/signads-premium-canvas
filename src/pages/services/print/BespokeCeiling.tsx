@@ -1,182 +1,180 @@
+import { Cloud } from "lucide-react";
+import { Button } from "@/components/ui/button";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
-import { Button } from "@/components/ui/button";
-import { CheckCircle2, Cloud } from "lucide-react";
 import { Link } from "react-router-dom";
 
 const BespokeCeiling = () => {
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-screen">
       <Navigation />
       
-      {/* Hero Section */}
-      <section className="pt-32 pb-16 px-6 bg-primary">
-        <div className="container mx-auto max-w-6xl">
-          <div className="flex items-center gap-4 mb-6">
-            <Cloud className="w-12 h-12 text-accent" />
-            <h1 className="text-5xl md:text-6xl font-bold text-accent">
-              Bespoke Printed Ceilings
+      <section className="pt-32 pb-16 bg-primary text-primary-foreground">
+        <div className="container mx-auto px-6">
+          <div className="max-w-4xl mx-auto text-center">
+            <div className="w-20 h-20 bg-primary-foreground/10 rounded-2xl flex items-center justify-center mx-auto mb-6">
+              <Cloud className="w-10 h-10 text-primary-foreground" />
+            </div>
+            <h1 className="text-5xl md:text-6xl font-bold mb-6">
+              Bespoke Printed <span className="text-accent">Ceilings</span>
             </h1>
+            <p className="text-xl text-primary-foreground/80 mb-8">
+              Transform overlooked ceiling space into stunning visual experiences. Custom-printed acoustic or stretch ceiling systems that inspire and impress.
+            </p>
+            <Link to="/#contact">
+              <Button variant="hero" size="xl">
+                Get Custom Quote
+              </Button>
+            </Link>
           </div>
-          <p className="text-xl text-primary-foreground mb-8 max-w-3xl">
-            Transform overlooked ceiling space into stunning visual experiences. Custom-printed acoustic or stretch ceiling systems that inspire and impress.
-          </p>
-          <Link to="/#contact">
-            <Button variant="hero" size="lg">Get Custom Quote</Button>
-          </Link>
         </div>
       </section>
 
-      {/* Image Gallery */}
-      <section className="py-16 px-6 bg-muted/30">
-        <div className="container mx-auto max-w-6xl">
-          <h2 className="text-3xl font-bold text-foreground mb-8">Project Gallery</h2>
-          <div className="grid md:grid-cols-3 gap-6">
-            {[1, 2, 3].map((i) => (
-              <div key={i} className="aspect-video bg-muted rounded-xl overflow-hidden">
-                <div className="w-full h-full flex items-center justify-center text-muted-foreground">
-                  Ceiling Graphics Example {i}
-                </div>
+      <section className="py-24 bg-background">
+        <div className="container mx-auto px-6">
+          <div className="max-w-6xl mx-auto space-y-16">
+            
+            {/* Project Gallery */}
+            <div>
+              <h2 className="text-3xl font-bold text-foreground mb-6">Project Gallery</h2>
+              <div className="grid md:grid-cols-3 gap-6">
+                {[1, 2, 3, 4, 5, 6].map((i) => (
+                  <div key={i} className="aspect-video bg-secondary rounded-2xl border border-border hover:shadow-premium transition-smooth" />
+                ))}
               </div>
-            ))}
-          </div>
-        </div>
-      </section>
+            </div>
 
-      {/* Details Section */}
-      <section className="py-16 px-6">
-        <div className="container mx-auto max-w-6xl">
-          <div className="grid md:grid-cols-2 gap-12">
+            {/* Overview */}
             <div>
               <h2 className="text-3xl font-bold text-foreground mb-6">Overview</h2>
-              <p className="text-muted-foreground mb-6">
-                Printed ceiling graphics create immersive environments that captivate from every angle. Whether transforming retail spaces, restaurants, or corporate environments, our custom ceiling solutions combine stunning visuals with practical acoustic and lighting benefits. Turn unused ceiling space into a powerful brand experience.
+              <p className="text-lg text-muted-foreground mb-4">
+                Printed ceiling graphics create immersive environments that captivate from every angle. Whether transforming retail spaces, restaurants, or corporate environments, our custom ceiling solutions combine stunning visuals with practical acoustic and lighting benefits.
               </p>
-              
-              <h3 className="text-2xl font-bold text-foreground mb-4 mt-8">Technical Specifications</h3>
-              <ul className="space-y-3">
-                <li className="flex items-start gap-3">
-                  <CheckCircle2 className="w-5 h-5 text-accent shrink-0 mt-1" />
-                  <span className="text-muted-foreground">Stretch fabric or acoustic panel systems</span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <CheckCircle2 className="w-5 h-5 text-accent shrink-0 mt-1" />
-                  <span className="text-muted-foreground">High-resolution dye-sublimation printing</span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <CheckCircle2 className="w-5 h-5 text-accent shrink-0 mt-1" />
-                  <span className="text-muted-foreground">Fire-rated materials (Class 0/A)</span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <CheckCircle2 className="w-5 h-5 text-accent shrink-0 mt-1" />
-                  <span className="text-muted-foreground">Integrated LED backlighting options</span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <CheckCircle2 className="w-5 h-5 text-accent shrink-0 mt-1" />
-                  <span className="text-muted-foreground">Seamless or modular installation</span>
-                </li>
-              </ul>
+              <p className="text-lg text-muted-foreground">
+                Turn unused ceiling space into a powerful brand experience that leaves lasting impressions on visitors and customers.
+              </p>
             </div>
 
-            <div>
-              <h3 className="text-2xl font-bold text-foreground mb-4">Design Options</h3>
-              <ul className="space-y-3 mb-8">
-                <li className="flex items-start gap-3">
-                  <CheckCircle2 className="w-5 h-5 text-accent shrink-0 mt-1" />
-                  <span className="text-muted-foreground">Photorealistic sky and nature scenes</span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <CheckCircle2 className="w-5 h-5 text-accent shrink-0 mt-1" />
-                  <span className="text-muted-foreground">Abstract patterns and geometric designs</span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <CheckCircle2 className="w-5 h-5 text-accent shrink-0 mt-1" />
-                  <span className="text-muted-foreground">Brand storytelling and product imagery</span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <CheckCircle2 className="w-5 h-5 text-accent shrink-0 mt-1" />
-                  <span className="text-muted-foreground">3D depth effects and trompe-l'œil</span>
-                </li>
-              </ul>
-
-              <h3 className="text-2xl font-bold text-foreground mb-4 mt-8">Ideal Applications</h3>
-              <ul className="space-y-3">
-                <li className="flex items-start gap-3">
-                  <CheckCircle2 className="w-5 h-5 text-accent shrink-0 mt-1" />
-                  <span className="text-muted-foreground">Retail stores and shopping centers</span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <CheckCircle2 className="w-5 h-5 text-accent shrink-0 mt-1" />
-                  <span className="text-muted-foreground">Restaurants and hospitality venues</span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <CheckCircle2 className="w-5 h-5 text-accent shrink-0 mt-1" />
-                  <span className="text-muted-foreground">Corporate lobbies and atriums</span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <CheckCircle2 className="w-5 h-5 text-accent shrink-0 mt-1" />
-                  <span className="text-muted-foreground">Healthcare and wellness facilities</span>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Pricing Section */}
-      <section className="py-16 px-6 bg-muted/30">
-        <div className="container mx-auto max-w-6xl">
-          <h2 className="text-3xl font-bold text-foreground mb-8">Pricing Guide</h2>
-          <div className="grid md:grid-cols-3 gap-6">
-            <div className="bg-background border border-border rounded-xl p-8">
-              <h3 className="text-xl font-bold text-foreground mb-2">Acoustic Panels</h3>
-              <p className="text-3xl font-bold text-accent mb-4">From £120/sqm</p>
-              <ul className="space-y-2 text-muted-foreground">
-                <li>• Modular panel system</li>
-                <li>• Acoustic performance</li>
-                <li>• Custom printed designs</li>
-                <li>• Easy maintenance</li>
-              </ul>
-            </div>
-            <div className="bg-background border-2 border-accent rounded-xl p-8 relative">
-              <div className="absolute -top-4 left-1/2 -translate-x-1/2 bg-accent text-accent-foreground px-4 py-1 rounded-full text-sm font-bold">
-                Premium Solution
+            {/* Specifications */}
+            <div className="grid md:grid-cols-2 gap-8">
+              <div className="bg-secondary p-8 rounded-2xl border border-border">
+                <h3 className="text-2xl font-bold text-foreground mb-6">Technical Specifications</h3>
+                <ul className="space-y-3">
+                  <li className="flex items-start gap-3">
+                    <span className="w-2 h-2 bg-accent rounded-full mt-2 flex-shrink-0" />
+                    <span className="text-muted-foreground"><strong>System:</strong> Stretch fabric or acoustic panels</span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <span className="w-2 h-2 bg-accent rounded-full mt-2 flex-shrink-0" />
+                    <span className="text-muted-foreground"><strong>Printing:</strong> High-resolution dye-sublimation</span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <span className="w-2 h-2 bg-accent rounded-full mt-2 flex-shrink-0" />
+                    <span className="text-muted-foreground"><strong>Safety:</strong> Fire-rated materials (Class 0/A)</span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <span className="w-2 h-2 bg-accent rounded-full mt-2 flex-shrink-0" />
+                    <span className="text-muted-foreground"><strong>Lighting:</strong> Integrated LED backlighting options</span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <span className="w-2 h-2 bg-accent rounded-full mt-2 flex-shrink-0" />
+                    <span className="text-muted-foreground"><strong>Install:</strong> Seamless or modular</span>
+                  </li>
+                </ul>
               </div>
-              <h3 className="text-xl font-bold text-foreground mb-2">Stretch Fabric</h3>
-              <p className="text-3xl font-bold text-accent mb-4">From £180/sqm</p>
-              <ul className="space-y-2 text-muted-foreground">
-                <li>• Seamless appearance</li>
-                <li>• Integrated LED lighting</li>
-                <li>• Photographic quality print</li>
-                <li>• Professional installation</li>
-              </ul>
+
+              <div className="bg-secondary p-8 rounded-2xl border border-border">
+                <h3 className="text-2xl font-bold text-foreground mb-6">Design Options</h3>
+                <ul className="space-y-3">
+                  <li className="flex items-start gap-3">
+                    <span className="w-2 h-2 bg-accent rounded-full mt-2 flex-shrink-0" />
+                    <span className="text-muted-foreground">Photorealistic sky and nature scenes</span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <span className="w-2 h-2 bg-accent rounded-full mt-2 flex-shrink-0" />
+                    <span className="text-muted-foreground">Abstract patterns and geometric designs</span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <span className="w-2 h-2 bg-accent rounded-full mt-2 flex-shrink-0" />
+                    <span className="text-muted-foreground">Brand storytelling and product imagery</span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <span className="w-2 h-2 bg-accent rounded-full mt-2 flex-shrink-0" />
+                    <span className="text-muted-foreground">3D depth effects and trompe-l'œil</span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <span className="w-2 h-2 bg-accent rounded-full mt-2 flex-shrink-0" />
+                    <span className="text-muted-foreground">Custom illustrations and artwork</span>
+                  </li>
+                </ul>
+              </div>
             </div>
-            <div className="bg-background border border-border rounded-xl p-8">
-              <h3 className="text-xl font-bold text-foreground mb-2">Complete Project</h3>
-              <p className="text-3xl font-bold text-accent mb-4">Custom Quote</p>
-              <ul className="space-y-2 text-muted-foreground">
-                <li>• Large-scale installations</li>
-                <li>• 3D design visualization</li>
-                <li>• Engineering & compliance</li>
-                <li>• Full project management</li>
-              </ul>
+
+            {/* Pricing Guide */}
+            <div>
+              <h2 className="text-3xl font-bold text-foreground mb-6">Pricing Guide</h2>
+              <div className="grid md:grid-cols-3 gap-6">
+                <div className="bg-secondary p-6 rounded-xl border border-border">
+                  <h4 className="text-xl font-bold text-foreground mb-2">Acoustic Panels</h4>
+                  <p className="text-3xl font-bold text-accent mb-4">From £120/sqm</p>
+                  <ul className="space-y-2 text-sm text-muted-foreground">
+                    <li>• Modular panel system</li>
+                    <li>• Acoustic performance</li>
+                    <li>• Custom printed designs</li>
+                    <li>• Easy maintenance</li>
+                  </ul>
+                </div>
+                <div className="bg-secondary p-6 rounded-xl border-2 border-accent">
+                  <h4 className="text-xl font-bold text-foreground mb-2">Stretch Fabric</h4>
+                  <p className="text-3xl font-bold text-accent mb-4">From £180/sqm</p>
+                  <ul className="space-y-2 text-sm text-muted-foreground">
+                    <li>• Seamless appearance</li>
+                    <li>• Integrated LED lighting</li>
+                    <li>• Photographic quality print</li>
+                    <li>• Professional installation</li>
+                  </ul>
+                </div>
+                <div className="bg-secondary p-6 rounded-xl border border-border">
+                  <h4 className="text-xl font-bold text-foreground mb-2">Complete Project</h4>
+                  <p className="text-3xl font-bold text-accent mb-4">Custom Quote</p>
+                  <ul className="space-y-2 text-sm text-muted-foreground">
+                    <li>• Large-scale installations</li>
+                    <li>• 3D design visualization</li>
+                    <li>• Engineering & compliance</li>
+                    <li>• Full project management</li>
+                  </ul>
+                </div>
+              </div>
+              <p className="text-sm text-muted-foreground mt-6 text-center">
+                *Prices are indicative and vary based on size, complexity, and installation requirements. Contact us for an accurate quote.
+              </p>
+            </div>
+
+            {/* Applications */}
+            <div>
+              <h2 className="text-3xl font-bold text-foreground mb-6">Ideal Applications</h2>
+              <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4">
+                {["Retail Stores", "Restaurants", "Corporate Lobbies", "Healthcare Facilities", "Shopping Centers", "Hotels", "Event Venues", "Wellness Centers"].map((app) => (
+                  <div key={app} className="bg-secondary p-4 rounded-xl border border-border text-center">
+                    <p className="font-medium text-foreground">{app}</p>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            {/* CTA */}
+            <div className="bg-primary text-primary-foreground p-12 rounded-2xl text-center">
+              <h2 className="text-3xl font-bold mb-4">Elevate Every View</h2>
+              <p className="text-xl text-primary-foreground/80 mb-8 max-w-2xl mx-auto">
+                Let's create an unforgettable ceiling experience for your space.
+              </p>
+              <Link to="/#contact">
+                <Button variant="hero" size="xl">
+                  Start Your Project
+                </Button>
+              </Link>
             </div>
           </div>
-        </div>
-      </section>
-
-      {/* CTA Section */}
-      <section className="py-16 px-6">
-        <div className="container mx-auto max-w-4xl text-center">
-          <h2 className="text-4xl font-bold text-foreground mb-6">
-            Elevate Every View
-          </h2>
-          <p className="text-xl text-muted-foreground mb-8">
-            Let's create an unforgettable ceiling experience for your space
-          </p>
-          <Link to="/#contact">
-            <Button variant="hero" size="lg">Start Your Project</Button>
-          </Link>
         </div>
       </section>
 
