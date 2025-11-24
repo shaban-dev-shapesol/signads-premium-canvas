@@ -1,7 +1,8 @@
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
-import { CheckCircle2 } from "lucide-react";
+import { CheckCircle2, Sparkles } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const BespokeExhibitionDisplay = () => {
   return (
@@ -9,15 +10,20 @@ const BespokeExhibitionDisplay = () => {
       <Navigation />
       
       {/* Hero Section */}
-      <section className="pt-32 pb-16 px-6">
+      <section className="pt-32 pb-16 px-6 bg-primary">
         <div className="container mx-auto max-w-6xl">
-          <h1 className="text-5xl md:text-6xl font-bold text-foreground mb-6">
-            Bespoke Exhibition Displays
-          </h1>
-          <p className="text-xl text-muted-foreground mb-8 max-w-3xl">
+          <div className="flex items-center gap-4 mb-6">
+            <Sparkles className="w-12 h-12 text-accent" />
+            <h1 className="text-5xl md:text-6xl font-bold text-accent">
+              Bespoke Exhibition Displays
+            </h1>
+          </div>
+          <p className="text-xl text-primary-foreground mb-8 max-w-3xl">
             Custom-designed exhibition stands that make unforgettable impressions. From concept to completion, we create unique displays that dominate show floors.
           </p>
-          <Button variant="premium" size="lg">Get Custom Quote</Button>
+          <Link to="/#contact">
+            <Button variant="hero" size="lg">Get Custom Quote</Button>
+          </Link>
         </div>
       </section>
 
@@ -168,7 +174,9 @@ const BespokeExhibitionDisplay = () => {
           <p className="text-xl text-muted-foreground mb-8">
             Discuss your vision with our exhibition design specialists
           </p>
-          <Button variant="premium" size="lg">Schedule Consultation</Button>
+          <Link to="/#contact">
+            <Button variant="hero" size="lg">Schedule Consultation</Button>
+          </Link>
         </div>
       </section>
 

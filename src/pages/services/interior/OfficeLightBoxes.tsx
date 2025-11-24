@@ -1,7 +1,8 @@
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
-import { CheckCircle2 } from "lucide-react";
+import { CheckCircle2, Lightbulb } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const OfficeLightBoxes = () => {
   return (
@@ -9,15 +10,20 @@ const OfficeLightBoxes = () => {
       <Navigation />
       
       {/* Hero Section */}
-      <section className="pt-32 pb-16 px-6">
+      <section className="pt-32 pb-16 px-6 bg-primary">
         <div className="container mx-auto max-w-6xl">
-          <h1 className="text-5xl md:text-6xl font-bold text-foreground mb-6">
-            Office Light Boxes
-          </h1>
-          <p className="text-xl text-muted-foreground mb-8 max-w-3xl">
+          <div className="flex items-center gap-4 mb-6">
+            <Lightbulb className="w-12 h-12 text-accent" />
+            <h1 className="text-5xl md:text-6xl font-bold text-accent">
+              Office Light Boxes
+            </h1>
+          </div>
+          <p className="text-xl text-primary-foreground mb-8 max-w-3xl">
             Elegant illuminated signage for interior spaces. Perfect for corporate lobbies, retail displays, and branded environments.
           </p>
-          <Button variant="premium" size="lg">Get Custom Quote</Button>
+          <Link to="/#contact">
+            <Button variant="hero" size="lg">Get Custom Quote</Button>
+          </Link>
         </div>
       </section>
 
@@ -168,7 +174,9 @@ const OfficeLightBoxes = () => {
           <p className="text-xl text-muted-foreground mb-8">
             Get expert advice on light box solutions for your space
           </p>
-          <Button variant="premium" size="lg">Request Quote</Button>
+          <Link to="/#contact">
+            <Button variant="hero" size="lg">Request Quote</Button>
+          </Link>
         </div>
       </section>
 
