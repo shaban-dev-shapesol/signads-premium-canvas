@@ -69,9 +69,9 @@ const Navigation = () => {
         { name: "Custom Flags", href: "/services/promotional-signs/custom-flags" },
         { name: "Pavement sign", href: "/services/promotional-signs/pavement-sign" },
         { name: "Projection Sign", href: "/services/exterior-signs/projection-sign" },
-        { name: "Window Graphics", href: "#" },
-        { name: "Light boxes", href: "#" },
-        { name: "Bespoke printed Ceiling", href: "#" }
+        { name: "Window Graphics", href: "/services/print-signs/window-graphics" },
+        { name: "Light boxes", href: "/services/light-boxes/promotional-lightbox" },
+        { name: "Bespoke printed Ceiling", href: "/services/print-signs/bespoke-ceiling" }
       ]
     },
     {
