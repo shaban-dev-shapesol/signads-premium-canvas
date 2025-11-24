@@ -35,6 +35,15 @@ const BannerPrinting = () => {
           <div className="max-w-6xl mx-auto space-y-16">
             
             <div>
+              <h2 className="text-3xl font-bold text-foreground mb-6">Project Gallery</h2>
+              <div className="grid md:grid-cols-3 gap-6">
+                {[1, 2, 3, 4, 5, 6].map((i) => (
+                  <div key={i} className="aspect-video bg-secondary rounded-2xl border border-border hover:shadow-premium transition-smooth" />
+                ))}
+              </div>
+            </div>
+
+            <div>
               <h2 className="text-3xl font-bold text-foreground mb-6">Overview</h2>
               <p className="text-lg text-muted-foreground mb-4">
                 Printed banners are one of the most versatile and cost-effective marketing tools available. Whether you need indoor displays for exhibitions or weather-resistant outdoor advertising, our large-format printing delivers vibrant colors and sharp graphics that command attention.
