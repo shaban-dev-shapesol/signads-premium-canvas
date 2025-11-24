@@ -19,42 +19,90 @@ const Navigation = () => {
     {
       name: "Exterior Signs",
       href: "/services/exterior-signs",
-      items: ["Built up 3D letters", "Fascia Sign Tray", "Flex face LightBox Sign", "Projection Sign", "Totem Sign Solutions", "Site Hoarding Boards"]
+      items: [
+        { name: "Built up 3D letters", href: "/services/exterior-signs/built-up-3d-letters" },
+        { name: "Fascia Sign Tray", href: "/services/exterior-signs/fascia-sign-tray" },
+        { name: "Flex face LightBox Sign", href: "#" },
+        { name: "Projection Sign", href: "#" },
+        { name: "Totem Sign Solutions", href: "#" },
+        { name: "Site Hoarding Boards", href: "#" }
+      ]
     },
     {
       name: "Interior Signs",
       href: "/services/interior-signs",
-      items: ["Reception Signs", "Neon Signs", "Light Boxes", "Creative Office Wall Graphics", "Office Window frosting"]
+      items: [
+        { name: "Reception Signs", href: "/services/interior-signs/reception-signs" },
+        { name: "Neon Signs", href: "#" },
+        { name: "Light Boxes", href: "#" },
+        { name: "Creative Office Wall Graphics", href: "#" },
+        { name: "Office Window frosting", href: "#" }
+      ]
     },
     {
       name: "Print Signs",
       href: "/services/print-signs",
-      items: ["Printed tray", "Vinyl lettering", "Site Hoarding Boards", "Banner Printing", "Window Graphics", "Wall Art", "Floor Graphics", "Bespoke printed ceiling"]
+      items: [
+        { name: "Printed tray", href: "#" },
+        { name: "Vinyl lettering", href: "#" },
+        { name: "Site Hoarding Boards", href: "#" },
+        { name: "Banner Printing", href: "/services/print-signs/banner-printing" },
+        { name: "Window Graphics", href: "#" },
+        { name: "Wall Art", href: "#" },
+        { name: "Floor Graphics", href: "#" },
+        { name: "Bespoke printed ceiling", href: "#" }
+      ]
     },
     {
       name: "Light Boxes",
       href: "/services/light-boxes",
-      items: ["Flex face LightBox Sign", "Acrylic printed lightbox", "Promotional lightboxes"]
+      items: [
+        { name: "Flex face LightBox Sign", href: "#" },
+        { name: "Acrylic printed lightbox", href: "#" },
+        { name: "Promotional lightboxes", href: "#" }
+      ]
     },
     {
       name: "Promotional Signs",
       href: "/services/promotional-signs",
-      items: ["Custom Flags", "Pavement sign", "Projection Sign", "Window Graphics", "Light boxes", "Bespoke printed Ceiling"]
+      items: [
+        { name: "Custom Flags", href: "#" },
+        { name: "Pavement sign", href: "#" },
+        { name: "Projection Sign", href: "#" },
+        { name: "Window Graphics", href: "#" },
+        { name: "Light boxes", href: "#" },
+        { name: "Bespoke printed Ceiling", href: "#" }
+      ]
     },
     {
       name: "Digital Signage",
       href: "/services/digital-signage",
-      items: ["Outdoor digital signs", "Indoor digital signage", "Digital takeaway menu", "Shop window display"]
+      items: [
+        { name: "Outdoor digital signs", href: "/services/digital-signage/outdoor-digital-signs" },
+        { name: "Indoor digital signage", href: "#" },
+        { name: "Digital takeaway menu", href: "#" },
+        { name: "Shop window display", href: "#" }
+      ]
     },
     {
       name: "Exhibition Display",
       href: "/services/exhibition-display",
-      items: ["Standard exhibition display", "Bespoke exhibition display"]
+      items: [
+        { name: "Standard exhibition display", href: "#" },
+        { name: "Bespoke exhibition display", href: "#" }
+      ]
     },
     {
       name: "Vehicle Graphics",
       href: "/services/vehicle-graphics",
-      items: ["Car Wrap", "Van Wrap", "Truck wrap", "Food Truck Wrap", "Lorry & HGV Wrap", "Bus Wrap"]
+      items: [
+        { name: "Car Wrap", href: "/services/vehicle-graphics/car-wrap" },
+        { name: "Van Wrap", href: "#" },
+        { name: "Truck wrap", href: "#" },
+        { name: "Food Truck Wrap", href: "#" },
+        { name: "Lorry & HGV Wrap", href: "#" },
+        { name: "Bus Wrap", href: "#" }
+      ]
     }
   ];
 
@@ -117,8 +165,14 @@ const Navigation = () => {
                         </Link>
                         <ul className="space-y-2">
                           {category.items.map((item) => (
-                            <li key={item} className="text-sm text-muted-foreground">
-                              {item}
+                            <li key={item.name}>
+                              <Link
+                                to={item.href}
+                                className="text-sm text-muted-foreground hover:text-accent transition-smooth block"
+                                onClick={() => setIsServicesOpen(false)}
+                              >
+                                {item.name}
+                              </Link>
                             </li>
                           ))}
                         </ul>
@@ -170,16 +224,29 @@ const Navigation = () => {
               >
                 Services
               </Link>
-              <div className="pl-4 space-y-2">
+              <div className="pl-4 space-y-3">
                 {serviceCategories.map((category) => (
-                  <Link
-                    key={category.name}
-                    to={category.href}
-                    className="block text-sm text-muted-foreground hover:text-accent transition-smooth"
-                    onClick={() => setIsOpen(false)}
-                  >
-                    {category.name}
-                  </Link>
+                  <div key={category.name}>
+                    <Link
+                      to={category.href}
+                      className="block text-sm font-bold text-foreground hover:text-accent transition-smooth mb-1"
+                      onClick={() => setIsOpen(false)}
+                    >
+                      {category.name}
+                    </Link>
+                    <div className="pl-3 space-y-1">
+                      {category.items.slice(0, 3).map((item) => (
+                        <Link
+                          key={item.name}
+                          to={item.href}
+                          className="block text-xs text-muted-foreground hover:text-accent transition-smooth"
+                          onClick={() => setIsOpen(false)}
+                        >
+                          {item.name}
+                        </Link>
+                      ))}
+                    </div>
+                  </div>
                 ))}
               </div>
             </div>
