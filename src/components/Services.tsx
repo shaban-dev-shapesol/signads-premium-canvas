@@ -120,9 +120,11 @@ const Services = () => {
         </div>
 
         <div className="text-center">
-          <Button variant="premium" size="lg">
-            Request a Custom Quote
-          </Button>
+          <Link to="/services">
+            <Button variant="premium" size="lg">
+              View All Services
+            </Button>
+          </Link>
         </div>
       </div>
     </section>
