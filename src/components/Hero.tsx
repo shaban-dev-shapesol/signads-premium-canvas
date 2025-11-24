@@ -1,7 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Award, Clock, Users, CheckCircle2 } from "lucide-react";
 import { motion } from "framer-motion";
-import heroImage from "@/assets/hero-signage-premium.jpg";
+import heroImage from "@/assets/hero-interior-signage.jpg";
 
 const Hero = () => {
   const stats = [
