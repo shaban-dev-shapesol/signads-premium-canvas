@@ -11,6 +11,16 @@ import vehicleBefore from "@/assets/before-after/vehicle-before.jpg";
 import vehicleAfter from "@/assets/before-after/vehicle-after.jpg";
 import restaurantBefore from "@/assets/before-after/restaurant-before.jpg";
 import restaurantAfter from "@/assets/before-after/restaurant-after.jpg";
+import windowBefore from "@/assets/before-after/window-before.jpg";
+import windowAfter from "@/assets/before-after/window-after.jpg";
+import digitalBefore from "@/assets/before-after/digital-before.jpg";
+import digitalAfter from "@/assets/before-after/digital-after.jpg";
+import exhibitionBefore from "@/assets/before-after/exhibition-before.jpg";
+import exhibitionAfter from "@/assets/before-after/exhibition-after.jpg";
+import lightboxBefore from "@/assets/before-after/lightbox-before.jpg";
+import lightboxAfter from "@/assets/before-after/lightbox-after.jpg";
+import neonBefore from "@/assets/before-after/neon-before.jpg";
+import neonAfter from "@/assets/before-after/neon-after.jpg";
 
 const BeforeAfter = () => {
   const [activeSlider, setActiveSlider] = useState<number | null>(null);
@@ -19,36 +29,76 @@ const BeforeAfter = () => {
     1: 50,
     2: 50,
     3: 50,
+    4: 50,
+    5: 50,
+    6: 50,
+    7: 50,
+    8: 50,
   });
 
   const comparisons = [
     {
-      title: "Retail Storefront Transformation",
+      title: "Retail Storefront",
       before: storefrontBefore,
       after: storefrontAfter,
       category: "Exterior Signage",
-      description: "From invisible to unmissable with illuminated fascia signage",
+      description: "Illuminated fascia signage transforms visibility",
     },
     {
-      title: "Corporate Reception Upgrade",
+      title: "Corporate Reception",
       before: receptionBefore,
       after: receptionAfter,
       category: "Interior Signage",
-      description: "Transforming blank walls into powerful brand statements",
+      description: "Blank walls become powerful brand statements",
     },
     {
-      title: "Vehicle Wrap Impact",
+      title: "Vehicle Wrap",
       before: vehicleBefore,
       after: vehicleAfter,
       category: "Vehicle Graphics",
-      description: "Turn your fleet into mobile billboards generating thousands of daily impressions",
+      description: "Transform your fleet into mobile billboards",
     },
     {
-      title: "Restaurant Ambiance Enhancement",
+      title: "Restaurant Ambiance",
       before: restaurantBefore,
       after: restaurantAfter,
       category: "Interior Signage",
-      description: "Creating memorable dining experiences with custom neon signage",
+      description: "Custom neon creates memorable experiences",
+    },
+    {
+      title: "Window Graphics",
+      before: windowBefore,
+      after: windowAfter,
+      category: "Print Signage",
+      description: "Turn blank glass into eye-catching displays",
+    },
+    {
+      title: "Digital Signage",
+      before: digitalBefore,
+      after: digitalAfter,
+      category: "Digital Display",
+      description: "Dynamic content captures attention 24/7",
+    },
+    {
+      title: "Exhibition Display",
+      before: exhibitionBefore,
+      after: exhibitionAfter,
+      category: "Exhibition",
+      description: "Stand out at trade shows with custom booths",
+    },
+    {
+      title: "Light Box Signage",
+      before: lightboxBefore,
+      after: lightboxAfter,
+      category: "Illuminated Signs",
+      description: "Glowing signage creates stunning night impact",
+    },
+    {
+      title: "Neon Signs",
+      before: neonBefore,
+      after: neonAfter,
+      category: "Interior Signage",
+      description: "LED neon adds character and atmosphere",
     },
   ];
 
@@ -78,105 +128,76 @@ const BeforeAfter = () => {
           </p>
         </div>
 
-        <div className="max-w-7xl mx-auto space-y-12">
+        <div className="max-w-7xl mx-auto grid md:grid-cols-2 lg:grid-cols-3 gap-6">
           {comparisons.map((comparison, index) => (
             <div
               key={index}
-              className="bg-background rounded-2xl overflow-hidden shadow-premium hover:shadow-glow transition-smooth"
+              className="bg-background rounded-xl overflow-hidden shadow-premium hover:shadow-glow transition-smooth"
             >
-              <div className="grid md:grid-cols-2 gap-0">
-                {/* Before/After Slider */}
-                <div className="relative aspect-[4/3] overflow-hidden group">
+              {/* Before/After Slider */}
+              <div className="relative aspect-[4/3] overflow-hidden group">
+                <div
+                  className="absolute inset-0 cursor-ew-resize"
+                  onMouseMove={(e) => handleSliderMove(index, e)}
+                  onMouseDown={() => setActiveSlider(index)}
+                  onMouseUp={() => setActiveSlider(null)}
+                  onMouseLeave={() => setActiveSlider(null)}
+                >
+                  {/* After Image (background) */}
+                  <img
+                    src={comparison.after}
+                    alt={`${comparison.title} - After`}
+                    className="absolute inset-0 w-full h-full object-cover"
+                  />
+
+                  {/* Before Image (with clip path) */}
                   <div
-                    className="absolute inset-0 cursor-ew-resize"
-                    onMouseMove={(e) => handleSliderMove(index, e)}
-                    onMouseDown={() => setActiveSlider(index)}
-                    onMouseUp={() => setActiveSlider(null)}
-                    onMouseLeave={() => setActiveSlider(null)}
+                    className="absolute inset-0 overflow-hidden transition-all duration-100"
+                    style={{
+                      clipPath: `inset(0 ${100 - sliderPositions[index]}% 0 0)`,
+                    }}
                   >
-                    {/* After Image (background) */}
                     <img
-                      src={comparison.after}
-                      alt={`${comparison.title} - After`}
+                      src={comparison.before}
+                      alt={`${comparison.title} - Before`}
                       className="absolute inset-0 w-full h-full object-cover"
                     />
+                  </div>
 
-                    {/* Before Image (with clip path) */}
-                    <div
-                      className="absolute inset-0 overflow-hidden transition-all duration-100"
-                      style={{
-                        clipPath: `inset(0 ${100 - sliderPositions[index]}% 0 0)`,
-                      }}
-                    >
-                      <img
-                        src={comparison.before}
-                        alt={`${comparison.title} - Before`}
-                        className="absolute inset-0 w-full h-full object-cover"
-                      />
-                    </div>
-
-                    {/* Slider Handle */}
-                    <div
-                      className="absolute top-0 bottom-0 w-1 bg-accent shadow-glow cursor-ew-resize z-10"
-                      style={{ left: `${sliderPositions[index]}%` }}
-                    >
-                      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-12 h-12 bg-accent rounded-full flex items-center justify-center shadow-premium">
-                        <ArrowLeftRight className="w-6 h-6 text-primary-foreground" />
-                      </div>
-                    </div>
-
-                    {/* Labels */}
-                    <div className="absolute top-4 left-4 bg-background/90 backdrop-blur-sm px-3 py-1 rounded-full text-sm font-semibold text-foreground">
-                      Before
-                    </div>
-                    <div className="absolute top-4 right-4 bg-accent/90 backdrop-blur-sm px-3 py-1 rounded-full text-sm font-semibold text-primary-foreground">
-                      After
+                  {/* Slider Handle */}
+                  <div
+                    className="absolute top-0 bottom-0 w-1 bg-accent shadow-glow cursor-ew-resize z-10"
+                    style={{ left: `${sliderPositions[index]}%` }}
+                  >
+                    <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-10 h-10 bg-accent rounded-full flex items-center justify-center shadow-premium">
+                      <ArrowLeftRight className="w-5 h-5 text-primary-foreground" />
                     </div>
                   </div>
-                </div>
 
-                {/* Content */}
-                <div className="p-8 md:p-12 flex flex-col justify-center">
-                  <span className="text-accent text-sm font-semibold mb-3">
-                    {comparison.category}
-                  </span>
-                  <h3 className="text-3xl font-bold text-foreground mb-4">
-                    {comparison.title}
-                  </h3>
-                  <p className="text-lg text-muted-foreground mb-6">
-                    {comparison.description}
-                  </p>
-                  <div className="flex flex-wrap gap-4">
-                    <Link to="/#contact">
-                      <Button variant="default" size="lg">
-                        Get Your Quote
-                      </Button>
-                    </Link>
-                    <Link to="/portfolio">
-                      <Button variant="outline" size="lg">
-                        View More Projects
-                      </Button>
-                    </Link>
+                  {/* Labels */}
+                  <div className="absolute top-3 left-3 bg-background/90 backdrop-blur-sm px-2 py-1 rounded-full text-xs font-semibold text-foreground">
+                    Before
+                  </div>
+                  <div className="absolute top-3 right-3 bg-accent/90 backdrop-blur-sm px-2 py-1 rounded-full text-xs font-semibold text-primary-foreground">
+                    After
                   </div>
                 </div>
               </div>
+
+              {/* Content */}
+              <div className="p-4">
+                <span className="text-accent text-xs font-semibold mb-2 block">
+                  {comparison.category}
+                </span>
+                <h3 className="text-lg font-bold text-foreground mb-2">
+                  {comparison.title}
+                </h3>
+                <p className="text-sm text-muted-foreground">
+                  {comparison.description}
+                </p>
+              </div>
             </div>
           ))}
-        </div>
-
-        {/* CTA Section */}
-        <div className="mt-16 text-center bg-primary text-primary-foreground p-12 rounded-2xl animate-fade-in">
-          <h3 className="text-3xl font-bold mb-4">
-            Ready to Transform Your Space?
-          </h3>
-          <p className="text-xl text-primary-foreground/80 mb-8 max-w-2xl mx-auto">
-            Let our expert team help you create signage that makes a lasting impact on your business.
-          </p>
-          <Link to="/#contact">
-            <Button variant="hero" size="xl">
-              Start Your Transformation Today
-            </Button>
-          </Link>
         </div>
       </div>
     </section>
