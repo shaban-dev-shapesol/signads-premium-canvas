@@ -25,7 +25,7 @@ const Navigation = () => {
         { name: "Flex face LightBox Sign", href: "/services/exterior-signs/flex-face-lightbox" },
         { name: "Projection Sign", href: "/services/exterior-signs/projection-sign" },
         { name: "Totem Sign Solutions", href: "/services/exterior-signs/totem-sign" },
-        { name: "Site Hoarding Boards", href: "#" }
+        { name: "Site Hoarding Boards", href: "/services/exterior-signs/site-hoarding-boards" }
       ]
     },
     {
@@ -43,32 +43,32 @@ const Navigation = () => {
       name: "Print Signs",
       href: "/services/print-signs",
       items: [
-        { name: "Printed tray", href: "#" },
-        { name: "Vinyl lettering", href: "#" },
-        { name: "Site Hoarding Boards", href: "#" },
+        { name: "Printed tray", href: "/services/print-signs/printed-tray" },
+        { name: "Vinyl lettering", href: "/services/print-signs/vinyl-lettering" },
+        { name: "Site Hoarding Boards", href: "/services/exterior-signs/site-hoarding-boards" },
         { name: "Banner Printing", href: "/services/print-signs/banner-printing" },
         { name: "Window Graphics", href: "/services/print-signs/window-graphics" },
         { name: "Wall Art", href: "/services/print-signs/wall-art" },
         { name: "Floor Graphics", href: "/services/print-signs/floor-graphics" },
-        { name: "Bespoke printed ceiling", href: "#" }
+        { name: "Bespoke printed ceiling", href: "/services/print-signs/bespoke-ceiling" }
       ]
     },
     {
       name: "Light Boxes",
       href: "/services/light-boxes",
       items: [
-        { name: "Flex face LightBox Sign", href: "#" },
+        { name: "Flex face LightBox Sign", href: "/services/exterior-signs/flex-face-lightbox" },
         { name: "Acrylic printed lightbox", href: "/services/light-boxes/acrylic-lightbox" },
-        { name: "Promotional lightboxes", href: "#" }
+        { name: "Promotional lightboxes", href: "/services/light-boxes/promotional-lightbox" }
       ]
     },
     {
       name: "Promotional Signs",
       href: "/services/promotional-signs",
       items: [
-        { name: "Custom Flags", href: "#" },
-        { name: "Pavement sign", href: "#" },
-        { name: "Projection Sign", href: "#" },
+        { name: "Custom Flags", href: "/services/promotional-signs/custom-flags" },
+        { name: "Pavement sign", href: "/services/promotional-signs/pavement-sign" },
+        { name: "Projection Sign", href: "/services/exterior-signs/projection-sign" },
         { name: "Window Graphics", href: "#" },
         { name: "Light boxes", href: "#" },
         { name: "Bespoke printed Ceiling", href: "#" }
@@ -80,8 +80,8 @@ const Navigation = () => {
       items: [
         { name: "Outdoor digital signs", href: "/services/digital-signage/outdoor-digital-signs" },
         { name: "Indoor digital signage", href: "/services/digital-signage/indoor-digital-signage" },
-        { name: "Digital takeaway menu", href: "#" },
-        { name: "Shop window display", href: "#" }
+        { name: "Digital takeaway menu", href: "/services/digital-signage/digital-takeaway-menu" },
+        { name: "Shop window display", href: "/services/digital-signage/shop-window-display" }
       ]
     },
     {
@@ -89,8 +89,8 @@ const Navigation = () => {
       href: "/services/exhibition-display",
       items: [
         { name: "Pop-Up Banners", href: "/services/exhibition-display/pop-up-banners" },
-        { name: "Standard exhibition display", href: "#" },
-        { name: "Bespoke exhibition display", href: "#" }
+        { name: "Standard exhibition display", href: "/services/exhibition-display/standard-exhibition" },
+        { name: "Bespoke exhibition display", href: "/services/exhibition-display/bespoke-exhibition" }
       ]
     },
     {

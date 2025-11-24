@@ -23,6 +23,7 @@ import FasciaSignTray from "./pages/services/exterior/FasciaSignTray";
 import FlexFaceLightBox from "./pages/services/exterior/FlexFaceLightBox";
 import ProjectionSign from "./pages/services/exterior/ProjectionSign";
 import TotemSign from "./pages/services/exterior/TotemSign";
+import SiteHoardingBoards from "./pages/services/exterior/SiteHoardingBoards";
 // Interior Signs Sub-pages
 import ReceptionSigns from "./pages/services/interior/ReceptionSigns";
 import NeonSigns from "./pages/services/interior/NeonSigns";
@@ -37,6 +38,9 @@ import BannerPrinting from "./pages/services/print/BannerPrinting";
 import FloorGraphics from "./pages/services/print/FloorGraphics";
 import WindowGraphics from "./pages/services/print/WindowGraphics";
 import WallArt from "./pages/services/print/WallArt";
+import PrintedTray from "./pages/services/print/PrintedTray";
+import VinylLettering from "./pages/services/print/VinylLettering";
+import BespokeCeiling from "./pages/services/print/BespokeCeiling";
 // Vehicle Graphics Sub-pages
 import CarWrap from "./pages/services/vehicle/CarWrap";
 import VanWrap from "./pages/services/vehicle/VanWrap";
@@ -46,8 +50,17 @@ import LorryHGVWrap from "./pages/services/vehicle/LorryHGVWrap";
 import BusWrap from "./pages/services/vehicle/BusWrap";
 // Exhibition Sub-pages
 import PopUpBanners from "./pages/services/exhibition/PopUpBanners";
+import StandardExhibitionDisplay from "./pages/services/exhibition/StandardExhibitionDisplay";
+import BespokeExhibitionDisplay from "./pages/services/exhibition/BespokeExhibitionDisplay";
 // Lightbox Sub-pages
 import AcrylicLightbox from "./pages/services/lightbox/AcrylicLightbox";
+import PromotionalLightbox from "./pages/services/lightbox/PromotionalLightbox";
+// Digital Signage Additional
+import DigitalTakeawayMenu from "./pages/services/digital/DigitalTakeawayMenu";
+import ShopWindowDisplay from "./pages/services/digital/ShopWindowDisplay";
+// Promotional Signs
+import CustomFlags from "./pages/services/promotional/CustomFlags";
+import PavementSign from "./pages/services/promotional/PavementSign";
 
 const queryClient = new QueryClient();
 
@@ -75,6 +88,7 @@ const App = () => (
           <Route path="/services/exterior-signs/flex-face-lightbox" element={<FlexFaceLightBox />} />
           <Route path="/services/exterior-signs/projection-sign" element={<ProjectionSign />} />
           <Route path="/services/exterior-signs/totem-sign" element={<TotemSign />} />
+          <Route path="/services/exterior-signs/site-hoarding-boards" element={<SiteHoardingBoards />} />
           
           {/* Interior Signs Sub-services */}
           <Route path="/services/interior-signs/reception-signs" element={<ReceptionSigns />} />
@@ -92,6 +106,9 @@ const App = () => (
           <Route path="/services/print-signs/floor-graphics" element={<FloorGraphics />} />
           <Route path="/services/print-signs/window-graphics" element={<WindowGraphics />} />
           <Route path="/services/print-signs/wall-art" element={<WallArt />} />
+          <Route path="/services/print-signs/printed-tray" element={<PrintedTray />} />
+          <Route path="/services/print-signs/vinyl-lettering" element={<VinylLettering />} />
+          <Route path="/services/print-signs/bespoke-ceiling" element={<BespokeCeiling />} />
           
           {/* Vehicle Graphics Sub-services */}
           <Route path="/services/vehicle-graphics/car-wrap" element={<CarWrap />} />
@@ -101,11 +118,24 @@ const App = () => (
           <Route path="/services/vehicle-graphics/lorry-hgv-wrap" element={<LorryHGVWrap />} />
           <Route path="/services/vehicle-graphics/bus-wrap" element={<BusWrap />} />
           
+          {/* Digital Signage Sub-services */}
+          <Route path="/services/digital-signage/outdoor-digital-signs" element={<OutdoorDigitalSigns />} />
+          <Route path="/services/digital-signage/indoor-digital-signage" element={<IndoorDigitalSignage />} />
+          <Route path="/services/digital-signage/digital-takeaway-menu" element={<DigitalTakeawayMenu />} />
+          <Route path="/services/digital-signage/shop-window-display" element={<ShopWindowDisplay />} />
+          
           {/* Exhibition Sub-services */}
           <Route path="/services/exhibition-display/pop-up-banners" element={<PopUpBanners />} />
+          <Route path="/services/exhibition-display/standard-exhibition" element={<StandardExhibitionDisplay />} />
+          <Route path="/services/exhibition-display/bespoke-exhibition" element={<BespokeExhibitionDisplay />} />
           
           {/* Lightbox Sub-services */}
           <Route path="/services/light-boxes/acrylic-lightbox" element={<AcrylicLightbox />} />
+          <Route path="/services/light-boxes/promotional-lightbox" element={<PromotionalLightbox />} />
+          
+          {/* Promotional Signs Sub-services */}
+          <Route path="/services/promotional-signs/custom-flags" element={<CustomFlags />} />
+          <Route path="/services/promotional-signs/pavement-sign" element={<PavementSign />} />
           
           <Route path="/industries" element={<Industries />} />
           <Route path="/portfolio" element={<Portfolio />} />
