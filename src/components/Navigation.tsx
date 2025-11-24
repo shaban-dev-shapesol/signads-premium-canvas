@@ -33,7 +33,7 @@ const Navigation = () => {
       href: "/services/interior-signs",
       items: [
         { name: "Reception Signs", href: "/services/interior-signs/reception-signs" },
-        { name: "Neon Signs", href: "#" },
+        { name: "Neon Signs", href: "/services/interior-signs/neon-signs" },
         { name: "Light Boxes", href: "#" },
         { name: "Creative Office Wall Graphics", href: "#" },
         { name: "Office Window frosting", href: "#" }
@@ -49,7 +49,7 @@ const Navigation = () => {
         { name: "Banner Printing", href: "/services/print-signs/banner-printing" },
         { name: "Window Graphics", href: "#" },
         { name: "Wall Art", href: "#" },
-        { name: "Floor Graphics", href: "#" },
+        { name: "Floor Graphics", href: "/services/print-signs/floor-graphics" },
         { name: "Bespoke printed ceiling", href: "#" }
       ]
     },
@@ -58,7 +58,7 @@ const Navigation = () => {
       href: "/services/light-boxes",
       items: [
         { name: "Flex face LightBox Sign", href: "#" },
-        { name: "Acrylic printed lightbox", href: "#" },
+        { name: "Acrylic printed lightbox", href: "/services/light-boxes/acrylic-lightbox" },
         { name: "Promotional lightboxes", href: "#" }
       ]
     },
@@ -79,7 +79,7 @@ const Navigation = () => {
       href: "/services/digital-signage",
       items: [
         { name: "Outdoor digital signs", href: "/services/digital-signage/outdoor-digital-signs" },
-        { name: "Indoor digital signage", href: "#" },
+        { name: "Indoor digital signage", href: "/services/digital-signage/indoor-digital-signage" },
         { name: "Digital takeaway menu", href: "#" },
         { name: "Shop window display", href: "#" }
       ]
@@ -88,6 +88,7 @@ const Navigation = () => {
       name: "Exhibition Display",
       href: "/services/exhibition-display",
       items: [
+        { name: "Pop-Up Banners", href: "/services/exhibition-display/pop-up-banners" },
         { name: "Standard exhibition display", href: "#" },
         { name: "Bespoke exhibition display", href: "#" }
       ]
@@ -97,7 +98,7 @@ const Navigation = () => {
       href: "/services/vehicle-graphics",
       items: [
         { name: "Car Wrap", href: "/services/vehicle-graphics/car-wrap" },
-        { name: "Van Wrap", href: "#" },
+        { name: "Van Wrap", href: "/services/vehicle-graphics/van-wrap" },
         { name: "Truck wrap", href: "#" },
         { name: "Food Truck Wrap", href: "#" },
         { name: "Lorry & HGV Wrap", href: "#" },

@@ -22,12 +22,20 @@ import BuiltUp3DLetters from "./pages/services/exterior/BuiltUp3DLetters";
 import FasciaSignTray from "./pages/services/exterior/FasciaSignTray";
 // Interior Signs Sub-pages
 import ReceptionSigns from "./pages/services/interior/ReceptionSigns";
+import NeonSigns from "./pages/services/interior/NeonSigns";
 // Digital Signage Sub-pages
 import OutdoorDigitalSigns from "./pages/services/digital/OutdoorDigitalSigns";
+import IndoorDigitalSignage from "./pages/services/digital/IndoorDigitalSignage";
 // Print Signs Sub-pages
 import BannerPrinting from "./pages/services/print/BannerPrinting";
+import FloorGraphics from "./pages/services/print/FloorGraphics";
 // Vehicle Graphics Sub-pages
 import CarWrap from "./pages/services/vehicle/CarWrap";
+import VanWrap from "./pages/services/vehicle/VanWrap";
+// Exhibition Sub-pages
+import PopUpBanners from "./pages/services/exhibition/PopUpBanners";
+// Lightbox Sub-pages
+import AcrylicLightbox from "./pages/services/lightbox/AcrylicLightbox";
 
 const queryClient = new QueryClient();
 
@@ -55,15 +63,25 @@ const App = () => (
           
           {/* Interior Signs Sub-services */}
           <Route path="/services/interior-signs/reception-signs" element={<ReceptionSigns />} />
+          <Route path="/services/interior-signs/neon-signs" element={<NeonSigns />} />
           
           {/* Digital Signage Sub-services */}
           <Route path="/services/digital-signage/outdoor-digital-signs" element={<OutdoorDigitalSigns />} />
+          <Route path="/services/digital-signage/indoor-digital-signage" element={<IndoorDigitalSignage />} />
           
           {/* Print Signs Sub-services */}
           <Route path="/services/print-signs/banner-printing" element={<BannerPrinting />} />
+          <Route path="/services/print-signs/floor-graphics" element={<FloorGraphics />} />
           
           {/* Vehicle Graphics Sub-services */}
           <Route path="/services/vehicle-graphics/car-wrap" element={<CarWrap />} />
+          <Route path="/services/vehicle-graphics/van-wrap" element={<VanWrap />} />
+          
+          {/* Exhibition Sub-services */}
+          <Route path="/services/exhibition-display/pop-up-banners" element={<PopUpBanners />} />
+          
+          {/* Lightbox Sub-services */}
+          <Route path="/services/light-boxes/acrylic-lightbox" element={<AcrylicLightbox />} />
           
           <Route path="/industries" element={<Industries />} />
           <Route path="/portfolio" element={<Portfolio />} />
