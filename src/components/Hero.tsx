@@ -18,7 +18,7 @@ const Hero = () => {
   ];
 
   // Set to null to use image fallback, or provide video URL
-  const heroVideoUrl = "https://cdn.coverr.co/videos/coverr-manufacturing-facility-with-workers-6897/1080p.mp4";
+  const heroVideoUrl = null;
 
   return (
     <section className="relative min-h-screen flex items-center overflow-hidden bg-primary pt-20">
