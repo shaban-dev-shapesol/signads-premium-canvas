@@ -8,47 +8,47 @@ All colors MUST be HSL.
 
 @layer base {
   :root {
-    /* Fresh Creative Forest Green & Lime Theme */
+    /* Premium Navy and Gold Theme */
     --background: 0 0% 100%;
-    --foreground: 145 55% 15%;
+    --foreground: 220 60% 10%;
 
     --card: 0 0% 100%;
-    --card-foreground: 145 55% 15%;
+    --card-foreground: 220 60% 10%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 145 55% 15%;
+    --popover-foreground: 220 60% 10%;
 
-    /* Deep Forest Green Primary */
-    --primary: 145 60% 25%;
+    /* Deep Navy Primary */
+    --primary: 220 70% 12%;
     --primary-foreground: 0 0% 100%;
 
-    /* Light Sage Secondary */
-    --secondary: 145 25% 94%;
-    --secondary-foreground: 145 55% 15%;
+    /* Light Gray Secondary */
+    --secondary: 220 20% 96%;
+    --secondary-foreground: 220 60% 10%;
 
-    --muted: 145 20% 92%;
-    --muted-foreground: 145 25% 45%;
+    --muted: 220 15% 95%;
+    --muted-foreground: 220 20% 50%;
 
-    /* Vibrant Lime Accent */
-    --accent: 80 70% 55%;
-    --accent-foreground: 145 60% 15%;
+    /* Metallic Gold Accent */
+    --accent: 45 75% 52%;
+    --accent-foreground: 220 70% 12%;
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 0 0% 100%;
 
-    --border: 145 20% 85%;
-    --input: 145 20% 85%;
-    --ring: 80 70% 55%;
+    --border: 220 20% 88%;
+    --input: 220 20% 88%;
+    --ring: 45 75% 52%;
 
     --radius: 0.75rem;
 
-    /* Fresh gradients */
-    --gradient-hero: linear-gradient(135deg, hsl(145 60% 25%) 0%, hsl(145 55% 35%) 100%);
-    --gradient-accent: linear-gradient(135deg, hsl(80 70% 55%) 0%, hsl(75 75% 50%) 100%);
+    /* Premium gradients */
+    --gradient-hero: linear-gradient(135deg, hsl(220 70% 12%) 0%, hsl(220 60% 20%) 100%);
+    --gradient-accent: linear-gradient(135deg, hsl(45 75% 52%) 0%, hsl(38 80% 48%) 100%);
     
-    /* Natural shadows */
-    --shadow-premium: 0 20px 60px -15px hsl(145 60% 25% / 0.3);
-    --shadow-glow: 0 0 40px hsl(80 70% 55% / 0.25);
+    /* Premium shadows */
+    --shadow-premium: 0 20px 60px -15px hsl(220 70% 12% / 0.3);
+    --shadow-glow: 0 0 40px hsl(45 75% 52% / 0.2);
 
     /* Animations */
     --transition-smooth: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
