@@ -22,9 +22,9 @@ const Navigation = () => {
       items: [
         { name: "Built up 3D letters", href: "/services/exterior-signs/built-up-3d-letters" },
         { name: "Fascia Sign Tray", href: "/services/exterior-signs/fascia-sign-tray" },
-        { name: "Flex face LightBox Sign", href: "#" },
-        { name: "Projection Sign", href: "#" },
-        { name: "Totem Sign Solutions", href: "#" },
+        { name: "Flex face LightBox Sign", href: "/services/exterior-signs/flex-face-lightbox" },
+        { name: "Projection Sign", href: "/services/exterior-signs/projection-sign" },
+        { name: "Totem Sign Solutions", href: "/services/exterior-signs/totem-sign" },
         { name: "Site Hoarding Boards", href: "#" }
       ]
     },
@@ -34,9 +34,9 @@ const Navigation = () => {
       items: [
         { name: "Reception Signs", href: "/services/interior-signs/reception-signs" },
         { name: "Neon Signs", href: "/services/interior-signs/neon-signs" },
-        { name: "Light Boxes", href: "#" },
-        { name: "Creative Office Wall Graphics", href: "#" },
-        { name: "Office Window frosting", href: "#" }
+        { name: "Light Boxes", href: "/services/interior-signs/light-boxes" },
+        { name: "Creative Office Wall Graphics", href: "/services/interior-signs/office-wall-graphics" },
+        { name: "Office Window frosting", href: "/services/interior-signs/window-frosting" }
       ]
     },
     {
@@ -47,8 +47,8 @@ const Navigation = () => {
         { name: "Vinyl lettering", href: "#" },
         { name: "Site Hoarding Boards", href: "#" },
         { name: "Banner Printing", href: "/services/print-signs/banner-printing" },
-        { name: "Window Graphics", href: "#" },
-        { name: "Wall Art", href: "#" },
+        { name: "Window Graphics", href: "/services/print-signs/window-graphics" },
+        { name: "Wall Art", href: "/services/print-signs/wall-art" },
         { name: "Floor Graphics", href: "/services/print-signs/floor-graphics" },
         { name: "Bespoke printed ceiling", href: "#" }
       ]
@@ -99,10 +99,10 @@ const Navigation = () => {
       items: [
         { name: "Car Wrap", href: "/services/vehicle-graphics/car-wrap" },
         { name: "Van Wrap", href: "/services/vehicle-graphics/van-wrap" },
-        { name: "Truck wrap", href: "#" },
-        { name: "Food Truck Wrap", href: "#" },
-        { name: "Lorry & HGV Wrap", href: "#" },
-        { name: "Bus Wrap", href: "#" }
+        { name: "Truck wrap", href: "/services/vehicle-graphics/truck-wrap" },
+        { name: "Food Truck Wrap", href: "/services/vehicle-graphics/food-truck-wrap" },
+        { name: "Lorry & HGV Wrap", href: "/services/vehicle-graphics/lorry-hgv-wrap" },
+        { name: "Bus Wrap", href: "/services/vehicle-graphics/bus-wrap" }
       ]
     }
   ];
