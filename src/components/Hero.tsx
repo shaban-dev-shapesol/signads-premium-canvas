@@ -21,7 +21,7 @@ const Hero = () => {
   const heroVideoUrl = "https://cdn.coverr.co/videos/coverr-manufacturing-facility-with-workers-6897/1080p.mp4";
 
   return (
-    <section className="relative min-h-screen flex items-center overflow-hidden bg-primary">
+    <section className="relative min-h-screen flex items-center overflow-hidden bg-primary pt-20">
       {/* Video or Image Background */}
       {heroVideoUrl ? (
         <motion.div
