@@ -151,7 +151,7 @@ const Navigation = () => {
               
               {isServicesOpen && (
                 <div 
-                  className="absolute top-full left-1/2 -translate-x-1/2 mt-2 w-screen max-w-6xl bg-background border border-border rounded-2xl shadow-premium p-8 z-50"
+                  className="fixed left-1/2 -translate-x-1/2 top-20 mt-2 w-screen max-w-6xl bg-background border border-border rounded-2xl shadow-premium p-8 z-50"
                   onMouseLeave={() => setIsServicesOpen(false)}
                 >
                   <div className="grid grid-cols-4 gap-8">
