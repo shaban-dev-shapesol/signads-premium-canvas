@@ -17,6 +17,17 @@ import PromotionalSigns from "./pages/services/PromotionalSigns";
 import DigitalSignage from "./pages/services/DigitalSignage";
 import ExhibitionDisplay from "./pages/services/ExhibitionDisplay";
 import VehicleGraphics from "./pages/services/VehicleGraphics";
+// Exterior Signs Sub-pages
+import BuiltUp3DLetters from "./pages/services/exterior/BuiltUp3DLetters";
+import FasciaSignTray from "./pages/services/exterior/FasciaSignTray";
+// Interior Signs Sub-pages
+import ReceptionSigns from "./pages/services/interior/ReceptionSigns";
+// Digital Signage Sub-pages
+import OutdoorDigitalSigns from "./pages/services/digital/OutdoorDigitalSigns";
+// Print Signs Sub-pages
+import BannerPrinting from "./pages/services/print/BannerPrinting";
+// Vehicle Graphics Sub-pages
+import CarWrap from "./pages/services/vehicle/CarWrap";
 
 const queryClient = new QueryClient();
 
@@ -37,6 +48,23 @@ const App = () => (
           <Route path="/services/digital-signage" element={<DigitalSignage />} />
           <Route path="/services/exhibition-display" element={<ExhibitionDisplay />} />
           <Route path="/services/vehicle-graphics" element={<VehicleGraphics />} />
+          
+          {/* Exterior Signs Sub-services */}
+          <Route path="/services/exterior-signs/built-up-3d-letters" element={<BuiltUp3DLetters />} />
+          <Route path="/services/exterior-signs/fascia-sign-tray" element={<FasciaSignTray />} />
+          
+          {/* Interior Signs Sub-services */}
+          <Route path="/services/interior-signs/reception-signs" element={<ReceptionSigns />} />
+          
+          {/* Digital Signage Sub-services */}
+          <Route path="/services/digital-signage/outdoor-digital-signs" element={<OutdoorDigitalSigns />} />
+          
+          {/* Print Signs Sub-services */}
+          <Route path="/services/print-signs/banner-printing" element={<BannerPrinting />} />
+          
+          {/* Vehicle Graphics Sub-services */}
+          <Route path="/services/vehicle-graphics/car-wrap" element={<CarWrap />} />
+          
           <Route path="/industries" element={<Industries />} />
           <Route path="/portfolio" element={<Portfolio />} />
           <Route path="/about" element={<About />} />
