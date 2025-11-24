@@ -1,174 +1,148 @@
+import { Sparkles } from "lucide-react";
+import { Button } from "@/components/ui/button";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
-import { Button } from "@/components/ui/button";
-import { CheckCircle2 } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const WindowGraphics = () => {
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-screen">
       <Navigation />
       
-      {/* Hero Section */}
-      <section className="pt-32 pb-16 px-6">
-        <div className="container mx-auto max-w-6xl">
-          <h1 className="text-5xl md:text-6xl font-bold text-foreground mb-6">
-            Window Graphics
-          </h1>
-          <p className="text-xl text-muted-foreground mb-8 max-w-3xl">
-            Transform your storefront windows into powerful marketing assets with custom printed window graphics and frosting solutions.
-          </p>
-          <Button variant="premium" size="lg">Get Custom Quote</Button>
-        </div>
-      </section>
-
-      {/* Image Gallery */}
-      <section className="py-16 px-6 bg-muted/30">
-        <div className="container mx-auto max-w-6xl">
-          <h2 className="text-3xl font-bold text-foreground mb-8">Project Gallery</h2>
-          <div className="grid md:grid-cols-3 gap-6">
-            {[1, 2, 3].map((i) => (
-              <div key={i} className="aspect-video bg-muted rounded-xl overflow-hidden">
-                <div className="w-full h-full flex items-center justify-center text-muted-foreground">
-                  Window Graphics Example {i}
-                </div>
-              </div>
-            ))}
+      <section className="pt-32 pb-16 bg-primary text-primary-foreground">
+        <div className="container mx-auto px-6">
+          <div className="max-w-4xl mx-auto text-center">
+            <div className="w-20 h-20 bg-primary-foreground/10 rounded-2xl flex items-center justify-center mx-auto mb-6">
+              <Sparkles className="w-10 h-10 text-primary-foreground" />
+            </div>
+            <h1 className="text-5xl md:text-6xl font-bold mb-6">
+              Window <span className="text-accent">Graphics</span>
+            </h1>
+            <p className="text-xl text-primary-foreground/80 mb-8">
+              Transform your storefront windows into powerful marketing assets with custom printed window graphics and frosting solutions.
+            </p>
+            <Link to="/#contact">
+              <Button variant="hero" size="xl">
+                Get Custom Quote
+              </Button>
+            </Link>
           </div>
         </div>
       </section>
 
-      {/* Details Section */}
-      <section className="py-16 px-6">
-        <div className="container mx-auto max-w-6xl">
-          <div className="grid md:grid-cols-2 gap-12">
+      <section className="py-24 bg-background">
+        <div className="container mx-auto px-6">
+          <div className="max-w-6xl mx-auto space-y-16">
+            
             <div>
               <h2 className="text-3xl font-bold text-foreground mb-6">Overview</h2>
-              <p className="text-muted-foreground mb-6">
+              <p className="text-lg text-muted-foreground mb-4">
                 Window graphics offer versatile solutions for retail displays, office privacy, and promotional messaging. From full-color digital prints to elegant frosted designs, we create window applications that enhance your space while communicating your brand message effectively.
               </p>
-              
-              <h3 className="text-2xl font-bold text-foreground mb-4 mt-8">Technical Specifications</h3>
-              <ul className="space-y-3">
-                <li className="flex items-start gap-3">
-                  <CheckCircle2 className="w-5 h-5 text-accent shrink-0 mt-1" />
-                  <span className="text-muted-foreground">Perforated or solid vinyl options</span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <CheckCircle2 className="w-5 h-5 text-accent shrink-0 mt-1" />
-                  <span className="text-muted-foreground">One-way vision technology available</span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <CheckCircle2 className="w-5 h-5 text-accent shrink-0 mt-1" />
-                  <span className="text-muted-foreground">UV-resistant inks for fade prevention</span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <CheckCircle2 className="w-5 h-5 text-accent shrink-0 mt-1" />
-                  <span className="text-muted-foreground">Removable or permanent adhesive</span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <CheckCircle2 className="w-5 h-5 text-accent shrink-0 mt-1" />
-                  <span className="text-muted-foreground">Custom cut-to-shape capability</span>
-                </li>
-              </ul>
+            </div>
+
+            <div className="grid md:grid-cols-2 gap-8">
+              <div className="bg-secondary p-8 rounded-2xl border border-border">
+                <h3 className="text-2xl font-bold text-foreground mb-6">Technical Specifications</h3>
+                <ul className="space-y-3">
+                  <li className="flex items-start gap-3">
+                    <span className="w-2 h-2 bg-accent rounded-full mt-2 flex-shrink-0" />
+                    <span className="text-muted-foreground"><strong>Materials:</strong> Perforated or solid vinyl options</span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <span className="w-2 h-2 bg-accent rounded-full mt-2 flex-shrink-0" />
+                    <span className="text-muted-foreground"><strong>Technology:</strong> One-way vision technology available</span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <span className="w-2 h-2 bg-accent rounded-full mt-2 flex-shrink-0" />
+                    <span className="text-muted-foreground"><strong>Printing:</strong> UV-resistant inks for fade prevention</span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <span className="w-2 h-2 bg-accent rounded-full mt-2 flex-shrink-0" />
+                    <span className="text-muted-foreground"><strong>Adhesive:</strong> Removable or permanent options</span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <span className="w-2 h-2 bg-accent rounded-full mt-2 flex-shrink-0" />
+                    <span className="text-muted-foreground"><strong>Customization:</strong> Cut-to-shape capability</span>
+                  </li>
+                </ul>
+              </div>
+
+              <div className="bg-secondary p-8 rounded-2xl border border-border">
+                <h3 className="text-2xl font-bold text-foreground mb-6">Application Types</h3>
+                <ul className="space-y-3">
+                  <li className="flex items-start gap-3">
+                    <span className="w-2 h-2 bg-accent rounded-full mt-2 flex-shrink-0" />
+                    <span className="text-muted-foreground">Full-color promotional graphics</span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <span className="w-2 h-2 bg-accent rounded-full mt-2 flex-shrink-0" />
+                    <span className="text-muted-foreground">Frosted privacy films</span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <span className="w-2 h-2 bg-accent rounded-full mt-2 flex-shrink-0" />
+                    <span className="text-muted-foreground">Cut vinyl lettering and logos</span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <span className="w-2 h-2 bg-accent rounded-full mt-2 flex-shrink-0" />
+                    <span className="text-muted-foreground">One-way vision perforated graphics</span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <span className="w-2 h-2 bg-accent rounded-full mt-2 flex-shrink-0" />
+                    <span className="text-muted-foreground">Seasonal and promotional displays</span>
+                  </li>
+                </ul>
+              </div>
             </div>
 
             <div>
-              <h3 className="text-2xl font-bold text-foreground mb-4">Application Types</h3>
-              <ul className="space-y-3 mb-8">
-                <li className="flex items-start gap-3">
-                  <CheckCircle2 className="w-5 h-5 text-accent shrink-0 mt-1" />
-                  <span className="text-muted-foreground">Full-color promotional graphics</span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <CheckCircle2 className="w-5 h-5 text-accent shrink-0 mt-1" />
-                  <span className="text-muted-foreground">Frosted privacy films</span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <CheckCircle2 className="w-5 h-5 text-accent shrink-0 mt-1" />
-                  <span className="text-muted-foreground">Cut vinyl lettering and logos</span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <CheckCircle2 className="w-5 h-5 text-accent shrink-0 mt-1" />
-                  <span className="text-muted-foreground">One-way vision perforated graphics</span>
-                </li>
-              </ul>
-
-              <h3 className="text-2xl font-bold text-foreground mb-4 mt-8">Ideal Applications</h3>
-              <ul className="space-y-3">
-                <li className="flex items-start gap-3">
-                  <CheckCircle2 className="w-5 h-5 text-accent shrink-0 mt-1" />
-                  <span className="text-muted-foreground">Retail storefront displays</span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <CheckCircle2 className="w-5 h-5 text-accent shrink-0 mt-1" />
-                  <span className="text-muted-foreground">Office window privacy</span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <CheckCircle2 className="w-5 h-5 text-accent shrink-0 mt-1" />
-                  <span className="text-muted-foreground">Seasonal promotions</span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <CheckCircle2 className="w-5 h-5 text-accent shrink-0 mt-1" />
-                  <span className="text-muted-foreground">Restaurant menus and specials</span>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Pricing Section */}
-      <section className="py-16 px-6 bg-muted/30">
-        <div className="container mx-auto max-w-6xl">
-          <h2 className="text-3xl font-bold text-foreground mb-8">Pricing Guide</h2>
-          <div className="grid md:grid-cols-3 gap-6">
-            <div className="bg-background border border-border rounded-xl p-8">
-              <h3 className="text-xl font-bold text-foreground mb-2">Vinyl Lettering</h3>
-              <p className="text-3xl font-bold text-accent mb-4">From £8/sq ft</p>
-              <ul className="space-y-2 text-muted-foreground">
-                <li>• Cut vinyl graphics</li>
-                <li>• Single or multiple colors</li>
-                <li>• Logo and text</li>
-                <li>• Professional installation</li>
-              </ul>
-            </div>
-            <div className="bg-background border-2 border-accent rounded-xl p-8 relative">
-              <div className="absolute -top-4 left-1/2 -translate-x-1/2 bg-accent text-accent-foreground px-4 py-1 rounded-full text-sm font-bold">
-                Popular Choice
+              <h2 className="text-3xl font-bold text-foreground mb-6">Pricing Guide</h2>
+              <div className="grid md:grid-cols-3 gap-6">
+                <div className="bg-secondary p-6 rounded-xl border border-border">
+                  <h4 className="text-xl font-bold text-foreground mb-2">Vinyl Lettering</h4>
+                  <p className="text-3xl font-bold text-accent mb-4">From £8/sq ft</p>
+                  <ul className="space-y-2 text-sm text-muted-foreground">
+                    <li>• Cut vinyl graphics</li>
+                    <li>• Single or multiple colors</li>
+                    <li>• Logo and text</li>
+                    <li>• Professional installation</li>
+                  </ul>
+                </div>
+                <div className="bg-secondary p-6 rounded-xl border-2 border-accent">
+                  <h4 className="text-xl font-bold text-foreground mb-2">Full-Color Print</h4>
+                  <p className="text-3xl font-bold text-accent mb-4">From £15/sq ft</p>
+                  <ul className="space-y-2 text-sm text-muted-foreground">
+                    <li>• Digital printed graphics</li>
+                    <li>• Full-color imagery</li>
+                    <li>• Perforated or solid</li>
+                    <li>• Design assistance included</li>
+                  </ul>
+                </div>
+                <div className="bg-secondary p-6 rounded-xl border border-border">
+                  <h4 className="text-xl font-bold text-foreground mb-2">Frosted Film</h4>
+                  <p className="text-3xl font-bold text-accent mb-4">From £12/sq ft</p>
+                  <ul className="space-y-2 text-sm text-muted-foreground">
+                    <li>• Privacy frosted film</li>
+                    <li>• Decorative patterns</li>
+                    <li>• Branded frosting</li>
+                    <li>• Conference room applications</li>
+                  </ul>
+                </div>
               </div>
-              <h3 className="text-xl font-bold text-foreground mb-2">Full-Color Print</h3>
-              <p className="text-3xl font-bold text-accent mb-4">From £15/sq ft</p>
-              <ul className="space-y-2 text-muted-foreground">
-                <li>• Digital printed graphics</li>
-                <li>• Full-color imagery</li>
-                <li>• Perforated or solid</li>
-                <li>• Design assistance included</li>
-              </ul>
             </div>
-            <div className="bg-background border border-border rounded-xl p-8">
-              <h3 className="text-xl font-bold text-foreground mb-2">Frosted Film</h3>
-              <p className="text-3xl font-bold text-accent mb-4">From £12/sq ft</p>
-              <ul className="space-y-2 text-muted-foreground">
-                <li>• Privacy frosted film</li>
-                <li>• Decorative patterns</li>
-                <li>• Branded frosting</li>
-                <li>• Conference room applications</li>
-              </ul>
+
+            <div className="bg-primary text-primary-foreground p-12 rounded-2xl text-center">
+              <h2 className="text-3xl font-bold mb-4">Transform Your Windows Today</h2>
+              <p className="text-xl text-primary-foreground/80 mb-8 max-w-2xl mx-auto">
+                Get expert advice and a quote for your window graphics project
+              </p>
+              <Link to="/#contact">
+                <Button variant="hero" size="xl">
+                  Get Started
+                </Button>
+              </Link>
             </div>
           </div>
-        </div>
-      </section>
-
-      {/* CTA Section */}
-      <section className="py-16 px-6">
-        <div className="container mx-auto max-w-4xl text-center">
-          <h2 className="text-4xl font-bold text-foreground mb-6">
-            Transform Your Windows Today
-          </h2>
-          <p className="text-xl text-muted-foreground mb-8">
-            Get expert advice and a quote for your window graphics project
-          </p>
-          <Button variant="premium" size="lg">Get Started</Button>
         </div>
       </section>
 
