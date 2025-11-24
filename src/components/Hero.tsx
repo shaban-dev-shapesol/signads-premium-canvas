@@ -173,7 +173,24 @@ const Hero = () => {
         }} className="hidden lg:flex flex-col gap-6">
             {stats.map((stat, index) => {
             const IconComponent = stat.icon;
-            return;
+            return <motion.div key={index} initial={{
+              opacity: 0,
+              y: 30
+            }} animate={{
+              opacity: 1,
+              y: 0
+            }} transition={{
+              duration: 0.6,
+              delay: 0.8 + index * 0.2
+            }} className="backdrop-blur-md bg-white/5 border border-white/10 rounded-2xl p-6 hover:bg-white/10 transition-smooth">
+                <div className="flex items-center gap-4 mb-4">
+                  <div className="w-12 h-12 rounded-xl bg-accent/10 border border-accent/20 flex items-center justify-center">
+                    <IconComponent className="w-6 h-6 text-accent" />
+                  </div>
+                  <div className="text-4xl font-bold text-white">{stat.value}</div>
+                </div>
+                <div className="text-white/70">{stat.label}</div>
+              </motion.div>;
           })}
           </motion.div>
 
