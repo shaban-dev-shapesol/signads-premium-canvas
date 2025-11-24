@@ -13,7 +13,7 @@ const Services = () => {
     {
       icon: Building2,
       title: "Exterior Signage",
-      description: "Make a powerful first impression with premium exterior signage. From illuminated 3D letters to striking totem signs, we create weather-resistant solutions engineered to attract customers 24/7.",
+      description: "Premium exterior signage solutions from illuminated 3D letters to striking totem signs that attract customers 24/7.",
       features: ["Built-up 3D Letters", "Fascia Sign Trays", "Illuminated Totems", "Flex Face Light Boxes", "Projection Signs", "Site Hoarding"],
       link: "/services/exterior-signs",
       image: exteriorImg,
