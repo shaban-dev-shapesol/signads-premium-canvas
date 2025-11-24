@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import { ArrowRight, Award, Clock, Users } from "lucide-react";
+import { ArrowRight, Award, Clock, Users, CheckCircle2 } from "lucide-react";
 import { motion } from "framer-motion";
 import heroImage from "@/assets/hero-signage.jpg";
 
@@ -10,11 +10,18 @@ const Hero = () => {
     { icon: Users, value: "1000+", label: "Happy Clients" },
   ];
 
+  const features = [
+    "Premium Quality Materials",
+    "Express 24hr Service Available",
+    "Expert Installation Team",
+    "Dedicated Account Manager"
+  ];
+
   // Set to null to use image fallback, or provide video URL
   const heroVideoUrl = "https://cdn.coverr.co/videos/coverr-manufacturing-facility-with-workers-6897/1080p.mp4";
 
   return (
-    <section className="relative min-h-[90vh] flex items-center justify-center overflow-hidden">
+    <section className="relative min-h-screen flex items-center overflow-hidden bg-primary">
       {/* Video or Image Background */}
       {heroVideoUrl ? (
         <motion.div
@@ -47,61 +54,82 @@ const Hero = () => {
         />
       )}
       
-      {/* Gradient overlays for depth */}
-      <div className="absolute inset-0 z-[1] bg-gradient-to-r from-primary/95 via-primary/85 to-primary/70" />
-      <div className="absolute inset-0 z-[2] bg-gradient-to-b from-transparent via-transparent to-primary/30" />
+      {/* Gradient overlays */}
+      <div className="absolute inset-0 z-[1] bg-gradient-to-r from-primary/95 via-primary/80 to-transparent" />
       
-      {/* Decorative elements */}
-      <div className="absolute top-20 right-10 w-72 h-72 bg-accent/10 rounded-full blur-3xl z-[3]" />
-      <div className="absolute bottom-20 left-10 w-96 h-96 bg-accent/5 rounded-full blur-3xl z-[3]" />
+      {/* Decorative accent glow */}
+      <div className="absolute top-1/4 right-0 w-96 h-96 bg-accent/20 rounded-full blur-3xl z-[2]" />
       
-      <div className="container mx-auto px-6 relative z-10">
-        <div className="max-w-5xl mx-auto">
-          {/* Main content */}
+      <div className="container mx-auto px-6 py-20 relative z-10">
+        <div className="grid lg:grid-cols-2 gap-12 items-center max-w-7xl mx-auto">
+          {/* Left Content */}
           <motion.div 
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
+            initial={{ opacity: 0, x: -50 }}
+            animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
-            className="text-center space-y-8"
+            className="space-y-8"
           >
+            {/* Badge */}
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.4 }}
-              className="inline-block"
             >
-              <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-accent/10 border border-accent/20 backdrop-blur-sm mb-6">
+              <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-accent/10 border border-accent/20 backdrop-blur-sm">
                 <Award className="w-4 h-4 text-accent" />
                 <span className="text-sm font-medium text-accent">Award-Winning Signage Solutions</span>
               </div>
             </motion.div>
 
+            {/* Headline */}
             <motion.h1 
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.5 }}
-              className="text-5xl md:text-7xl lg:text-8xl font-bold text-white leading-tight"
+              className="text-5xl md:text-6xl xl:text-7xl font-bold text-white leading-[1.1]"
             >
-              Transform Your Brand
+              Elevate Your Brand
               <br />
-              <span className="text-accent gradient-accent bg-clip-text text-transparent">Into Visual Impact</span>
+              <span className="text-accent">with Stunning Signage</span>
             </motion.h1>
             
+            {/* Description */}
             <motion.p 
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.7 }}
-              className="text-xl md:text-2xl text-white/90 max-w-3xl mx-auto font-light leading-relaxed"
+              className="text-lg md:text-xl text-white/80 font-light leading-relaxed max-w-xl"
             >
-              Premium signage, vehicle wraps, and large format printing crafted with precision. 
-              Delivered fast. Built to last.
+              From eye-catching exterior signs to dynamic vehicle wraps — we deliver premium signage solutions that transform your business visibility.
             </motion.p>
+
+            {/* Features List */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.8 }}
+              className="grid grid-cols-1 sm:grid-cols-2 gap-3"
+            >
+              {features.map((feature, index) => (
+                <motion.div
+                  key={index}
+                  initial={{ opacity: 0, x: -20 }}
+                  animate={{ opacity: 1, x: 0 }}
+                  transition={{ duration: 0.5, delay: 0.9 + index * 0.1 }}
+                  className="flex items-center gap-2 text-white/90"
+                >
+                  <CheckCircle2 className="w-5 h-5 text-accent flex-shrink-0" />
+                  <span className="text-sm">{feature}</span>
+                </motion.div>
+              ))}
+            </motion.div>
             
+            {/* CTA Buttons */}
             <motion.div 
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.9 }}
-              className="flex flex-col sm:flex-row gap-4 justify-center items-center pt-4"
+              transition={{ duration: 0.8, delay: 1.2 }}
+              className="flex flex-col sm:flex-row gap-4 pt-2"
             >
               <Button variant="hero" size="xl" className="group shadow-glow">
                 Get a Free Quote
@@ -111,36 +139,61 @@ const Hero = () => {
                 View Our Work
               </Button>
             </motion.div>
+          </motion.div>
 
-            {/* Stats section */}
-            <motion.div 
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 1.1 }}
-              className="grid grid-cols-3 gap-8 max-w-3xl mx-auto pt-12"
-            >
-              {stats.map((stat, index) => (
+          {/* Right Stats Panel */}
+          <motion.div
+            initial={{ opacity: 0, x: 50 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.8, delay: 0.6 }}
+            className="hidden lg:flex flex-col gap-6"
+          >
+            {stats.map((stat, index) => {
+              const IconComponent = stat.icon;
+              return (
                 <motion.div
                   key={index}
-                  initial={{ opacity: 0, scale: 0.8 }}
-                  animate={{ opacity: 1, scale: 1 }}
-                  transition={{ duration: 0.5, delay: 1.2 + index * 0.1 }}
-                  className="text-center group"
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.6, delay: 1 + index * 0.15 }}
+                  className="bg-white/5 backdrop-blur-md border border-white/10 rounded-2xl p-8 hover:bg-white/10 transition-all group"
                 >
-                  <div className="inline-flex items-center justify-center w-12 h-12 rounded-full bg-accent/10 border border-accent/20 mb-3 group-hover:scale-110 transition-transform">
-                    <stat.icon className="w-6 h-6 text-accent" />
+                  <div className="flex items-center gap-6">
+                    <div className="flex-shrink-0 w-16 h-16 rounded-xl bg-accent/10 border border-accent/20 flex items-center justify-center group-hover:scale-110 transition-transform">
+                      <IconComponent className="w-8 h-8 text-accent" />
+                    </div>
+                    <div>
+                      <div className="text-4xl font-bold text-white mb-1">{stat.value}</div>
+                      <div className="text-sm text-white/70">{stat.label}</div>
+                    </div>
                   </div>
-                  <div className="text-3xl md:text-4xl font-bold text-white mb-1">{stat.value}</div>
-                  <div className="text-sm text-white/70">{stat.label}</div>
                 </motion.div>
-              ))}
-            </motion.div>
+              );
+            })}
+          </motion.div>
+
+          {/* Mobile Stats */}
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 1.3 }}
+            className="grid grid-cols-3 gap-4 lg:hidden"
+          >
+            {stats.map((stat, index) => {
+              const IconComponent = stat.icon;
+              return (
+                <div key={index} className="text-center">
+                  <div className="inline-flex items-center justify-center w-12 h-12 rounded-xl bg-accent/10 border border-accent/20 mb-2">
+                    <IconComponent className="w-6 h-6 text-accent" />
+                  </div>
+                  <div className="text-2xl font-bold text-white mb-1">{stat.value}</div>
+                  <div className="text-xs text-white/70">{stat.label}</div>
+                </div>
+              );
+            })}
           </motion.div>
         </div>
       </div>
-      
-      {/* Bottom gradient fade */}
-      <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-background to-transparent z-[4]" />
     </section>
   );
 };
