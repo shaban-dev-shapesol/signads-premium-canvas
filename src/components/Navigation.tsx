@@ -6,6 +6,8 @@ import { Link, useLocation } from "react-router-dom";
 const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [isServicesOpen, setIsServicesOpen] = useState(false);
+  const [mobileServicesOpen, setMobileServicesOpen] = useState(false);
+  const [expandedCategory, setExpandedCategory] = useState<string | null>(null);
   const location = useLocation();
   const servicesRef = useRef<HTMLDivElement>(null);
 
@@ -216,40 +218,76 @@ const Navigation = () => {
 
         {/* Mobile Navigation */}
         {isOpen && (
-          <div className="md:hidden py-6 space-y-4 border-t border-border">
+          <div className="md:hidden py-6 space-y-4 border-t border-border max-h-[calc(100vh-5rem)] overflow-y-auto">
+            {/* Services Section with Accordion */}
             <div className="space-y-2">
-              <Link
-                to="/services"
-                className="block text-foreground hover:text-accent transition-smooth font-bold"
-                onClick={() => setIsOpen(false)}
+              <button
+                className="w-full flex items-center justify-between text-foreground hover:text-accent transition-smooth font-bold"
+                onClick={() => setMobileServicesOpen(!mobileServicesOpen)}
               >
-                Services
-              </Link>
-              <div className="pl-4 space-y-3">
-                {serviceCategories.map((category) => (
-                  <div key={category.name}>
-                    <Link
-                      to={category.href}
-                      className="block text-sm font-bold text-foreground hover:text-accent transition-smooth mb-1"
-                      onClick={() => setIsOpen(false)}
-                    >
-                      {category.name}
-                    </Link>
-                    <div className="pl-3 space-y-1">
-                      {category.items.slice(0, 3).map((item) => (
+                <span>Services</span>
+                <ChevronDown className={`w-5 h-5 transition-transform ${mobileServicesOpen ? 'rotate-180' : ''}`} />
+              </button>
+              
+              {mobileServicesOpen && (
+                <div className="pl-4 space-y-3 pt-2">
+                  {serviceCategories.map((category) => (
+                    <div key={category.name} className="space-y-2">
+                      <button
+                        className="w-full flex items-center justify-between text-sm font-bold text-foreground hover:text-accent transition-smooth"
+                        onClick={() => setExpandedCategory(expandedCategory === category.name ? null : category.name)}
+                      >
                         <Link
-                          key={item.name}
-                          to={item.href}
-                          className="block text-xs text-muted-foreground hover:text-accent transition-smooth"
-                          onClick={() => setIsOpen(false)}
+                          to={category.href}
+                          className="flex-1 text-left"
+                          onClick={(e) => {
+                            e.stopPropagation();
+                            setIsOpen(false);
+                            setMobileServicesOpen(false);
+                          }}
                         >
-                          {item.name}
+                          {category.name}
                         </Link>
-                      ))}
+                        <ChevronDown className={`w-4 h-4 transition-transform ${expandedCategory === category.name ? 'rotate-180' : ''}`} />
+                      </button>
+                      
+                      {expandedCategory === category.name && (
+                        <div className="pl-3 space-y-1 pb-2">
+                          {category.items.map((item) => (
+                            <Link
+                              key={item.name}
+                              to={item.href}
+                              className="block text-xs text-muted-foreground hover:text-accent transition-smooth py-1"
+                              onClick={() => {
+                                setIsOpen(false);
+                                setMobileServicesOpen(false);
+                                setExpandedCategory(null);
+                              }}
+                            >
+                              {item.name}
+                            </Link>
+                          ))}
+                        </div>
+                      )}
                     </div>
+                  ))}
+                  <div className="pt-2">
+                    <Link to="/services">
+                      <Button 
+                        variant="outline" 
+                        size="sm" 
+                        className="w-full"
+                        onClick={() => {
+                          setIsOpen(false);
+                          setMobileServicesOpen(false);
+                        }}
+                      >
+                        View All Services
+                      </Button>
+                    </Link>
                   </div>
-                ))}
-              </div>
+                </div>
+              )}
             </div>
             
             {navLinks.map((link) => (
@@ -262,7 +300,10 @@ const Navigation = () => {
                 {link.name}
               </Link>
             ))}
-            <Button variant="premium" size="default" className="w-full" onClick={scrollToContact}>
+            <Button variant="premium" size="default" className="w-full" onClick={(e) => {
+              scrollToContact(e);
+              setIsOpen(false);
+            }}>
               Get Quote
             </Button>
           </div>

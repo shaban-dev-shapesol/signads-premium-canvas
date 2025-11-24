@@ -112,6 +112,17 @@ const BeforeAfter = () => {
     }));
   };
 
+  const handleTouchMove = (index: number, e: React.TouchEvent<HTMLDivElement>) => {
+    const touch = e.touches[0];
+    const rect = e.currentTarget.getBoundingClientRect();
+    const x = touch.clientX - rect.left;
+    const percentage = (x / rect.width) * 100;
+    setSliderPositions((prev) => ({
+      ...prev,
+      [index]: Math.max(0, Math.min(100, percentage)),
+    }));
+  };
+
   return (
     <section className="py-24 bg-secondary/30">
       <div className="container mx-auto px-6">
@@ -137,11 +148,14 @@ const BeforeAfter = () => {
               {/* Before/After Slider */}
               <div className="relative aspect-[4/3] overflow-hidden group">
                 <div
-                  className="absolute inset-0 cursor-ew-resize"
+                  className="absolute inset-0 cursor-ew-resize touch-none"
                   onMouseMove={(e) => handleSliderMove(index, e)}
                   onMouseDown={() => setActiveSlider(index)}
                   onMouseUp={() => setActiveSlider(null)}
                   onMouseLeave={() => setActiveSlider(null)}
+                  onTouchMove={(e) => handleTouchMove(index, e)}
+                  onTouchStart={() => setActiveSlider(index)}
+                  onTouchEnd={() => setActiveSlider(null)}
                 >
                   {/* After Image (background) */}
                   <img
