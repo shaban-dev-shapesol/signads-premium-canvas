@@ -1,27 +1,31 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
+import projectCorporate from "@/assets/project-corporate.jpg";
+import projectVehicle from "@/assets/project-vehicle.jpg";
+import projectInterior from "@/assets/project-interior.jpg";
+import projectExhibition from "@/assets/project-exhibition.jpg";
 
 const Gallery = () => {
   const projects = [
     {
       title: "Corporate Headquarters Signage",
       category: "Exterior",
-      image: "placeholder",
+      image: projectCorporate,
     },
     {
       title: "Fleet Vehicle Wrap",
       category: "Vehicle Graphics",
-      image: "placeholder",
+      image: projectVehicle,
     },
     {
       title: "Retail Store Interior",
       category: "Interior",
-      image: "placeholder",
+      image: projectInterior,
     },
     {
       title: "Exhibition Display",
       category: "Events",
-      image: "placeholder",
+      image: projectExhibition,
     },
   ];
 
@@ -41,8 +45,13 @@ const Gallery = () => {
           {projects.map((project, index) => (
             <div 
               key={index}
-              className="group relative overflow-hidden rounded-2xl aspect-[4/3] bg-muted cursor-pointer shadow-premium hover:shadow-glow transition-smooth"
+              className="group relative overflow-hidden rounded-2xl aspect-[4/3] cursor-pointer shadow-premium hover:shadow-glow transition-smooth"
             >
+              <img 
+                src={project.image} 
+                alt={project.title}
+                className="absolute inset-0 w-full h-full object-cover group-hover:scale-110 transition-smooth duration-700"
+              />
               <div className="absolute inset-0 bg-gradient-to-t from-primary/90 to-primary/20 z-10" />
               <div className="absolute inset-0 flex flex-col justify-end p-8 z-20">
                 <span className="text-accent text-sm font-semibold mb-2">
@@ -52,7 +61,6 @@ const Gallery = () => {
                   {project.title}
                 </h3>
               </div>
-              <div className="absolute inset-0 bg-muted group-hover:scale-110 transition-smooth duration-700" />
             </div>
           ))}
         </div>
