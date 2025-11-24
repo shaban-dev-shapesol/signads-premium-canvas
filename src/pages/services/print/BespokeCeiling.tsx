@@ -1,7 +1,8 @@
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
-import { CheckCircle2 } from "lucide-react";
+import { CheckCircle2, Cloud } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const BespokeCeiling = () => {
   return (
@@ -9,15 +10,20 @@ const BespokeCeiling = () => {
       <Navigation />
       
       {/* Hero Section */}
-      <section className="pt-32 pb-16 px-6">
+      <section className="pt-32 pb-16 px-6 bg-primary">
         <div className="container mx-auto max-w-6xl">
-          <h1 className="text-5xl md:text-6xl font-bold text-foreground mb-6">
-            Bespoke Printed Ceilings
-          </h1>
-          <p className="text-xl text-muted-foreground mb-8 max-w-3xl">
+          <div className="flex items-center gap-4 mb-6">
+            <Cloud className="w-12 h-12 text-accent" />
+            <h1 className="text-5xl md:text-6xl font-bold text-accent">
+              Bespoke Printed Ceilings
+            </h1>
+          </div>
+          <p className="text-xl text-primary-foreground mb-8 max-w-3xl">
             Transform overlooked ceiling space into stunning visual experiences. Custom-printed acoustic or stretch ceiling systems that inspire and impress.
           </p>
-          <Button variant="premium" size="lg">Get Custom Quote</Button>
+          <Link to="/#contact">
+            <Button variant="hero" size="lg">Get Custom Quote</Button>
+          </Link>
         </div>
       </section>
 
@@ -168,7 +174,9 @@ const BespokeCeiling = () => {
           <p className="text-xl text-muted-foreground mb-8">
             Let's create an unforgettable ceiling experience for your space
           </p>
-          <Button variant="premium" size="lg">Start Your Project</Button>
+          <Link to="/#contact">
+            <Button variant="hero" size="lg">Start Your Project</Button>
+          </Link>
         </div>
       </section>
 
