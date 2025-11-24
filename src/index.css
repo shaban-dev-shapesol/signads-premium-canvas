@@ -8,7 +8,7 @@ All colors MUST be HSL.
 
 @layer base {
   :root {
-    /* Premium Charcoal and Gold Theme */
+    /* Modern Charcoal and Lime Theme */
     --background: 0 0% 100%;
     --foreground: 0 0% 15%;
 
@@ -29,8 +29,8 @@ All colors MUST be HSL.
     --muted: 0 0% 92%;
     --muted-foreground: 0 0% 45%;
 
-    /* Metallic Gold Accent */
-    --accent: 45 80% 55%;
+    /* Lime Green Accent */
+    --accent: 80 75% 55%;
     --accent-foreground: 0 0% 15%;
 
     --destructive: 0 84.2% 60.2%;
@@ -38,17 +38,17 @@ All colors MUST be HSL.
 
     --border: 0 0% 85%;
     --input: 0 0% 85%;
-    --ring: 45 80% 55%;
+    --ring: 80 75% 55%;
 
     --radius: 0.75rem;
 
-    /* Luxury gradients */
+    /* Modern gradients */
     --gradient-hero: linear-gradient(135deg, hsl(0 0% 15%) 0%, hsl(0 0% 25%) 100%);
-    --gradient-accent: linear-gradient(135deg, hsl(45 80% 55%) 0%, hsl(38 75% 50%) 100%);
+    --gradient-accent: linear-gradient(135deg, hsl(80 75% 55%) 0%, hsl(75 70% 50%) 100%);
     
-    /* Luxury shadows */
+    /* Modern shadows */
     --shadow-premium: 0 20px 60px -15px hsl(0 0% 15% / 0.4);
-    --shadow-glow: 0 0 40px hsl(45 80% 55% / 0.25);
+    --shadow-glow: 0 0 40px hsl(80 75% 55% / 0.3);
 
     /* Animations */
     --transition-smooth: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
