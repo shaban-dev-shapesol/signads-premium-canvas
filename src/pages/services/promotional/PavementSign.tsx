@@ -21,7 +21,7 @@ const PavementSign = () => {
         </div>
       </section>
 
-      {/* Image Gallery */}
+      {/* Project Gallery */}
       <section className="py-16 px-6 bg-muted/30">
         <div className="container mx-auto max-w-6xl">
           <h2 className="text-3xl font-bold text-foreground mb-8">Project Gallery</h2>
