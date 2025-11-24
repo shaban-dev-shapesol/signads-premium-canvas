@@ -1,182 +1,180 @@
+import { Sparkles } from "lucide-react";
+import { Button } from "@/components/ui/button";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
-import { Button } from "@/components/ui/button";
-import { CheckCircle2, Sparkles } from "lucide-react";
 import { Link } from "react-router-dom";
 
 const BespokeExhibitionDisplay = () => {
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-screen">
       <Navigation />
       
-      {/* Hero Section */}
-      <section className="pt-32 pb-16 px-6 bg-primary">
-        <div className="container mx-auto max-w-6xl">
-          <div className="flex items-center gap-4 mb-6">
-            <Sparkles className="w-12 h-12 text-accent" />
-            <h1 className="text-5xl md:text-6xl font-bold text-accent">
-              Bespoke Exhibition Displays
+      <section className="pt-32 pb-16 bg-primary text-primary-foreground">
+        <div className="container mx-auto px-6">
+          <div className="max-w-4xl mx-auto text-center">
+            <div className="w-20 h-20 bg-primary-foreground/10 rounded-2xl flex items-center justify-center mx-auto mb-6">
+              <Sparkles className="w-10 h-10 text-primary-foreground" />
+            </div>
+            <h1 className="text-5xl md:text-6xl font-bold mb-6">
+              Bespoke <span className="text-accent">Exhibition Displays</span>
             </h1>
+            <p className="text-xl text-primary-foreground/80 mb-8">
+              Custom-designed exhibition stands that make unforgettable impressions. From concept to completion, we create unique displays that dominate show floors.
+            </p>
+            <Link to="/#contact">
+              <Button variant="hero" size="xl">
+                Get Custom Quote
+              </Button>
+            </Link>
           </div>
-          <p className="text-xl text-primary-foreground mb-8 max-w-3xl">
-            Custom-designed exhibition stands that make unforgettable impressions. From concept to completion, we create unique displays that dominate show floors.
-          </p>
-          <Link to="/#contact">
-            <Button variant="hero" size="lg">Get Custom Quote</Button>
-          </Link>
         </div>
       </section>
 
-      {/* Image Gallery */}
-      <section className="py-16 px-6 bg-muted/30">
-        <div className="container mx-auto max-w-6xl">
-          <h2 className="text-3xl font-bold text-foreground mb-8">Project Gallery</h2>
-          <div className="grid md:grid-cols-3 gap-6">
-            {[1, 2, 3].map((i) => (
-              <div key={i} className="aspect-video bg-muted rounded-xl overflow-hidden">
-                <div className="w-full h-full flex items-center justify-center text-muted-foreground">
-                  Bespoke Display Example {i}
-                </div>
+      <section className="py-24 bg-background">
+        <div className="container mx-auto px-6">
+          <div className="max-w-6xl mx-auto space-y-16">
+            
+            {/* Project Gallery */}
+            <div>
+              <h2 className="text-3xl font-bold text-foreground mb-6">Project Gallery</h2>
+              <div className="grid md:grid-cols-3 gap-6">
+                {[1, 2, 3, 4, 5, 6].map((i) => (
+                  <div key={i} className="aspect-video bg-secondary rounded-2xl border border-border hover:shadow-premium transition-smooth" />
+                ))}
               </div>
-            ))}
-          </div>
-        </div>
-      </section>
+            </div>
 
-      {/* Details Section */}
-      <section className="py-16 px-6">
-        <div className="container mx-auto max-w-6xl">
-          <div className="grid md:grid-cols-2 gap-12">
+            {/* Overview */}
             <div>
               <h2 className="text-3xl font-bold text-foreground mb-6">Overview</h2>
-              <p className="text-muted-foreground mb-6">
-                Bespoke exhibition stands are architectural statements that position your brand as an industry leader. Our design team creates unique structures incorporating the latest exhibition technology—from interactive displays and product showcases to multi-level builds with private meeting areas. Every element is crafted to reflect your brand identity and achieve your event objectives.
+              <p className="text-lg text-muted-foreground mb-4">
+                Bespoke exhibition stands are architectural statements that position your brand as an industry leader. Our design team creates unique structures incorporating the latest exhibition technology—from interactive displays and product showcases to multi-level builds with private meeting areas.
               </p>
-              
-              <h3 className="text-2xl font-bold text-foreground mb-4 mt-8">Design Options</h3>
-              <ul className="space-y-3">
-                <li className="flex items-start gap-3">
-                  <CheckCircle2 className="w-5 h-5 text-accent shrink-0 mt-1" />
-                  <span className="text-muted-foreground">Custom architectural structures</span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <CheckCircle2 className="w-5 h-5 text-accent shrink-0 mt-1" />
-                  <span className="text-muted-foreground">Multi-level and mezzanine builds</span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <CheckCircle2 className="w-5 h-5 text-accent shrink-0 mt-1" />
-                  <span className="text-muted-foreground">Integrated digital screens and technology</span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <CheckCircle2 className="w-5 h-5 text-accent shrink-0 mt-1" />
-                  <span className="text-muted-foreground">Private meeting rooms and hospitality areas</span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <CheckCircle2 className="w-5 h-5 text-accent shrink-0 mt-1" />
-                  <span className="text-muted-foreground">Product display showcases</span>
-                </li>
-              </ul>
+              <p className="text-lg text-muted-foreground">
+                Every element is crafted to reflect your brand identity and achieve your event objectives with maximum impact.
+              </p>
             </div>
 
-            <div>
-              <h3 className="text-2xl font-bold text-foreground mb-4">Full Service Includes</h3>
-              <ul className="space-y-3 mb-8">
-                <li className="flex items-start gap-3">
-                  <CheckCircle2 className="w-5 h-5 text-accent shrink-0 mt-1" />
-                  <span className="text-muted-foreground">3D design visualization and walkthroughs</span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <CheckCircle2 className="w-5 h-5 text-accent shrink-0 mt-1" />
-                  <span className="text-muted-foreground">Project management and coordination</span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <CheckCircle2 className="w-5 h-5 text-accent shrink-0 mt-1" />
-                  <span className="text-muted-foreground">Build, installation, and breakdown</span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <CheckCircle2 className="w-5 h-5 text-accent shrink-0 mt-1" />
-                  <span className="text-muted-foreground">Storage and refurbishment options</span>
-                </li>
-              </ul>
-
-              <h3 className="text-2xl font-bold text-foreground mb-4 mt-8">Perfect For</h3>
-              <ul className="space-y-3">
-                <li className="flex items-start gap-3">
-                  <CheckCircle2 className="w-5 h-5 text-accent shrink-0 mt-1" />
-                  <span className="text-muted-foreground">Large-scale international exhibitions</span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <CheckCircle2 className="w-5 h-5 text-accent shrink-0 mt-1" />
-                  <span className="text-muted-foreground">Major product launches</span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <CheckCircle2 className="w-5 h-5 text-accent shrink-0 mt-1" />
-                  <span className="text-muted-foreground">Corporate flagship events</span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <CheckCircle2 className="w-5 h-5 text-accent shrink-0 mt-1" />
-                  <span className="text-muted-foreground">Premium brand activations</span>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Pricing Section */}
-      <section className="py-16 px-6 bg-muted/30">
-        <div className="container mx-auto max-w-6xl">
-          <h2 className="text-3xl font-bold text-foreground mb-8">Investment Guide</h2>
-          <div className="grid md:grid-cols-3 gap-6">
-            <div className="bg-background border border-border rounded-xl p-8">
-              <h3 className="text-xl font-bold text-foreground mb-2">Modular Custom</h3>
-              <p className="text-3xl font-bold text-accent mb-4">From £5,500</p>
-              <ul className="space-y-2 text-muted-foreground">
-                <li>• 3x4m stand footprint</li>
-                <li>• Semi-custom design</li>
-                <li>• Modular reusable system</li>
-                <li>• Graphics and lighting</li>
-              </ul>
-            </div>
-            <div className="bg-background border-2 border-accent rounded-xl p-8 relative">
-              <div className="absolute -top-4 left-1/2 -translate-x-1/2 bg-accent text-accent-foreground px-4 py-1 rounded-full text-sm font-bold">
-                Popular Choice
+            {/* Specifications */}
+            <div className="grid md:grid-cols-2 gap-8">
+              <div className="bg-secondary p-8 rounded-2xl border border-border">
+                <h3 className="text-2xl font-bold text-foreground mb-6">Design Options</h3>
+                <ul className="space-y-3">
+                  <li className="flex items-start gap-3">
+                    <span className="w-2 h-2 bg-accent rounded-full mt-2 flex-shrink-0" />
+                    <span className="text-muted-foreground">Custom architectural structures</span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <span className="w-2 h-2 bg-accent rounded-full mt-2 flex-shrink-0" />
+                    <span className="text-muted-foreground">Multi-level and mezzanine builds</span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <span className="w-2 h-2 bg-accent rounded-full mt-2 flex-shrink-0" />
+                    <span className="text-muted-foreground">Integrated digital screens and technology</span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <span className="w-2 h-2 bg-accent rounded-full mt-2 flex-shrink-0" />
+                    <span className="text-muted-foreground">Private meeting rooms and hospitality areas</span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <span className="w-2 h-2 bg-accent rounded-full mt-2 flex-shrink-0" />
+                    <span className="text-muted-foreground">Product display showcases</span>
+                  </li>
+                </ul>
               </div>
-              <h3 className="text-xl font-bold text-foreground mb-2">Full Custom Build</h3>
-              <p className="text-3xl font-bold text-accent mb-4">From £15,000</p>
-              <ul className="space-y-2 text-muted-foreground">
-                <li>• 6x6m+ unique design</li>
-                <li>• Custom fabrication</li>
-                <li>• Meeting areas included</li>
-                <li>• Complete project management</li>
-              </ul>
+
+              <div className="bg-secondary p-8 rounded-2xl border border-border">
+                <h3 className="text-2xl font-bold text-foreground mb-6">Full Service Includes</h3>
+                <ul className="space-y-3">
+                  <li className="flex items-start gap-3">
+                    <span className="w-2 h-2 bg-accent rounded-full mt-2 flex-shrink-0" />
+                    <span className="text-muted-foreground">3D design visualization and walkthroughs</span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <span className="w-2 h-2 bg-accent rounded-full mt-2 flex-shrink-0" />
+                    <span className="text-muted-foreground">Project management and coordination</span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <span className="w-2 h-2 bg-accent rounded-full mt-2 flex-shrink-0" />
+                    <span className="text-muted-foreground">Build, installation, and breakdown</span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <span className="w-2 h-2 bg-accent rounded-full mt-2 flex-shrink-0" />
+                    <span className="text-muted-foreground">Storage and refurbishment options</span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <span className="w-2 h-2 bg-accent rounded-full mt-2 flex-shrink-0" />
+                    <span className="text-muted-foreground">On-site technical support</span>
+                  </li>
+                </ul>
+              </div>
             </div>
-            <div className="bg-background border border-border rounded-xl p-8">
-              <h3 className="text-xl font-bold text-foreground mb-2">Premium Showcase</h3>
-              <p className="text-3xl font-bold text-accent mb-4">From £35,000</p>
-              <ul className="space-y-2 text-muted-foreground">
-                <li>• Multi-level structures</li>
-                <li>• Integrated technology</li>
-                <li>• VIP hospitality areas</li>
-                <li>• International exhibitions</li>
-              </ul>
+
+            {/* Pricing Guide */}
+            <div>
+              <h2 className="text-3xl font-bold text-foreground mb-6">Investment Guide</h2>
+              <div className="grid md:grid-cols-3 gap-6">
+                <div className="bg-secondary p-6 rounded-xl border border-border">
+                  <h4 className="text-xl font-bold text-foreground mb-2">Modular Custom</h4>
+                  <p className="text-3xl font-bold text-accent mb-4">From £5,500</p>
+                  <ul className="space-y-2 text-sm text-muted-foreground">
+                    <li>• 3x4m stand footprint</li>
+                    <li>• Semi-custom design</li>
+                    <li>• Modular reusable system</li>
+                    <li>• Graphics and lighting</li>
+                  </ul>
+                </div>
+                <div className="bg-secondary p-6 rounded-xl border-2 border-accent">
+                  <h4 className="text-xl font-bold text-foreground mb-2">Full Custom Build</h4>
+                  <p className="text-3xl font-bold text-accent mb-4">From £15,000</p>
+                  <ul className="space-y-2 text-sm text-muted-foreground">
+                    <li>• 6x6m+ unique design</li>
+                    <li>• Custom fabrication</li>
+                    <li>• Meeting areas included</li>
+                    <li>• Complete project management</li>
+                  </ul>
+                </div>
+                <div className="bg-secondary p-6 rounded-xl border border-border">
+                  <h4 className="text-xl font-bold text-foreground mb-2">Premium Showcase</h4>
+                  <p className="text-3xl font-bold text-accent mb-4">From £35,000</p>
+                  <ul className="space-y-2 text-sm text-muted-foreground">
+                    <li>• Multi-level structures</li>
+                    <li>• Integrated technology</li>
+                    <li>• VIP hospitality areas</li>
+                    <li>• International exhibitions</li>
+                  </ul>
+                </div>
+              </div>
+              <p className="text-sm text-muted-foreground mt-6 text-center">
+                *Prices are indicative and vary based on size, materials, and features. Contact us for an accurate quote.
+              </p>
+            </div>
+
+            {/* Applications */}
+            <div>
+              <h2 className="text-3xl font-bold text-foreground mb-6">Ideal Applications</h2>
+              <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4">
+                {["International Exhibitions", "Product Launches", "Corporate Events", "Brand Activations", "Industry Shows", "Flagship Events", "Premium Displays", "VIP Areas"].map((app) => (
+                  <div key={app} className="bg-secondary p-4 rounded-xl border border-border text-center">
+                    <p className="font-medium text-foreground">{app}</p>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            {/* CTA */}
+            <div className="bg-primary text-primary-foreground p-12 rounded-2xl text-center">
+              <h2 className="text-3xl font-bold mb-4">Create An Unforgettable Exhibition Presence</h2>
+              <p className="text-xl text-primary-foreground/80 mb-8 max-w-2xl mx-auto">
+                Discuss your vision with our exhibition design specialists.
+              </p>
+              <Link to="/#contact">
+                <Button variant="hero" size="xl">
+                  Schedule Consultation
+                </Button>
+              </Link>
             </div>
           </div>
-        </div>
-      </section>
-
-      {/* CTA Section */}
-      <section className="py-16 px-6">
-        <div className="container mx-auto max-w-4xl text-center">
-          <h2 className="text-4xl font-bold text-foreground mb-6">
-            Create An Unforgettable Exhibition Presence
-          </h2>
-          <p className="text-xl text-muted-foreground mb-8">
-            Discuss your vision with our exhibition design specialists
-          </p>
-          <Link to="/#contact">
-            <Button variant="hero" size="lg">Schedule Consultation</Button>
-          </Link>
         </div>
       </section>
 
