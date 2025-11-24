@@ -96,21 +96,21 @@ const Services = () => {
                   <div className="w-14 h-14 bg-primary/90 backdrop-blur-sm rounded-xl flex items-center justify-center mb-6 group-hover:bg-accent transition-smooth shadow-lg">
                     <Icon className="w-7 h-7 text-primary-foreground" />
                   </div>
-                  <h3 className="text-2xl font-bold text-foreground mb-3">
+                  <h3 className="text-2xl font-bold text-white mb-3 drop-shadow-lg">
                     {service.title}
                   </h3>
-                  <p className="text-muted-foreground mb-6 leading-relaxed">
+                  <p className="text-white/90 mb-6 leading-relaxed drop-shadow-md">
                     {service.description}
                   </p>
                   <ul className="space-y-2 mb-4 flex-grow">
                     {service.features.map((feature, idx) => (
-                      <li key={idx} className="text-sm text-muted-foreground flex items-center">
-                        <span className="w-1.5 h-1.5 bg-accent rounded-full mr-2 flex-shrink-0" />
+                      <li key={idx} className="text-sm text-white/85 flex items-center drop-shadow">
+                        <span className="w-1.5 h-1.5 bg-accent rounded-full mr-2 flex-shrink-0 shadow-glow" />
                         {feature}
                       </li>
                     ))}
                   </ul>
-                  <div className="text-accent text-sm font-semibold group-hover:underline flex items-center gap-2">
+                  <div className="text-accent text-sm font-semibold group-hover:underline flex items-center gap-2 drop-shadow-lg">
                     View Services →
                   </div>
                 </div>
