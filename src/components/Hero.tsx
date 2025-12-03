@@ -72,7 +72,7 @@ const Hero = () => {
             <Button
               variant="outline"
               size="xl"
-              className="border-white/30 text-white hover:bg-white hover:text-primary"
+              className="border-white/30 text-white bg-transparent hover:bg-white hover:text-primary"
               asChild
             >
               <Link to="/portfolio">
@@ -110,8 +110,6 @@ const Hero = () => {
         </div>
       </div>
 
-      {/* Bottom Gradient Fade */}
-      <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-background to-transparent" />
     </section>
   );
 };
