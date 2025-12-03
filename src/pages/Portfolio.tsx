@@ -51,6 +51,8 @@ const Portfolio = () => {
   const [isInProjectsSection, setIsInProjectsSection] = useState(true);
   const projectsSectionRef = useRef<HTMLElement>(null);
 
+  const filterSectionRef = useRef<HTMLElement>(null);
+
   useEffect(() => {
     const observer = new IntersectionObserver(
       ([entry]) => {
@@ -65,6 +67,11 @@ const Portfolio = () => {
 
     return () => observer.disconnect();
   }, []);
+
+  const handleFilterChange = (categoryId: string) => {
+    setFilter(categoryId);
+    filterSectionRef.current?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  };
 
   const projects = [
     // Exterior Projects
@@ -419,14 +426,14 @@ const Portfolio = () => {
       </section>
 
       {/* Filter Section */}
-      <section className={`py-8 bg-secondary border-b border-border transition-all duration-300 ease-in-out ${isInProjectsSection ? 'sticky top-20 z-40' : 'relative'}`}>
+      <section ref={filterSectionRef} className={`py-8 bg-secondary border-b border-border transition-all duration-300 ease-in-out ${isInProjectsSection ? 'sticky top-20 z-40' : 'relative'}`}>
         <div className="container mx-auto px-6">
           <div className="flex flex-wrap gap-2 justify-center">
             {categories.map((cat) => (
               <Button
                 key={cat.id}
                 variant={filter === cat.id ? "premium" : "outline"}
-                onClick={() => setFilter(cat.id)}
+                onClick={() => handleFilterChange(cat.id)}
                 size="sm"
               >
                 {cat.name}
