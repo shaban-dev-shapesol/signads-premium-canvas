@@ -244,10 +244,10 @@ const Navigation = () => {
               </Link>
             ))}
             <Button 
-              variant={scrolled ? "premium" : "outline"} 
+              variant={scrolled ? "premium" : "ghost"} 
               size="default" 
               onClick={scrollToContact}
-              className={!scrolled ? "border-white/50 text-white hover:bg-white hover:text-primary" : ""}
+              className={!scrolled ? "border-2 border-white text-white bg-transparent hover:bg-white hover:text-primary font-semibold" : ""}
             >
               Get Quote
             </Button>
