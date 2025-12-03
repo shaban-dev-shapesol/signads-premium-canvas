@@ -70,7 +70,14 @@ const Portfolio = () => {
 
   const handleFilterChange = (categoryId: string) => {
     setFilter(categoryId);
-    filterSectionRef.current?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    // Scroll to just above the projects section (accounting for nav + filter height)
+    const navHeight = 80;
+    const filterHeight = filterSectionRef.current?.offsetHeight || 60;
+    const projectsTop = projectsSectionRef.current?.offsetTop || 0;
+    window.scrollTo({ 
+      top: projectsTop - navHeight - filterHeight, 
+      behavior: 'smooth' 
+    });
   };
 
   const projects = [
