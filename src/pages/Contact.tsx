@@ -22,6 +22,33 @@ const Contact = () => {
       {/* Contact Form Section */}
       <ContactForm />
 
+      {/* Map Section */}
+      <section className="py-20 px-4">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold mb-4">
+              Find <span className="text-accent">Us</span>
+            </h2>
+            <p className="text-muted-foreground max-w-2xl mx-auto">
+              Visit our showroom to see our signage solutions in person
+            </p>
+          </div>
+          <div className="rounded-2xl overflow-hidden border border-border shadow-lg">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2483.5424813697714!2d-0.1277583!3d51.5073509!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x487604c38c8cd1d9%3A0xb78f2474b9a45aa9!2sLondon%2C%20UK!5e0!3m2!1sen!2s!4v1699900000000!5m2!1sen!2s"
+              width="100%"
+              height="450"
+              style={{ border: 0 }}
+              allowFullScreen
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+              title="signAds Location"
+              className="w-full"
+            />
+          </div>
+        </div>
+      </section>
+
       <Footer />
     </div>
   );
