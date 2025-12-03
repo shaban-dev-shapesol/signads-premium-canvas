@@ -58,7 +58,7 @@ const Portfolio = () => {
       ([entry]) => {
         setIsInProjectsSection(entry.isIntersecting);
       },
-      { threshold: 0, rootMargin: "-100px 0px 0px 0px" }
+      { threshold: 0, rootMargin: "-100px 0px 0px 0px" },
     );
 
     if (projectsSectionRef.current) {
@@ -74,9 +74,9 @@ const Portfolio = () => {
     const navHeight = 80;
     const filterHeight = filterSectionRef.current?.offsetHeight || 60;
     const projectsTop = projectsSectionRef.current?.offsetTop || 0;
-    window.scrollTo({ 
-      top: projectsTop - navHeight - filterHeight, 
-      behavior: 'smooth' 
+    window.scrollTo({
+      top: projectsTop - navHeight - filterHeight,
+      behavior: "smooth",
     });
   };
 
@@ -89,7 +89,7 @@ const Portfolio = () => {
       industry: "Corporate",
       image: exteriorFasciaTray,
       description: "Premium illuminated fascia signage for modern office building.",
-      services: ["Fascia Sign Tray", "LED Lighting"]
+      services: ["Fascia Sign Tray", "LED Lighting"],
     },
     {
       id: 2,
@@ -98,7 +98,7 @@ const Portfolio = () => {
       industry: "Retail",
       image: exterior3DLetters,
       description: "Built-up 3D letters creating bold storefront presence.",
-      services: ["3D Letters", "Illuminated Signs"]
+      services: ["3D Letters", "Illuminated Signs"],
     },
     {
       id: 3,
@@ -107,7 +107,7 @@ const Portfolio = () => {
       industry: "Retail",
       image: exteriorTotem,
       description: "Multi-tenant totem sign for retail park navigation.",
-      services: ["Totem Signs", "Wayfinding"]
+      services: ["Totem Signs", "Wayfinding"],
     },
     {
       id: 4,
@@ -116,7 +116,7 @@ const Portfolio = () => {
       industry: "Hospitality",
       image: exteriorFlexFace,
       description: "Large format flex face light box for restaurant visibility.",
-      services: ["Flex Face Light Box", "LED Lighting"]
+      services: ["Flex Face Light Box", "LED Lighting"],
     },
     {
       id: 5,
@@ -125,7 +125,7 @@ const Portfolio = () => {
       industry: "Hospitality",
       image: exteriorProjection,
       description: "Double-sided projection sign for hotel entrance.",
-      services: ["Projection Signs", "Premium Branding"]
+      services: ["Projection Signs", "Premium Branding"],
     },
     {
       id: 6,
@@ -134,7 +134,7 @@ const Portfolio = () => {
       industry: "Construction",
       image: exteriorHoarding,
       description: "Full site hoarding with branded graphics.",
-      services: ["Site Hoarding", "Large Format Print"]
+      services: ["Site Hoarding", "Large Format Print"],
     },
 
     // Interior Projects
@@ -145,7 +145,7 @@ const Portfolio = () => {
       industry: "Corporate",
       image: interiorReception,
       description: "Elegant reception signage with backlit logo.",
-      services: ["Reception Signs", "LED Illumination"]
+      services: ["Reception Signs", "LED Illumination"],
     },
     {
       id: 8,
@@ -154,7 +154,7 @@ const Portfolio = () => {
       industry: "Hospitality",
       image: interiorNeon,
       description: "Custom LED neon signs creating vibrant atmosphere.",
-      services: ["Neon Signs", "Custom Design"]
+      services: ["Neon Signs", "Custom Design"],
     },
     {
       id: 9,
@@ -163,7 +163,7 @@ const Portfolio = () => {
       industry: "Corporate",
       image: interiorLightbox,
       description: "Illuminated light box showcasing company values.",
-      services: ["Light Boxes", "Brand Graphics"]
+      services: ["Light Boxes", "Brand Graphics"],
     },
     {
       id: 10,
@@ -172,7 +172,7 @@ const Portfolio = () => {
       industry: "Corporate",
       image: interiorWallGraphics,
       description: "Bold wall graphics transforming office space.",
-      services: ["Wall Graphics", "Interior Branding"]
+      services: ["Wall Graphics", "Interior Branding"],
     },
     {
       id: 11,
@@ -181,7 +181,7 @@ const Portfolio = () => {
       industry: "Healthcare",
       image: interiorWindowFrosting,
       description: "Privacy frosting with branded elements.",
-      services: ["Window Frosting", "Privacy Solutions"]
+      services: ["Window Frosting", "Privacy Solutions"],
     },
 
     // Vehicle Projects
@@ -192,7 +192,7 @@ const Portfolio = () => {
       industry: "Logistics",
       image: vehicleCarWrap,
       description: "Full vehicle wrap for delivery service fleet.",
-      services: ["Car Wraps", "Fleet Graphics"]
+      services: ["Car Wraps", "Fleet Graphics"],
     },
     {
       id: 13,
@@ -201,7 +201,7 @@ const Portfolio = () => {
       industry: "Trade Services",
       image: vehicleVanWrap,
       description: "Eye-catching van wrap for local plumbing company.",
-      services: ["Van Wraps", "Mobile Advertising"]
+      services: ["Van Wraps", "Mobile Advertising"],
     },
     {
       id: 14,
@@ -210,7 +210,7 @@ const Portfolio = () => {
       industry: "Logistics",
       image: vehicleTruckWrap,
       description: "Full truck wrap maximizing brand exposure.",
-      services: ["Truck Wraps", "Large Format"]
+      services: ["Truck Wraps", "Large Format"],
     },
     {
       id: 15,
@@ -219,7 +219,7 @@ const Portfolio = () => {
       industry: "Transport",
       image: vehicleBusWrap,
       description: "High-impact bus wrap for public transport advertising.",
-      services: ["Bus Wraps", "OOH Advertising"]
+      services: ["Bus Wraps", "OOH Advertising"],
     },
     {
       id: 16,
@@ -228,7 +228,7 @@ const Portfolio = () => {
       industry: "Hospitality",
       image: vehicleFoodTruck,
       description: "Vibrant food truck wrap attracting customers.",
-      services: ["Food Truck Wraps", "Menu Graphics"]
+      services: ["Food Truck Wraps", "Menu Graphics"],
     },
     {
       id: 17,
@@ -237,7 +237,7 @@ const Portfolio = () => {
       industry: "Logistics",
       image: vehicleLorryWrap,
       description: "Branded HGV fleet covering nationwide routes.",
-      services: ["Lorry Wraps", "Fleet Branding"]
+      services: ["Lorry Wraps", "Fleet Branding"],
     },
 
     // Exhibition Projects
@@ -248,7 +248,7 @@ const Portfolio = () => {
       industry: "Corporate",
       image: exhibitionStandard,
       description: "Professional exhibition stand for trade shows.",
-      services: ["Exhibition Display", "Pop-up Banners"]
+      services: ["Exhibition Display", "Pop-up Banners"],
     },
     {
       id: 19,
@@ -257,7 +257,7 @@ const Portfolio = () => {
       industry: "Technology",
       image: exhibitionBespoke,
       description: "Custom-built exhibition stand with integrated displays.",
-      services: ["Bespoke Displays", "Event Graphics"]
+      services: ["Bespoke Displays", "Event Graphics"],
     },
     {
       id: 20,
@@ -266,7 +266,7 @@ const Portfolio = () => {
       industry: "Corporate",
       image: exhibitionPopup,
       description: "Portable pop-up banners for conference events.",
-      services: ["Pop-up Banners", "Portable Displays"]
+      services: ["Pop-up Banners", "Portable Displays"],
     },
 
     // Digital Projects
@@ -277,7 +277,7 @@ const Portfolio = () => {
       industry: "Advertising",
       image: digitalOutdoor,
       description: "High-brightness outdoor digital display.",
-      services: ["Outdoor Digital", "LED Displays"]
+      services: ["Outdoor Digital", "LED Displays"],
     },
     {
       id: 22,
@@ -286,7 +286,7 @@ const Portfolio = () => {
       industry: "Retail",
       image: digitalIndoor,
       description: "Interactive indoor digital signage for retail.",
-      services: ["Indoor Digital", "Interactive Displays"]
+      services: ["Indoor Digital", "Interactive Displays"],
     },
     {
       id: 23,
@@ -295,7 +295,7 @@ const Portfolio = () => {
       industry: "Hospitality",
       image: digitalMenu,
       description: "Dynamic digital menu boards for fast service.",
-      services: ["Digital Menus", "Content Management"]
+      services: ["Digital Menus", "Content Management"],
     },
     {
       id: 24,
@@ -304,7 +304,7 @@ const Portfolio = () => {
       industry: "Retail",
       image: digitalWindow,
       description: "High-visibility window-facing digital display.",
-      services: ["Window Displays", "Digital Signage"]
+      services: ["Window Displays", "Digital Signage"],
     },
 
     // Light Box Projects
@@ -315,7 +315,7 @@ const Portfolio = () => {
       industry: "Arts",
       image: lightboxAcrylic,
       description: "Premium acrylic light box for gallery display.",
-      services: ["Acrylic Light Box", "LED Illumination"]
+      services: ["Acrylic Light Box", "LED Illumination"],
     },
     {
       id: 26,
@@ -324,7 +324,7 @@ const Portfolio = () => {
       industry: "Retail",
       image: lightboxPromotional,
       description: "Eye-catching promotional light box for retail.",
-      services: ["Promotional Light Box", "Brand Activation"]
+      services: ["Promotional Light Box", "Brand Activation"],
     },
 
     // Print Projects
@@ -335,7 +335,7 @@ const Portfolio = () => {
       industry: "Events",
       image: printBanner,
       description: "Large format banners for outdoor event.",
-      services: ["Banner Printing", "Event Graphics"]
+      services: ["Banner Printing", "Event Graphics"],
     },
     {
       id: 28,
@@ -344,7 +344,7 @@ const Portfolio = () => {
       industry: "Retail",
       image: printVinyl,
       description: "Precision cut vinyl lettering for storefront.",
-      services: ["Vinyl Lettering", "Window Graphics"]
+      services: ["Vinyl Lettering", "Window Graphics"],
     },
     {
       id: 29,
@@ -353,7 +353,7 @@ const Portfolio = () => {
       industry: "Retail",
       image: printWindow,
       description: "Seasonal window graphics for fashion boutique.",
-      services: ["Window Graphics", "Promotional Print"]
+      services: ["Window Graphics", "Promotional Print"],
     },
     {
       id: 30,
@@ -362,7 +362,7 @@ const Portfolio = () => {
       industry: "Corporate",
       image: printWallArt,
       description: "Custom wall art creating inspiring workspace.",
-      services: ["Wall Art", "Interior Print"]
+      services: ["Wall Art", "Interior Print"],
     },
     {
       id: 31,
@@ -371,7 +371,7 @@ const Portfolio = () => {
       industry: "Automotive",
       image: printFloor,
       description: "Directional floor graphics guiding customers.",
-      services: ["Floor Graphics", "Wayfinding"]
+      services: ["Floor Graphics", "Wayfinding"],
     },
 
     // Promotional Projects
@@ -382,7 +382,7 @@ const Portfolio = () => {
       industry: "Events",
       image: promotionalFlags,
       description: "Vibrant custom flags for outdoor festival.",
-      services: ["Custom Flags", "Event Branding"]
+      services: ["Custom Flags", "Event Branding"],
     },
     {
       id: 33,
@@ -391,7 +391,7 @@ const Portfolio = () => {
       industry: "Hospitality",
       image: promotionalPavement,
       description: "A-frame pavement sign driving foot traffic.",
-      services: ["Pavement Signs", "Street Advertising"]
+      services: ["Pavement Signs", "Street Advertising"],
     },
   ];
 
@@ -407,14 +407,12 @@ const Portfolio = () => {
     { id: "promotional", name: "Promotional" },
   ];
 
-  const filteredProjects = filter === "all" 
-    ? projects 
-    : projects.filter(p => p.category === filter);
+  const filteredProjects = filter === "all" ? projects : projects.filter((p) => p.category === filter);
 
   return (
     <div className="min-h-screen">
       <Navigation />
-      
+
       {/* Hero Section */}
       <section className="pt-32 pb-16 bg-primary text-primary-foreground">
         <div className="container mx-auto px-6">
@@ -433,7 +431,10 @@ const Portfolio = () => {
       </section>
 
       {/* Filter Section */}
-      <section ref={filterSectionRef} className={`py-8 bg-secondary border-b border-border transition-all duration-300 ease-in-out ${isInProjectsSection ? 'sticky top-20 z-40' : 'relative'}`}>
+      <section
+        ref={filterSectionRef}
+        className={`py-8 bg-secondary border-b border-border transition-all duration-300 ease-in-out ${isInProjectsSection ? "sticky top-20 z-40" : "relative"}`}
+      >
         <div className="container mx-auto px-6">
           <div className="flex flex-wrap gap-2 justify-center">
             {categories.map((cat) => (
@@ -446,7 +447,7 @@ const Portfolio = () => {
                 {cat.name}
                 {filter === cat.id && (
                   <span className="ml-2 text-xs bg-accent/20 px-2 py-0.5 rounded-full">
-                    {cat.id === "all" ? projects.length : projects.filter(p => p.category === cat.id).length}
+                    {cat.id === "all" ? projects.length : projects.filter((p) => p.category === cat.id).length}
                   </span>
                 )}
               </Button>
@@ -461,20 +462,20 @@ const Portfolio = () => {
           <div className="max-w-7xl mx-auto">
             <div className="grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
               {filteredProjects.map((project) => (
-                <div 
+                <div
                   key={project.id}
                   className="group bg-card border border-border rounded-xl overflow-hidden hover:shadow-premium transition-smooth"
                 >
                   <div className="relative aspect-[4/3] overflow-hidden">
-                    <img 
-                      src={project.image} 
+                    <img
+                      src={project.image}
                       alt={project.title}
                       className="w-full h-full object-cover group-hover:scale-110 transition-smooth duration-700"
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-primary/90 via-primary/20 to-transparent opacity-0 group-hover:opacity-100 transition-smooth flex items-end p-4">
                       <div className="flex flex-wrap gap-1">
                         {project.services.map((service, idx) => (
-                          <span 
+                          <span
                             key={idx}
                             className="text-xs bg-accent/90 text-accent-foreground px-2 py-0.5 rounded-full"
                           >
@@ -489,14 +490,10 @@ const Portfolio = () => {
                       </span>
                     </div>
                   </div>
-                  
+
                   <div className="p-4">
-                    <h3 className="text-base font-bold text-foreground mb-2 line-clamp-1">
-                      {project.title}
-                    </h3>
-                    <p className="text-sm text-muted-foreground line-clamp-2">
-                      {project.description}
-                    </p>
+                    <h3 className="text-base font-bold text-foreground mb-2 line-clamp-1">{project.title}</h3>
+                    <p className="text-sm text-muted-foreground line-clamp-2">{project.description}</p>
                   </div>
                 </div>
               ))}
@@ -507,25 +504,22 @@ const Portfolio = () => {
                 <p className="text-muted-foreground">No projects found in this category.</p>
               </div>
             )}
-          </div>
-        </div>
-      </section>
-
-      {/* CTA Section */}
-      <section className="py-24 bg-primary text-primary-foreground">
-        <div className="container mx-auto px-6">
-          <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-4xl md:text-5xl font-bold mb-6">
-              Ready for Your Project to Shine?
-            </h2>
-            <p className="text-xl text-primary-foreground/80 mb-8">
-              Let's create signage solutions that showcase your brand and drive results.
-            </p>
-            <Link to="/#contact">
-              <Button variant="hero" size="xl">
-                Start Your Project
-              </Button>
-            </Link>
+            {/* CTA Section */}
+            <section className="bg-primary text-primary-foreground p-12 rounded-2xl text-center">
+              <div className="container mx-auto px-6">
+                <div className="max-w-4xl mx-auto text-center">
+                  <h2 className="text-4xl md:text-5xl font-bold mb-6">Ready for Your Project to Shine?</h2>
+                  <p className="text-xl text-primary-foreground/80 mb-8">
+                    Let's create signage solutions that showcase your brand and drive results.
+                  </p>
+                  <Link to="/#contact">
+                    <Button variant="hero" size="xl">
+                      Start Your Project
+                    </Button>
+                  </Link>
+                </div>
+              </div>
+            </section>
           </div>
         </div>
       </section>
