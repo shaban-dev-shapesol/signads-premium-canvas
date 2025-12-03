@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect, useRef } from "react";
 import { Button } from "@/components/ui/button";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
@@ -48,6 +48,23 @@ import promotionalPavement from "@/assets/gallery/promotional-pavement-1.jpg";
 
 const Portfolio = () => {
   const [filter, setFilter] = useState("all");
+  const [isInProjectsSection, setIsInProjectsSection] = useState(true);
+  const projectsSectionRef = useRef<HTMLElement>(null);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        setIsInProjectsSection(entry.isIntersecting);
+      },
+      { threshold: 0, rootMargin: "-100px 0px 0px 0px" }
+    );
+
+    if (projectsSectionRef.current) {
+      observer.observe(projectsSectionRef.current);
+    }
+
+    return () => observer.disconnect();
+  }, []);
 
   const projects = [
     // Exterior Projects
@@ -402,7 +419,7 @@ const Portfolio = () => {
       </section>
 
       {/* Filter Section */}
-      <section className="py-8 bg-secondary sticky top-20 z-40 border-b border-border">
+      <section className={`py-8 bg-secondary border-b border-border ${isInProjectsSection ? 'sticky top-20 z-40' : ''}`}>
         <div className="container mx-auto px-6">
           <div className="flex flex-wrap gap-2 justify-center">
             {categories.map((cat) => (
@@ -425,7 +442,7 @@ const Portfolio = () => {
       </section>
 
       {/* Portfolio Grid */}
-      <section className="py-20 bg-background">
+      <section ref={projectsSectionRef} className="py-20 bg-background">
         <div className="container mx-auto px-6">
           <div className="max-w-7xl mx-auto">
             <div className="grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
