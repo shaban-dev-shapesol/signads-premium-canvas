@@ -95,11 +95,11 @@ const Hero = () => {
           >
             <p className="text-white/50 text-xs uppercase tracking-widest mb-4">Trusted By</p>
             <div className="flex flex-wrap items-center gap-8">
-              <img src={client1} alt="Apex" className="h-8 w-auto opacity-70 hover:opacity-100 transition-opacity" />
-              <img src={client2} alt="Noeva" className="h-8 w-auto opacity-70 hover:opacity-100 transition-opacity" />
-              <img src={client3} alt="Atlas" className="h-8 w-auto opacity-70 hover:opacity-100 transition-opacity" />
-              <img src={client4} alt="Pulse" className="h-8 w-auto opacity-70 hover:opacity-100 transition-opacity" />
-              <img src={client5} alt="Zenith" className="h-8 w-auto opacity-70 hover:opacity-100 transition-opacity" />
+              <img src={client1} alt="Metro" className="h-8 w-auto opacity-70 hover:opacity-100 transition-opacity" />
+              <img src={client2} alt="Crown" className="h-8 w-auto opacity-70 hover:opacity-100 transition-opacity" />
+              <img src={client3} alt="Spark" className="h-8 w-auto opacity-70 hover:opacity-100 transition-opacity" />
+              <img src={client4} alt="Vista" className="h-8 w-auto opacity-70 hover:opacity-100 transition-opacity" />
+              <img src={client5} alt="Orbit" className="h-8 w-auto opacity-70 hover:opacity-100 transition-opacity" />
             </div>
           </motion.div>
         </div>
