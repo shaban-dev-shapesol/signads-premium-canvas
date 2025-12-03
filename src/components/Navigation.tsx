@@ -8,12 +8,17 @@ const Navigation = () => {
   const [isServicesOpen, setIsServicesOpen] = useState(false);
   const [mobileServicesOpen, setMobileServicesOpen] = useState(false);
   const [expandedCategory, setExpandedCategory] = useState<string | null>(null);
+  const [scrolled, setScrolled] = useState(false);
   const location = useLocation();
   const servicesRef = useRef<HTMLDivElement>(null);
 
-  const navLinks = [
-    { name: "Industries", href: "/industries" },
+  const leftNavLinks = [
+    { name: "Services", href: "/services", hasDropdown: true },
     { name: "Portfolio", href: "/portfolio" },
+  ];
+
+  const rightNavLinks = [
+    { name: "Industries", href: "/industries" },
     { name: "About", href: "/about" },
   ];
 
@@ -110,6 +115,14 @@ const Navigation = () => {
   ];
 
   useEffect(() => {
+    const handleScroll = () => {
+      setScrolled(window.scrollY > 50);
+    };
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
+  useEffect(() => {
     const handleClickOutside = (event: MouseEvent) => {
       if (servicesRef.current && !servicesRef.current.contains(event.target as Node)) {
         setIsServicesOpen(false);
@@ -131,85 +144,118 @@ const Navigation = () => {
   };
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-lg border-b border-border">
+    <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
+      scrolled 
+        ? 'bg-background/95 backdrop-blur-lg border-b border-border shadow-lg' 
+        : 'bg-transparent'
+    }`}>
       <div className="container mx-auto px-6">
         <div className="flex items-center justify-between h-20">
-          <div className="flex items-center">
-            <Link to="/" className="text-2xl font-bold text-foreground hover:text-accent transition-smooth">
+          {/* Left Navigation */}
+          <div className="hidden lg:flex items-center gap-8 flex-1">
+            {leftNavLinks.map((link) => (
+              link.hasDropdown ? (
+                <div key={link.name} className="relative" ref={servicesRef}>
+                  <button
+                    className={`font-medium flex items-center gap-1 transition-all duration-300 ${
+                      scrolled ? 'text-foreground hover:text-accent' : 'text-white hover:text-accent'
+                    }`}
+                    onMouseEnter={() => setIsServicesOpen(true)}
+                  >
+                    {link.name}
+                    <ChevronDown className="w-4 h-4" />
+                  </button>
+                  
+                  {isServicesOpen && (
+                    <div 
+                      className="fixed left-1/2 -translate-x-1/2 top-20 mt-2 w-screen max-w-6xl bg-background border border-border rounded-2xl shadow-premium p-8 z-50"
+                      onMouseLeave={() => setIsServicesOpen(false)}
+                    >
+                      <div className="grid grid-cols-4 gap-8">
+                        {serviceCategories.map((category) => (
+                          <div key={category.name}>
+                            <Link
+                              to={category.href}
+                              className="text-lg font-bold text-foreground hover:text-accent transition-smooth mb-3 block"
+                              onClick={() => setIsServicesOpen(false)}
+                            >
+                              {category.name}
+                            </Link>
+                            <ul className="space-y-2">
+                              {category.items.map((item) => (
+                                <li key={item.name}>
+                                  <Link
+                                    to={item.href}
+                                    className="text-sm text-muted-foreground hover:text-accent transition-smooth block"
+                                    onClick={() => setIsServicesOpen(false)}
+                                  >
+                                    {item.name}
+                                  </Link>
+                                </li>
+                              ))}
+                            </ul>
+                          </div>
+                        ))}
+                      </div>
+                      <div className="mt-8 pt-8 border-t border-border text-center">
+                        <Link to="/services">
+                          <Button variant="premium" onClick={() => setIsServicesOpen(false)}>
+                            View All Services
+                          </Button>
+                        </Link>
+                      </div>
+                    </div>
+                  )}
+                </div>
+              ) : (
+                <Link
+                  key={link.name}
+                  to={link.href}
+                  className={`font-medium transition-all duration-300 ${
+                    scrolled ? 'text-foreground hover:text-accent' : 'text-white hover:text-accent'
+                  }`}
+                >
+                  {link.name}
+                </Link>
+              )
+            ))}
+          </div>
+
+          {/* Center Logo */}
+          <div className="flex-shrink-0 lg:absolute lg:left-1/2 lg:-translate-x-1/2">
+            <Link to="/" className={`text-3xl font-bold transition-all duration-300 ${
+              scrolled ? 'text-foreground' : 'text-white'
+            }`}>
               sign<span className="text-accent">Ads</span>
             </Link>
           </div>
 
-          {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center gap-8">
-            <div className="relative" ref={servicesRef}>
-              <button
-                className="text-foreground hover:text-accent transition-smooth font-medium flex items-center gap-1"
-                onMouseEnter={() => setIsServicesOpen(true)}
-              >
-                Services
-                <ChevronDown className="w-4 h-4" />
-              </button>
-              
-              {isServicesOpen && (
-                <div 
-                  className="fixed left-1/2 -translate-x-1/2 top-20 mt-2 w-screen max-w-6xl bg-background border border-border rounded-2xl shadow-premium p-8 z-50"
-                  onMouseLeave={() => setIsServicesOpen(false)}
-                >
-                  <div className="grid grid-cols-4 gap-8">
-                    {serviceCategories.map((category) => (
-                      <div key={category.name}>
-                        <Link
-                          to={category.href}
-                          className="text-lg font-bold text-foreground hover:text-accent transition-smooth mb-3 block"
-                          onClick={() => setIsServicesOpen(false)}
-                        >
-                          {category.name}
-                        </Link>
-                        <ul className="space-y-2">
-                          {category.items.map((item) => (
-                            <li key={item.name}>
-                              <Link
-                                to={item.href}
-                                className="text-sm text-muted-foreground hover:text-accent transition-smooth block"
-                                onClick={() => setIsServicesOpen(false)}
-                              >
-                                {item.name}
-                              </Link>
-                            </li>
-                          ))}
-                        </ul>
-                      </div>
-                    ))}
-                  </div>
-                  <div className="mt-8 pt-8 border-t border-border text-center">
-                    <Link to="/services">
-                      <Button variant="premium" onClick={() => setIsServicesOpen(false)}>
-                        View All Services
-                      </Button>
-                    </Link>
-                  </div>
-                </div>
-              )}
-            </div>
-            
-            {navLinks.map((link) => (
+          {/* Right Navigation */}
+          <div className="hidden lg:flex items-center gap-8 flex-1 justify-end">
+            {rightNavLinks.map((link) => (
               <Link
                 key={link.name}
                 to={link.href}
-                className="text-foreground hover:text-accent transition-smooth font-medium"
+                className={`font-medium transition-all duration-300 ${
+                  scrolled ? 'text-foreground hover:text-accent' : 'text-white hover:text-accent'
+                }`}
               >
                 {link.name}
               </Link>
             ))}
-            <Button variant="premium" size="default" onClick={scrollToContact}>
+            <Button 
+              variant={scrolled ? "premium" : "outline"} 
+              size="default" 
+              onClick={scrollToContact}
+              className={!scrolled ? "border-white/50 text-white hover:bg-white hover:text-primary" : ""}
+            >
               Get Quote
             </Button>
           </div>
 
           {/* Mobile Menu Button */}
           <button
-            className="md:hidden text-foreground"
+            className={`lg:hidden transition-colors ${scrolled ? 'text-foreground' : 'text-white'}`}
             onClick={() => setIsOpen(!isOpen)}
           >
             {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
@@ -218,7 +264,7 @@ const Navigation = () => {
 
         {/* Mobile Navigation */}
         {isOpen && (
-          <div className="md:hidden py-6 space-y-4 border-t border-border max-h-[calc(100vh-5rem)] overflow-y-auto">
+          <div className="lg:hidden py-6 space-y-4 border-t border-border/50 max-h-[calc(100vh-5rem)] overflow-y-auto bg-background/95 backdrop-blur-lg rounded-b-2xl">
             {/* Services Section with Accordion */}
             <div className="space-y-2">
               <button
@@ -290,16 +336,27 @@ const Navigation = () => {
               )}
             </div>
             
-            {navLinks.map((link) => (
-              <Link
-                key={link.name}
-                to={link.href}
-                className="block text-foreground hover:text-accent transition-smooth font-medium"
-                onClick={() => setIsOpen(false)}
-              >
-                {link.name}
-              </Link>
-            ))}
+            <Link
+              to="/portfolio"
+              className="block text-foreground hover:text-accent transition-smooth font-medium"
+              onClick={() => setIsOpen(false)}
+            >
+              Portfolio
+            </Link>
+            <Link
+              to="/industries"
+              className="block text-foreground hover:text-accent transition-smooth font-medium"
+              onClick={() => setIsOpen(false)}
+            >
+              Industries
+            </Link>
+            <Link
+              to="/about"
+              className="block text-foreground hover:text-accent transition-smooth font-medium"
+              onClick={() => setIsOpen(false)}
+            >
+              About
+            </Link>
             <Button variant="premium" size="default" className="w-full" onClick={(e) => {
               scrollToContact(e);
               setIsOpen(false);
