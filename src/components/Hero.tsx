@@ -81,31 +81,21 @@ const Hero = () => {
             </Button>
           </motion.div>
 
-          {/* Quick Links */}
+          {/* Trusted By */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.8 }}
-            className="flex flex-wrap gap-6 mt-12 pt-8 border-t border-white/20"
+            className="mt-12 pt-8 border-t border-white/20"
           >
-            <Link 
-              to="/services" 
-              className="text-white/70 hover:text-accent transition-colors text-sm font-medium"
-            >
-              Our Services →
-            </Link>
-            <Link 
-              to="/about" 
-              className="text-white/70 hover:text-accent transition-colors text-sm font-medium"
-            >
-              About Us →
-            </Link>
-            <Link 
-              to="/contact" 
-              className="text-white/70 hover:text-accent transition-colors text-sm font-medium"
-            >
-              Contact →
-            </Link>
+            <p className="text-white/50 text-xs uppercase tracking-widest mb-4">Trusted By</p>
+            <div className="flex flex-wrap items-center gap-6">
+              <span className="text-white/70 font-semibold text-lg tracking-wide">Tesco</span>
+              <span className="text-white/70 font-semibold text-lg tracking-wide">Costa</span>
+              <span className="text-white/70 font-semibold text-lg tracking-wide">Hilton</span>
+              <span className="text-white/70 font-semibold text-lg tracking-wide">McDonald's</span>
+              <span className="text-white/70 font-semibold text-lg tracking-wide">Premier Inn</span>
+            </div>
           </motion.div>
         </div>
       </div>
