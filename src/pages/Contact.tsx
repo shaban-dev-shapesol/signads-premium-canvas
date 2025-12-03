@@ -22,6 +22,43 @@ const Contact = () => {
       {/* Contact Form Section */}
       <ContactForm />
 
+      {/* Business Hours Section */}
+      <section className="py-20 px-4 bg-muted/30">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold mb-4">
+              Business <span className="text-accent">Hours</span>
+            </h2>
+            <p className="text-muted-foreground max-w-2xl mx-auto">
+              Visit us during our opening hours or schedule an appointment
+            </p>
+          </div>
+          <div className="max-w-md mx-auto bg-card rounded-2xl border border-border p-8 shadow-lg">
+            <div className="space-y-4">
+              {[
+                { day: "Monday", hours: "9:00 AM - 6:00 PM" },
+                { day: "Tuesday", hours: "9:00 AM - 6:00 PM" },
+                { day: "Wednesday", hours: "9:00 AM - 6:00 PM" },
+                { day: "Thursday", hours: "9:00 AM - 6:00 PM" },
+                { day: "Friday", hours: "9:00 AM - 6:00 PM" },
+                { day: "Saturday", hours: "10:00 AM - 4:00 PM" },
+                { day: "Sunday", hours: "Closed" },
+              ].map((item) => (
+                <div
+                  key={item.day}
+                  className="flex justify-between items-center py-3 border-b border-border last:border-0"
+                >
+                  <span className="font-medium">{item.day}</span>
+                  <span className={item.hours === "Closed" ? "text-destructive" : "text-accent"}>
+                    {item.hours}
+                  </span>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Map Section */}
       <section className="py-20 px-4">
         <div className="max-w-7xl mx-auto">
