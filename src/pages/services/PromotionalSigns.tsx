@@ -1,34 +1,53 @@
-import { Megaphone } from "lucide-react";
+import { Megaphone, ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import { Link } from "react-router-dom";
 
+import promotionalFlags from "@/assets/gallery/promotional-flags-1.jpg";
+import promotionalPavement from "@/assets/gallery/promotional-pavement-1.jpg";
+import exteriorProjection from "@/assets/gallery/exterior-projection-1.jpg";
+import printWindow from "@/assets/gallery/print-window-1.jpg";
+import lightboxPromotional from "@/assets/gallery/lightbox-promotional-1.jpg";
+import printCeiling from "@/assets/gallery/print-ceiling-1.jpg";
+
 const PromotionalSigns = () => {
   const services = [
     {
       title: "Custom Flags",
-      description: "Eye-catching feather and teardrop flags for outdoor promotions. Portable and weather-resistant with easy setup.",
+      description: "Eye-catching feather and teardrop flags for outdoor promotions.",
+      image: promotionalFlags,
+      link: "/services/promotional-signs/custom-flags",
     },
     {
-      title: "Pavement Sign",
-      description: "A-frame signs perfect for storefronts and events. Weather-resistant with changeable graphics options.",
+      title: "Pavement Signs",
+      description: "A-frame signs perfect for storefronts and events.",
+      image: promotionalPavement,
+      link: "/services/promotional-signs/pavement-sign",
     },
     {
       title: "Projection Sign",
-      description: "Traditional projecting signs that extend visibility and attract attention from multiple angles.",
+      description: "Projecting signs for multi-angle visibility.",
+      image: exteriorProjection,
+      link: "/services/exterior-signs/projection-sign",
     },
     {
       title: "Window Graphics",
-      description: "Promotional window displays that drive foot traffic. Removable adhesive for temporary campaigns.",
+      description: "Promotional window displays that drive traffic.",
+      image: printWindow,
+      link: "/services/print-signs/window-graphics",
     },
     {
       title: "Light Boxes",
-      description: "Illuminated promotional displays that ensure your message is seen day and night.",
+      description: "Illuminated displays seen day and night.",
+      image: lightboxPromotional,
+      link: "/services/light-boxes/promotional-lightbox",
     },
     {
-      title: "Bespoke Printed Ceiling",
-      description: "Innovative overhead graphics that capture attention in retail and exhibition spaces.",
+      title: "Bespoke Ceiling",
+      description: "Innovative overhead graphics for retail spaces.",
+      image: printCeiling,
+      link: "/services/print-signs/bespoke-ceiling",
     },
   ];
 
@@ -46,8 +65,7 @@ const PromotionalSigns = () => {
               Promotional <span className="text-accent">Signs</span>
             </h1>
             <p className="text-xl text-primary-foreground/80 mb-8">
-              Maximize your promotional impact with versatile signage solutions designed for campaigns, 
-              events, and seasonal promotions.
+              Maximize your promotional impact with versatile signage solutions.
             </p>
             <Link to="/#contact">
               <Button variant="hero" size="xl">
@@ -60,27 +78,41 @@ const PromotionalSigns = () => {
 
       <section className="py-24 bg-background">
         <div className="container mx-auto px-6">
-          <div className="max-w-6xl mx-auto">
-            <div className="grid md:grid-cols-2 gap-8">
+          <div className="max-w-7xl mx-auto">
+            <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
               {services.map((service, index) => (
-                <div 
+                <Link 
                   key={index}
-                  className="bg-secondary p-8 rounded-2xl border border-border hover:shadow-premium transition-smooth"
+                  to={service.link}
+                  className="group relative overflow-hidden rounded-2xl border border-border bg-card hover:shadow-premium transition-all duration-300"
                 >
-                  <h3 className="text-2xl font-bold text-foreground mb-4">
-                    {service.title}
-                  </h3>
-                  <p className="text-muted-foreground">
-                    {service.description}
-                  </p>
-                </div>
+                  <div className="aspect-[4/3] overflow-hidden">
+                    <img 
+                      src={service.image} 
+                      alt={service.title}
+                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                    />
+                  </div>
+                  <div className="p-6">
+                    <h3 className="text-xl font-bold text-foreground mb-2 group-hover:text-accent transition-colors">
+                      {service.title}
+                    </h3>
+                    <p className="text-muted-foreground text-sm mb-4">
+                      {service.description}
+                    </p>
+                    <div className="flex items-center text-accent font-medium text-sm">
+                      Learn More
+                      <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
+                    </div>
+                  </div>
+                </Link>
               ))}
             </div>
 
             <div className="mt-16 bg-primary text-primary-foreground p-12 rounded-2xl text-center">
               <h2 className="text-3xl font-bold mb-4">Amplify Your Promotions</h2>
               <p className="text-xl text-primary-foreground/80 mb-8 max-w-2xl mx-auto">
-                Flexible, impactful promotional signage that drives results for your campaigns.
+                Flexible, impactful promotional signage that drives results.
               </p>
               <Link to="/#contact">
                 <Button variant="hero" size="xl">

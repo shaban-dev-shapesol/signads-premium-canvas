@@ -1,18 +1,32 @@
-import { Presentation } from "lucide-react";
+import { Presentation, ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import { Link } from "react-router-dom";
 
+import exhibitionStandard from "@/assets/gallery/exhibition-standard-1.jpg";
+import exhibitionBespoke from "@/assets/gallery/exhibition-bespoke-1.jpg";
+import exhibitionPopup from "@/assets/gallery/exhibition-popup-1.jpg";
+
 const ExhibitionDisplay = () => {
   const services = [
     {
       title: "Standard Exhibition Display",
-      description: "Professional pop-up banners, roller banners, and modular display systems. Lightweight, portable, and easy to set up.",
+      description: "Professional pop-up banners and modular display systems.",
+      image: exhibitionStandard,
+      link: "/services/exhibition-display/standard-exhibition-display",
     },
     {
       title: "Bespoke Exhibition Display",
-      description: "Custom-designed exhibition stands tailored to your brand. Modular systems that can be reconfigured for different spaces.",
+      description: "Custom-designed exhibition stands tailored to your brand.",
+      image: exhibitionBespoke,
+      link: "/services/exhibition-display/bespoke-exhibition-display",
+    },
+    {
+      title: "Pop-Up Banners",
+      description: "Lightweight, portable, and easy to set up displays.",
+      image: exhibitionPopup,
+      link: "/services/exhibition-display/pop-up-banners",
     },
   ];
 
@@ -30,8 +44,7 @@ const ExhibitionDisplay = () => {
               Exhibition <span className="text-accent">Display</span>
             </h1>
             <p className="text-xl text-primary-foreground/80 mb-8">
-              Stand out at trade shows and events with professional exhibition systems designed for 
-              maximum impact, portability, and ease of setup.
+              Stand out at trade shows with professional exhibition systems designed for impact.
             </p>
             <Link to="/#contact">
               <Button variant="hero" size="xl">
@@ -44,20 +57,34 @@ const ExhibitionDisplay = () => {
 
       <section className="py-24 bg-background">
         <div className="container mx-auto px-6">
-          <div className="max-w-6xl mx-auto">
-            <div className="grid md:grid-cols-2 gap-8">
+          <div className="max-w-7xl mx-auto">
+            <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
               {services.map((service, index) => (
-                <div 
+                <Link 
                   key={index}
-                  className="bg-secondary p-8 rounded-2xl border border-border hover:shadow-premium transition-smooth"
+                  to={service.link}
+                  className="group relative overflow-hidden rounded-2xl border border-border bg-card hover:shadow-premium transition-all duration-300"
                 >
-                  <h3 className="text-2xl font-bold text-foreground mb-4">
-                    {service.title}
-                  </h3>
-                  <p className="text-muted-foreground">
-                    {service.description}
-                  </p>
-                </div>
+                  <div className="aspect-[4/3] overflow-hidden">
+                    <img 
+                      src={service.image} 
+                      alt={service.title}
+                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                    />
+                  </div>
+                  <div className="p-6">
+                    <h3 className="text-xl font-bold text-foreground mb-2 group-hover:text-accent transition-colors">
+                      {service.title}
+                    </h3>
+                    <p className="text-muted-foreground text-sm mb-4">
+                      {service.description}
+                    </p>
+                    <div className="flex items-center text-accent font-medium text-sm">
+                      Learn More
+                      <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
+                    </div>
+                  </div>
+                </Link>
               ))}
             </div>
 

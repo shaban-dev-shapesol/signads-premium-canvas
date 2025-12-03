@@ -1,26 +1,39 @@
-import { Monitor } from "lucide-react";
+import { Monitor, ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import { Link } from "react-router-dom";
 
+import digitalOutdoor from "@/assets/gallery/digital-outdoor-1.jpg";
+import digitalIndoor from "@/assets/gallery/digital-indoor-1.jpg";
+import digitalMenu from "@/assets/gallery/digital-menu-1.jpg";
+import digitalWindow from "@/assets/gallery/digital-window-1.jpg";
+
 const DigitalSignage = () => {
   const services = [
     {
       title: "Outdoor Digital Signs",
-      description: "High-brightness LED displays designed for outdoor environments. Weather-resistant with dynamic content capabilities.",
+      description: "High-brightness LED displays for outdoor environments.",
+      image: digitalOutdoor,
+      link: "/services/digital-signage/outdoor-digital-signs",
     },
     {
       title: "Indoor Digital Signage",
-      description: "Professional display solutions for retail, corporate, and hospitality environments. Content management systems included.",
+      description: "Professional display solutions for retail and corporate.",
+      image: digitalIndoor,
+      link: "/services/digital-signage/indoor-digital-signage",
     },
     {
       title: "Digital Takeaway Menu",
-      description: "Interactive menu boards for restaurants and cafes. Easy content updates and vibrant food photography display.",
+      description: "Interactive menu boards for restaurants and cafes.",
+      image: digitalMenu,
+      link: "/services/digital-signage/digital-takeaway-menu",
     },
     {
       title: "Shop Window Display",
-      description: "Attention-grabbing digital window displays that drive foot traffic. High-brightness screens for visibility in direct sunlight.",
+      description: "High-brightness screens that drive foot traffic.",
+      image: digitalWindow,
+      link: "/services/digital-signage/shop-window-display",
     },
   ];
 
@@ -38,8 +51,7 @@ const DigitalSignage = () => {
               Digital <span className="text-accent">Signage</span>
             </h1>
             <p className="text-xl text-primary-foreground/80 mb-8">
-              Engage audiences with dynamic digital displays. Update content instantly and maximize 
-              impact with vibrant, attention-grabbing visuals.
+              Engage audiences with dynamic digital displays and instant content updates.
             </p>
             <Link to="/#contact">
               <Button variant="hero" size="xl">
@@ -52,20 +64,34 @@ const DigitalSignage = () => {
 
       <section className="py-24 bg-background">
         <div className="container mx-auto px-6">
-          <div className="max-w-6xl mx-auto">
-            <div className="grid md:grid-cols-2 gap-8">
+          <div className="max-w-7xl mx-auto">
+            <div className="grid sm:grid-cols-2 lg:grid-cols-2 gap-6">
               {services.map((service, index) => (
-                <div 
+                <Link 
                   key={index}
-                  className="bg-secondary p-8 rounded-2xl border border-border hover:shadow-premium transition-smooth"
+                  to={service.link}
+                  className="group relative overflow-hidden rounded-2xl border border-border bg-card hover:shadow-premium transition-all duration-300"
                 >
-                  <h3 className="text-2xl font-bold text-foreground mb-4">
-                    {service.title}
-                  </h3>
-                  <p className="text-muted-foreground">
-                    {service.description}
-                  </p>
-                </div>
+                  <div className="aspect-[4/3] overflow-hidden">
+                    <img 
+                      src={service.image} 
+                      alt={service.title}
+                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                    />
+                  </div>
+                  <div className="p-6">
+                    <h3 className="text-xl font-bold text-foreground mb-2 group-hover:text-accent transition-colors">
+                      {service.title}
+                    </h3>
+                    <p className="text-muted-foreground text-sm mb-4">
+                      {service.description}
+                    </p>
+                    <div className="flex items-center text-accent font-medium text-sm">
+                      Learn More
+                      <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
+                    </div>
+                  </div>
+                </Link>
               ))}
             </div>
 
