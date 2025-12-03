@@ -3,6 +3,11 @@ import { ArrowRight } from "lucide-react";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import heroImage from "@/assets/hero-signage-premium.jpg";
+import client1 from "@/assets/clients/client-1.png";
+import client2 from "@/assets/clients/client-2.png";
+import client3 from "@/assets/clients/client-3.png";
+import client4 from "@/assets/clients/client-4.png";
+import client5 from "@/assets/clients/client-5.png";
 
 const Hero = () => {
   const scrollToContact = () => {
@@ -89,12 +94,12 @@ const Hero = () => {
             className="mt-12 pt-8 border-t border-white/20"
           >
             <p className="text-white/50 text-xs uppercase tracking-widest mb-4">Trusted By</p>
-            <div className="flex flex-wrap items-center gap-6">
-              <span className="text-white/70 font-semibold text-lg tracking-wide">Tesco</span>
-              <span className="text-white/70 font-semibold text-lg tracking-wide">Costa</span>
-              <span className="text-white/70 font-semibold text-lg tracking-wide">Hilton</span>
-              <span className="text-white/70 font-semibold text-lg tracking-wide">McDonald's</span>
-              <span className="text-white/70 font-semibold text-lg tracking-wide">Premier Inn</span>
+            <div className="flex flex-wrap items-center gap-8">
+              <img src={client1} alt="Apex" className="h-8 w-auto opacity-70 hover:opacity-100 transition-opacity" />
+              <img src={client2} alt="Noeva" className="h-8 w-auto opacity-70 hover:opacity-100 transition-opacity" />
+              <img src={client3} alt="Atlas" className="h-8 w-auto opacity-70 hover:opacity-100 transition-opacity" />
+              <img src={client4} alt="Pulse" className="h-8 w-auto opacity-70 hover:opacity-100 transition-opacity" />
+              <img src={client5} alt="Zenith" className="h-8 w-auto opacity-70 hover:opacity-100 transition-opacity" />
             </div>
           </motion.div>
         </div>
