@@ -419,7 +419,7 @@ const Portfolio = () => {
       </section>
 
       {/* Filter Section */}
-      <section className={`py-8 bg-secondary border-b border-border ${isInProjectsSection ? 'sticky top-20 z-40' : ''}`}>
+      <section className={`py-8 bg-secondary border-b border-border transition-all duration-300 ease-in-out ${isInProjectsSection ? 'sticky top-20 z-40' : 'relative'}`}>
         <div className="container mx-auto px-6">
           <div className="flex flex-wrap gap-2 justify-center">
             {categories.map((cat) => (
