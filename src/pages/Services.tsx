@@ -1,80 +1,138 @@
-import { Building2, Home, Car, Printer, Presentation } from "lucide-react";
+import { Building2, Home, Car, Printer, Presentation, Lightbulb, Flag, Monitor } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import { Link } from "react-router-dom";
 
+import serviceExterior from "@/assets/service-exterior.jpg";
+import serviceInterior from "@/assets/service-interior.jpg";
+import serviceVehicle from "@/assets/service-vehicle.jpg";
+import servicePrinting from "@/assets/service-printing.jpg";
+import serviceExhibition from "@/assets/service-exhibition.jpg";
+import serviceDigital from "@/assets/service-digital.jpg";
+
 const Services = () => {
   const services = [
     {
       icon: Building2,
-      title: "Exterior Signage",
-      description: "Make an unforgettable first impression with premium exterior signage solutions that command attention and elevate your brand presence 24/7.",
+      title: "Exterior Signs",
+      description: "Premium exterior signage that commands attention and elevates your brand presence 24/7.",
+      image: serviceExterior,
+      link: "/services/exterior-signs",
       features: [
-        "Fascia Signs - Premium illuminated and non-illuminated options",
-        "3D Built-up Letters - Dimensional signage with depth and impact",
-        "Totem Signs - Freestanding structures for maximum visibility",
-        "Illuminated Light Boxes - Eye-catching displays that shine day and night",
-        "LED Signage - Energy-efficient, vibrant digital displays",
-        "Window Graphics - Professional vinyl applications and manifestations"
+        "Built-up 3D Letters",
+        "Fascia Sign Trays",
+        "Flex Face Light Boxes",
+        "Projection Signs",
+        "Totem Signs",
+        "Site Hoarding Boards"
       ],
-      benefits: "Weather-resistant materials, professional installation, compliance with local regulations, and maintenance support included."
+      benefits: "Weather-resistant materials, professional installation, and compliance with local regulations."
     },
     {
       icon: Home,
-      title: "Interior Signage",
-      description: "Transform your interior spaces with sophisticated signage that reinforces brand identity and enhances the customer experience at every touchpoint.",
+      title: "Interior Signs",
+      description: "Sophisticated interior signage that reinforces brand identity and enhances customer experience.",
+      image: serviceInterior,
+      link: "/services/interior-signs",
       features: [
-        "Reception Signs - Make a powerful statement in your lobby",
-        "Office Wall Graphics - Inspire and motivate with branded environments",
-        "Wayfinding Systems - Guide visitors seamlessly through your space",
-        "Neon Signs - Contemporary illuminated features for modern spaces",
-        "Acrylic Displays - Premium transparent and colored options",
-        "Directory Boards - Professional information systems"
+        "Reception Signs",
+        "Neon Signs",
+        "Office Light Boxes",
+        "Creative Wall Graphics",
+        "Window Frosting"
       ],
-      benefits: "Custom design consultation, precise manufacturing, expert installation, and materials that meet safety standards."
+      benefits: "Custom design consultation, precise manufacturing, and expert installation."
+    },
+    {
+      icon: Printer,
+      title: "Print Signs",
+      description: "Cutting-edge printing technology delivering stunning visual impact at any scale.",
+      image: servicePrinting,
+      link: "/services/print-signs",
+      features: [
+        "Printed Trays",
+        "Vinyl Lettering",
+        "Banner Printing",
+        "Window Graphics",
+        "Wall Art",
+        "Floor Graphics",
+        "Bespoke Ceilings"
+      ],
+      benefits: "High-resolution output, UV-resistant inks, and fast turnaround times."
+    },
+    {
+      icon: Lightbulb,
+      title: "Light Boxes",
+      description: "Eye-catching illuminated displays that make your brand shine day and night.",
+      image: serviceExterior,
+      link: "/services/light-boxes",
+      features: [
+        "Flex Face Light Box Signs",
+        "Acrylic Printed Light Boxes",
+        "Promotional Light Boxes"
+      ],
+      benefits: "Energy-efficient LED technology, even illumination, and durable construction."
+    },
+    {
+      icon: Flag,
+      title: "Promotional Signs",
+      description: "Versatile promotional solutions designed for maximum visibility and engagement.",
+      image: servicePrinting,
+      link: "/services/promotional-signs",
+      features: [
+        "Custom Flags",
+        "Pavement Signs",
+        "Projection Signs",
+        "Window Graphics",
+        "Light Boxes",
+        "Bespoke Ceilings"
+      ],
+      benefits: "Portable designs, quick setup, and high-impact visibility."
+    },
+    {
+      icon: Monitor,
+      title: "Digital Signage",
+      description: "Dynamic digital displays that captivate audiences with stunning visuals.",
+      image: serviceDigital,
+      link: "/services/digital-signage",
+      features: [
+        "Outdoor Digital Signs",
+        "Indoor Digital Signage",
+        "Digital Takeaway Menus",
+        "Shop Window Displays"
+      ],
+      benefits: "Remote content management, real-time updates, and engaging animations."
+    },
+    {
+      icon: Presentation,
+      title: "Exhibition Display",
+      description: "Professional exhibition systems designed for impact, portability, and ease of setup.",
+      image: serviceExhibition,
+      link: "/services/exhibition-display",
+      features: [
+        "Standard Exhibition Displays",
+        "Bespoke Exhibition Displays",
+        "Pop-up Banners",
+        "Modular Stands"
+      ],
+      benefits: "Lightweight designs, tool-free assembly, and graphic replacement services."
     },
     {
       icon: Car,
       title: "Vehicle Graphics",
-      description: "Transform your fleet into mobile billboards that generate thousands of impressions daily. Professional vehicle wrapping that protects and promotes.",
+      description: "Transform your fleet into mobile billboards generating thousands of impressions daily.",
+      image: serviceVehicle,
+      link: "/services/vehicle-graphics",
       features: [
-        "Full Vehicle Wraps - Complete transformation with maximum impact",
-        "Partial Wraps - Strategic coverage for targeted messaging",
-        "Fleet Graphics - Consistent branding across multiple vehicles",
-        "Truck & Van Wraps - Large format solutions for commercial vehicles",
-        "Car Magnets - Flexible, removable branding options",
-        "Window Perforated Vinyl - Visibility from inside, advertising from outside"
+        "Car Wraps",
+        "Van Wraps",
+        "Truck Wraps",
+        "Food Truck Wraps",
+        "Lorry & HGV Wraps",
+        "Bus Wraps"
       ],
-      benefits: "Premium 3M and Avery materials, precision application, paint protection, and removal services available."
-    },
-    {
-      icon: Printer,
-      title: "Large Format Printing",
-      description: "Cutting-edge printing technology delivering stunning visual impact at any scale. From temporary campaigns to permanent installations.",
-      features: [
-        "Hoarding Boards - Construction site and event perimeter graphics",
-        "Banners - Indoor and outdoor, various materials and sizes",
-        "Floor Graphics - Durable, anti-slip promotional floor decals",
-        "Wall Art - Custom murals and decorative installations",
-        "Bespoke Prints - Canvas, fabric, rigid substrates",
-        "Event Graphics - Backdrops, displays, and promotional materials"
-      ],
-      benefits: "High-resolution output, UV-resistant inks, fast turnaround, and expert finishing services."
-    },
-    {
-      icon: Presentation,
-      title: "Exhibition & Display",
-      description: "Stand out at trade shows and events with professional exhibition systems designed for impact, portability, and ease of setup.",
-      features: [
-        "Pop-up Banners - Quick setup, professional appearance",
-        "Modular Exhibition Stands - Flexible, reusable systems",
-        "Feather Flags - Eye-catching outdoor promotional displays",
-        "Display Counters - Professional presentation surfaces",
-        "Poster Frames - Premium display solutions for marketing materials",
-        "Promotional Tables - Branded furniture for events"
-      ],
-      benefits: "Lightweight designs, carry cases included, tool-free assembly, and graphic replacement services."
+      benefits: "Premium 3M and Avery materials, precision application, and paint protection."
     },
   ];
 
@@ -90,8 +148,7 @@ const Services = () => {
               Our <span className="text-accent">Services</span>
             </h1>
             <p className="text-xl text-primary-foreground/80 mb-8">
-              Comprehensive signage solutions designed to elevate your brand and drive business growth. 
-              From concept to installation, we deliver excellence at every stage.
+              Comprehensive signage solutions designed to elevate your brand and drive business growth.
             </p>
             <Link to="/#contact">
               <Button variant="hero" size="xl">
@@ -138,15 +195,27 @@ const Services = () => {
                       </ul>
                     </div>
                     
-                    <div className="bg-secondary p-6 rounded-xl border border-border">
+                    <div className="bg-secondary p-6 rounded-xl border border-border mb-6">
                       <p className="text-sm text-foreground">
                         <strong>Why Choose Us:</strong> {service.benefits}
                       </p>
                     </div>
+
+                    <Link to={service.link}>
+                      <Button variant="default" size="lg">
+                        Explore {service.title}
+                      </Button>
+                    </Link>
                   </div>
                   
                   <div className={isEven ? 'lg:order-2' : 'lg:order-1'}>
-                    <div className="bg-muted rounded-2xl aspect-[4/3] shadow-premium" />
+                    <div className="rounded-2xl overflow-hidden shadow-premium aspect-[4/3]">
+                      <img 
+                        src={service.image} 
+                        alt={service.title}
+                        className="w-full h-full object-cover"
+                      />
+                    </div>
                   </div>
                 </div>
               );
