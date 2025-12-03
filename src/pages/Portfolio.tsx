@@ -505,7 +505,7 @@ const Portfolio = () => {
               </div>
             )}
             {/* CTA Section */}
-            <section className="bg-primary text-primary-foreground p-12 rounded-2xl text-center">
+            <section className="bg-primary text-primary-foreground p-12 rounded-2xl text-center mt-20">
               <div className="container mx-auto px-6">
                 <div className="max-w-4xl mx-auto text-center">
                   <h2 className="text-4xl md:text-5xl font-bold mb-6">Ready for Your Project to Shine?</h2>
