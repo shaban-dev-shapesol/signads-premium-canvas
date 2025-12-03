@@ -1,34 +1,53 @@
-import { Car } from "lucide-react";
+import { Car, ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import { Link } from "react-router-dom";
 
+import vehicleCar from "@/assets/gallery/vehicle-car-wrap-1.jpg";
+import vehicleVan from "@/assets/gallery/vehicle-van-wrap-1.jpg";
+import vehicleTruck from "@/assets/gallery/vehicle-truck-wrap-1.jpg";
+import vehicleFoodTruck from "@/assets/gallery/vehicle-food-truck-1.jpg";
+import vehicleLorry from "@/assets/gallery/vehicle-lorry-wrap-1.jpg";
+import vehicleBus from "@/assets/gallery/vehicle-bus-wrap-1.jpg";
+
 const VehicleGraphics = () => {
   const services = [
     {
       title: "Car Wrap",
-      description: "Transform your vehicle into a mobile billboard. Premium 3M and Avery materials with professional installation and paint protection.",
+      description: "Transform your vehicle into a mobile billboard.",
+      image: vehicleCar,
+      link: "/services/vehicle-graphics/car-wrap",
     },
     {
       title: "Van Wrap",
-      description: "Full and partial wrap options for commercial vans. High-impact graphics that generate thousands of daily impressions.",
+      description: "Full and partial wrap options for commercial vans.",
+      image: vehicleVan,
+      link: "/services/vehicle-graphics/van-wrap",
     },
     {
       title: "Truck Wrap",
-      description: "Large-format wraps for trucks and commercial vehicles. Weather-resistant and designed for long-term durability.",
+      description: "Large-format wraps for trucks and commercial vehicles.",
+      image: vehicleTruck,
+      link: "/services/vehicle-graphics/truck-wrap",
     },
     {
       title: "Food Truck Wrap",
-      description: "Eye-catching designs for food trucks that attract customers. Vibrant graphics that showcase your menu and brand.",
+      description: "Eye-catching designs that attract customers.",
+      image: vehicleFoodTruck,
+      link: "/services/vehicle-graphics/food-truck-wrap",
     },
     {
       title: "Lorry & HGV Wrap",
-      description: "Heavy goods vehicle wraps for maximum brand exposure. Professional installation with material warranties.",
+      description: "Heavy goods vehicle wraps for maximum exposure.",
+      image: vehicleLorry,
+      link: "/services/vehicle-graphics/lorry-hgv-wrap",
     },
     {
       title: "Bus Wrap",
-      description: "Full bus wraps for transit and tour operators. High-visibility advertising that reaches wide audiences.",
+      description: "Full bus wraps for transit and tour operators.",
+      image: vehicleBus,
+      link: "/services/vehicle-graphics/bus-wrap",
     },
   ];
 
@@ -46,8 +65,7 @@ const VehicleGraphics = () => {
               Vehicle <span className="text-accent">Graphics</span>
             </h1>
             <p className="text-xl text-primary-foreground/80 mb-8">
-              Transform your fleet into mobile billboards that generate thousands of impressions daily. 
-              Professional vehicle wrapping that protects and promotes.
+              Transform your fleet into mobile billboards that generate thousands of impressions daily.
             </p>
             <Link to="/#contact">
               <Button variant="hero" size="xl">
@@ -60,20 +78,34 @@ const VehicleGraphics = () => {
 
       <section className="py-24 bg-background">
         <div className="container mx-auto px-6">
-          <div className="max-w-6xl mx-auto">
-            <div className="grid md:grid-cols-2 gap-8">
+          <div className="max-w-7xl mx-auto">
+            <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
               {services.map((service, index) => (
-                <div 
+                <Link 
                   key={index}
-                  className="bg-secondary p-8 rounded-2xl border border-border hover:shadow-premium transition-smooth"
+                  to={service.link}
+                  className="group relative overflow-hidden rounded-2xl border border-border bg-card hover:shadow-premium transition-all duration-300"
                 >
-                  <h3 className="text-2xl font-bold text-foreground mb-4">
-                    {service.title}
-                  </h3>
-                  <p className="text-muted-foreground">
-                    {service.description}
-                  </p>
-                </div>
+                  <div className="aspect-[4/3] overflow-hidden">
+                    <img 
+                      src={service.image} 
+                      alt={service.title}
+                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                    />
+                  </div>
+                  <div className="p-6">
+                    <h3 className="text-xl font-bold text-foreground mb-2 group-hover:text-accent transition-colors">
+                      {service.title}
+                    </h3>
+                    <p className="text-muted-foreground text-sm mb-4">
+                      {service.description}
+                    </p>
+                    <div className="flex items-center text-accent font-medium text-sm">
+                      Learn More
+                      <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
+                    </div>
+                  </div>
+                </Link>
               ))}
             </div>
 

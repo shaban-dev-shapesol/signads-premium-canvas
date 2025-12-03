@@ -1,22 +1,32 @@
-import { Lightbulb } from "lucide-react";
+import { Lightbulb, ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import { Link } from "react-router-dom";
 
+import exteriorFlexFace from "@/assets/gallery/exterior-flex-face-1.jpg";
+import lightboxAcrylic from "@/assets/gallery/lightbox-acrylic-1.jpg";
+import lightboxPromotional from "@/assets/gallery/lightbox-promotional-1.jpg";
+
 const LightBoxes = () => {
   const services = [
     {
-      title: "Flex Face LightBox Sign",
-      description: "Durable illuminated signage with weather-resistant flex face material. Perfect for exterior applications with 24/7 visibility.",
+      title: "Flex Face LightBox",
+      description: "Durable illuminated signage with weather-resistant flex face material.",
+      image: exteriorFlexFace,
+      link: "/services/light-boxes/flex-face-lightbox",
     },
     {
-      title: "Acrylic Printed Lightbox",
-      description: "Premium acrylic face panels with edge-lit or backlit illumination. Superior clarity and vibrant color reproduction.",
+      title: "Acrylic Lightbox",
+      description: "Premium acrylic face panels with superior clarity.",
+      image: lightboxAcrylic,
+      link: "/services/light-boxes/acrylic-lightbox",
     },
     {
-      title: "Promotional Lightboxes",
-      description: "Eye-catching illuminated displays for retail and promotional use. Quick-change graphic systems available.",
+      title: "Promotional Lightbox",
+      description: "Eye-catching illuminated displays for retail and promotions.",
+      image: lightboxPromotional,
+      link: "/services/light-boxes/promotional-lightbox",
     },
   ];
 
@@ -34,8 +44,7 @@ const LightBoxes = () => {
               Light <span className="text-accent">Boxes</span>
             </h1>
             <p className="text-xl text-primary-foreground/80 mb-8">
-              Illuminate your brand with energy-efficient LED lightbox solutions. 
-              Maximum visibility day and night with stunning visual impact.
+              Illuminate your brand with energy-efficient LED lightbox solutions.
             </p>
             <Link to="/#contact">
               <Button variant="hero" size="xl">
@@ -48,20 +57,34 @@ const LightBoxes = () => {
 
       <section className="py-24 bg-background">
         <div className="container mx-auto px-6">
-          <div className="max-w-6xl mx-auto">
-            <div className="grid md:grid-cols-2 gap-8">
+          <div className="max-w-7xl mx-auto">
+            <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
               {services.map((service, index) => (
-                <div 
+                <Link 
                   key={index}
-                  className="bg-secondary p-8 rounded-2xl border border-border hover:shadow-premium transition-smooth"
+                  to={service.link}
+                  className="group relative overflow-hidden rounded-2xl border border-border bg-card hover:shadow-premium transition-all duration-300"
                 >
-                  <h3 className="text-2xl font-bold text-foreground mb-4">
-                    {service.title}
-                  </h3>
-                  <p className="text-muted-foreground">
-                    {service.description}
-                  </p>
-                </div>
+                  <div className="aspect-[4/3] overflow-hidden">
+                    <img 
+                      src={service.image} 
+                      alt={service.title}
+                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                    />
+                  </div>
+                  <div className="p-6">
+                    <h3 className="text-xl font-bold text-foreground mb-2 group-hover:text-accent transition-colors">
+                      {service.title}
+                    </h3>
+                    <p className="text-muted-foreground text-sm mb-4">
+                      {service.description}
+                    </p>
+                    <div className="flex items-center text-accent font-medium text-sm">
+                      Learn More
+                      <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
+                    </div>
+                  </div>
+                </Link>
               ))}
             </div>
 
