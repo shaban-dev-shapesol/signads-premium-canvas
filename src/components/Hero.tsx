@@ -7,6 +7,60 @@ import heroImage from "@/assets/hero-signage-premium.jpg";
 const Hero = () => {
   return (
     <section className="relative min-h-screen bg-primary overflow-hidden">
+      {/* Background Geometric Elements */}
+      <div className="absolute inset-0 overflow-hidden pointer-events-none">
+        {/* Large gradient circle - top right */}
+        <motion.div
+          initial={{ scale: 0, opacity: 0 }}
+          animate={{ scale: 1, opacity: 1 }}
+          transition={{ duration: 1.5, ease: "easeOut" }}
+          className="absolute -top-32 -right-32 w-[500px] h-[500px] rounded-full bg-accent/5"
+        />
+        {/* Medium circle outline - left */}
+        <motion.div
+          initial={{ scale: 0, opacity: 0 }}
+          animate={{ scale: 1, opacity: 0.1 }}
+          transition={{ duration: 1.2, delay: 0.3 }}
+          className="absolute top-1/3 -left-24 w-[350px] h-[350px] rounded-full border border-accent/30"
+        />
+        {/* Small filled circle - bottom left */}
+        <motion.div
+          initial={{ y: 30, opacity: 0 }}
+          animate={{ y: 0, opacity: 0.15 }}
+          transition={{ duration: 1, delay: 0.5 }}
+          className="absolute bottom-32 left-1/4 w-20 h-20 rounded-full bg-accent/20"
+        />
+        {/* Tiny dot accent */}
+        <motion.div
+          initial={{ scale: 0 }}
+          animate={{ scale: 1 }}
+          transition={{ duration: 0.6, delay: 0.8 }}
+          className="absolute top-1/4 left-1/3 w-3 h-3 rounded-full bg-accent/40"
+        />
+        {/* Horizontal line - subtle */}
+        <motion.div
+          initial={{ scaleX: 0 }}
+          animate={{ scaleX: 1 }}
+          transition={{ duration: 1.5, delay: 0.4 }}
+          className="absolute top-1/2 left-0 w-1/3 h-[1px] bg-gradient-to-r from-accent/20 to-transparent origin-left"
+        />
+        {/* Diagonal line - bottom right */}
+        <motion.div
+          initial={{ scaleX: 0, opacity: 0 }}
+          animate={{ scaleX: 1, opacity: 1 }}
+          transition={{ duration: 1.2, delay: 0.6 }}
+          className="absolute bottom-1/4 right-0 w-1/4 h-[1px] bg-gradient-to-l from-accent/15 to-transparent origin-right"
+        />
+        {/* Grid pattern overlay */}
+        <div 
+          className="absolute inset-0 opacity-[0.02]"
+          style={{
+            backgroundImage: `linear-gradient(to right, hsl(var(--accent)) 1px, transparent 1px),
+                              linear-gradient(to bottom, hsl(var(--accent)) 1px, transparent 1px)`,
+            backgroundSize: '60px 60px'
+          }}
+        />
+      </div>
       <div className="container mx-auto px-6 min-h-screen flex items-center">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-8 w-full py-24 lg:py-0">
           
