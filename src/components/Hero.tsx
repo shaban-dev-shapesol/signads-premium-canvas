@@ -2,7 +2,7 @@ import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
-import heroImage from "@/assets/hero-signage-urban.jpg";
+import heroImage from "@/assets/hero-neon-night.jpg";
 
 const Hero = () => {
   return (
