@@ -4,6 +4,11 @@ import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import { Link } from "react-router-dom";
 
+import printFloor1 from "@/assets/gallery/print-floor-1.jpg";
+import printFloor2 from "@/assets/gallery/print-floor-2.jpg";
+import printFloor3 from "@/assets/gallery/print-floor-3.jpg";
+import printFloor4 from "@/assets/gallery/print-floor-4.jpg";
+
 const FloorGraphics = () => {
   return (
     <div className="min-h-screen">
@@ -37,9 +42,11 @@ const FloorGraphics = () => {
             {/* Project Examples Gallery */}
             <div>
               <h2 className="text-3xl font-bold text-foreground mb-6">Floor Graphics Showcase</h2>
-              <div className="grid md:grid-cols-3 gap-6">
-                {[1, 2, 3, 4, 5, 6].map((i) => (
-                  <div key={i} className="aspect-square bg-secondary rounded-2xl border border-border hover:shadow-premium transition-smooth" />
+              <div className="grid md:grid-cols-4 gap-6">
+                {[printFloor1, printFloor2, printFloor3, printFloor4].map((img, i) => (
+                  <div key={i} className="aspect-video overflow-hidden rounded-2xl border border-border hover:shadow-premium transition-smooth">
+                    <img src={img} alt={`Floor graphics project ${i + 1}`} className="w-full h-full object-cover" />
+                  </div>
                 ))}
               </div>
             </div>

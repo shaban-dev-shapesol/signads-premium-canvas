@@ -4,6 +4,11 @@ import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import { Link } from "react-router-dom";
 
+import printWindow1 from "@/assets/gallery/print-window-1.jpg";
+import printWindow2 from "@/assets/gallery/print-window-2.jpg";
+import printWindow3 from "@/assets/gallery/print-window-3.jpg";
+import printWindow4 from "@/assets/gallery/print-window-4.jpg";
+
 const WindowGraphics = () => {
   return (
     <div className="min-h-screen">
@@ -34,6 +39,18 @@ const WindowGraphics = () => {
         <div className="container mx-auto px-6">
           <div className="max-w-6xl mx-auto space-y-16">
             
+            {/* Project Gallery */}
+            <div>
+              <h2 className="text-3xl font-bold text-foreground mb-6">Project Gallery</h2>
+              <div className="grid md:grid-cols-4 gap-6">
+                {[printWindow1, printWindow2, printWindow3, printWindow4].map((img, i) => (
+                  <div key={i} className="aspect-video overflow-hidden rounded-2xl border border-border hover:shadow-premium transition-smooth">
+                    <img src={img} alt={`Window graphics project ${i + 1}`} className="w-full h-full object-cover" />
+                  </div>
+                ))}
+              </div>
+            </div>
+
             <div>
               <h2 className="text-3xl font-bold text-foreground mb-6">Overview</h2>
               <p className="text-lg text-muted-foreground mb-4">
