@@ -6,7 +6,7 @@ import Industries from "@/components/Industries";
 import Gallery from "@/components/Gallery";
 import BeforeAfter from "@/components/BeforeAfter";
 import Testimonials from "@/components/Testimonials";
-import ContactForm from "@/components/ContactForm";
+
 import Footer from "@/components/Footer";
 
 const Index = () => {
@@ -21,9 +21,6 @@ const Index = () => {
         <Industries />
         <Gallery />
         <Testimonials />
-      <section id="contact">
-        <ContactForm />
-      </section>
       </main>
       <Footer />
     </div>
