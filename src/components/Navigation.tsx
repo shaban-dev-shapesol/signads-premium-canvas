@@ -1,13 +1,22 @@
 import { useState, useRef, useEffect } from "react";
 import { Button } from "@/components/ui/button";
-import { Menu, X, ChevronDown } from "lucide-react";
+import { Menu, X, ChevronDown, ArrowRight } from "lucide-react";
 import { Link, useLocation } from "react-router-dom";
+
+// Service images
+import exteriorImg from "@/assets/service-exterior.jpg";
+import interiorImg from "@/assets/service-interior.jpg";
+import printImg from "@/assets/service-printing.jpg";
+import digitalImg from "@/assets/service-digital.jpg";
+import exhibitionImg from "@/assets/service-exhibition.jpg";
+import vehicleImg from "@/assets/service-vehicle.jpg";
 
 const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [isServicesOpen, setIsServicesOpen] = useState(false);
   const [mobileServicesOpen, setMobileServicesOpen] = useState(false);
   const [expandedCategory, setExpandedCategory] = useState<string | null>(null);
+  const [hoveredCategory, setHoveredCategory] = useState<string | null>(null);
   const [scrolled, setScrolled] = useState(false);
   const location = useLocation();
   const servicesRef = useRef<HTMLDivElement>(null);
@@ -26,6 +35,8 @@ const Navigation = () => {
     {
       name: "Exterior Signs",
       href: "/services/exterior-signs",
+      image: exteriorImg,
+      description: "Bold outdoor signage solutions",
       items: [
         { name: "Built up 3D letters", href: "/services/exterior-signs/built-up-3d-letters" },
         { name: "Fascia Sign Tray", href: "/services/exterior-signs/fascia-sign-tray" },
@@ -38,6 +49,8 @@ const Navigation = () => {
     {
       name: "Interior Signs",
       href: "/services/interior-signs",
+      image: interiorImg,
+      description: "Elevate your indoor spaces",
       items: [
         { name: "Reception Signs", href: "/services/interior-signs/reception-signs" },
         { name: "Neon Signs", href: "/services/interior-signs/neon-signs" },
@@ -49,20 +62,22 @@ const Navigation = () => {
     {
       name: "Print Signs",
       href: "/services/print-signs",
+      image: printImg,
+      description: "High-quality print solutions",
       items: [
         { name: "Printed tray", href: "/services/print-signs/printed-tray" },
         { name: "Vinyl lettering", href: "/services/print-signs/vinyl-lettering" },
-        { name: "Site Hoarding Boards", href: "/services/exterior-signs/site-hoarding-boards" },
         { name: "Banner Printing", href: "/services/print-signs/banner-printing" },
         { name: "Window Graphics", href: "/services/print-signs/window-graphics" },
         { name: "Wall Art", href: "/services/print-signs/wall-art" },
-        { name: "Floor Graphics", href: "/services/print-signs/floor-graphics" },
-        { name: "Bespoke printed ceiling", href: "/services/print-signs/bespoke-ceiling" }
+        { name: "Floor Graphics", href: "/services/print-signs/floor-graphics" }
       ]
     },
     {
       name: "Light Boxes",
       href: "/services/light-boxes",
+      image: exteriorImg,
+      description: "Illuminated display solutions",
       items: [
         { name: "Flex face LightBox Sign", href: "/services/exterior-signs/flex-face-lightbox" },
         { name: "Acrylic printed lightbox", href: "/services/light-boxes/acrylic-lightbox" },
@@ -70,20 +85,10 @@ const Navigation = () => {
       ]
     },
     {
-      name: "Promotional Signs",
-      href: "/services/promotional-signs",
-      items: [
-        { name: "Custom Flags", href: "/services/promotional-signs/custom-flags" },
-        { name: "Pavement sign", href: "/services/promotional-signs/pavement-sign" },
-        { name: "Projection Sign", href: "/services/exterior-signs/projection-sign" },
-        { name: "Window Graphics", href: "/services/print-signs/window-graphics" },
-        { name: "Light boxes", href: "/services/light-boxes/promotional-lightbox" },
-        { name: "Bespoke printed Ceiling", href: "/services/print-signs/bespoke-ceiling" }
-      ]
-    },
-    {
       name: "Digital Signage",
       href: "/services/digital-signage",
+      image: digitalImg,
+      description: "Dynamic digital displays",
       items: [
         { name: "Outdoor digital signs", href: "/services/digital-signage/outdoor-digital-signs" },
         { name: "Indoor digital signage", href: "/services/digital-signage/indoor-digital-signage" },
@@ -94,6 +99,8 @@ const Navigation = () => {
     {
       name: "Exhibition Display",
       href: "/services/exhibition-display",
+      image: exhibitionImg,
+      description: "Stand out at events",
       items: [
         { name: "Pop-Up Banners", href: "/services/exhibition-display/pop-up-banners" },
         { name: "Standard exhibition display", href: "/services/exhibition-display/standard-exhibition" },
@@ -103,6 +110,8 @@ const Navigation = () => {
     {
       name: "Vehicle Graphics",
       href: "/services/vehicle-graphics",
+      image: vehicleImg,
+      description: "Mobile brand advertising",
       items: [
         { name: "Car Wrap", href: "/services/vehicle-graphics/car-wrap" },
         { name: "Van Wrap", href: "/services/vehicle-graphics/van-wrap" },
@@ -113,6 +122,10 @@ const Navigation = () => {
       ]
     }
   ];
+
+  const activeCategory = hoveredCategory 
+    ? serviceCategories.find(c => c.name === hoveredCategory) 
+    : serviceCategories[0];
 
   useEffect(() => {
     const handleScroll = () => {
@@ -168,41 +181,81 @@ const Navigation = () => {
                   
                   {isServicesOpen && (
                     <div 
-                      className="fixed left-1/2 -translate-x-1/2 top-20 mt-2 w-screen max-w-6xl bg-background border border-border rounded-2xl shadow-premium p-8 z-50"
-                      onMouseLeave={() => setIsServicesOpen(false)}
+                      className="fixed left-1/2 -translate-x-1/2 top-20 mt-2 w-screen max-w-6xl bg-background border border-border rounded-2xl shadow-2xl z-50 overflow-hidden"
+                      onMouseLeave={() => {
+                        setIsServicesOpen(false);
+                        setHoveredCategory(null);
+                      }}
                     >
-                      <div className="grid grid-cols-4 gap-8">
-                        {serviceCategories.map((category) => (
-                          <div key={category.name}>
-                            <Link
-                              to={category.href}
-                              className="text-lg font-bold text-foreground hover:text-accent transition-smooth mb-3 block"
-                              onClick={() => setIsServicesOpen(false)}
-                            >
-                              {category.name}
-                            </Link>
-                            <ul className="space-y-2">
-                              {category.items.map((item) => (
-                                <li key={item.name}>
-                                  <Link
-                                    to={item.href}
-                                    className="text-sm text-muted-foreground hover:text-accent transition-smooth block"
-                                    onClick={() => setIsServicesOpen(false)}
-                                  >
-                                    {item.name}
-                                  </Link>
-                                </li>
-                              ))}
-                            </ul>
+                      <div className="flex">
+                        {/* Left: Category List */}
+                        <div className="w-1/3 bg-muted/30 p-6 border-r border-border">
+                          <p className="text-xs uppercase tracking-widest text-muted-foreground mb-4 font-semibold">Our Services</p>
+                          <div className="space-y-1">
+                            {serviceCategories.map((category) => (
+                              <Link
+                                key={category.name}
+                                to={category.href}
+                                className={`flex items-center justify-between p-3 rounded-lg transition-all duration-200 group ${
+                                  hoveredCategory === category.name || (!hoveredCategory && category.name === serviceCategories[0].name)
+                                    ? 'bg-accent text-accent-foreground'
+                                    : 'hover:bg-muted text-foreground'
+                                }`}
+                                onMouseEnter={() => setHoveredCategory(category.name)}
+                                onClick={() => setIsServicesOpen(false)}
+                              >
+                                <span className="font-medium">{category.name}</span>
+                                <ArrowRight className={`w-4 h-4 transition-transform ${
+                                  hoveredCategory === category.name || (!hoveredCategory && category.name === serviceCategories[0].name)
+                                    ? 'translate-x-1'
+                                    : 'opacity-0 group-hover:opacity-100'
+                                }`} />
+                              </Link>
+                            ))}
                           </div>
-                        ))}
-                      </div>
-                      <div className="mt-8 pt-8 border-t border-border text-center">
-                        <Link to="/services">
-                          <Button variant="premium" onClick={() => setIsServicesOpen(false)}>
-                            View All Services
-                          </Button>
-                        </Link>
+                          <div className="mt-6 pt-6 border-t border-border">
+                            <Link to="/services" onClick={() => setIsServicesOpen(false)}>
+                              <Button variant="premium" className="w-full">
+                                View All Services
+                              </Button>
+                            </Link>
+                          </div>
+                        </div>
+
+                        {/* Right: Subcategories + Image */}
+                        <div className="w-2/3 p-6">
+                          {activeCategory && (
+                            <div className="flex gap-6 h-full">
+                              {/* Subcategory List */}
+                              <div className="flex-1">
+                                <h3 className="text-lg font-bold text-foreground mb-2">{activeCategory.name}</h3>
+                                <p className="text-sm text-muted-foreground mb-4">{activeCategory.description}</p>
+                                <div className="grid grid-cols-2 gap-x-6 gap-y-2">
+                                  {activeCategory.items.map((item) => (
+                                    <Link
+                                      key={item.name}
+                                      to={item.href}
+                                      className="text-sm text-foreground hover:text-accent transition-all duration-200 py-1.5 flex items-center gap-2 group"
+                                      onClick={() => setIsServicesOpen(false)}
+                                    >
+                                      <span className="w-1 h-1 rounded-full bg-accent opacity-0 group-hover:opacity-100 transition-opacity" />
+                                      {item.name}
+                                    </Link>
+                                  ))}
+                                </div>
+                              </div>
+
+                              {/* Category Image */}
+                              <div className="w-48 h-48 rounded-xl overflow-hidden flex-shrink-0">
+                                <img 
+                                  src={activeCategory.image} 
+                                  alt={activeCategory.name}
+                                  className="w-full h-full object-cover transition-transform duration-500 hover:scale-110"
+                                />
+                              </div>
+                            </div>
+                          )}
+                        </div>
                       </div>
                     </div>
                   )}
