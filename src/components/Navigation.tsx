@@ -331,105 +331,111 @@ const Navigation = () => {
 
         {/* Mobile Navigation */}
         {isOpen && (
-          <div className="lg:hidden py-6 space-y-4 border-t border-border/50 max-h-[calc(100vh-5rem)] overflow-y-auto bg-background/95 backdrop-blur-lg rounded-b-2xl">
-            {/* Services Section with Accordion */}
-            <div className="space-y-2">
-              <button
-                className="w-full flex items-center justify-between text-foreground hover:text-accent transition-smooth font-bold"
-                onClick={() => setMobileServicesOpen(!mobileServicesOpen)}
-              >
-                <span>Services</span>
-                <ChevronDown className={`w-5 h-5 transition-transform ${mobileServicesOpen ? 'rotate-180' : ''}`} />
-              </button>
-              
-              {mobileServicesOpen && (
-                <div className="pl-4 space-y-3 pt-2">
-                  {serviceCategories.map((category) => (
-                    <div key={category.name} className="space-y-2">
-                      <button
-                        className="w-full flex items-center justify-between text-sm font-bold text-foreground hover:text-accent transition-smooth"
-                        onClick={() => setExpandedCategory(expandedCategory === category.name ? null : category.name)}
-                      >
-                        <Link
-                          to={category.href}
-                          className="flex-1 text-left"
-                          onClick={(e) => {
-                            e.stopPropagation();
+          <div className="lg:hidden fixed inset-0 top-20 bg-background z-40">
+            <div className="h-full overflow-y-auto px-6 py-6 space-y-2">
+              {/* Services Section with Accordion */}
+              <div className="border-b border-border pb-2">
+                <button
+                  className={`w-full flex items-center justify-between py-3 font-semibold text-lg transition-colors ${
+                    mobileServicesOpen ? 'text-accent' : 'text-foreground'
+                  }`}
+                  onClick={() => setMobileServicesOpen(!mobileServicesOpen)}
+                >
+                  <span>Services</span>
+                  <ChevronDown className={`w-5 h-5 transition-transform duration-300 ${mobileServicesOpen ? 'rotate-180' : ''}`} />
+                </button>
+                
+                {mobileServicesOpen && (
+                  <div className="pb-4 space-y-1">
+                    {serviceCategories.map((category) => (
+                      <div key={category.name}>
+                        <button
+                          className="w-full flex items-center justify-between py-2.5 pl-4 text-foreground hover:text-accent transition-colors"
+                          onClick={() => setExpandedCategory(expandedCategory === category.name ? null : category.name)}
+                        >
+                          <Link
+                            to={category.href}
+                            className="flex-1 text-left font-medium"
+                            onClick={(e) => {
+                              e.stopPropagation();
+                              setIsOpen(false);
+                              setMobileServicesOpen(false);
+                            }}
+                          >
+                            {category.name}
+                          </Link>
+                          <ChevronDown className={`w-4 h-4 transition-transform duration-300 ${expandedCategory === category.name ? 'rotate-180' : ''}`} />
+                        </button>
+                        
+                        {expandedCategory === category.name && (
+                          <div className="pl-8 pb-2 space-y-1 bg-muted/30 rounded-lg mx-2 py-2">
+                            {category.items.map((item) => (
+                              <Link
+                                key={item.name}
+                                to={item.href}
+                                className="block text-sm text-muted-foreground hover:text-accent transition-colors py-2 px-3"
+                                onClick={() => {
+                                  setIsOpen(false);
+                                  setMobileServicesOpen(false);
+                                  setExpandedCategory(null);
+                                }}
+                              >
+                                {item.name}
+                              </Link>
+                            ))}
+                          </div>
+                        )}
+                      </div>
+                    ))}
+                    <div className="pt-3 px-4">
+                      <Link to="/services">
+                        <Button 
+                          variant="outline" 
+                          size="sm" 
+                          className="w-full"
+                          onClick={() => {
                             setIsOpen(false);
                             setMobileServicesOpen(false);
                           }}
                         >
-                          {category.name}
-                        </Link>
-                        <ChevronDown className={`w-4 h-4 transition-transform ${expandedCategory === category.name ? 'rotate-180' : ''}`} />
-                      </button>
-                      
-                      {expandedCategory === category.name && (
-                        <div className="pl-3 space-y-1 pb-2">
-                          {category.items.map((item) => (
-                            <Link
-                              key={item.name}
-                              to={item.href}
-                              className="block text-xs text-muted-foreground hover:text-accent transition-smooth py-1"
-                              onClick={() => {
-                                setIsOpen(false);
-                                setMobileServicesOpen(false);
-                                setExpandedCategory(null);
-                              }}
-                            >
-                              {item.name}
-                            </Link>
-                          ))}
-                        </div>
-                      )}
+                          View All Services
+                        </Button>
+                      </Link>
                     </div>
-                  ))}
-                  <div className="pt-2">
-                    <Link to="/services">
-                      <Button 
-                        variant="outline" 
-                        size="sm" 
-                        className="w-full"
-                        onClick={() => {
-                          setIsOpen(false);
-                          setMobileServicesOpen(false);
-                        }}
-                      >
-                        View All Services
-                      </Button>
-                    </Link>
                   </div>
-                </div>
-              )}
+                )}
+              </div>
+              
+              <Link
+                to="/portfolio"
+                className="block py-3 text-lg font-semibold text-foreground hover:text-accent transition-colors border-b border-border"
+                onClick={() => setIsOpen(false)}
+              >
+                Portfolio
+              </Link>
+              <Link
+                to="/industries"
+                className="block py-3 text-lg font-semibold text-foreground hover:text-accent transition-colors border-b border-border"
+                onClick={() => setIsOpen(false)}
+              >
+                Industries
+              </Link>
+              <Link
+                to="/about"
+                className="block py-3 text-lg font-semibold text-foreground hover:text-accent transition-colors border-b border-border"
+                onClick={() => setIsOpen(false)}
+              >
+                About
+              </Link>
+              
+              <div className="pt-6">
+                <Link to="/contact" onClick={() => setIsOpen(false)}>
+                  <Button variant="hero" size="lg" className="w-full">
+                    Get Quote
+                  </Button>
+                </Link>
+              </div>
             </div>
-            
-            <Link
-              to="/portfolio"
-              className="block text-foreground hover:text-accent transition-smooth font-medium"
-              onClick={() => setIsOpen(false)}
-            >
-              Portfolio
-            </Link>
-            <Link
-              to="/industries"
-              className="block text-foreground hover:text-accent transition-smooth font-medium"
-              onClick={() => setIsOpen(false)}
-            >
-              Industries
-            </Link>
-            <Link
-              to="/about"
-              className="block text-foreground hover:text-accent transition-smooth font-medium"
-              onClick={() => setIsOpen(false)}
-            >
-              About
-            </Link>
-            <Button variant="premium" size="default" className="w-full" onClick={(e) => {
-              scrollToContact(e);
-              setIsOpen(false);
-            }}>
-              Get Quote
-            </Button>
           </div>
         )}
       </div>
