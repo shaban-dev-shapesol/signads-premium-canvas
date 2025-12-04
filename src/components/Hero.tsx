@@ -9,33 +9,36 @@ const Hero = () => {
     <section className="relative min-h-screen bg-primary overflow-hidden">
       {/* Background Geometric Elements */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        {/* Large gradient circle - top right */}
+        {/* Large gradient circle - top right - with pulse */}
         <motion.div
           initial={{ scale: 0, opacity: 0 }}
           animate={{ scale: 1, opacity: 1 }}
           transition={{ duration: 1.5, ease: "easeOut" }}
-          className="absolute -top-32 -right-32 w-[500px] h-[500px] rounded-full bg-accent/5"
+          className="absolute -top-32 -right-32 w-[500px] h-[500px] rounded-full bg-accent/5 animate-pulse"
         />
-        {/* Medium circle outline - left */}
+        {/* Medium circle outline - left - with glow */}
         <motion.div
           initial={{ scale: 0, opacity: 0 }}
-          animate={{ scale: 1, opacity: 0.1 }}
-          transition={{ duration: 1.2, delay: 0.3 }}
+          animate={{ scale: [0, 1, 1], opacity: [0, 0.1, 0.2, 0.1] }}
+          transition={{ duration: 3, delay: 0.3, repeat: Infinity, repeatType: "reverse" }}
           className="absolute top-1/3 -left-24 w-[350px] h-[350px] rounded-full border border-accent/30"
+          style={{ boxShadow: '0 0 60px hsl(var(--accent) / 0.15)' }}
         />
-        {/* Small filled circle - bottom left */}
+        {/* Small filled circle - bottom left - with pulse glow */}
         <motion.div
           initial={{ y: 30, opacity: 0 }}
-          animate={{ y: 0, opacity: 0.15 }}
-          transition={{ duration: 1, delay: 0.5 }}
+          animate={{ y: 0, opacity: [0.15, 0.3, 0.15] }}
+          transition={{ duration: 2.5, delay: 0.5, repeat: Infinity }}
           className="absolute bottom-32 left-1/4 w-20 h-20 rounded-full bg-accent/20"
+          style={{ boxShadow: '0 0 30px hsl(var(--accent) / 0.2)' }}
         />
-        {/* Tiny dot accent */}
+        {/* Tiny dot accent - pulsing */}
         <motion.div
           initial={{ scale: 0 }}
-          animate={{ scale: 1 }}
-          transition={{ duration: 0.6, delay: 0.8 }}
+          animate={{ scale: [1, 1.5, 1], opacity: [0.4, 0.7, 0.4] }}
+          transition={{ duration: 2, delay: 0.8, repeat: Infinity }}
           className="absolute top-1/4 left-1/3 w-3 h-3 rounded-full bg-accent/40"
+          style={{ boxShadow: '0 0 15px hsl(var(--accent) / 0.5)' }}
         />
         {/* Horizontal line - subtle */}
         <motion.div
