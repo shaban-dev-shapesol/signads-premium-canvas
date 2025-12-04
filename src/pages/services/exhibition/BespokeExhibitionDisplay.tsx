@@ -4,6 +4,18 @@ import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import { Link } from "react-router-dom";
 
+import galleryBespoke1 from "@/assets/gallery/exhibition-bespoke-1.jpg";
+import galleryBespoke2 from "@/assets/gallery/exhibition-bespoke-2.jpg";
+import galleryBespoke3 from "@/assets/gallery/exhibition-bespoke-3.jpg";
+import galleryBespoke4 from "@/assets/gallery/exhibition-bespoke-4.jpg";
+
+const galleryImages = [
+  { src: galleryBespoke1, alt: "Custom bespoke exhibition stand" },
+  { src: galleryBespoke2, alt: "Multi-level exhibition booth with digital screens" },
+  { src: galleryBespoke3, alt: "Premium custom booth with meeting area" },
+  { src: galleryBespoke4, alt: "Large custom exhibition stand with mezzanine" },
+];
+
 const BespokeExhibitionDisplay = () => {
   return (
     <div className="min-h-screen">
@@ -37,9 +49,11 @@ const BespokeExhibitionDisplay = () => {
             {/* Project Gallery */}
             <div>
               <h2 className="text-3xl font-bold text-foreground mb-6">Project Gallery</h2>
-              <div className="grid md:grid-cols-3 gap-6">
-                {[1, 2, 3, 4, 5, 6].map((i) => (
-                  <div key={i} className="aspect-video bg-secondary rounded-2xl border border-border hover:shadow-premium transition-smooth" />
+              <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+                {galleryImages.map((image, i) => (
+                  <div key={i} className="aspect-video overflow-hidden rounded-2xl border border-border hover:shadow-premium transition-smooth">
+                    <img src={image.src} alt={image.alt} className="w-full h-full object-cover hover:scale-105 transition-transform duration-500" />
+                  </div>
                 ))}
               </div>
             </div>

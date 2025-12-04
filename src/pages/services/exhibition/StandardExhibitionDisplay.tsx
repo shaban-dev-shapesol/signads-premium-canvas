@@ -4,6 +4,18 @@ import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import { Link } from "react-router-dom";
 
+import galleryStandard1 from "@/assets/gallery/exhibition-standard-1.jpg";
+import galleryStandard2 from "@/assets/gallery/exhibition-standard-2.jpg";
+import galleryStandard3 from "@/assets/gallery/exhibition-standard-3.jpg";
+import galleryStandard4 from "@/assets/gallery/exhibition-standard-4.jpg";
+
+const galleryImages = [
+  { src: galleryStandard1, alt: "Standard exhibition display at trade show" },
+  { src: galleryStandard2, alt: "Portable pop-up backdrop with printed graphics" },
+  { src: galleryStandard3, alt: "Exhibition stand with fabric tension display" },
+  { src: galleryStandard4, alt: "Modular exhibition display with counter" },
+];
+
 const StandardExhibitionDisplay = () => {
   return (
     <div className="min-h-screen">
@@ -37,9 +49,11 @@ const StandardExhibitionDisplay = () => {
             {/* Project Gallery */}
             <div>
               <h2 className="text-3xl font-bold text-foreground mb-6">Project Gallery</h2>
-              <div className="grid md:grid-cols-3 gap-6">
-                {[1, 2, 3, 4, 5, 6].map((i) => (
-                  <div key={i} className="aspect-video bg-secondary rounded-2xl border border-border hover:shadow-premium transition-smooth" />
+              <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+                {galleryImages.map((image, i) => (
+                  <div key={i} className="aspect-video overflow-hidden rounded-2xl border border-border hover:shadow-premium transition-smooth">
+                    <img src={image.src} alt={image.alt} className="w-full h-full object-cover hover:scale-105 transition-transform duration-500" />
+                  </div>
                 ))}
               </div>
             </div>
