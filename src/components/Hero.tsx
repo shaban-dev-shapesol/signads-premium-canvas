@@ -2,7 +2,7 @@ import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
-import heroImage from "@/assets/hero-signage-unsplash.jpg";
+import heroImage from "@/assets/hero-3d-signage.jpg";
 
 const Hero = () => {
   return (
