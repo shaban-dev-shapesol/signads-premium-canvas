@@ -10,6 +10,7 @@ import printImg from "@/assets/service-printing.jpg";
 import digitalImg from "@/assets/service-digital.jpg";
 import exhibitionImg from "@/assets/service-exhibition.jpg";
 import vehicleImg from "@/assets/service-vehicle.jpg";
+import promotionalImg from "@/assets/service-promotional.jpg";
 
 const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -87,7 +88,7 @@ const Navigation = () => {
     {
       name: "Promotional Signs",
       href: "/services/promotional-signs",
-      image: printImg,
+      image: promotionalImg,
       description: "Eye-catching promotional displays",
       items: [
         { name: "Custom Flags", href: "/services/promotional-signs/custom-flags" },
