@@ -4,6 +4,18 @@ import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import { Link } from "react-router-dom";
 
+import galleryAcrylic1 from "@/assets/gallery/lightbox-acrylic-1.jpg";
+import galleryAcrylic2 from "@/assets/gallery/lightbox-acrylic-2.jpg";
+import galleryAcrylic3 from "@/assets/gallery/lightbox-acrylic-3.jpg";
+import galleryAcrylic4 from "@/assets/gallery/lightbox-acrylic-4.jpg";
+
+const galleryImages = [
+  { src: galleryAcrylic1, alt: "Premium acrylic lightbox in retail environment" },
+  { src: galleryAcrylic2, alt: "Acrylic lightbox display in luxury store" },
+  { src: galleryAcrylic3, alt: "Corporate lobby acrylic lightbox signage" },
+  { src: galleryAcrylic4, alt: "Shopping mall acrylic lightbox displays" },
+];
+
 const AcrylicLightbox = () => {
   return (
     <div className="min-h-screen">
@@ -37,9 +49,11 @@ const AcrylicLightbox = () => {
             {/* Project Examples Gallery */}
             <div>
               <h2 className="text-3xl font-bold text-foreground mb-6">Acrylic Lightbox Examples</h2>
-              <div className="grid md:grid-cols-3 gap-6">
-                {[1, 2, 3, 4, 5, 6].map((i) => (
-                  <div key={i} className="aspect-video bg-secondary rounded-2xl border border-border hover:shadow-premium transition-smooth" />
+              <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+                {galleryImages.map((image, i) => (
+                  <div key={i} className="aspect-video overflow-hidden rounded-2xl border border-border hover:shadow-premium transition-smooth">
+                    <img src={image.src} alt={image.alt} className="w-full h-full object-cover hover:scale-105 transition-transform duration-500" />
+                  </div>
                 ))}
               </div>
             </div>
