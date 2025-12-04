@@ -4,6 +4,18 @@ import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import { Link } from "react-router-dom";
 
+import galleryLightbox1 from "@/assets/gallery/interior-lightbox-1.jpg";
+import galleryLightbox2 from "@/assets/gallery/interior-lightbox-2.jpg";
+import galleryLightbox3 from "@/assets/gallery/interior-lightbox-3.jpg";
+import galleryLightbox4 from "@/assets/gallery/interior-lightbox-4.jpg";
+
+const galleryImages = [
+  { src: galleryLightbox1, alt: "Office lightbox display in corporate setting" },
+  { src: galleryLightbox2, alt: "LED lightbox promotional display in corridor" },
+  { src: galleryLightbox3, alt: "Backlit fabric lightbox in retail showroom" },
+  { src: galleryLightbox4, alt: "Edge-lit acrylic lightbox in waiting room" },
+];
+
 const OfficeLightBoxes = () => {
   return (
     <div className="min-h-screen">
@@ -37,9 +49,11 @@ const OfficeLightBoxes = () => {
             {/* Project Gallery */}
             <div>
               <h2 className="text-3xl font-bold text-foreground mb-6">Project Gallery</h2>
-              <div className="grid md:grid-cols-3 gap-6">
-                {[1, 2, 3, 4, 5, 6].map((i) => (
-                  <div key={i} className="aspect-video bg-secondary rounded-2xl border border-border hover:shadow-premium transition-smooth" />
+              <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+                {galleryImages.map((image, i) => (
+                  <div key={i} className="aspect-video overflow-hidden rounded-2xl border border-border hover:shadow-premium transition-smooth">
+                    <img src={image.src} alt={image.alt} className="w-full h-full object-cover hover:scale-105 transition-transform duration-500" />
+                  </div>
                 ))}
               </div>
             </div>

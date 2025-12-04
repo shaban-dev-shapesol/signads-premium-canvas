@@ -4,6 +4,18 @@ import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import { Link } from "react-router-dom";
 
+import galleryNeon1 from "@/assets/gallery/interior-neon-1.jpg";
+import galleryNeon2 from "@/assets/gallery/interior-neon-2.jpg";
+import galleryNeon3 from "@/assets/gallery/interior-neon-3.jpg";
+import galleryNeon4 from "@/assets/gallery/interior-neon-4.jpg";
+
+const galleryImages = [
+  { src: galleryNeon1, alt: "Custom LED neon sign in restaurant interior" },
+  { src: galleryNeon2, alt: "Vibrant neon bar signage at night" },
+  { src: galleryNeon3, alt: "Retro coffee shop neon sign" },
+  { src: galleryNeon4, alt: "Motivational neon quote in modern office" },
+];
+
 const NeonSigns = () => {
   return (
     <div className="min-h-screen">
@@ -37,9 +49,11 @@ const NeonSigns = () => {
             {/* Project Examples Gallery */}
             <div>
               <h2 className="text-3xl font-bold text-foreground mb-6">Project Examples</h2>
-              <div className="grid md:grid-cols-3 gap-6">
-                {[1, 2, 3, 4, 5, 6].map((i) => (
-                  <div key={i} className="aspect-square bg-secondary rounded-2xl border border-border hover:shadow-premium transition-smooth" />
+              <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+                {galleryImages.map((image, i) => (
+                  <div key={i} className="aspect-square overflow-hidden rounded-2xl border border-border hover:shadow-premium transition-smooth">
+                    <img src={image.src} alt={image.alt} className="w-full h-full object-cover hover:scale-105 transition-transform duration-500" />
+                  </div>
                 ))}
               </div>
             </div>
