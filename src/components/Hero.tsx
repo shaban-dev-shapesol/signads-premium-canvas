@@ -3,11 +3,6 @@ import { ArrowRight } from "lucide-react";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import heroImage from "@/assets/hero-signage-premium.jpg";
-import client1 from "@/assets/clients/client-1.png";
-import client2 from "@/assets/clients/client-2.png";
-import client3 from "@/assets/clients/client-3.png";
-import client4 from "@/assets/clients/client-4.png";
-import client5 from "@/assets/clients/client-5.png";
 
 const Hero = () => {
   const scrollToContact = () => {
@@ -86,22 +81,6 @@ const Hero = () => {
             </Button>
           </motion.div>
 
-          {/* Trusted By */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.8 }}
-            className="mt-12 pt-8 border-t border-white/20"
-          >
-            <p className="text-white/50 text-xs uppercase tracking-widest mb-4">Trusted By</p>
-            <div className="flex flex-wrap items-center gap-8">
-              <img src={client1} alt="Metro" className="h-8 w-auto opacity-70 hover:opacity-100 transition-opacity" />
-              <img src={client2} alt="Crown" className="h-8 w-auto opacity-70 hover:opacity-100 transition-opacity" />
-              <img src={client3} alt="Spark" className="h-8 w-auto opacity-70 hover:opacity-100 transition-opacity" />
-              <img src={client4} alt="Vista" className="h-8 w-auto opacity-70 hover:opacity-100 transition-opacity" />
-              <img src={client5} alt="Orbit" className="h-8 w-auto opacity-70 hover:opacity-100 transition-opacity" />
-            </div>
-          </motion.div>
         </div>
       </div>
 
