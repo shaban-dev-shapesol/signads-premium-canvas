@@ -4,6 +4,11 @@ import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import { Link } from "react-router-dom";
 
+import printTray1 from "@/assets/gallery/print-tray-1.jpg";
+import printTray2 from "@/assets/gallery/print-tray-2.jpg";
+import printTray3 from "@/assets/gallery/print-tray-3.jpg";
+import printTray4 from "@/assets/gallery/print-tray-4.jpg";
+
 const PrintedTray = () => {
   return (
     <div className="min-h-screen">
@@ -37,9 +42,11 @@ const PrintedTray = () => {
             {/* Project Gallery */}
             <div>
               <h2 className="text-3xl font-bold text-foreground mb-6">Project Gallery</h2>
-              <div className="grid md:grid-cols-3 gap-6">
-                {[1, 2, 3, 4, 5, 6].map((i) => (
-                  <div key={i} className="aspect-video bg-secondary rounded-2xl border border-border hover:shadow-premium transition-smooth" />
+              <div className="grid md:grid-cols-4 gap-6">
+                {[printTray1, printTray2, printTray3, printTray4].map((img, i) => (
+                  <div key={i} className="aspect-video overflow-hidden rounded-2xl border border-border hover:shadow-premium transition-smooth">
+                    <img src={img} alt={`Printed tray project ${i + 1}`} className="w-full h-full object-cover" />
+                  </div>
                 ))}
               </div>
             </div>

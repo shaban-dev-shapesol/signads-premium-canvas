@@ -4,6 +4,11 @@ import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import { Link } from "react-router-dom";
 
+import printWallArt1 from "@/assets/gallery/print-wall-art-1.jpg";
+import printWallArt2 from "@/assets/gallery/print-wall-art-2.jpg";
+import printWallArt3 from "@/assets/gallery/print-wall-art-3.jpg";
+import printWallArt4 from "@/assets/gallery/print-wall-art-4.jpg";
+
 const WallArt = () => {
   return (
     <div className="min-h-screen">
@@ -34,6 +39,18 @@ const WallArt = () => {
         <div className="container mx-auto px-6">
           <div className="max-w-6xl mx-auto space-y-16">
             
+            {/* Project Gallery */}
+            <div>
+              <h2 className="text-3xl font-bold text-foreground mb-6">Project Gallery</h2>
+              <div className="grid md:grid-cols-4 gap-6">
+                {[printWallArt1, printWallArt2, printWallArt3, printWallArt4].map((img, i) => (
+                  <div key={i} className="aspect-video overflow-hidden rounded-2xl border border-border hover:shadow-premium transition-smooth">
+                    <img src={img} alt={`Wall art project ${i + 1}`} className="w-full h-full object-cover" />
+                  </div>
+                ))}
+              </div>
+            </div>
+
             <div>
               <h2 className="text-3xl font-bold text-foreground mb-6">Overview</h2>
               <p className="text-lg text-muted-foreground mb-4">
