@@ -85,6 +85,19 @@ const Navigation = () => {
       ]
     },
     {
+      name: "Promotional Signs",
+      href: "/services/promotional-signs",
+      image: printImg,
+      description: "Eye-catching promotional displays",
+      items: [
+        { name: "Custom Flags", href: "/services/promotional-signs/custom-flags" },
+        { name: "Pavement sign", href: "/services/promotional-signs/pavement-sign" },
+        { name: "Projection Sign", href: "/services/exterior-signs/projection-sign" },
+        { name: "Window Graphics", href: "/services/print-signs/window-graphics" },
+        { name: "Light boxes", href: "/services/light-boxes/promotional-lightbox" }
+      ]
+    },
+    {
       name: "Digital Signage",
       href: "/services/digital-signage",
       image: digitalImg,
