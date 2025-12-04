@@ -51,6 +51,50 @@ const Hero = () => {
           transition={{ duration: 1.2, delay: 0.6 }}
           className="absolute bottom-1/4 right-0 w-1/4 h-[1px] bg-gradient-to-l from-accent/15 to-transparent origin-right"
         />
+        {/* Rotating ring - center right */}
+        <motion.div
+          initial={{ opacity: 0, rotate: 0 }}
+          animate={{ opacity: 0.1, rotate: 360 }}
+          transition={{ duration: 30, repeat: Infinity, ease: "linear" }}
+          className="absolute top-1/2 right-1/4 w-[200px] h-[200px] rounded-full border border-dashed border-accent/20"
+        />
+        {/* Diamond shape - top left */}
+        <motion.div
+          initial={{ scale: 0, rotate: 45 }}
+          animate={{ scale: 1, rotate: 45 }}
+          transition={{ duration: 1, delay: 0.7 }}
+          className="absolute top-20 left-20 w-16 h-16 border border-accent/15 bg-accent/5"
+        />
+        {/* Floating dots cluster - right side */}
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 1, delay: 0.9 }}
+          className="absolute top-1/3 right-16 flex flex-col gap-3"
+        >
+          <div className="w-2 h-2 rounded-full bg-accent/30" />
+          <div className="w-1.5 h-1.5 rounded-full bg-accent/20 ml-4" />
+          <div className="w-2.5 h-2.5 rounded-full bg-accent/25 ml-1" />
+        </motion.div>
+        {/* Arc line - bottom */}
+        <motion.div
+          initial={{ pathLength: 0, opacity: 0 }}
+          animate={{ pathLength: 1, opacity: 0.15 }}
+          transition={{ duration: 2, delay: 0.5 }}
+          className="absolute bottom-16 left-1/2 -translate-x-1/2"
+        >
+          <svg width="300" height="100" viewBox="0 0 300 100" fill="none">
+            <motion.path
+              d="M0 100 Q150 0 300 100"
+              stroke="hsl(var(--accent))"
+              strokeWidth="1"
+              fill="none"
+              initial={{ pathLength: 0 }}
+              animate={{ pathLength: 1 }}
+              transition={{ duration: 2, delay: 0.5 }}
+            />
+          </svg>
+        </motion.div>
         {/* Grid pattern overlay */}
         <div 
           className="absolute inset-0 opacity-[0.02]"
