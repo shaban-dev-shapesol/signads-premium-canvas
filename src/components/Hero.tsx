@@ -5,12 +5,6 @@ import { Link } from "react-router-dom";
 import heroImage from "@/assets/hero-signage-premium.jpg";
 
 const Hero = () => {
-  const scrollToContact = () => {
-    const contactSection = document.getElementById("contact");
-    if (contactSection) {
-      contactSection.scrollIntoView({ behavior: "smooth" });
-    }
-  };
 
   return (
     <section className="relative min-h-screen overflow-hidden">
@@ -64,10 +58,12 @@ const Hero = () => {
               variant="hero" 
               size="xl" 
               className="group"
-              onClick={scrollToContact}
+              asChild
             >
-              Get Your Quote
-              <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
+              <Link to="/contact">
+                Get Your Quote
+                <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
+              </Link>
             </Button>
             <Button
               variant="outline"
