@@ -4,6 +4,18 @@ import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import { Link } from "react-router-dom";
 
+import gallery3DLetters1 from "@/assets/gallery/exterior-3d-letters-1.jpg";
+import gallery3DLetters2 from "@/assets/gallery/exterior-3d-letters-2.jpg";
+import gallery3DLetters3 from "@/assets/gallery/exterior-3d-letters-3.jpg";
+import gallery3DLetters4 from "@/assets/gallery/exterior-3d-letters-4.jpg";
+
+const galleryImages = [
+  { src: gallery3DLetters1, alt: "Professional 3D built-up letters on modern building" },
+  { src: gallery3DLetters2, alt: "Illuminated channel letters at dusk" },
+  { src: gallery3DLetters3, alt: "Colorful acrylic 3D letters on storefront" },
+  { src: gallery3DLetters4, alt: "Gold brass 3D letters on marble wall" },
+];
+
 const BuiltUp3DLetters = () => {
   return (
     <div className="min-h-screen">
@@ -37,9 +49,11 @@ const BuiltUp3DLetters = () => {
             {/* Project Gallery */}
             <div>
               <h2 className="text-3xl font-bold text-foreground mb-6">Project Gallery</h2>
-              <div className="grid md:grid-cols-3 gap-6">
-                {[1, 2, 3, 4, 5, 6].map((i) => (
-                  <div key={i} className="aspect-video bg-secondary rounded-2xl border border-border hover:shadow-premium transition-smooth" />
+              <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+                {galleryImages.map((image, i) => (
+                  <div key={i} className="aspect-video overflow-hidden rounded-2xl border border-border hover:shadow-premium transition-smooth">
+                    <img src={image.src} alt={image.alt} className="w-full h-full object-cover hover:scale-105 transition-transform duration-500" />
+                  </div>
                 ))}
               </div>
             </div>

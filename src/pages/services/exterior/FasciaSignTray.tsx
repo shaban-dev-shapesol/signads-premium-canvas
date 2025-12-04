@@ -4,6 +4,18 @@ import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import { Link } from "react-router-dom";
 
+import galleryFascia1 from "@/assets/gallery/exterior-fascia-tray-1.jpg";
+import galleryFascia2 from "@/assets/gallery/exterior-fascia-tray-2.jpg";
+import galleryFascia3 from "@/assets/gallery/exterior-fascia-tray-3.jpg";
+import galleryFascia4 from "@/assets/gallery/exterior-fascia-tray-4.jpg";
+
+const galleryImages = [
+  { src: galleryFascia1, alt: "Professional fascia sign tray on retail storefront" },
+  { src: galleryFascia2, alt: "Illuminated fascia sign with business logo" },
+  { src: galleryFascia3, alt: "Restaurant fascia sign tray at night" },
+  { src: galleryFascia4, alt: "Modern coffee shop fascia signage" },
+];
+
 const FasciaSignTray = () => {
   return (
     <div className="min-h-screen">
@@ -37,9 +49,11 @@ const FasciaSignTray = () => {
             {/* Project Gallery */}
             <div>
               <h2 className="text-3xl font-bold text-foreground mb-6">Project Gallery</h2>
-              <div className="grid md:grid-cols-3 gap-6">
-                {[1, 2, 3, 4, 5, 6].map((i) => (
-                  <div key={i} className="aspect-video bg-secondary rounded-2xl border border-border hover:shadow-premium transition-smooth" />
+              <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+                {galleryImages.map((image, i) => (
+                  <div key={i} className="aspect-video overflow-hidden rounded-2xl border border-border hover:shadow-premium transition-smooth">
+                    <img src={image.src} alt={image.alt} className="w-full h-full object-cover hover:scale-105 transition-transform duration-500" />
+                  </div>
                 ))}
               </div>
             </div>
