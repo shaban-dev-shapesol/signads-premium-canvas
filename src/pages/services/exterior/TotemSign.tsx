@@ -4,6 +4,18 @@ import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import { Link } from "react-router-dom";
 
+import galleryTotem1 from "@/assets/gallery/exterior-totem-1.jpg";
+import galleryTotem2 from "@/assets/gallery/exterior-totem-2.jpg";
+import galleryTotem3 from "@/assets/gallery/exterior-totem-3.jpg";
+import galleryTotem4 from "@/assets/gallery/exterior-totem-4.jpg";
+
+const galleryImages = [
+  { src: galleryTotem1, alt: "Freestanding totem sign at business entrance" },
+  { src: galleryTotem2, alt: "Multi-tenant totem sign at business park" },
+  { src: galleryTotem3, alt: "Digital totem sign at retail park" },
+  { src: galleryTotem4, alt: "Corporate totem sign at office building" },
+];
+
 const TotemSign = () => {
   return (
     <div className="min-h-screen">
@@ -36,9 +48,11 @@ const TotemSign = () => {
             
             <div>
               <h2 className="text-3xl font-bold text-foreground mb-6">Project Gallery</h2>
-              <div className="grid md:grid-cols-3 gap-6">
-                {[1, 2, 3, 4, 5, 6].map((i) => (
-                  <div key={i} className="aspect-video bg-secondary rounded-2xl border border-border hover:shadow-premium transition-smooth" />
+              <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+                {galleryImages.map((image, i) => (
+                  <div key={i} className="aspect-video overflow-hidden rounded-2xl border border-border hover:shadow-premium transition-smooth">
+                    <img src={image.src} alt={image.alt} className="w-full h-full object-cover hover:scale-105 transition-transform duration-500" />
+                  </div>
                 ))}
               </div>
             </div>

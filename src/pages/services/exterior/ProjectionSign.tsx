@@ -4,6 +4,18 @@ import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import { Link } from "react-router-dom";
 
+import galleryProjection1 from "@/assets/gallery/exterior-projection-1.jpg";
+import galleryProjection2 from "@/assets/gallery/exterior-projection-2.jpg";
+import galleryProjection3 from "@/assets/gallery/exterior-projection-3.jpg";
+import galleryProjection4 from "@/assets/gallery/exterior-projection-4.jpg";
+
+const galleryImages = [
+  { src: galleryProjection1, alt: "Professional projection sign on building facade" },
+  { src: galleryProjection2, alt: "Illuminated pub projection sign at night" },
+  { src: galleryProjection3, alt: "Modern circular projection sign at dusk" },
+  { src: galleryProjection4, alt: "Decorative boutique projection sign" },
+];
+
 const ProjectionSign = () => {
   return (
     <div className="min-h-screen">
@@ -36,9 +48,11 @@ const ProjectionSign = () => {
             
             <div>
               <h2 className="text-3xl font-bold text-foreground mb-6">Project Gallery</h2>
-              <div className="grid md:grid-cols-3 gap-6">
-                {[1, 2, 3, 4, 5, 6].map((i) => (
-                  <div key={i} className="aspect-video bg-secondary rounded-2xl border border-border hover:shadow-premium transition-smooth" />
+              <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+                {galleryImages.map((image, i) => (
+                  <div key={i} className="aspect-video overflow-hidden rounded-2xl border border-border hover:shadow-premium transition-smooth">
+                    <img src={image.src} alt={image.alt} className="w-full h-full object-cover hover:scale-105 transition-transform duration-500" />
+                  </div>
                 ))}
               </div>
             </div>
