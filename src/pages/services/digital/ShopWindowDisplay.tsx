@@ -4,6 +4,18 @@ import { Button } from "@/components/ui/button";
 import { CheckCircle2, Monitor } from "lucide-react";
 import { Link } from "react-router-dom";
 
+import galleryWindow1 from "@/assets/gallery/digital-window-1.jpg";
+import galleryWindow2 from "@/assets/gallery/digital-window-2.jpg";
+import galleryWindow3 from "@/assets/gallery/digital-window-3.jpg";
+import galleryWindow4 from "@/assets/gallery/digital-window-4.jpg";
+
+const galleryImages = [
+  { src: galleryWindow1, alt: "Digital window display in retail storefront" },
+  { src: galleryWindow2, alt: "High-brightness window display in fashion store" },
+  { src: galleryWindow3, alt: "Estate agent window with property displays" },
+  { src: galleryWindow4, alt: "Video wall in shop window at night" },
+];
+
 const ShopWindowDisplay = () => {
   return (
     <div className="min-h-screen bg-background">
@@ -37,9 +49,11 @@ const ShopWindowDisplay = () => {
             {/* Project Gallery */}
             <div>
               <h2 className="text-3xl font-bold text-foreground mb-6">Project Gallery</h2>
-              <div className="grid md:grid-cols-3 gap-6">
-                {[1, 2, 3, 4, 5, 6].map((i) => (
-                  <div key={i} className="aspect-video bg-secondary rounded-2xl border border-border hover:shadow-premium transition-smooth" />
+              <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+                {galleryImages.map((image, i) => (
+                  <div key={i} className="aspect-video overflow-hidden rounded-2xl border border-border hover:shadow-premium transition-smooth">
+                    <img src={image.src} alt={image.alt} className="w-full h-full object-cover hover:scale-105 transition-transform duration-500" />
+                  </div>
                 ))}
               </div>
             </div>

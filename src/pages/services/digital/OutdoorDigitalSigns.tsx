@@ -4,6 +4,18 @@ import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import { Link } from "react-router-dom";
 
+import galleryOutdoor1 from "@/assets/gallery/digital-outdoor-1.jpg";
+import galleryOutdoor2 from "@/assets/gallery/digital-outdoor-2.jpg";
+import galleryOutdoor3 from "@/assets/gallery/digital-outdoor-3.jpg";
+import galleryOutdoor4 from "@/assets/gallery/digital-outdoor-4.jpg";
+
+const galleryImages = [
+  { src: galleryOutdoor1, alt: "Outdoor digital LED billboard" },
+  { src: galleryOutdoor2, alt: "Digital billboard on commercial building at night" },
+  { src: galleryOutdoor3, alt: "High-brightness outdoor display at storefront" },
+  { src: galleryOutdoor4, alt: "Transportation hub digital information display" },
+];
+
 const OutdoorDigitalSigns = () => {
   return (
     <div className="min-h-screen">
@@ -37,9 +49,11 @@ const OutdoorDigitalSigns = () => {
             {/* Project Gallery */}
             <div>
               <h2 className="text-3xl font-bold text-foreground mb-6">Project Gallery</h2>
-              <div className="grid md:grid-cols-3 gap-6">
-                {[1, 2, 3, 4, 5, 6].map((i) => (
-                  <div key={i} className="aspect-video bg-secondary rounded-2xl border border-border hover:shadow-premium transition-smooth" />
+              <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+                {galleryImages.map((image, i) => (
+                  <div key={i} className="aspect-video overflow-hidden rounded-2xl border border-border hover:shadow-premium transition-smooth">
+                    <img src={image.src} alt={image.alt} className="w-full h-full object-cover hover:scale-105 transition-transform duration-500" />
+                  </div>
                 ))}
               </div>
             </div>
