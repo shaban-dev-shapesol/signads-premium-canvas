@@ -4,6 +4,18 @@ import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import { Link } from "react-router-dom";
 
+import galleryPromotional1 from "@/assets/gallery/lightbox-promotional-1.jpg";
+import galleryPromotional2 from "@/assets/gallery/lightbox-promotional-2.jpg";
+import galleryPromotional3 from "@/assets/gallery/lightbox-promotional-3.jpg";
+import galleryPromotional4 from "@/assets/gallery/lightbox-promotional-4.jpg";
+
+const galleryImages = [
+  { src: galleryPromotional1, alt: "Promotional lightbox at trade show" },
+  { src: galleryPromotional2, alt: "Freestanding promotional display at exhibition" },
+  { src: galleryPromotional3, alt: "Retail point of sale lightbox display" },
+  { src: galleryPromotional4, alt: "Conference event promotional lightbox" },
+];
+
 const PromotionalLightbox = () => {
   return (
     <div className="min-h-screen">
@@ -37,9 +49,11 @@ const PromotionalLightbox = () => {
             {/* Project Gallery */}
             <div>
               <h2 className="text-3xl font-bold text-foreground mb-6">Project Gallery</h2>
-              <div className="grid md:grid-cols-3 gap-6">
-                {[1, 2, 3, 4, 5, 6].map((i) => (
-                  <div key={i} className="aspect-video bg-secondary rounded-2xl border border-border hover:shadow-premium transition-smooth" />
+              <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+                {galleryImages.map((image, i) => (
+                  <div key={i} className="aspect-video overflow-hidden rounded-2xl border border-border hover:shadow-premium transition-smooth">
+                    <img src={image.src} alt={image.alt} className="w-full h-full object-cover hover:scale-105 transition-transform duration-500" />
+                  </div>
                 ))}
               </div>
             </div>
