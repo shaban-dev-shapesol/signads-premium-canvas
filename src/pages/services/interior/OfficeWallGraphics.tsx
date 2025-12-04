@@ -4,6 +4,18 @@ import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import { Link } from "react-router-dom";
 
+import galleryWallGraphics1 from "@/assets/gallery/interior-wall-graphics-1.jpg";
+import galleryWallGraphics2 from "@/assets/gallery/interior-wall-graphics-2.jpg";
+import galleryWallGraphics3 from "@/assets/gallery/interior-wall-graphics-3.jpg";
+import galleryWallGraphics4 from "@/assets/gallery/interior-wall-graphics-4.jpg";
+
+const galleryImages = [
+  { src: galleryWallGraphics1, alt: "Creative office wall graphics installation" },
+  { src: galleryWallGraphics2, alt: "Colorful abstract wall mural in modern office" },
+  { src: galleryWallGraphics3, alt: "Company values timeline wall display" },
+  { src: galleryWallGraphics4, alt: "Geometric pattern wall graphics in meeting room" },
+];
+
 const OfficeWallGraphics = () => {
   return (
     <div className="min-h-screen">
@@ -37,9 +49,11 @@ const OfficeWallGraphics = () => {
             {/* Project Gallery */}
             <div>
               <h2 className="text-3xl font-bold text-foreground mb-6">Project Gallery</h2>
-              <div className="grid md:grid-cols-3 gap-6">
-                {[1, 2, 3, 4, 5, 6].map((i) => (
-                  <div key={i} className="aspect-video bg-secondary rounded-2xl border border-border hover:shadow-premium transition-smooth" />
+              <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+                {galleryImages.map((image, i) => (
+                  <div key={i} className="aspect-video overflow-hidden rounded-2xl border border-border hover:shadow-premium transition-smooth">
+                    <img src={image.src} alt={image.alt} className="w-full h-full object-cover hover:scale-105 transition-transform duration-500" />
+                  </div>
                 ))}
               </div>
             </div>
