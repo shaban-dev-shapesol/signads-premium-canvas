@@ -3,6 +3,7 @@ import { Button } from "@/components/ui/button";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import { Link } from "react-router-dom";
+import SEO from "@/components/SEO";
 
 const About = () => {
   const values = [
@@ -75,6 +76,10 @@ const About = () => {
 
   return (
     <div className="min-h-screen">
+      <SEO 
+        title="About signAds - 15+ Years of Premium Signage Excellence"
+        description="Discover signAds' story of quality craftsmanship, expert installation, and dedicated service. Trusted by 2,500+ businesses across the UK for premium signage solutions."
+      />
       <Navigation />
       
       {/* Hero Section */}

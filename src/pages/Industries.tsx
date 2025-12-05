@@ -3,6 +3,7 @@ import { Button } from "@/components/ui/button";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import { Link } from "react-router-dom";
+import SEO from "@/components/SEO";
 
 const Industries = () => {
   const industries = [
@@ -140,6 +141,10 @@ const Industries = () => {
 
   return (
     <div className="min-h-screen">
+      <SEO 
+        title="Industries We Serve - Retail, Corporate, Healthcare & More"
+        description="Expert signage solutions for retail, corporate, healthcare, hospitality, education, and logistics industries. Industry-specific expertise delivering results."
+      />
       <Navigation />
       
       {/* Hero Section */}

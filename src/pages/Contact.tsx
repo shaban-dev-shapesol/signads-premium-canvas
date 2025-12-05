@@ -1,10 +1,15 @@
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import ContactForm from "@/components/ContactForm";
+import SEO from "@/components/SEO";
 
 const Contact = () => {
   return (
     <div className="min-h-screen bg-background">
+      <SEO 
+        title="Contact signAds - Get a Free Signage Quote"
+        description="Contact signAds for a free consultation and quote on your signage project. Expert advice, competitive pricing, and fast turnaround times."
+      />
       <Navigation />
       
       {/* Hero Section */}
