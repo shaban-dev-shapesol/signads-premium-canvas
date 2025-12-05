@@ -3,6 +3,7 @@ import { Button } from "@/components/ui/button";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import { Link } from "react-router-dom";
+import SEO from "@/components/SEO";
 
 import printWallArt1 from "@/assets/gallery/print-wall-art-1.jpg";
 import printWallArt2 from "@/assets/gallery/print-wall-art-2.jpg";
@@ -12,6 +13,10 @@ import printWallArt4 from "@/assets/gallery/print-wall-art-4.jpg";
 const WallArt = () => {
   return (
     <div className="min-h-screen">
+      <SEO 
+        title="Wall Art & Murals - Custom Printed Wall Graphics"
+        description="Transform spaces with custom wall art and murals. High-resolution printing on various substrates for offices, retail, and hospitality venues."
+      />
       <Navigation />
       
       <section className="pt-32 pb-16 bg-primary text-primary-foreground">

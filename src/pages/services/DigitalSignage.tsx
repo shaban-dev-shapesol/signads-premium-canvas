@@ -3,6 +3,7 @@ import { Button } from "@/components/ui/button";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import { Link } from "react-router-dom";
+import SEO from "@/components/SEO";
 
 import digitalOutdoor from "@/assets/gallery/digital-outdoor-1.jpg";
 import digitalIndoor from "@/assets/gallery/digital-indoor-1.jpg";
@@ -39,6 +40,10 @@ const DigitalSignage = () => {
 
   return (
     <div className="min-h-screen">
+      <SEO 
+        title="Digital Signage - LED Displays, Menu Boards & Window Screens"
+        description="Dynamic digital signage solutions including outdoor LED displays, indoor screens, digital menu boards, and shop window displays with remote content management."
+      />
       <Navigation />
       
       <section className="pt-32 pb-16 bg-primary text-primary-foreground">

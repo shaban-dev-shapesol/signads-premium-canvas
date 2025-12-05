@@ -3,6 +3,7 @@ import { Button } from "@/components/ui/button";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import { Link } from "react-router-dom";
+import SEO from "@/components/SEO";
 
 import promotionalFlags from "@/assets/gallery/promotional-flags-1.jpg";
 import promotionalPavement from "@/assets/gallery/promotional-pavement-1.jpg";
@@ -53,6 +54,10 @@ const PromotionalSigns = () => {
 
   return (
     <div className="min-h-screen">
+      <SEO 
+        title="Promotional Signs - Flags, Pavement Signs & Displays"
+        description="Versatile promotional signage including custom flags, A-frame pavement signs, window graphics, and lightboxes. Drive foot traffic and boost visibility."
+      />
       <Navigation />
       
       <section className="pt-32 pb-16 bg-primary text-primary-foreground">

@@ -3,6 +3,7 @@ import { Button } from "@/components/ui/button";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import { Link } from "react-router-dom";
+import SEO from "@/components/SEO";
 
 import printBanner1 from "@/assets/gallery/print-banner-1.jpg";
 import printBanner2 from "@/assets/gallery/print-banner-2.jpg";
@@ -12,6 +13,10 @@ import printBanner4 from "@/assets/gallery/print-banner-4.jpg";
 const BannerPrinting = () => {
   return (
     <div className="min-h-screen">
+      <SEO 
+        title="Banner Printing - PVC, Mesh & Fabric Banners"
+        description="High-quality banner printing for indoor and outdoor use. PVC, mesh, and fabric banners with hemming and eyelets. Fast turnaround available."
+      />
       <Navigation />
       
       <section className="pt-32 pb-16 bg-primary text-primary-foreground">

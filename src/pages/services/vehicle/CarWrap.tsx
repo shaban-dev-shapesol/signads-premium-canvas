@@ -3,6 +3,7 @@ import { Button } from "@/components/ui/button";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import { Link } from "react-router-dom";
+import SEO from "@/components/SEO";
 
 import vehicleCarWrap1 from "@/assets/gallery/vehicle-car-wrap-1.jpg";
 import vehicleCarWrap2 from "@/assets/gallery/vehicle-car-wrap-2.jpg";
@@ -12,6 +13,10 @@ import vehicleCarWrap4 from "@/assets/gallery/vehicle-car-wrap-4.jpg";
 const CarWrap = () => {
   return (
     <div className="min-h-screen">
+      <SEO 
+        title="Car Wrap - Professional Vehicle Wrapping Services"
+        description="Premium car wraps using 3M and Avery Dennison vinyl. Full, partial, and spot graphics. 5-7 year durability with paint protection."
+      />
       <Navigation />
       
       <section className="pt-32 pb-16 bg-primary text-primary-foreground">

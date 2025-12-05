@@ -3,6 +3,7 @@ import { Button } from "@/components/ui/button";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import { Link } from "react-router-dom";
+import SEO from "@/components/SEO";
 
 import vehicleCar from "@/assets/gallery/vehicle-car-wrap-1.jpg";
 import vehicleVan from "@/assets/gallery/vehicle-van-wrap-1.jpg";
@@ -53,6 +54,10 @@ const VehicleGraphics = () => {
 
   return (
     <div className="min-h-screen">
+      <SEO 
+        title="Vehicle Graphics - Car, Van, Truck & Fleet Wraps"
+        description="Professional vehicle wraps for cars, vans, trucks, and fleets. Premium 3M and Avery vinyl with 5-7 year durability. Mobile advertising that works."
+      />
       <Navigation />
       
       <section className="pt-32 pb-16 bg-primary text-primary-foreground">

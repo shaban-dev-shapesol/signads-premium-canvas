@@ -3,6 +3,7 @@ import { Button } from "@/components/ui/button";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import { Link } from "react-router-dom";
+import SEO from "@/components/SEO";
 
 import vehicleBusWrap1 from "@/assets/gallery/vehicle-bus-wrap-1.jpg";
 import vehicleBusWrap2 from "@/assets/gallery/vehicle-bus-wrap-2.jpg";
@@ -12,6 +13,10 @@ import vehicleBusWrap4 from "@/assets/gallery/vehicle-bus-wrap-4.jpg";
 const BusWrap = () => {
   return (
     <div className="min-h-screen">
+      <SEO 
+        title="Bus Wrap Advertising - High-Impact Transit Marketing"
+        description="Bus wrap advertising with millions of daily impressions. Full and partial bus wraps for transit operators and advertising campaigns."
+      />
       <Navigation />
       
       <section className="pt-32 pb-16 bg-primary text-primary-foreground">

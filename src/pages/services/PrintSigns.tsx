@@ -3,6 +3,7 @@ import { Button } from "@/components/ui/button";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import { Link } from "react-router-dom";
+import SEO from "@/components/SEO";
 
 import printTray from "@/assets/gallery/print-tray-1.jpg";
 import printVinyl from "@/assets/gallery/print-vinyl-1.jpg";

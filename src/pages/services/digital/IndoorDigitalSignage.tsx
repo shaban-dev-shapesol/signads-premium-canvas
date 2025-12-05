@@ -3,6 +3,7 @@ import { Button } from "@/components/ui/button";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import { Link } from "react-router-dom";
+import SEO from "@/components/SEO";
 
 import galleryIndoor1 from "@/assets/gallery/digital-indoor-1.jpg";
 import galleryIndoor2 from "@/assets/gallery/digital-indoor-2.jpg";
@@ -19,6 +20,10 @@ const galleryImages = [
 const IndoorDigitalSignage = () => {
   return (
     <div className="min-h-screen">
+      <SEO 
+        title="Indoor Digital Signage - Commercial Display Solutions"
+        description="Professional indoor digital signage for retail, corporate, and hospitality. Video walls, touchscreens, and interactive displays with CMS."
+      />
       <Navigation />
       
       <section className="pt-32 pb-16 bg-primary text-primary-foreground">

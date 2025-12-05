@@ -3,6 +3,7 @@ import { Button } from "@/components/ui/button";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import { Link } from "react-router-dom";
+import SEO from "@/components/SEO";
 
 import galleryProjection1 from "@/assets/gallery/exterior-projection-1.jpg";
 import galleryProjection2 from "@/assets/gallery/exterior-projection-2.jpg";
@@ -19,6 +20,10 @@ const galleryImages = [
 const ProjectionSign = () => {
   return (
     <div className="min-h-screen">
+      <SEO 
+        title="Projection Signs - Double-Sided Hanging Signs"
+        description="Professional projection signs for multi-angle visibility. Illuminated and non-illuminated options for pubs, shops, and commercial buildings."
+      />
       <Navigation />
       
       <section className="pt-32 pb-16 bg-primary text-primary-foreground">

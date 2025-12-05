@@ -3,6 +3,7 @@ import { Button } from "@/components/ui/button";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import { Link } from "react-router-dom";
+import SEO from "@/components/SEO";
 
 import galleryWindowFrosting1 from "@/assets/gallery/interior-window-frosting-1.jpg";
 import galleryWindowFrosting2 from "@/assets/gallery/interior-window-frosting-2.jpg";
@@ -19,6 +20,10 @@ const galleryImages = [
 const WindowFrosting = () => {
   return (
     <div className="min-h-screen">
+      <SEO 
+        title="Window Frosting - Privacy Glass Films & Vinyl"
+        description="Professional window frosting for offices, meeting rooms, and storefronts. Privacy solutions with branded designs, logos, and decorative patterns."
+      />
       <Navigation />
       
       <section className="pt-32 pb-16 bg-primary text-primary-foreground">

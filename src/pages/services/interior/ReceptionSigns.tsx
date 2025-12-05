@@ -3,6 +3,7 @@ import { Button } from "@/components/ui/button";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import { Link } from "react-router-dom";
+import SEO from "@/components/SEO";
 
 import galleryReception1 from "@/assets/gallery/interior-reception-1.jpg";
 import galleryReception2 from "@/assets/gallery/interior-reception-2.jpg";
@@ -19,6 +20,10 @@ const galleryImages = [
 const ReceptionSigns = () => {
   return (
     <div className="min-h-screen">
+      <SEO 
+        title="Reception Signs - Lobby & Corporate Signage"
+        description="Premium reception and lobby signs for corporate offices, hotels, and businesses. 3D letters, illuminated logos, and custom designs that impress."
+      />
       <Navigation />
       
       <section className="pt-32 pb-16 bg-primary text-primary-foreground">

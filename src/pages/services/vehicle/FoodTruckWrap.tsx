@@ -3,6 +3,7 @@ import { Button } from "@/components/ui/button";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import { Link } from "react-router-dom";
+import SEO from "@/components/SEO";
 
 import vehicleFoodTruck1 from "@/assets/gallery/vehicle-food-truck-1.jpg";
 import vehicleFoodTruck2 from "@/assets/gallery/vehicle-food-truck-2.jpg";
@@ -12,6 +13,10 @@ import vehicleFoodTruck4 from "@/assets/gallery/vehicle-food-truck-4.jpg";
 const FoodTruckWrap = () => {
   return (
     <div className="min-h-screen">
+      <SEO 
+        title="Food Truck Wraps - Custom Food Vehicle Graphics"
+        description="Eye-catching food truck wraps that attract customers. Vibrant, food-safe graphics with menu boards and branding for mobile food businesses."
+      />
       <Navigation />
       
       <section className="pt-32 pb-16 bg-primary text-primary-foreground">

@@ -3,6 +3,7 @@ import { Button } from "@/components/ui/button";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import { Link } from "react-router-dom";
+import SEO from "@/components/SEO";
 
 import galleryTotem1 from "@/assets/gallery/exterior-totem-1.jpg";
 import galleryTotem2 from "@/assets/gallery/exterior-totem-2.jpg";
@@ -19,6 +20,10 @@ const galleryImages = [
 const TotemSign = () => {
   return (
     <div className="min-h-screen">
+      <SEO 
+        title="Totem Signs - Freestanding Monolith Signage"
+        description="Freestanding totem and monolith signs for business parks, retail parks, and building entrances. Custom designed, illuminated, and multi-tenant options."
+      />
       <Navigation />
       
       <section className="pt-32 pb-16 bg-primary text-primary-foreground">

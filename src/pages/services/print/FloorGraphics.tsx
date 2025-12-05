@@ -3,6 +3,7 @@ import { Button } from "@/components/ui/button";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import { Link } from "react-router-dom";
+import SEO from "@/components/SEO";
 
 import printFloor1 from "@/assets/gallery/print-floor-1.jpg";
 import printFloor2 from "@/assets/gallery/print-floor-2.jpg";
@@ -12,6 +13,10 @@ import printFloor4 from "@/assets/gallery/print-floor-4.jpg";
 const FloorGraphics = () => {
   return (
     <div className="min-h-screen">
+      <SEO 
+        title="Floor Graphics - Anti-Slip Floor Decals & Stickers"
+        description="Durable anti-slip floor graphics for retail, events, and wayfinding. R9-R13 rated, removable options available, and custom shapes and sizes."
+      />
       <Navigation />
       
       <section className="pt-32 pb-16 bg-primary text-primary-foreground">
