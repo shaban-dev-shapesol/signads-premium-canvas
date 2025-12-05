@@ -3,6 +3,7 @@ import { Button } from "@/components/ui/button";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import { Link } from "react-router-dom";
+import SEO from "@/components/SEO";
 
 import galleryBespoke1 from "@/assets/gallery/exhibition-bespoke-1.jpg";
 import galleryBespoke2 from "@/assets/gallery/exhibition-bespoke-2.jpg";
@@ -19,6 +20,10 @@ const galleryImages = [
 const BespokeExhibitionDisplay = () => {
   return (
     <div className="min-h-screen">
+      <SEO 
+        title="Bespoke Exhibition Displays - Custom Trade Show Stands"
+        description="Custom-designed exhibition stands tailored to your brand. Multi-level booths, integrated technology, and full project management."
+      />
       <Navigation />
       
       <section className="pt-32 pb-16 bg-primary text-primary-foreground">

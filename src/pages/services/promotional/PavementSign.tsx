@@ -2,10 +2,15 @@ import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 import { CheckCircle2 } from "lucide-react";
+import SEO from "@/components/SEO";
 
 const PavementSign = () => {
   return (
     <div className="min-h-screen bg-background">
+      <SEO 
+        title="Pavement Signs & A-Boards - Sidewalk Advertising Displays"
+        description="Classic pavement signs and A-boards for storefronts and events. Chalkboards, snap-frame displays, and custom branded A-boards."
+      />
       <Navigation />
       
       {/* Hero Section */}

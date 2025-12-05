@@ -3,6 +3,7 @@ import { Button } from "@/components/ui/button";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import { Link } from "react-router-dom";
+import SEO from "@/components/SEO";
 
 import galleryAcrylic1 from "@/assets/gallery/lightbox-acrylic-1.jpg";
 import galleryAcrylic2 from "@/assets/gallery/lightbox-acrylic-2.jpg";
@@ -19,6 +20,10 @@ const galleryImages = [
 const AcrylicLightbox = () => {
   return (
     <div className="min-h-screen">
+      <SEO 
+        title="Acrylic Lightbox Signs - Premium LED Illuminated Displays"
+        description="Premium acrylic lightbox signs with crystal-clear face panels. Even LED illumination for retail, corporate, and hospitality environments."
+      />
       <Navigation />
       
       <section className="pt-32 pb-16 bg-primary text-primary-foreground">

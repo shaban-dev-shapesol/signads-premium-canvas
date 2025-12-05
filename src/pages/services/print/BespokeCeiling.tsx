@@ -3,6 +3,7 @@ import { Button } from "@/components/ui/button";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import { Link } from "react-router-dom";
+import SEO from "@/components/SEO";
 
 import printCeiling1 from "@/assets/gallery/print-ceiling-1.jpg";
 import printCeiling2 from "@/assets/gallery/print-ceiling-2.jpg";
@@ -12,6 +13,10 @@ import printCeiling4 from "@/assets/gallery/print-ceiling-4.jpg";
 const BespokeCeiling = () => {
   return (
     <div className="min-h-screen">
+      <SEO 
+        title="Bespoke Printed Ceilings - Custom Ceiling Graphics"
+        description="Transform overhead spaces with custom printed ceiling graphics. Retail, hospitality, and commercial installations with stunning visual impact."
+      />
       <Navigation />
       
       <section className="pt-32 pb-16 bg-primary text-primary-foreground">

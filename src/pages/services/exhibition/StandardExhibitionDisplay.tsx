@@ -3,6 +3,7 @@ import { Button } from "@/components/ui/button";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import { Link } from "react-router-dom";
+import SEO from "@/components/SEO";
 
 import galleryStandard1 from "@/assets/gallery/exhibition-standard-1.jpg";
 import galleryStandard2 from "@/assets/gallery/exhibition-standard-2.jpg";
@@ -19,6 +20,10 @@ const galleryImages = [
 const StandardExhibitionDisplay = () => {
   return (
     <div className="min-h-screen">
+      <SEO 
+        title="Standard Exhibition Displays - Trade Show Stands"
+        description="Professional standard exhibition displays for trade shows and events. Modular, portable systems with easy assembly and graphic replacement."
+      />
       <Navigation />
       
       <section className="pt-32 pb-16 bg-primary text-primary-foreground">
