@@ -3,6 +3,7 @@ import { Button } from "@/components/ui/button";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import { Link } from "react-router-dom";
+import SEO from "@/components/SEO";
 
 // Import gallery images
 import exteriorFasciaTray from "@/assets/gallery/exterior-fascia-tray-1.jpg";
@@ -411,6 +412,10 @@ const Portfolio = () => {
 
   return (
     <div className="min-h-screen">
+      <SEO 
+        title="Portfolio - Signage Projects & Case Studies"
+        description="Explore our portfolio of 33+ signage projects across exterior signs, vehicle wraps, digital displays, and more. See our quality craftsmanship in action."
+      />
       <Navigation />
 
       {/* Hero Section */}

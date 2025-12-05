@@ -3,6 +3,7 @@ import { Button } from "@/components/ui/button";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import { Link } from "react-router-dom";
+import SEO from "@/components/SEO";
 
 import serviceExterior from "@/assets/service-exterior.jpg";
 import serviceInterior from "@/assets/service-interior.jpg";
@@ -138,6 +139,10 @@ const Services = () => {
 
   return (
     <div className="min-h-screen">
+      <SEO 
+        title="Signage Services - Exterior, Interior, Vehicle Wraps & More"
+        description="Comprehensive signage solutions including exterior signs, interior branding, vehicle wraps, digital signage, exhibition displays, and large format printing."
+      />
       <Navigation />
       
       {/* Hero Section */}
