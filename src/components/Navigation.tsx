@@ -171,13 +171,14 @@ const Navigation = () => {
   };
 
   return (
-    <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
-      scrolled 
-        ? 'bg-background/95 backdrop-blur-lg border-b border-border shadow-lg' 
-        : 'bg-transparent'
-    }`}>
-      <div className="container mx-auto px-6">
-        <div className="flex items-center justify-between h-20">
+    <>
+      <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
+        scrolled 
+          ? 'bg-background/95 backdrop-blur-lg border-b border-border shadow-lg' 
+          : 'bg-transparent'
+      }`}>
+        <div className="container mx-auto px-6">
+          <div className="flex items-center justify-between h-20">
           {/* Left Navigation */}
           <div className="hidden lg:flex items-center gap-8 flex-1">
             {leftNavLinks.map((link) => (
@@ -328,10 +329,12 @@ const Navigation = () => {
             {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
           </button>
         </div>
+      </div>
+    </nav>
 
-        {/* Mobile Navigation */}
-        {isOpen && (
-          <div className="lg:hidden fixed left-0 right-0 bottom-0 top-20 bg-background z-[60]">
+    {/* Mobile Navigation - Outside nav for proper z-index stacking */}
+    {isOpen && (
+      <div className="lg:hidden fixed inset-0 top-20 bg-background z-[100]">
             <div className="h-full overflow-y-auto px-6 py-6 space-y-2">
               {/* Services Section with Accordion */}
               <div className="border-b border-border pb-2">
@@ -438,9 +441,8 @@ const Navigation = () => {
             </div>
           </div>
         )}
-      </div>
-    </nav>
-  );
-};
+      </>
+    );
+  };
 
 export default Navigation;
