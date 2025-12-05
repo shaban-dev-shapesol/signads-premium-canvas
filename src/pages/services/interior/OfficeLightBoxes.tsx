@@ -3,6 +3,7 @@ import { Button } from "@/components/ui/button";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import { Link } from "react-router-dom";
+import SEO from "@/components/SEO";
 
 import galleryLightbox1 from "@/assets/gallery/interior-lightbox-1.jpg";
 import galleryLightbox2 from "@/assets/gallery/interior-lightbox-2.jpg";
@@ -19,6 +20,10 @@ const galleryImages = [
 const OfficeLightBoxes = () => {
   return (
     <div className="min-h-screen">
+      <SEO 
+        title="Office Light Boxes - LED Backlit Display Signs"
+        description="Professional LED lightbox displays for offices, reception areas, and corporate spaces. Even illumination, easy graphic changes, and energy efficient."
+      />
       <Navigation />
       
       <section className="pt-32 pb-16 bg-primary text-primary-foreground">

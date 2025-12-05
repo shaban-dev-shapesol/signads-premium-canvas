@@ -3,6 +3,7 @@ import { Button } from "@/components/ui/button";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import { Link } from "react-router-dom";
+import SEO from "@/components/SEO";
 
 import vehicleVanWrap1 from "@/assets/gallery/vehicle-van-wrap-1.jpg";
 import vehicleVanWrap2 from "@/assets/gallery/vehicle-van-wrap-2.jpg";
@@ -12,6 +13,10 @@ import vehicleVanWrap4 from "@/assets/gallery/vehicle-van-wrap-4.jpg";
 const VanWrap = () => {
   return (
     <div className="min-h-screen">
+      <SEO 
+        title="Van Wrap - Commercial Van Graphics & Branding"
+        description="Professional van wraps for commercial vehicles. Full and partial wraps, fleet branding, and mobile advertising with premium vinyl materials."
+      />
       <Navigation />
       
       <section className="pt-32 pb-16 bg-primary text-primary-foreground">

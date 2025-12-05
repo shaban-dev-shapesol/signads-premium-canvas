@@ -3,6 +3,7 @@ import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 import { CheckCircle2, Monitor } from "lucide-react";
 import { Link } from "react-router-dom";
+import SEO from "@/components/SEO";
 
 import galleryWindow1 from "@/assets/gallery/digital-window-1.jpg";
 import galleryWindow2 from "@/assets/gallery/digital-window-2.jpg";
@@ -19,6 +20,10 @@ const galleryImages = [
 const ShopWindowDisplay = () => {
   return (
     <div className="min-h-screen bg-background">
+      <SEO 
+        title="Shop Window Digital Displays - High-Brightness Retail Screens"
+        description="High-brightness digital displays for shop windows. Capture attention with dynamic content visible in direct sunlight."
+      />
       <Navigation />
       
       <section className="pt-32 pb-16 bg-primary text-primary-foreground">

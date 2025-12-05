@@ -3,6 +3,7 @@ import { Button } from "@/components/ui/button";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import { Link } from "react-router-dom";
+import SEO from "@/components/SEO";
 
 import galleryWallGraphics1 from "@/assets/gallery/interior-wall-graphics-1.jpg";
 import galleryWallGraphics2 from "@/assets/gallery/interior-wall-graphics-2.jpg";
@@ -19,6 +20,10 @@ const galleryImages = [
 const OfficeWallGraphics = () => {
   return (
     <div className="min-h-screen">
+      <SEO 
+        title="Office Wall Graphics - Creative Workspace Branding"
+        description="Transform your workspace with custom wall graphics, murals, and branded environments. Inspire creativity and reinforce company culture."
+      />
       <Navigation />
       
       <section className="pt-32 pb-16 bg-primary text-primary-foreground">

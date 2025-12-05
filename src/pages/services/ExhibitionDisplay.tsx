@@ -3,6 +3,7 @@ import { Button } from "@/components/ui/button";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import { Link } from "react-router-dom";
+import SEO from "@/components/SEO";
 
 import exhibitionStandard from "@/assets/gallery/exhibition-standard-1.jpg";
 import exhibitionBespoke from "@/assets/gallery/exhibition-bespoke-1.jpg";
@@ -32,6 +33,10 @@ const ExhibitionDisplay = () => {
 
   return (
     <div className="min-h-screen">
+      <SEO 
+        title="Exhibition Display - Trade Show Stands & Pop-Up Banners"
+        description="Professional exhibition displays, pop-up banners, and bespoke trade show stands. Portable, easy to set up, and designed for maximum impact."
+      />
       <Navigation />
       
       <section className="pt-32 pb-16 bg-primary text-primary-foreground">

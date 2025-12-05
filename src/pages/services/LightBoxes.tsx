@@ -3,6 +3,7 @@ import { Button } from "@/components/ui/button";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import { Link } from "react-router-dom";
+import SEO from "@/components/SEO";
 
 import exteriorFlexFace from "@/assets/gallery/exterior-flex-face-1.jpg";
 import lightboxAcrylic from "@/assets/gallery/lightbox-acrylic-1.jpg";
@@ -32,6 +33,10 @@ const LightBoxes = () => {
 
   return (
     <div className="min-h-screen">
+      <SEO 
+        title="Light Boxes - Illuminated Signage & LED Displays"
+        description="Energy-efficient LED lightbox signage including flex face, acrylic, and promotional displays. Bright, even illumination for 24/7 visibility."
+      />
       <Navigation />
       
       <section className="pt-32 pb-16 bg-primary text-primary-foreground">

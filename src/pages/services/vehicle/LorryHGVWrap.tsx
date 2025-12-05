@@ -3,6 +3,7 @@ import { Button } from "@/components/ui/button";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import { Link } from "react-router-dom";
+import SEO from "@/components/SEO";
 
 import vehicleLorryWrap1 from "@/assets/gallery/vehicle-lorry-wrap-1.jpg";
 import vehicleLorryWrap2 from "@/assets/gallery/vehicle-lorry-wrap-2.jpg";
@@ -12,6 +13,10 @@ import vehicleLorryWrap4 from "@/assets/gallery/vehicle-lorry-wrap-4.jpg";
 const LorryHGVWrap = () => {
   return (
     <div className="min-h-screen">
+      <SEO 
+        title="Lorry & HGV Wraps - Heavy Goods Vehicle Graphics"
+        description="Maximum brand exposure with lorry and HGV wraps. Full and partial wraps for heavy goods vehicles with nationwide coverage and fleet discounts."
+      />
       <Navigation />
       
       <section className="pt-32 pb-16 bg-primary text-primary-foreground">

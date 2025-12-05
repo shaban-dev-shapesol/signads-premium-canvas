@@ -3,6 +3,7 @@ import { Button } from "@/components/ui/button";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import { Link } from "react-router-dom";
+import SEO from "@/components/SEO";
 
 import galleryNeon1 from "@/assets/gallery/interior-neon-1.jpg";
 import galleryNeon2 from "@/assets/gallery/interior-neon-2.jpg";
@@ -19,6 +20,10 @@ const galleryImages = [
 const NeonSigns = () => {
   return (
     <div className="min-h-screen">
+      <SEO 
+        title="LED Neon Signs - Custom Neon Signage for Business"
+        description="Custom LED neon signs for restaurants, bars, offices & retail. Energy-efficient, safe to touch, and fully customizable in any color or design."
+      />
       <Navigation />
       
       <section className="pt-32 pb-16 bg-primary text-primary-foreground">

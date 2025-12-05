@@ -3,6 +3,7 @@ import { Button } from "@/components/ui/button";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import { Link } from "react-router-dom";
+import SEO from "@/components/SEO";
 
 import galleryFlexFace1 from "@/assets/gallery/exterior-flex-face-1.jpg";
 import galleryFlexFace2 from "@/assets/gallery/exterior-flex-face-2.jpg";
@@ -19,6 +20,10 @@ const galleryImages = [
 const FlexFaceLightBox = () => {
   return (
     <div className="min-h-screen">
+      <SEO 
+        title="Flex Face Light Box Signs - Large Format Illuminated Signage"
+        description="Flex face light box signs for large format advertising. Weather-resistant, energy-efficient LED illumination for 24/7 brand visibility."
+      />
       <Navigation />
       
       <section className="pt-32 pb-16 bg-primary text-primary-foreground">

@@ -3,6 +3,7 @@ import { Button } from "@/components/ui/button";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import { Link } from "react-router-dom";
+import SEO from "@/components/SEO";
 
 import printWindow1 from "@/assets/gallery/print-window-1.jpg";
 import printWindow2 from "@/assets/gallery/print-window-2.jpg";
@@ -12,6 +13,10 @@ import printWindow4 from "@/assets/gallery/print-window-4.jpg";
 const WindowGraphics = () => {
   return (
     <div className="min-h-screen">
+      <SEO 
+        title="Window Graphics - Custom Printed Window Displays"
+        description="Eye-catching window graphics and displays for retail storefronts. Vinyl lettering, full-color prints, and frosted film options."
+      />
       <Navigation />
       
       <section className="pt-32 pb-16 bg-primary text-primary-foreground">

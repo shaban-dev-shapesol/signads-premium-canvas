@@ -3,6 +3,7 @@ import { Button } from "@/components/ui/button";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import { Link } from "react-router-dom";
+import SEO from "@/components/SEO";
 
 import exterior3DLetters from "@/assets/gallery/exterior-3d-letters-1.jpg";
 import exteriorFasciaTray from "@/assets/gallery/exterior-fascia-tray-1.jpg";
@@ -53,6 +54,10 @@ const ExteriorSigns = () => {
 
   return (
     <div className="min-h-screen">
+      <SEO 
+        title="Exterior Signs - Shop Fronts, 3D Letters & Building Signage"
+        description="Premium exterior signage including 3D letters, fascia signs, lightboxes, totems, and projection signs. Weather-resistant and professionally installed."
+      />
       <Navigation />
       
       <section className="pt-32 pb-16 bg-primary text-primary-foreground">

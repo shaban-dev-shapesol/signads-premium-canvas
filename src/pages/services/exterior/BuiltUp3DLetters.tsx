@@ -3,6 +3,7 @@ import { Button } from "@/components/ui/button";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import { Link } from "react-router-dom";
+import SEO from "@/components/SEO";
 
 import gallery3DLetters1 from "@/assets/gallery/exterior-3d-letters-1.jpg";
 import gallery3DLetters2 from "@/assets/gallery/exterior-3d-letters-2.jpg";
@@ -19,6 +20,10 @@ const galleryImages = [
 const BuiltUp3DLetters = () => {
   return (
     <div className="min-h-screen">
+      <SEO 
+        title="Built-Up 3D Letters - Premium Dimensional Signage"
+        description="Custom built-up 3D letters in acrylic, aluminium, stainless steel & brass. Illuminated and non-illuminated options for storefronts, reception areas & buildings."
+      />
       <Navigation />
       
       <section className="pt-32 pb-16 bg-primary text-primary-foreground">

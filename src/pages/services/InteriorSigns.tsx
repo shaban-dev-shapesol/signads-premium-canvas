@@ -3,6 +3,7 @@ import { Button } from "@/components/ui/button";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import { Link } from "react-router-dom";
+import SEO from "@/components/SEO";
 
 import interiorReception from "@/assets/gallery/interior-reception-1.jpg";
 import interiorNeon from "@/assets/gallery/interior-neon-1.jpg";
@@ -46,6 +47,10 @@ const InteriorSigns = () => {
 
   return (
     <div className="min-h-screen">
+      <SEO 
+        title="Interior Signs - Reception, Neon, Wall Graphics & More"
+        description="Transform your interior spaces with reception signs, LED neon, lightboxes, wall graphics, and window frosting. Professional design and installation."
+      />
       <Navigation />
       
       <section className="pt-32 pb-16 bg-primary text-primary-foreground">

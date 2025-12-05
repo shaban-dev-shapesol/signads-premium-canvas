@@ -3,6 +3,7 @@ import { Button } from "@/components/ui/button";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import { Link } from "react-router-dom";
+import SEO from "@/components/SEO";
 
 import printVinyl1 from "@/assets/gallery/print-vinyl-1.jpg";
 import printVinyl2 from "@/assets/gallery/print-vinyl-2.jpg";
@@ -12,6 +13,10 @@ import printVinyl4 from "@/assets/gallery/print-vinyl-4.jpg";
 const VinylLettering = () => {
   return (
     <div className="min-h-screen">
+      <SEO 
+        title="Vinyl Lettering - Cut Vinyl Graphics & Letters"
+        description="Precision-cut vinyl lettering for windows, walls, vehicles, and signs. Wide range of colors and finishes with easy application."
+      />
       <Navigation />
       
       <section className="pt-32 pb-16 bg-primary text-primary-foreground">

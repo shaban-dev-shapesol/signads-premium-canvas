@@ -3,6 +3,7 @@ import { Button } from "@/components/ui/button";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import { Link } from "react-router-dom";
+import SEO from "@/components/SEO";
 
 import galleryHoarding1 from "@/assets/gallery/exterior-hoarding-1.jpg";
 import galleryHoarding2 from "@/assets/gallery/exterior-hoarding-2.jpg";
@@ -19,6 +20,10 @@ const galleryImages = [
 const SiteHoardingBoards = () => {
   return (
     <div className="min-h-screen">
+      <SEO 
+        title="Site Hoarding Boards - Construction Site Graphics"
+        description="Large format site hoarding boards for construction and development sites. High-impact graphics, durable materials, and professional installation."
+      />
       <Navigation />
       
       <section className="pt-32 pb-16 bg-primary text-primary-foreground">

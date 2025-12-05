@@ -3,6 +3,7 @@ import { Button } from "@/components/ui/button";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import { Link } from "react-router-dom";
+import SEO from "@/components/SEO";
 
 import vehicleTruckWrap1 from "@/assets/gallery/vehicle-truck-wrap-1.jpg";
 import vehicleTruckWrap2 from "@/assets/gallery/vehicle-truck-wrap-2.jpg";
@@ -12,6 +13,10 @@ import vehicleTruckWrap4 from "@/assets/gallery/vehicle-truck-wrap-4.jpg";
 const TruckWrap = () => {
   return (
     <div className="min-h-screen">
+      <SEO 
+        title="Truck Wrap - Large Vehicle Graphics & Branding"
+        description="High-impact truck wraps for maximum brand exposure. Professional design and installation with durable vinyl materials for commercial trucks."
+      />
       <Navigation />
       
       <section className="pt-32 pb-16 bg-primary text-primary-foreground">

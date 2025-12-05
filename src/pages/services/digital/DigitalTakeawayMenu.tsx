@@ -3,6 +3,7 @@ import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 import { CheckCircle2, UtensilsCrossed } from "lucide-react";
 import { Link } from "react-router-dom";
+import SEO from "@/components/SEO";
 
 import galleryMenu1 from "@/assets/gallery/digital-menu-1.jpg";
 import galleryMenu2 from "@/assets/gallery/digital-menu-2.jpg";
@@ -19,6 +20,10 @@ const galleryImages = [
 const DigitalTakeawayMenu = () => {
   return (
     <div className="min-h-screen bg-background">
+      <SEO 
+        title="Digital Takeaway Menu Boards - Restaurant Digital Displays"
+        description="Dynamic digital menu boards for restaurants, cafes, and takeaways. Easy content updates and professional installation."
+      />
       <Navigation />
       
       <section className="pt-32 pb-16 bg-primary text-primary-foreground">

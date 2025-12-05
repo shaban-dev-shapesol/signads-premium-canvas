@@ -3,6 +3,7 @@ import { Button } from "@/components/ui/button";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import { Link } from "react-router-dom";
+import SEO from "@/components/SEO";
 
 import galleryFascia1 from "@/assets/gallery/exterior-fascia-tray-1.jpg";
 import galleryFascia2 from "@/assets/gallery/exterior-fascia-tray-2.jpg";
@@ -19,6 +20,10 @@ const galleryImages = [
 const FasciaSignTray = () => {
   return (
     <div className="min-h-screen">
+      <SEO 
+        title="Fascia Sign Tray - Illuminated Storefront Signage"
+        description="Professional fascia sign trays for retail storefronts and commercial buildings. LED illuminated, weather-resistant, and custom designed to your brand."
+      />
       <Navigation />
       
       <section className="pt-32 pb-16 bg-primary text-primary-foreground">

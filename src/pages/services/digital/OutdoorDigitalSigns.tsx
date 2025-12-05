@@ -3,6 +3,7 @@ import { Button } from "@/components/ui/button";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import { Link } from "react-router-dom";
+import SEO from "@/components/SEO";
 
 import galleryOutdoor1 from "@/assets/gallery/digital-outdoor-1.jpg";
 import galleryOutdoor2 from "@/assets/gallery/digital-outdoor-2.jpg";
@@ -19,6 +20,10 @@ const galleryImages = [
 const OutdoorDigitalSigns = () => {
   return (
     <div className="min-h-screen">
+      <SEO 
+        title="Outdoor Digital Signs - LED Billboards & Displays"
+        description="High-brightness outdoor digital signage and LED billboards. Weather-resistant displays with remote content management for advertising and information."
+      />
       <Navigation />
       
       <section className="pt-32 pb-16 bg-primary text-primary-foreground">
