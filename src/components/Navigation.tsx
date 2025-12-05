@@ -331,7 +331,7 @@ const Navigation = () => {
 
         {/* Mobile Navigation */}
         {isOpen && (
-          <div className="lg:hidden fixed inset-0 top-20 bg-background z-40">
+          <div className="lg:hidden fixed left-0 right-0 bottom-0 top-20 bg-background z-[60]">
             <div className="h-full overflow-y-auto px-6 py-6 space-y-2">
               {/* Services Section with Accordion */}
               <div className="border-b border-border pb-2">
