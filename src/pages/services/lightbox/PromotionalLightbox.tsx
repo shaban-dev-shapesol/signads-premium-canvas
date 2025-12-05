@@ -3,6 +3,7 @@ import { Button } from "@/components/ui/button";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import { Link } from "react-router-dom";
+import SEO from "@/components/SEO";
 
 import galleryPromotional1 from "@/assets/gallery/lightbox-promotional-1.jpg";
 import galleryPromotional2 from "@/assets/gallery/lightbox-promotional-2.jpg";
@@ -19,6 +20,10 @@ const galleryImages = [
 const PromotionalLightbox = () => {
   return (
     <div className="min-h-screen">
+      <SEO 
+        title="Promotional Lightbox Displays - Event & Retail Illuminated Signs"
+        description="Eye-catching promotional lightboxes for trade shows, retail, and events. Portable options with easy graphic changes and bright LED illumination."
+      />
       <Navigation />
       
       <section className="pt-32 pb-16 bg-primary text-primary-foreground">

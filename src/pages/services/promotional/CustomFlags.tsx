@@ -2,10 +2,15 @@ import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 import { CheckCircle2 } from "lucide-react";
+import SEO from "@/components/SEO";
 
 const CustomFlags = () => {
   return (
     <div className="min-h-screen bg-background">
+      <SEO 
+        title="Custom Flags & Banners - Feather Flags & Promotional Displays"
+        description="Eye-catching custom flags and banners for events, retail, and outdoor advertising. Feather flags, teardrop flags, and branded promotional displays."
+      />
       <Navigation />
       
       {/* Hero Section */}

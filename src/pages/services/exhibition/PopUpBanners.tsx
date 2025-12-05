@@ -3,6 +3,7 @@ import { Button } from "@/components/ui/button";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import { Link } from "react-router-dom";
+import SEO from "@/components/SEO";
 
 import galleryPopup1 from "@/assets/gallery/exhibition-popup-1.jpg";
 import galleryPopup2 from "@/assets/gallery/exhibition-popup-2.jpg";
@@ -19,6 +20,10 @@ const galleryImages = [
 const PopUpBanners = () => {
   return (
     <div className="min-h-screen">
+      <SEO 
+        title="Pop-Up Banners - Roller Banners & Pull-Up Displays"
+        description="Portable pop-up and roller banners for trade shows, events, and retail. Easy setup, premium print quality, and various sizes available."
+      />
       <Navigation />
       
       <section className="pt-32 pb-16 bg-primary text-primary-foreground">

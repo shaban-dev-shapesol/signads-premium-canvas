@@ -68,6 +68,10 @@ const PrintSigns = () => {
 
   return (
     <div className="min-h-screen">
+      <SEO 
+        title="Print Signs - Banners, Vinyl, Floor & Window Graphics"
+        description="Large format printing services including banners, vinyl lettering, floor graphics, window displays, wall art, and bespoke printed ceilings."
+      />
       <Navigation />
       
       <section className="pt-32 pb-16 bg-primary text-primary-foreground">
