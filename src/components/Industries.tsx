@@ -1,13 +1,5 @@
-import { Store, Briefcase, GraduationCap, Heart, Truck, Building, ArrowRight } from "lucide-react";
+import { Store, Briefcase, GraduationCap, Heart, Truck, Building } from "lucide-react";
 import { motion } from "framer-motion";
-
-// Import industry images
-import retailImg from "@/assets/industries/retail.jpg";
-import corporateImg from "@/assets/industries/corporate.jpg";
-import educationImg from "@/assets/industries/education.jpg";
-import healthcareImg from "@/assets/industries/healthcare.jpg";
-import transportImg from "@/assets/industries/transport.jpg";
-import hospitalityImg from "@/assets/industries/hospitality.jpg";
 
 const Industries = () => {
   const industries = [
@@ -15,37 +7,31 @@ const Industries = () => {
       icon: Store,
       title: "Retail",
       description: "Drive foot traffic with eye-catching storefront signage",
-      image: retailImg,
     },
     {
       icon: Briefcase,
       title: "Corporate & Office",
       description: "Professional branding for modern workspaces",
-      image: corporateImg,
     },
     {
       icon: GraduationCap,
       title: "Education",
       description: "Wayfinding and informational signage for campuses",
-      image: educationImg,
     },
     {
       icon: Heart,
       title: "Healthcare",
       description: "Clear, compliant signage for medical facilities",
-      image: healthcareImg,
     },
     {
       icon: Truck,
       title: "Transport & Logistics",
       description: "Fleet graphics and warehouse signage",
-      image: transportImg,
     },
     {
       icon: Building,
       title: "Hospitality",
       description: "Premium signage for hotels and restaurants",
-      image: hospitalityImg,
     },
   ];
 
@@ -86,7 +72,7 @@ const Industries = () => {
 
         {/* Industries Grid */}
         <motion.div 
-          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-7xl mx-auto"
+          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 max-w-7xl mx-auto"
           variants={containerVariants}
           initial="hidden"
           animate="visible"
@@ -97,9 +83,8 @@ const Industries = () => {
               <motion.div
                 key={index}
                 variants={itemVariants}
-                className="group bg-card rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300"
+                className="group bg-card rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300"
               >
-                {/* Text Content */}
                 <div className="p-6">
                   <div className="flex items-start gap-4">
                     <div className="w-12 h-12 bg-accent rounded-xl flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform duration-300">
@@ -108,24 +93,6 @@ const Industries = () => {
                     <div>
                       <h3 className="text-lg font-bold text-foreground mb-2">{industry.title}</h3>
                       <p className="text-muted-foreground text-sm leading-relaxed">{industry.description}</p>
-                    </div>
-                  </div>
-                </div>
-
-                {/* Image with Arrow Button */}
-                <div className="relative px-4 pb-4">
-                  <div className="relative overflow-hidden rounded-xl">
-                    <img 
-                      src={industry.image} 
-                      alt={industry.title}
-                      className="w-full h-40 object-cover transition-transform duration-500 group-hover:scale-105"
-                    />
-                  </div>
-                  
-                  {/* Arrow Button */}
-                  <div className="absolute bottom-6 right-6">
-                    <div className="w-10 h-10 bg-accent rounded-full flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform duration-300">
-                      <ArrowRight className="w-5 h-5 text-primary rotate-[-45deg]" />
                     </div>
                   </div>
                 </div>
