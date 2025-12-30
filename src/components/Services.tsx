@@ -90,96 +90,74 @@ const Services = () => {
   };
 
   return (
-    <section className="py-24 bg-muted/30">
+    <section className="py-24 bg-primary">
       <div className="container mx-auto px-6">
         {/* Header */}
-        <div className="text-center mb-16 max-w-7xl mx-auto">
-          <h2 className="text-4xl md:text-5xl font-bold text-foreground">
-            Our <span className="text-accent">Services</span>
-          </h2>
+        <div className="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-6 mb-12 max-w-7xl mx-auto">
+          <div>
+            <span className="text-accent font-medium text-sm tracking-wider uppercase mb-4 block flex items-center gap-2">
+              <span className="w-6 h-px bg-accent"></span>
+              OUR SERVICES
+            </span>
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-primary-foreground">
+              Explore Our Services:
+            </h2>
+            <p className="text-2xl md:text-3xl lg:text-4xl italic text-accent mt-2">
+              Your Path to Success
+            </p>
+          </div>
+          <Link to="/services">
+            <Button variant="outline" size="lg" className="group bg-transparent border-accent text-accent hover:bg-accent hover:text-primary">
+              <ArrowRight className="w-4 h-4 mr-2" />
+              View All Services
+            </Button>
+          </Link>
         </div>
 
-        {/* Grid Layout - Row 1: 3 equal cards, Row 2: 2 larger cards */}
+        {/* Cards Grid */}
         <motion.div 
-          className="max-w-7xl mx-auto"
+          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-7xl mx-auto"
           variants={containerVariants}
           initial="hidden"
           animate="visible"
         >
-          {/* First Row - 3 Equal Cards */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-5 mb-5">
-            {services.slice(0, 3).map((service, index) => (
-              <motion.div key={index} variants={itemVariants}>
-                <Link
-                  to={service.link}
-                  className="group relative block overflow-hidden rounded-2xl h-[280px]"
-                >
-                  {/* Background Image */}
-                  <div className="absolute inset-0">
+          {services.slice(0, 6).map((service, index) => (
+            <motion.div key={index} variants={itemVariants}>
+              <Link
+                to={service.link}
+                className="group block bg-card rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300"
+              >
+                {/* Text Content */}
+                <div className="p-6">
+                  <h3 className="text-lg font-bold text-foreground mb-2">
+                    {service.title}
+                  </h3>
+                  <p className="text-muted-foreground text-sm leading-relaxed">
+                    {service.description}
+                  </p>
+                </div>
+
+                {/* Image with Arrow Button */}
+                <div className="relative px-4 pb-4">
+                  <div className="relative overflow-hidden rounded-xl">
                     <img 
                       src={service.image} 
                       alt={service.title}
-                      className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                      className="w-full h-40 object-cover transition-transform duration-500 group-hover:scale-105"
                     />
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent" />
                   </div>
-
-                  {/* Content */}
-                  <div className="relative z-10 h-full flex flex-col justify-end p-6">
-                    <h3 className="text-xl font-bold text-white mb-2">
-                      {service.title}
-                    </h3>
-                    <p className="text-white/80 text-sm line-clamp-2">
-                      {service.description}
-                    </p>
+                  
+                  {/* Arrow Button */}
+                  <div className="absolute bottom-6 right-6">
+                    <div className="w-10 h-10 bg-accent rounded-full flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform duration-300">
+                      <ArrowRight className="w-5 h-5 text-primary rotate-[-45deg]" />
+                    </div>
                   </div>
-                </Link>
-              </motion.div>
-            ))}
-          </div>
-
-          {/* Second Row - 2 Larger Cards */}
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
-            {services.slice(3, 5).map((service, index) => (
-              <motion.div key={index + 3} variants={itemVariants}>
-                <Link
-                  to={service.link}
-                  className="group relative block overflow-hidden rounded-2xl h-[320px]"
-                >
-                  {/* Background Image */}
-                  <div className="absolute inset-0">
-                    <img 
-                      src={service.image} 
-                      alt={service.title}
-                      className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
-                    />
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent" />
-                  </div>
-
-                  {/* Content */}
-                  <div className="relative z-10 h-full flex flex-col justify-end p-6">
-                    <h3 className="text-xl font-bold text-white mb-2">
-                      {service.title}
-                    </h3>
-                    <p className="text-white/80 text-sm line-clamp-2">
-                      {service.description}
-                    </p>
-                  </div>
-                </Link>
-              </motion.div>
-            ))}
-          </div>
+                </div>
+              </Link>
+            </motion.div>
+          ))}
         </motion.div>
-
-        {/* CTA */}
-        <div className="text-center mt-14">
-          <Link to="/services">
-            <Button variant="premium" size="lg" className="group">
-              View All Services
-              <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
-            </Button>
-          </Link>
-        </div>
       </div>
     </section>
   );
