@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
-import { Award, BadgeCheck } from "lucide-react";
+import { Headphones, MapPin, Palette } from "lucide-react";
 
 // Import images from gallery
 import signImage1 from "@/assets/gallery/exterior-3d-letters-1.jpg";
@@ -27,6 +27,11 @@ const AboutSection = () => {
                     className="w-full h-[350px] object-cover"
                   />
                 </div>
+                {/* Stats Badge */}
+                <div className="absolute -bottom-6 -right-6 bg-primary text-primary-foreground px-6 py-4 rounded-lg shadow-lg">
+                  <p className="text-3xl font-bold">500+</p>
+                  <p className="text-sm opacity-90">Projects Completed</p>
+                </div>
               </div>
               
               {/* Second Image - Upper Right */}
@@ -51,7 +56,7 @@ const AboutSection = () => {
             
             {/* Heading */}
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mt-4 mb-6 leading-tight">
-              Experienced Sign and Graphic Professionals
+              Crafting Visual Identity Since 2009
             </h2>
             
             {/* Orange Accent Line */}
@@ -59,33 +64,44 @@ const AboutSection = () => {
             
             {/* Description */}
             <p className="text-muted-foreground text-lg mb-4 leading-relaxed">
-              We story-tell through creative concepts and provide all kinds of signs for the most recognized brands across the UK.
+              From concept to installation, we handle every step of your signage journey. Our end-to-end process ensures seamless delivery of <span className="text-foreground font-medium underline underline-offset-4">custom-crafted signs</span> that elevate your brand.
             </p>
             <p className="text-muted-foreground text-lg mb-8 leading-relaxed">
-              With over 15 years of experience in design, manufacture & installation, signAds has established itself as a <span className="text-foreground font-medium underline underline-offset-4">hand-crafted signage</span> studio delivering high-quality indoor & outdoor signage solutions.
+              Design. Manufacture. Install. With 50+ brand partnerships and a dedicated in-house team, we transform spaces across the UK with precision and creativity.
             </p>
 
             {/* Credentials */}
-            <div className="flex flex-wrap gap-8 mb-8">
-              {/* Certified Studio */}
+            <div className="flex flex-wrap gap-6 mb-8">
+              {/* 24/7 Support */}
               <div className="flex items-start gap-4">
                 <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center flex-shrink-0">
-                  <BadgeCheck className="w-6 h-6 text-primary" />
+                  <Headphones className="w-6 h-6 text-primary" />
                 </div>
                 <div>
-                  <h4 className="font-semibold text-foreground text-lg">Certified Studio</h4>
-                  <p className="text-muted-foreground text-sm">Verified professionals<br />For 15+ years!</p>
+                  <h4 className="font-semibold text-foreground text-lg">24/7 Support</h4>
+                  <p className="text-muted-foreground text-sm">Always here when<br />you need us</p>
                 </div>
               </div>
 
-              {/* Award */}
+              {/* UK-Wide Installation */}
               <div className="flex items-start gap-4">
                 <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center flex-shrink-0">
-                  <Award className="w-6 h-6 text-primary" />
+                  <MapPin className="w-6 h-6 text-primary" />
                 </div>
                 <div>
-                  <h4 className="font-semibold text-foreground text-lg">Award Winning</h4>
-                  <p className="text-muted-foreground text-sm">Recognized for best sign<br />and graphic work</p>
+                  <h4 className="font-semibold text-foreground text-lg">UK-Wide</h4>
+                  <p className="text-muted-foreground text-sm">Installation services<br />across Britain</p>
+                </div>
+              </div>
+
+              {/* Free Design Consultation */}
+              <div className="flex items-start gap-4">
+                <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center flex-shrink-0">
+                  <Palette className="w-6 h-6 text-primary" />
+                </div>
+                <div>
+                  <h4 className="font-semibold text-foreground text-lg">Free Consultation</h4>
+                  <p className="text-muted-foreground text-sm">Expert design advice<br />at no cost</p>
                 </div>
               </div>
             </div>
