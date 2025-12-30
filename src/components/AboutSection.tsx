@@ -3,8 +3,8 @@ import { Button } from "@/components/ui/button";
 import { Headphones, MapPin, Palette } from "lucide-react";
 
 // Import images from gallery
-import signImage1 from "@/assets/gallery/exterior-3d-letters-1.jpg";
-import signImage2 from "@/assets/gallery/exterior-fascia-tray-1.jpg";
+import signImage1 from "@/assets/gallery/interior-reception-1.jpg";
+import signImage2 from "@/assets/gallery/vehicle-van-wrap-1.jpg";
 
 const AboutSection = () => {
   return (
@@ -23,7 +23,7 @@ const AboutSection = () => {
                 <div className="rounded-lg overflow-hidden shadow-2xl">
                   <img 
                     src={signImage1} 
-                    alt="3D illuminated signage installation"
+                    alt="Modern reception signage installation"
                     className="w-full h-[350px] object-cover"
                   />
                 </div>
@@ -39,7 +39,7 @@ const AboutSection = () => {
                 <div className="rounded-lg overflow-hidden shadow-2xl">
                   <img 
                     src={signImage2} 
-                    alt="Fascia signage for storefront"
+                    alt="Professional vehicle wrap graphics"
                     className="w-full h-[400px] object-cover"
                   />
                 </div>
