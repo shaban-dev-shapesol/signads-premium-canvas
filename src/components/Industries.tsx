@@ -49,7 +49,7 @@ const Industries = () => {
   };
 
   return (
-    <section className="py-24 bg-primary">
+    <section className="py-24 bg-muted/30">
       <div className="container mx-auto px-6">
         {/* Header */}
         <div className="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-6 mb-12 max-w-7xl mx-auto">
@@ -58,21 +58,21 @@ const Industries = () => {
               <span className="w-6 h-px bg-accent"></span>
               INDUSTRIES
             </span>
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-primary-foreground">
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground">
               Industries We Serve:
             </h2>
             <p className="text-2xl md:text-3xl lg:text-4xl italic text-accent mt-2">
               Trusted Across Sectors
             </p>
           </div>
-          <p className="text-primary-foreground/70 max-w-md lg:text-right">
+          <p className="text-muted-foreground max-w-md lg:text-right">
             Delivering premium signage solutions to leading businesses across diverse industries.
           </p>
         </div>
 
         {/* Industries Grid */}
         <motion.div 
-          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 max-w-7xl mx-auto"
+          className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4 max-w-7xl mx-auto"
           variants={containerVariants}
           initial="hidden"
           animate="visible"
@@ -83,19 +83,13 @@ const Industries = () => {
               <motion.div
                 key={index}
                 variants={itemVariants}
-                className="group bg-card rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300"
+                className="group bg-card rounded-2xl p-6 text-center shadow-sm hover:shadow-lg border border-border/50 hover:border-accent/50 transition-all duration-300"
               >
-                <div className="p-6">
-                  <div className="flex items-start gap-4">
-                    <div className="w-12 h-12 bg-accent rounded-xl flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform duration-300">
-                      <Icon className="w-6 h-6 text-primary" />
-                    </div>
-                    <div>
-                      <h3 className="text-lg font-bold text-foreground mb-2">{industry.title}</h3>
-                      <p className="text-muted-foreground text-sm leading-relaxed">{industry.description}</p>
-                    </div>
-                  </div>
+                <div className="w-14 h-14 bg-accent/10 rounded-xl flex items-center justify-center mx-auto mb-4 group-hover:bg-accent group-hover:scale-110 transition-all duration-300">
+                  <Icon className="w-7 h-7 text-accent group-hover:text-primary-foreground transition-colors duration-300" />
                 </div>
+                <h3 className="text-sm font-bold text-foreground mb-1">{industry.title}</h3>
+                <p className="text-muted-foreground text-xs leading-relaxed hidden lg:block">{industry.description}</p>
               </motion.div>
             );
           })}
