@@ -93,42 +93,26 @@ const Services = () => {
     <section className="py-24 bg-muted/30">
       <div className="container mx-auto px-6">
         {/* Header */}
-        <div className="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-6 mb-16 max-w-7xl mx-auto">
-          <div>
-            <span className="text-accent font-semibold text-sm tracking-wider uppercase mb-3 block">
-              What We Offer
-            </span>
-            <h2 className="text-4xl md:text-5xl font-bold text-foreground">
-              Our <span className="text-accent">Services</span>
-            </h2>
-          </div>
-          <p className="text-muted-foreground max-w-md lg:text-right">
-            From concept to installation, we deliver premium signage solutions with expert craftsmanship and express turnaround.
-          </p>
+        <div className="text-center mb-16 max-w-7xl mx-auto">
+          <h2 className="text-4xl md:text-5xl font-bold text-foreground">
+            Our <span className="text-accent">Services</span>
+          </h2>
         </div>
 
-        {/* Bento Grid */}
+        {/* Grid Layout - Row 1: 3 equal cards, Row 2: 2 larger cards */}
         <motion.div 
-          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 max-w-7xl mx-auto"
+          className="max-w-7xl mx-auto"
           variants={containerVariants}
           initial="hidden"
           animate="visible"
         >
-          {services.map((service, index) => {
-            const Icon = service.icon;
-            const isLarge = index === 0 || index === 2;
-            
-            return (
-              <motion.div
-                key={index}
-                variants={itemVariants}
-                className={`${isLarge ? 'lg:row-span-2' : ''}`}
-              >
+          {/* First Row - 3 Equal Cards */}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-5 mb-5">
+            {services.slice(0, 3).map((service, index) => (
+              <motion.div key={index} variants={itemVariants}>
                 <Link
                   to={service.link}
-                  className={`group relative block overflow-hidden rounded-2xl border border-border/50 bg-card hover:border-accent/50 transition-all duration-500 ${
-                    isLarge ? 'h-full min-h-[480px]' : 'h-full min-h-[240px]'
-                  }`}
+                  className="group relative block overflow-hidden rounded-2xl h-[280px]"
                 >
                   {/* Background Image */}
                   <div className="absolute inset-0">
@@ -137,65 +121,54 @@ const Services = () => {
                       alt={service.title}
                       className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                     />
-                    <div className={`absolute inset-0 transition-all duration-500 ${
-                      isLarge 
-                        ? 'bg-gradient-to-t from-background via-background/80 to-transparent group-hover:from-background/95'
-                        : 'bg-gradient-to-r from-background/95 via-background/85 to-background/70 group-hover:from-background/90'
-                    }`} />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent" />
                   </div>
 
                   {/* Content */}
-                  <div className={`relative z-10 h-full flex flex-col ${
-                    isLarge ? 'justify-end p-8' : 'justify-between p-6'
-                  }`}>
-                    {/* Icon */}
-                    <div className={`${isLarge ? 'mb-auto' : ''}`}>
-                      <div className="w-12 h-12 bg-accent/10 backdrop-blur-sm rounded-xl flex items-center justify-center border border-accent/20 group-hover:bg-accent group-hover:border-accent transition-all duration-300">
-                        <Icon className="w-6 h-6 text-accent group-hover:text-primary-foreground transition-colors duration-300" />
-                      </div>
-                    </div>
-
-                    {/* Text Content */}
-                    <div className={isLarge ? 'mt-auto' : ''}>
-                      <h3 className="text-xl lg:text-2xl font-bold text-foreground mb-2 group-hover:text-accent transition-colors duration-300">
-                        {service.title}
-                      </h3>
-                      
-                      {isLarge && (
-                        <>
-                          <p className="text-muted-foreground text-sm mb-4 leading-relaxed">
-                            {service.description}
-                          </p>
-                          <div className="flex flex-wrap gap-2 mb-4">
-                            {service.features.slice(0, 4).map((feature, idx) => (
-                              <span 
-                                key={idx} 
-                                className="text-xs bg-accent/10 text-accent px-3 py-1 rounded-full border border-accent/20"
-                              >
-                                {feature}
-                              </span>
-                            ))}
-                          </div>
-                        </>
-                      )}
-                      
-                      {!isLarge && (
-                        <p className="text-muted-foreground text-sm line-clamp-2">
-                          {service.description}
-                        </p>
-                      )}
-
-                      {/* Arrow indicator */}
-                      <div className="flex items-center gap-2 text-accent font-medium text-sm mt-3 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                        <span>Explore</span>
-                        <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform duration-300" />
-                      </div>
-                    </div>
+                  <div className="relative z-10 h-full flex flex-col justify-end p-6">
+                    <h3 className="text-xl font-bold text-white mb-2">
+                      {service.title}
+                    </h3>
+                    <p className="text-white/80 text-sm line-clamp-2">
+                      {service.description}
+                    </p>
                   </div>
                 </Link>
               </motion.div>
-            );
-          })}
+            ))}
+          </div>
+
+          {/* Second Row - 2 Larger Cards */}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
+            {services.slice(3, 5).map((service, index) => (
+              <motion.div key={index + 3} variants={itemVariants}>
+                <Link
+                  to={service.link}
+                  className="group relative block overflow-hidden rounded-2xl h-[320px]"
+                >
+                  {/* Background Image */}
+                  <div className="absolute inset-0">
+                    <img 
+                      src={service.image} 
+                      alt={service.title}
+                      className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent" />
+                  </div>
+
+                  {/* Content */}
+                  <div className="relative z-10 h-full flex flex-col justify-end p-6">
+                    <h3 className="text-xl font-bold text-white mb-2">
+                      {service.title}
+                    </h3>
+                    <p className="text-white/80 text-sm line-clamp-2">
+                      {service.description}
+                    </p>
+                  </div>
+                </Link>
+              </motion.div>
+            ))}
+          </div>
         </motion.div>
 
         {/* CTA */}
