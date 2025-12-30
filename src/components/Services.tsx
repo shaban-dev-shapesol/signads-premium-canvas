@@ -103,7 +103,7 @@ const Services = () => {
               Explore Our Services:
             </h2>
             <p className="text-2xl md:text-3xl lg:text-4xl italic text-accent mt-2">
-              Your Path to Success
+              Premium Signage Solutions
             </p>
           </div>
           <Link to="/services">

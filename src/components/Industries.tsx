@@ -1,4 +1,5 @@
 import { Store, Briefcase, GraduationCap, Heart, Truck, Building } from "lucide-react";
+import { motion } from "framer-motion";
 
 const Industries = () => {
   const industries = [
@@ -34,39 +35,65 @@ const Industries = () => {
     },
   ];
 
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: { staggerChildren: 0.1 },
+    },
+  };
+
+  const itemVariants = {
+    hidden: { opacity: 0, y: 20 },
+    visible: { opacity: 1, y: 0, transition: { duration: 0.5 } },
+  };
+
   return (
-    <section className="py-24 bg-primary text-primary-foreground">
+    <section className="py-24 bg-muted/30">
       <div className="container mx-auto px-6">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold mb-4">
-            Industries We <span className="text-accent">Serve</span>
-          </h2>
-          <p className="text-lg text-primary-foreground/80 max-w-2xl mx-auto">
-            Trusted by leading businesses across diverse sectors
+        {/* Header */}
+        <div className="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-6 mb-12 max-w-7xl mx-auto">
+          <div>
+            <span className="text-accent font-medium text-sm tracking-wider uppercase mb-4 block flex items-center gap-2">
+              <span className="w-6 h-px bg-accent"></span>
+              INDUSTRIES
+            </span>
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground">
+              Industries We Serve:
+            </h2>
+            <p className="text-2xl md:text-3xl lg:text-4xl italic text-accent mt-2">
+              Trusted Across Sectors
+            </p>
+          </div>
+          <p className="text-muted-foreground max-w-md lg:text-right">
+            Delivering premium signage solutions to leading businesses across diverse industries.
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
+        {/* Industries Grid */}
+        <motion.div 
+          className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4 max-w-7xl mx-auto"
+          variants={containerVariants}
+          initial="hidden"
+          animate="visible"
+        >
           {industries.map((industry, index) => {
             const Icon = industry.icon;
             return (
-              <div 
+              <motion.div
                 key={index}
-                className="bg-primary-foreground/5 backdrop-blur-sm border border-primary-foreground/10 p-6 rounded-xl hover:bg-primary-foreground/10 transition-smooth group"
+                variants={itemVariants}
+                className="group bg-card rounded-2xl p-6 text-center shadow-sm hover:shadow-lg border border-border/50 hover:border-accent/50 transition-all duration-300"
               >
-                <div className="flex items-start gap-4">
-                  <div className="w-12 h-12 bg-accent/20 rounded-lg flex items-center justify-center flex-shrink-0 group-hover:bg-accent/30 transition-smooth">
-                    <Icon className="w-6 h-6 text-accent" />
-                  </div>
-                  <div>
-                    <h3 className="text-xl font-bold mb-2 text-primary-foreground">{industry.title}</h3>
-                    <p className="text-primary-foreground/70 text-sm">{industry.description}</p>
-                  </div>
+                <div className="w-14 h-14 bg-accent/10 rounded-xl flex items-center justify-center mx-auto mb-4 group-hover:bg-accent group-hover:scale-110 transition-all duration-300">
+                  <Icon className="w-7 h-7 text-accent group-hover:text-primary-foreground transition-colors duration-300" />
                 </div>
-              </div>
+                <h3 className="text-sm font-bold text-foreground mb-1">{industry.title}</h3>
+                <p className="text-muted-foreground text-xs leading-relaxed hidden lg:block">{industry.description}</p>
+              </motion.div>
             );
           })}
-        </div>
+        </motion.div>
       </div>
     </section>
   );
