@@ -1,9 +1,10 @@
-import { useState, useRef } from "react";
+import { useState, useRef, useEffect } from "react";
 import { Quote, ChevronLeft, ChevronRight, Star } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 const Testimonials = () => {
   const scrollRef = useRef<HTMLDivElement>(null);
+  const [scrollProgress, setScrollProgress] = useState(0);
   
   const testimonials = [
     {
@@ -37,6 +38,24 @@ const Testimonials = () => {
       avatar: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=100&h=100&fit=crop&crop=face",
     },
   ];
+
+  const updateScrollProgress = () => {
+    if (scrollRef.current) {
+      const { scrollLeft, scrollWidth, clientWidth } = scrollRef.current;
+      const maxScroll = scrollWidth - clientWidth;
+      const progress = maxScroll > 0 ? (scrollLeft / maxScroll) * 100 : 0;
+      setScrollProgress(progress);
+    }
+  };
+
+  useEffect(() => {
+    const container = scrollRef.current;
+    if (container) {
+      container.addEventListener("scroll", updateScrollProgress);
+      updateScrollProgress();
+      return () => container.removeEventListener("scroll", updateScrollProgress);
+    }
+  }, []);
 
   const scroll = (direction: "left" | "right") => {
     if (scrollRef.current) {
@@ -73,8 +92,11 @@ const Testimonials = () => {
                 <ChevronLeft className="w-5 h-5" />
               </Button>
               
-              <div className="flex-1 h-0.5 bg-border rounded-full">
-                <div className="w-1/3 h-full bg-foreground rounded-full" />
+              <div className="flex-1 h-0.5 bg-border rounded-full overflow-hidden">
+                <div 
+                  className="h-full bg-foreground rounded-full transition-all duration-300"
+                  style={{ width: `${Math.max(10, scrollProgress)}%` }}
+                />
               </div>
               
               <Button
