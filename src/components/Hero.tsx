@@ -1,155 +1,161 @@
 import { Button } from "@/components/ui/button";
-import { ArrowRight } from "lucide-react";
-import { motion } from "framer-motion";
+import { ArrowRight, ChevronLeft, ChevronRight } from "lucide-react";
+import { motion, AnimatePresence } from "framer-motion";
 import { Link } from "react-router-dom";
+import { useState, useEffect, useCallback } from "react";
+import useEmblaCarousel from "embla-carousel-react";
 
+// Import hero images
+import heroSignage from "@/assets/hero-signage.jpg";
+import hero3dSignage from "@/assets/hero-3d-signage.jpg";
+import heroStorefrontNight from "@/assets/hero-storefront-night.jpg";
+import heroNeonNight from "@/assets/hero-neon-night.jpg";
+
+const slides = [
+  {
+    image: heroSignage,
+    title: "Where Vision",
+    highlight: "Takes Form:",
+    subtitle: "Innovative Sign Solutions",
+    description: "Unlocking Design Potential for Every Surface and Space."
+  },
+  {
+    image: hero3dSignage,
+    title: "Premium",
+    highlight: "3D Signage",
+    subtitle: "That Commands Attention",
+    description: "Built-up letters and illuminated displays for maximum impact."
+  },
+  {
+    image: heroStorefrontNight,
+    title: "Transform",
+    highlight: "Your Storefront",
+    subtitle: "Into a Landmark",
+    description: "Professional exterior signage that works day and night."
+  },
+  {
+    image: heroNeonNight,
+    title: "Illuminate",
+    highlight: "Your Brand",
+    subtitle: "With Custom Neon",
+    description: "Eye-catching neon and LED signs for any space."
+  }
+];
 
 const Hero = () => {
+  const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true });
+  const [selectedIndex, setSelectedIndex] = useState(0);
+
+  const scrollPrev = useCallback(() => emblaApi?.scrollPrev(), [emblaApi]);
+  const scrollNext = useCallback(() => emblaApi?.scrollNext(), [emblaApi]);
+  const scrollTo = useCallback((index: number) => emblaApi?.scrollTo(index), [emblaApi]);
+
+  // Auto-play
+  useEffect(() => {
+    if (!emblaApi) return;
+    const interval = setInterval(() => {
+      emblaApi.scrollNext();
+    }, 6000);
+    return () => clearInterval(interval);
+  }, [emblaApi]);
+
+  // Track selected slide
+  useEffect(() => {
+    if (!emblaApi) return;
+    const onSelect = () => setSelectedIndex(emblaApi.selectedScrollSnap());
+    emblaApi.on("select", onSelect);
+    onSelect();
+    return () => { emblaApi.off("select", onSelect); };
+  }, [emblaApi]);
+
   return (
-    <section className="relative min-h-screen bg-primary overflow-hidden">
-      {/* Background Geometric Elements */}
-      <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        {/* Large gradient circle - top right - with pulse */}
-        <motion.div
-          initial={{ scale: 0, opacity: 0 }}
-          animate={{ scale: 1, opacity: 1 }}
-          transition={{ duration: 1.5, ease: "easeOut" }}
-          className="absolute -top-32 -right-32 w-[500px] h-[500px] rounded-full bg-accent/5 animate-pulse"
-        />
-        {/* Medium circle outline - left - with glow */}
-        <motion.div
-          initial={{ scale: 0, opacity: 0 }}
-          animate={{ scale: [0, 1, 1], opacity: [0, 0.1, 0.2, 0.1] }}
-          transition={{ duration: 3, delay: 0.3, repeat: Infinity, repeatType: "reverse" }}
-          className="absolute top-1/3 -left-24 w-[350px] h-[350px] rounded-full border border-accent/30"
-          style={{ boxShadow: '0 0 60px hsl(var(--accent) / 0.15)' }}
-        />
-        {/* Small filled circle - bottom left - with pulse glow */}
-        <motion.div
-          initial={{ y: 30, opacity: 0 }}
-          animate={{ y: 0, opacity: [0.15, 0.3, 0.15] }}
-          transition={{ duration: 2.5, delay: 0.5, repeat: Infinity }}
-          className="absolute bottom-32 left-1/4 w-20 h-20 rounded-full bg-accent/20"
-          style={{ boxShadow: '0 0 30px hsl(var(--accent) / 0.2)' }}
-        />
-        {/* Tiny dot accent - pulsing */}
-        <motion.div
-          initial={{ scale: 0 }}
-          animate={{ scale: [1, 1.5, 1], opacity: [0.4, 0.7, 0.4] }}
-          transition={{ duration: 2, delay: 0.8, repeat: Infinity }}
-          className="absolute top-1/4 left-1/3 w-3 h-3 rounded-full bg-accent/40"
-          style={{ boxShadow: '0 0 15px hsl(var(--accent) / 0.5)' }}
-        />
-        {/* Horizontal line - subtle */}
-        <motion.div
-          initial={{ scaleX: 0 }}
-          animate={{ scaleX: 1 }}
-          transition={{ duration: 1.5, delay: 0.4 }}
-          className="absolute top-1/2 left-0 w-1/3 h-[1px] bg-gradient-to-r from-accent/20 to-transparent origin-left"
-        />
-        {/* Diagonal line - bottom right */}
-        <motion.div
-          initial={{ scaleX: 0, opacity: 0 }}
-          animate={{ scaleX: 1, opacity: 1 }}
-          transition={{ duration: 1.2, delay: 0.6 }}
-          className="absolute bottom-1/4 right-0 w-1/4 h-[1px] bg-gradient-to-l from-accent/15 to-transparent origin-right"
-        />
-        {/* Rotating ring - center right */}
-        <motion.div
-          initial={{ opacity: 0, rotate: 0 }}
-          animate={{ opacity: 0.1, rotate: 360 }}
-          transition={{ duration: 30, repeat: Infinity, ease: "linear" }}
-          className="absolute top-1/2 right-1/4 w-[200px] h-[200px] rounded-full border border-dashed border-accent/20"
-        />
-        {/* Diamond shape - top left */}
-        <motion.div
-          initial={{ scale: 0, rotate: 45 }}
-          animate={{ scale: 1, rotate: 45 }}
-          transition={{ duration: 1, delay: 0.7 }}
-          className="absolute top-20 left-20 w-16 h-16 border border-accent/15 bg-accent/5"
-        />
-        {/* Floating dots cluster - right side */}
-        <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 1, delay: 0.9 }}
-          className="absolute top-1/3 right-16 flex flex-col gap-3"
-        >
-          <div className="w-2 h-2 rounded-full bg-accent/30" />
-          <div className="w-1.5 h-1.5 rounded-full bg-accent/20 ml-4" />
-          <div className="w-2.5 h-2.5 rounded-full bg-accent/25 ml-1" />
-        </motion.div>
-        {/* Arc line - bottom */}
-        <motion.div
-          initial={{ pathLength: 0, opacity: 0 }}
-          animate={{ pathLength: 1, opacity: 0.15 }}
-          transition={{ duration: 2, delay: 0.5 }}
-          className="absolute bottom-16 left-1/2 -translate-x-1/2"
-        >
-          <svg width="300" height="100" viewBox="0 0 300 100" fill="none">
-            <motion.path
-              d="M0 100 Q150 0 300 100"
-              stroke="hsl(var(--accent))"
-              strokeWidth="1"
-              fill="none"
-              initial={{ pathLength: 0 }}
-              animate={{ pathLength: 1 }}
-              transition={{ duration: 2, delay: 0.5 }}
-            />
-          </svg>
-        </motion.div>
-        {/* Grid pattern overlay */}
-        <div 
-          className="absolute inset-0 opacity-[0.02]"
-          style={{
-            backgroundImage: `linear-gradient(to right, hsl(var(--accent)) 1px, transparent 1px),
-                              linear-gradient(to bottom, hsl(var(--accent)) 1px, transparent 1px)`,
-            backgroundSize: '60px 60px'
-          }}
-        />
-      </div>
-      <div className="container mx-auto px-6 min-h-screen flex items-center justify-center">
-        <div className="flex flex-col items-center text-center max-w-3xl py-24">
-          <motion.h1
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.2 }}
-            className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-white leading-[1.1] mb-6"
-          >
-            Where Vision
-            <br />
-            <span className="text-accent">Takes Form:</span>
-            <br />
-            Innovative Sign Solutions
-          </motion.h1>
-
-          <motion.p
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.4 }}
-            className="text-lg md:text-xl text-white/70 mb-10 max-w-lg"
-          >
-            Unlocking Design Potential for Every Surface and Space.
-          </motion.p>
-
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.6 }}
-          >
-            <Button 
-              variant="hero" 
-              size="xl" 
-              className="group"
-              asChild
-            >
-              <Link to="/portfolio">
-                View Our Creative Portfolio
-                <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
-              </Link>
-            </Button>
-          </motion.div>
+    <section className="relative min-h-screen overflow-hidden">
+      {/* Carousel Container */}
+      <div className="absolute inset-0" ref={emblaRef}>
+        <div className="flex h-full">
+          {slides.map((slide, index) => (
+            <div key={index} className="relative min-w-full h-screen flex-shrink-0">
+              {/* Background Image */}
+              <div 
+                className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+                style={{ backgroundImage: `url(${slide.image})` }}
+              />
+              {/* Dark Overlay */}
+              <div className="absolute inset-0 bg-primary/70" />
+            </div>
+          ))}
         </div>
+      </div>
+
+      {/* Content Overlay */}
+      <div className="relative z-10 container mx-auto px-6 min-h-screen flex items-center">
+        <div className="max-w-3xl">
+          <AnimatePresence mode="wait">
+            <motion.div
+              key={selectedIndex}
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: -20 }}
+              transition={{ duration: 0.6 }}
+            >
+              <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-white leading-[1.1] mb-6">
+                {slides[selectedIndex].title}
+                <br />
+                <span className="text-accent">{slides[selectedIndex].highlight}</span>
+                <br />
+                {slides[selectedIndex].subtitle}
+              </h1>
+
+              <p className="text-lg md:text-xl text-white/70 mb-10 max-w-lg">
+                {slides[selectedIndex].description}
+              </p>
+
+              <Button 
+                variant="hero" 
+                size="xl" 
+                className="group"
+                asChild
+              >
+                <Link to="/portfolio">
+                  View Our Creative Portfolio
+                  <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
+                </Link>
+              </Button>
+            </motion.div>
+          </AnimatePresence>
+        </div>
+      </div>
+
+      {/* Navigation Arrows */}
+      <button
+        onClick={scrollPrev}
+        className="absolute left-6 top-1/2 -translate-y-1/2 z-20 w-12 h-12 rounded-full bg-white/10 backdrop-blur-sm border border-white/20 flex items-center justify-center text-white hover:bg-white/20 transition-colors"
+        aria-label="Previous slide"
+      >
+        <ChevronLeft className="w-6 h-6" />
+      </button>
+      <button
+        onClick={scrollNext}
+        className="absolute right-6 top-1/2 -translate-y-1/2 z-20 w-12 h-12 rounded-full bg-white/10 backdrop-blur-sm border border-white/20 flex items-center justify-center text-white hover:bg-white/20 transition-colors"
+        aria-label="Next slide"
+      >
+        <ChevronRight className="w-6 h-6" />
+      </button>
+
+      {/* Slide Indicators */}
+      <div className="absolute bottom-10 left-1/2 -translate-x-1/2 z-20 flex gap-3">
+        {slides.map((_, index) => (
+          <button
+            key={index}
+            onClick={() => scrollTo(index)}
+            className={`h-2 rounded-full transition-all duration-300 ${
+              index === selectedIndex 
+                ? 'w-8 bg-accent' 
+                : 'w-2 bg-white/40 hover:bg-white/60'
+            }`}
+            aria-label={`Go to slide ${index + 1}`}
+          />
+        ))}
       </div>
     </section>
   );
