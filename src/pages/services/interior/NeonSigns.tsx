@@ -51,12 +51,12 @@ const NeonSigns = () => {
         <div className="container mx-auto px-6">
           <div className="max-w-6xl mx-auto space-y-16">
             
-            {/* Project Examples Gallery */}
+            {/* Project Gallery */}
             <div>
-              <h2 className="text-3xl font-bold text-foreground mb-6">Project Examples</h2>
+              <h2 className="text-3xl font-bold text-foreground mb-6">Project Gallery</h2>
               <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
                 {galleryImages.map((image, i) => (
-                  <div key={i} className="aspect-square overflow-hidden rounded-2xl border border-border hover:shadow-premium transition-smooth">
+                  <div key={i} className="aspect-video overflow-hidden rounded-2xl border border-border hover:shadow-premium transition-smooth">
                     <img src={image.src} alt={image.alt} className="w-full h-full object-cover hover:scale-105 transition-transform duration-500" />
                   </div>
                 ))}
@@ -184,29 +184,15 @@ const NeonSigns = () => {
               </p>
             </div>
 
+            {/* Applications */}
             <div>
-              <h2 className="text-3xl font-bold text-foreground mb-6">Design Process</h2>
-              <div className="grid md:grid-cols-4 gap-4">
-                <div className="bg-secondary p-6 rounded-xl border border-border">
-                  <div className="w-12 h-12 bg-accent rounded-full flex items-center justify-center text-primary-foreground font-bold mb-4">1</div>
-                  <h4 className="font-bold text-foreground mb-2">Submit Design</h4>
-                  <p className="text-sm text-muted-foreground">Send us your text, logo, or custom artwork</p>
-                </div>
-                <div className="bg-secondary p-6 rounded-xl border border-border">
-                  <div className="w-12 h-12 bg-accent rounded-full flex items-center justify-center text-primary-foreground font-bold mb-4">2</div>
-                  <h4 className="font-bold text-foreground mb-2">Preview & Approve</h4>
-                  <p className="text-sm text-muted-foreground">Review digital mockup and select colors</p>
-                </div>
-                <div className="bg-secondary p-6 rounded-xl border border-border">
-                  <div className="w-12 h-12 bg-accent rounded-full flex items-center justify-center text-primary-foreground font-bold mb-4">3</div>
-                  <h4 className="font-bold text-foreground mb-2">Handcrafted</h4>
-                  <p className="text-sm text-muted-foreground">Expert fabrication with quality materials</p>
-                </div>
-                <div className="bg-secondary p-6 rounded-xl border border-border">
-                  <div className="w-12 h-12 bg-accent rounded-full flex items-center justify-center text-primary-foreground font-bold mb-4">4</div>
-                  <h4 className="font-bold text-foreground mb-2">Installation</h4>
-                  <p className="text-sm text-muted-foreground">Professional mounting and testing</p>
-                </div>
+              <h2 className="text-3xl font-bold text-foreground mb-6">Ideal Applications</h2>
+              <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4">
+                {["Restaurants & Bars", "Cafes & Coffee Shops", "Retail Stores", "Corporate Offices", "Hotels & Venues", "Photo Backdrops", "Weddings & Events", "Home Decor"].map((app) => (
+                  <div key={app} className="bg-secondary p-4 rounded-xl border border-border text-center">
+                    <p className="font-medium text-foreground">{app}</p>
+                  </div>
+                ))}
               </div>
             </div>
 

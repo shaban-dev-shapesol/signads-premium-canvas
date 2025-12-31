@@ -47,10 +47,10 @@ const CarWrap = () => {
             {/* Project Gallery */}
             <div>
               <h2 className="text-3xl font-bold text-foreground mb-6">Project Gallery</h2>
-              <div className="grid md:grid-cols-4 gap-6">
+              <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
                 {[vehicleCarWrap1, vehicleCarWrap2, vehicleCarWrap3, vehicleCarWrap4].map((img, i) => (
                   <div key={i} className="aspect-video overflow-hidden rounded-2xl border border-border hover:shadow-premium transition-smooth">
-                    <img src={img} alt={`Car wrap project ${i + 1}`} className="w-full h-full object-cover" />
+                    <img src={img} alt={`Car wrap project ${i + 1}`} className="w-full h-full object-cover hover:scale-105 transition-transform duration-500" />
                   </div>
                 ))}
               </div>

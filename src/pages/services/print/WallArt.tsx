@@ -47,10 +47,10 @@ const WallArt = () => {
             {/* Project Gallery */}
             <div>
               <h2 className="text-3xl font-bold text-foreground mb-6">Project Gallery</h2>
-              <div className="grid md:grid-cols-4 gap-6">
+              <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
                 {[printWallArt1, printWallArt2, printWallArt3, printWallArt4].map((img, i) => (
                   <div key={i} className="aspect-video overflow-hidden rounded-2xl border border-border hover:shadow-premium transition-smooth">
-                    <img src={img} alt={`Wall art project ${i + 1}`} className="w-full h-full object-cover" />
+                    <img src={img} alt={`Wall art project ${i + 1}`} className="w-full h-full object-cover hover:scale-105 transition-transform duration-500" />
                   </div>
                 ))}
               </div>
@@ -153,12 +153,13 @@ const WallArt = () => {
               </div>
             </div>
 
-            <div className="bg-primary text-primary-foreground p-8 rounded-2xl">
-              <h3 className="text-2xl font-bold mb-6">Ideal Applications</h3>
+            {/* Applications */}
+            <div>
+              <h2 className="text-3xl font-bold text-foreground mb-6">Ideal Applications</h2>
               <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4">
                 {["Office Reception", "Conference Rooms", "Retail Stores", "Restaurants", "Hotels", "Creative Spaces", "Educational Facilities", "Healthcare"].map((app) => (
-                  <div key={app} className="bg-primary-foreground/10 p-4 rounded-xl text-center">
-                    <p className="font-medium text-primary-foreground">{app}</p>
+                  <div key={app} className="bg-secondary p-4 rounded-xl border border-border text-center">
+                    <p className="font-medium text-foreground">{app}</p>
                   </div>
                 ))}
               </div>

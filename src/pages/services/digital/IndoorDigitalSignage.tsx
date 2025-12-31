@@ -51,9 +51,9 @@ const IndoorDigitalSignage = () => {
         <div className="container mx-auto px-6">
           <div className="max-w-6xl mx-auto space-y-16">
             
-            {/* Project Examples Gallery */}
+            {/* Project Gallery */}
             <div>
-              <h2 className="text-3xl font-bold text-foreground mb-6">Installation Examples</h2>
+              <h2 className="text-3xl font-bold text-foreground mb-6">Project Gallery</h2>
               <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
                 {galleryImages.map((image, i) => (
                   <div key={i} className="aspect-video overflow-hidden rounded-2xl border border-border hover:shadow-premium transition-smooth">
