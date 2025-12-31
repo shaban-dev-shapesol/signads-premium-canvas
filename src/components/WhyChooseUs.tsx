@@ -46,7 +46,7 @@ const WhyChooseUs = () => {
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground">
               Why Choose signAds:
             </h2>
-            <p className="text-2xl md:text-3xl lg:text-4xl italic text-accent mt-2">
+            <p className="text-2xl md:text-3xl lg:text-4xl text-accent mt-2">
               Excellence in Every Detail
             </p>
           </div>
