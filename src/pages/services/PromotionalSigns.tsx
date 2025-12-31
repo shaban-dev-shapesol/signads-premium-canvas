@@ -21,10 +21,10 @@ const PromotionalSigns = () => {
       link: "/services/promotional-signs/custom-flags",
     },
     {
-      title: "Pavement Signs",
-      description: "A-frame signs perfect for storefronts and events.",
+      title: "Pavement Signs & A-Boards",
+      description: "Swinger signs and A-frame signs perfect for storefronts.",
       image: promotionalPavement,
-      link: "/services/promotional-signs/pavement-sign",
+      link: "/services/promotional-signs/swinger-a-boards",
     },
     {
       title: "Projection Sign",

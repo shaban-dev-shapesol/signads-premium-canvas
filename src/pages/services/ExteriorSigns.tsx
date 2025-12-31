@@ -33,6 +33,18 @@ const ExteriorSigns = () => {
       link: "/services/exterior-signs/flex-face-lightbox",
     },
     {
+      title: "LED Circular Signs",
+      description: "Eye-catching round projecting signs for maximum visibility.",
+      image: exteriorProjection,
+      link: "/services/exterior-signs/led-circular-signs",
+    },
+    {
+      title: "Shop Front ACM Signs",
+      description: "Clean, professional aluminium composite signage.",
+      image: exteriorFasciaTray,
+      link: "/services/exterior-signs/shop-front-acm",
+    },
+    {
       title: "Projection Sign",
       description: "Projecting signs for multi-angle visibility.",
       image: exteriorProjection,
