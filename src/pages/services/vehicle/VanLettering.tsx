@@ -5,10 +5,10 @@ import Footer from "@/components/Footer";
 import { Link } from "react-router-dom";
 import SEO from "@/components/SEO";
 
-import vanImage1 from "@/assets/gallery/vehicle-van-wrap-1.jpg";
-import vanImage2 from "@/assets/gallery/vehicle-van-wrap-2.jpg";
-import vanImage3 from "@/assets/gallery/vehicle-van-wrap-3.jpg";
-import vanImage4 from "@/assets/gallery/vehicle-van-wrap-4.jpg";
+import vanImage1 from "@/assets/gallery/vehicle-van-lettering-1.jpg";
+import vanImage2 from "@/assets/gallery/vehicle-van-lettering-2.jpg";
+import vanImage3 from "@/assets/gallery/vehicle-van-lettering-3.jpg";
+import vanImage4 from "@/assets/gallery/vehicle-van-lettering-4.jpg";
 
 const galleryImages = [
   { src: vanImage1, alt: "Van lettering branding example" },
