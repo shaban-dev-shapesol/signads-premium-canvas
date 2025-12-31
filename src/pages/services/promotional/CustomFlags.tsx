@@ -1,179 +1,205 @@
+import { Flag } from "lucide-react";
+import { Button } from "@/components/ui/button";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
-import { Button } from "@/components/ui/button";
-import { CheckCircle2 } from "lucide-react";
+import { Link } from "react-router-dom";
 import SEO from "@/components/SEO";
+
+import promoImage1 from "@/assets/gallery/promotional-flags-1.jpg";
+import promoImage2 from "@/assets/gallery/promotional-pavement-1.jpg";
+import promoImage3 from "@/assets/gallery/print-banner-1.jpg";
+import promoImage4 from "@/assets/gallery/print-banner-2.jpg";
+
+const galleryImages = [
+  { src: promoImage1, alt: "Feather flag display" },
+  { src: promoImage2, alt: "Promotional flags outdoor" },
+  { src: promoImage3, alt: "Custom branded flags" },
+  { src: promoImage4, alt: "Event flag banners" },
+];
 
 const CustomFlags = () => {
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-screen">
       <SEO 
         title="Custom Flags & Banners - Feather Flags & Promotional Displays"
         description="Eye-catching custom flags and banners for events, retail, and outdoor advertising. Feather flags, teardrop flags, and branded promotional displays."
       />
       <Navigation />
       
-      {/* Hero Section */}
-      <section className="pt-32 pb-16 px-6">
-        <div className="container mx-auto max-w-6xl">
-          <h1 className="text-5xl md:text-6xl font-bold text-foreground mb-6">
-            Custom Flags & Banners
-          </h1>
-          <p className="text-xl text-muted-foreground mb-8 max-w-3xl">
-            Eye-catching promotional flags that flutter in the breeze. Perfect for events, retail locations, and outdoor advertising that demands attention.
-          </p>
-          <Button variant="premium" size="lg">Get Custom Quote</Button>
-        </div>
-      </section>
-
-      {/* Project Gallery */}
-      <section className="py-16 px-6 bg-muted/30">
-        <div className="container mx-auto max-w-6xl">
-          <h2 className="text-3xl font-bold text-foreground mb-8">Project Gallery</h2>
-          <div className="grid md:grid-cols-3 gap-6">
-            {[1, 2, 3].map((i) => (
-              <div key={i} className="aspect-video bg-muted rounded-xl overflow-hidden">
-                <div className="w-full h-full flex items-center justify-center text-muted-foreground">
-                  Custom Flag Example {i}
-                </div>
-              </div>
-            ))}
+      <section className="pt-32 pb-16 bg-primary text-primary-foreground">
+        <div className="container mx-auto px-6">
+          <div className="max-w-4xl mx-auto text-center">
+            <div className="w-20 h-20 bg-primary-foreground/10 rounded-2xl flex items-center justify-center mx-auto mb-6">
+              <Flag className="w-10 h-10 text-primary-foreground" />
+            </div>
+            <h1 className="text-5xl md:text-6xl font-bold mb-6">
+              Custom <span className="text-accent">Flags & Banners</span>
+            </h1>
+            <p className="text-xl text-primary-foreground/80 mb-8">
+              Eye-catching promotional flags that flutter in the breeze. Perfect for events, retail locations, and outdoor advertising.
+            </p>
+            <Link to="/#contact">
+              <Button variant="hero" size="xl">
+                Get Custom Quote
+              </Button>
+            </Link>
           </div>
         </div>
       </section>
 
-      {/* Details Section */}
-      <section className="py-16 px-6">
-        <div className="container mx-auto max-w-6xl">
-          <div className="grid md:grid-cols-2 gap-12">
+      <section className="py-24 bg-background">
+        <div className="container mx-auto px-6">
+          <div className="max-w-6xl mx-auto space-y-16">
+            
+            {/* Project Gallery */}
+            <div>
+              <h2 className="text-3xl font-bold text-foreground mb-6">Project Gallery</h2>
+              <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+                {galleryImages.map((image, i) => (
+                  <div key={i} className="aspect-video overflow-hidden rounded-2xl border border-border hover:shadow-premium transition-smooth">
+                    <img src={image.src} alt={image.alt} className="w-full h-full object-cover hover:scale-105 transition-transform duration-500" />
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            {/* Overview */}
             <div>
               <h2 className="text-3xl font-bold text-foreground mb-6">Overview</h2>
-              <p className="text-muted-foreground mb-6">
-                Custom flags create dynamic, attention-grabbing displays that move with the wind, naturally drawing the eye. From feather flags to large advertising banners, our printed flags are perfect for temporary promotions, events, and permanent outdoor advertising. Lightweight, portable, and weather-resistant for reliable outdoor performance.
+              <p className="text-lg text-muted-foreground mb-4">
+                Custom flags create dynamic, attention-grabbing displays that move with the wind, naturally drawing the eye. From feather flags to large advertising banners, our printed flags are perfect for temporary promotions, events, and permanent outdoor advertising.
               </p>
-              
-              <h3 className="text-2xl font-bold text-foreground mb-4 mt-8">Flag Types</h3>
-              <ul className="space-y-3">
-                <li className="flex items-start gap-3">
-                  <CheckCircle2 className="w-5 h-5 text-accent shrink-0 mt-1" />
-                  <span className="text-muted-foreground">Feather/teardrop flags (2.5m-5.5m)</span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <CheckCircle2 className="w-5 h-5 text-accent shrink-0 mt-1" />
-                  <span className="text-muted-foreground">Rectangle advertising flags</span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <CheckCircle2 className="w-5 h-5 text-accent shrink-0 mt-1" />
-                  <span className="text-muted-foreground">Custom-shaped promotional flags</span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <CheckCircle2 className="w-5 h-5 text-accent shrink-0 mt-1" />
-                  <span className="text-muted-foreground">Double-sided printed options</span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <CheckCircle2 className="w-5 h-5 text-accent shrink-0 mt-1" />
-                  <span className="text-muted-foreground">Ground spike, cross base, or weighted bases</span>
-                </li>
-              </ul>
+              <p className="text-lg text-muted-foreground">
+                Lightweight, portable, and weather-resistant for reliable outdoor performance. Quick setup with no tools required makes them ideal for businesses that need flexible promotional solutions.
+              </p>
             </div>
 
-            <div>
-              <h3 className="text-2xl font-bold text-foreground mb-4">Key Benefits</h3>
-              <ul className="space-y-3 mb-8">
-                <li className="flex items-start gap-3">
-                  <CheckCircle2 className="w-5 h-5 text-accent shrink-0 mt-1" />
-                  <span className="text-muted-foreground">Movement naturally attracts attention</span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <CheckCircle2 className="w-5 h-5 text-accent shrink-0 mt-1" />
-                  <span className="text-muted-foreground">Portable and easy to relocate</span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <CheckCircle2 className="w-5 h-5 text-accent shrink-0 mt-1" />
-                  <span className="text-muted-foreground">Quick setup with no tools required</span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <CheckCircle2 className="w-5 h-5 text-accent shrink-0 mt-1" />
-                  <span className="text-muted-foreground">Weather-resistant materials</span>
-                </li>
-              </ul>
-
-              <h3 className="text-2xl font-bold text-foreground mb-4 mt-8">Ideal Applications</h3>
-              <ul className="space-y-3">
-                <li className="flex items-start gap-3">
-                  <CheckCircle2 className="w-5 h-5 text-accent shrink-0 mt-1" />
-                  <span className="text-muted-foreground">Store entrances and sidewalks</span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <CheckCircle2 className="w-5 h-5 text-accent shrink-0 mt-1" />
-                  <span className="text-muted-foreground">Events and exhibitions</span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <CheckCircle2 className="w-5 h-5 text-accent shrink-0 mt-1" />
-                  <span className="text-muted-foreground">Car dealerships and forecourts</span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <CheckCircle2 className="w-5 h-5 text-accent shrink-0 mt-1" />
-                  <span className="text-muted-foreground">Sports events and festivals</span>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Pricing Section */}
-      <section className="py-16 px-6 bg-muted/30">
-        <div className="container mx-auto max-w-6xl">
-          <h2 className="text-3xl font-bold text-foreground mb-8">Pricing Guide</h2>
-          <div className="grid md:grid-cols-3 gap-6">
-            <div className="bg-background border border-border rounded-xl p-8">
-              <h3 className="text-xl font-bold text-foreground mb-2">Small Feather</h3>
-              <p className="text-3xl font-bold text-accent mb-4">From £95</p>
-              <ul className="space-y-2 text-muted-foreground">
-                <li>• 2.5m height</li>
-                <li>• Single-sided print</li>
-                <li>• Ground spike included</li>
-                <li>• Carry bag</li>
-              </ul>
-            </div>
-            <div className="bg-background border-2 border-accent rounded-xl p-8 relative">
-              <div className="absolute -top-4 left-1/2 -translate-x-1/2 bg-accent text-accent-foreground px-4 py-1 rounded-full text-sm font-bold">
-                Most Popular
+            {/* Specifications */}
+            <div className="grid md:grid-cols-2 gap-8">
+              <div className="bg-secondary p-8 rounded-2xl border border-border">
+                <h3 className="text-2xl font-bold text-foreground mb-6">Flag Types</h3>
+                <ul className="space-y-3">
+                  <li className="flex items-start gap-3">
+                    <span className="w-2 h-2 bg-accent rounded-full mt-2 flex-shrink-0" />
+                    <span className="text-muted-foreground"><strong>Feather Flags:</strong> 2.5m to 5.5m heights</span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <span className="w-2 h-2 bg-accent rounded-full mt-2 flex-shrink-0" />
+                    <span className="text-muted-foreground"><strong>Teardrop Flags:</strong> Compact and eye-catching</span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <span className="w-2 h-2 bg-accent rounded-full mt-2 flex-shrink-0" />
+                    <span className="text-muted-foreground"><strong>Rectangle Flags:</strong> Maximum print area</span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <span className="w-2 h-2 bg-accent rounded-full mt-2 flex-shrink-0" />
+                    <span className="text-muted-foreground"><strong>Custom Shapes:</strong> Bespoke designs</span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <span className="w-2 h-2 bg-accent rounded-full mt-2 flex-shrink-0" />
+                    <span className="text-muted-foreground"><strong>Double-Sided:</strong> Visible from all angles</span>
+                  </li>
+                </ul>
               </div>
-              <h3 className="text-xl font-bold text-foreground mb-2">Large Feather</h3>
-              <p className="text-3xl font-bold text-accent mb-4">From £165</p>
-              <ul className="space-y-2 text-muted-foreground">
-                <li>• 4.5m height</li>
-                <li>• Double-sided print option</li>
-                <li>• Water base or cross base</li>
-                <li>• Premium fabric</li>
-              </ul>
+
+              <div className="bg-secondary p-8 rounded-2xl border border-border">
+                <h3 className="text-2xl font-bold text-foreground mb-6">Key Benefits</h3>
+                <ul className="space-y-3">
+                  <li className="flex items-start gap-3">
+                    <span className="w-2 h-2 bg-accent rounded-full mt-2 flex-shrink-0" />
+                    <span className="text-muted-foreground"><strong>Movement:</strong> Naturally attracts attention</span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <span className="w-2 h-2 bg-accent rounded-full mt-2 flex-shrink-0" />
+                    <span className="text-muted-foreground"><strong>Portable:</strong> Easy to relocate</span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <span className="w-2 h-2 bg-accent rounded-full mt-2 flex-shrink-0" />
+                    <span className="text-muted-foreground"><strong>Quick Setup:</strong> No tools required</span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <span className="w-2 h-2 bg-accent rounded-full mt-2 flex-shrink-0" />
+                    <span className="text-muted-foreground"><strong>Weather-Resistant:</strong> Durable materials</span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <span className="w-2 h-2 bg-accent rounded-full mt-2 flex-shrink-0" />
+                    <span className="text-muted-foreground"><strong>Base Options:</strong> Spike, cross, or weighted</span>
+                  </li>
+                </ul>
+              </div>
             </div>
-            <div className="bg-background border border-border rounded-xl p-8">
-              <h3 className="text-xl font-bold text-foreground mb-2">Custom Shape</h3>
-              <p className="text-3xl font-bold text-accent mb-4">From £220</p>
-              <ul className="space-y-2 text-muted-foreground">
-                <li>• Bespoke flag shapes</li>
-                <li>• Multiple sizes available</li>
-                <li>• Premium hardware</li>
-                <li>• Bulk order discounts</li>
-              </ul>
+
+            {/* Pricing Guide */}
+            <div>
+              <h2 className="text-3xl font-bold text-foreground mb-6">Pricing Guide</h2>
+              <div className="grid md:grid-cols-3 gap-6">
+                <div className="bg-secondary p-6 rounded-xl border border-border">
+                  <h4 className="text-xl font-bold text-foreground mb-2">Small Feather</h4>
+                  <p className="text-sm text-muted-foreground mb-2">2.5m height</p>
+                  <p className="text-3xl font-bold text-accent mb-4">From £95</p>
+                  <ul className="space-y-2 text-sm text-muted-foreground">
+                    <li>• Single-sided print</li>
+                    <li>• Ground spike included</li>
+                    <li>• Carry bag</li>
+                    <li>• Premium fabric</li>
+                    <li>• Design service</li>
+                  </ul>
+                </div>
+                <div className="bg-secondary p-6 rounded-xl border-2 border-accent">
+                  <h4 className="text-xl font-bold text-foreground mb-2">Large Feather</h4>
+                  <p className="text-sm text-muted-foreground mb-2">4.5m height</p>
+                  <p className="text-3xl font-bold text-accent mb-4">From £165</p>
+                  <ul className="space-y-2 text-sm text-muted-foreground">
+                    <li>• Double-sided option</li>
+                    <li>• Water or cross base</li>
+                    <li>• Premium fabric</li>
+                    <li>• Carry case</li>
+                    <li>• Full design included</li>
+                  </ul>
+                </div>
+                <div className="bg-secondary p-6 rounded-xl border border-border">
+                  <h4 className="text-xl font-bold text-foreground mb-2">Custom Shape</h4>
+                  <p className="text-sm text-muted-foreground mb-2">Bespoke sizes</p>
+                  <p className="text-3xl font-bold text-accent mb-4">From £220</p>
+                  <ul className="space-y-2 text-sm text-muted-foreground">
+                    <li>• Bespoke flag shapes</li>
+                    <li>• Multiple sizes</li>
+                    <li>• Premium hardware</li>
+                    <li>• Bulk discounts</li>
+                    <li>• Full project management</li>
+                  </ul>
+                </div>
+              </div>
+              <p className="text-sm text-muted-foreground mt-6 text-center">
+                *Prices include flag, pole, and base. Replacement flags available at reduced cost.
+              </p>
+            </div>
+
+            {/* Applications */}
+            <div>
+              <h2 className="text-3xl font-bold text-foreground mb-6">Ideal Applications</h2>
+              <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4">
+                {["Store Entrances", "Events & Exhibitions", "Car Dealerships", "Sports Events", "Festivals", "Trade Shows", "Retail Forecourts", "Outdoor Markets"].map((app) => (
+                  <div key={app} className="bg-secondary p-4 rounded-xl border border-border text-center">
+                    <p className="font-medium text-foreground">{app}</p>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            {/* CTA */}
+            <div className="bg-primary text-primary-foreground p-12 rounded-2xl text-center">
+              <h2 className="text-3xl font-bold mb-4">Make Your Brand Fly</h2>
+              <p className="text-xl text-primary-foreground/80 mb-8 max-w-2xl mx-auto">
+                Get a quote for custom promotional flags that catch every eye.
+              </p>
+              <Link to="/#contact">
+                <Button variant="hero" size="xl">
+                  Request Detailed Quote
+                </Button>
+              </Link>
             </div>
           </div>
-        </div>
-      </section>
-
-      {/* CTA Section */}
-      <section className="py-16 px-6">
-        <div className="container mx-auto max-w-4xl text-center">
-          <h2 className="text-4xl font-bold text-foreground mb-6">
-            Make Your Brand Fly
-          </h2>
-          <p className="text-xl text-muted-foreground mb-8">
-            Get a quote for custom promotional flags
-          </p>
-          <Button variant="premium" size="lg">Request Quote</Button>
         </div>
       </section>
 
