@@ -1,7 +1,7 @@
 import { useState, useRef, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { Menu, X, ChevronDown, ArrowRight } from "lucide-react";
-import { Link, useLocation } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 
 // Service images
 import exteriorImg from "@/assets/service-exterior.jpg";
@@ -20,6 +20,7 @@ const Navigation = () => {
   const [hoveredCategory, setHoveredCategory] = useState<string | null>(null);
   const [scrolled, setScrolled] = useState(false);
   const location = useLocation();
+  const navigate = useNavigate();
   const servicesRef = useRef<HTMLDivElement>(null);
 
   const leftNavLinks = [
@@ -162,7 +163,7 @@ const Navigation = () => {
   }, []);
 
   const goToContact = () => {
-    window.location.href = '/contact';
+    navigate('/contact');
   };
 
   return (
