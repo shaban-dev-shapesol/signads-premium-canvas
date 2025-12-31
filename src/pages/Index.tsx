@@ -7,6 +7,7 @@ import Industries from "@/components/Industries";
 import Gallery from "@/components/Gallery";
 import BeforeAfter from "@/components/BeforeAfter";
 import Testimonials from "@/components/Testimonials";
+import CTASection from "@/components/CTASection";
 import Footer from "@/components/Footer";
 import SEO from "@/components/SEO";
 
@@ -27,6 +28,7 @@ const Index = () => {
         <Industries />
         <Gallery />
         <Testimonials />
+        <CTASection />
       </main>
       <Footer />
     </div>
