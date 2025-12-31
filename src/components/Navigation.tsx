@@ -127,12 +127,10 @@ const Navigation = () => {
       image: vehicleImg,
       description: "Mobile brand advertising",
       items: [
-        { name: "Car Wrap", href: "/services/vehicle-graphics/car-wrap" },
         { name: "Van Wrap", href: "/services/vehicle-graphics/van-wrap" },
-        { name: "Truck wrap", href: "/services/vehicle-graphics/truck-wrap" },
-        { name: "Food Truck Wrap", href: "/services/vehicle-graphics/food-truck-wrap" },
-        { name: "Lorry & HGV Wrap", href: "/services/vehicle-graphics/lorry-hgv-wrap" },
-        { name: "Bus Wrap", href: "/services/vehicle-graphics/bus-wrap" }
+        { name: "Van Lettering Branding", href: "/services/vehicle-graphics/van-lettering" },
+        { name: "Truck Wrap", href: "/services/vehicle-graphics/truck-wrap" },
+        { name: "Food Truck Wrap", href: "/services/vehicle-graphics/food-truck-wrap" }
       ]
     }
   ];
@@ -294,7 +292,7 @@ const Navigation = () => {
             <Link to="/" className={`text-3xl font-bold transition-all duration-300 ${
               scrolled ? 'text-foreground' : 'text-white'
             }`}>
-              sign<span className="text-accent">Ads</span>
+              Sign<span className="text-accent">ad</span>
             </Link>
           </div>
 

@@ -32,8 +32,8 @@ const Services = () => {
     {
       icon: Car,
       title: "Vehicle Graphics",
-      description: "Professional wraps for cars, vans & fleets delivering thousands of impressions daily.",
-      features: ["Car Wraps", "Van Wraps", "Truck & HGV Wraps", "Fleet Branding"],
+      description: "Professional wraps and lettering for vans & fleets delivering thousands of impressions daily.",
+      features: ["Van Wraps", "Van Lettering", "Truck Wraps", "Fleet Branding"],
       link: "/services/vehicle-graphics",
       image: vehicleImg,
       featured: true,

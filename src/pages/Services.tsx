@@ -126,12 +126,10 @@ const Services = () => {
       image: serviceVehicle,
       link: "/services/vehicle-graphics",
       features: [
-        "Car Wraps",
         "Van Wraps",
+        "Van Lettering Branding",
         "Truck Wraps",
-        "Food Truck Wraps",
-        "Lorry & HGV Wraps",
-        "Bus Wraps"
+        "Food Truck Wraps"
       ],
       benefits: "Premium 3M and Avery materials, precision application, and paint protection."
     },

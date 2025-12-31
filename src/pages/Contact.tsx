@@ -7,8 +7,8 @@ const Contact = () => {
   return (
     <div className="min-h-screen bg-background">
       <SEO 
-        title="Contact signAds - Get a Free Signage Quote"
-        description="Contact signAds for a free consultation and quote on your signage project. Expert advice, competitive pricing, and fast turnaround times."
+        title="Contact Signad - Get a Free Signage Quote"
+        description="Contact Signad for a free consultation and quote on your signage project. Expert advice, competitive pricing, and fast turnaround times."
       />
       <Navigation />
       
@@ -77,14 +77,14 @@ const Contact = () => {
           </div>
           <div className="rounded-2xl overflow-hidden border border-border shadow-lg">
             <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2483.5424813697714!2d-0.1277583!3d51.5073509!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x487604c38c8cd1d9%3A0xb78f2474b9a45aa9!2sLondon%2C%20UK!5e0!3m2!1sen!2s!4v1699900000000!5m2!1sen!2s"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d152515.98561928845!2d-3.0200348!3d53.4083714!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x487b212d4a53598d%3A0x6a0d54b89e1c6a5a!2sLiverpool%2C%20UK!5e0!3m2!1sen!2s!4v1699900000000!5m2!1sen!2s"
               width="100%"
               height="450"
               style={{ border: 0 }}
               allowFullScreen
               loading="lazy"
               referrerPolicy="no-referrer-when-downgrade"
-              title="signAds Location"
+              title="Signad Location"
               className="w-full"
             />
           </div>
