@@ -13,13 +13,14 @@ import printWallArt from "@/assets/gallery/print-wall-art-1.jpg";
 import printFloor from "@/assets/gallery/print-floor-1.jpg";
 import printCeiling from "@/assets/gallery/print-ceiling-1.jpg";
 import exteriorHoarding from "@/assets/gallery/exterior-hoarding-1.jpg";
+import printPVCBanner from "@/assets/gallery/print-pvc-banner-1.jpg";
 
 const PrintSigns = () => {
   const services = [
     {
       title: "PVC Banners",
       description: "Durable, weather-resistant vinyl banners for any occasion.",
-      image: printBanner,
+      image: printPVCBanner,
       link: "/services/print-signs/pvc-banners",
     },
     {

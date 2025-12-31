@@ -11,6 +11,8 @@ import exteriorFlexFace from "@/assets/gallery/exterior-flex-face-1.jpg";
 import exteriorProjection from "@/assets/gallery/exterior-projection-1.jpg";
 import exteriorTotem from "@/assets/gallery/exterior-totem-1.jpg";
 import exteriorHoarding from "@/assets/gallery/exterior-hoarding-1.jpg";
+import exteriorACMShopfront from "@/assets/gallery/exterior-acm-shopfront-1.jpg";
+import exteriorLEDCircular from "@/assets/gallery/exterior-led-circular-1.jpg";
 
 const ExteriorSigns = () => {
   const services = [
@@ -35,13 +37,13 @@ const ExteriorSigns = () => {
     {
       title: "LED Circular Signs",
       description: "Eye-catching round projecting signs for maximum visibility.",
-      image: exteriorProjection,
+      image: exteriorLEDCircular,
       link: "/services/exterior-signs/led-circular-signs",
     },
     {
       title: "Shop Front ACM Signs",
       description: "Clean, professional aluminium composite signage.",
-      image: exteriorFasciaTray,
+      image: exteriorACMShopfront,
       link: "/services/exterior-signs/shop-front-acm",
     },
     {

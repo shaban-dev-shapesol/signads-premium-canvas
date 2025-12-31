@@ -8,6 +8,7 @@ import SEO from "@/components/SEO";
 import vehicleVan from "@/assets/gallery/vehicle-van-wrap-1.jpg";
 import vehicleTruck from "@/assets/gallery/vehicle-truck-wrap-1.jpg";
 import vehicleFoodTruck from "@/assets/gallery/vehicle-food-truck-1.jpg";
+import vehicleVanLettering from "@/assets/gallery/vehicle-van-lettering-main.jpg";
 
 const VehicleGraphics = () => {
   const services = [
@@ -20,7 +21,7 @@ const VehicleGraphics = () => {
     {
       title: "Van Lettering Branding",
       description: "Professional vinyl lettering for vans and commercial vehicles.",
-      image: vehicleVan,
+      image: vehicleVanLettering,
       link: "/services/vehicle-graphics/van-lettering",
     },
     {
