@@ -102,7 +102,7 @@ const Services = () => {
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-primary-foreground">
               Explore Our Services:
             </h2>
-            <p className="text-2xl md:text-3xl lg:text-4xl italic text-accent mt-2">
+            <p className="text-2xl md:text-3xl lg:text-4xl text-accent mt-2">
               Premium Signage Solutions
             </p>
           </div>
