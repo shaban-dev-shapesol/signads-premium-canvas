@@ -103,6 +103,7 @@ const BeforeAfter = () => {
   ];
 
   const handleSliderMove = (index: number, e: React.MouseEvent<HTMLDivElement>) => {
+    if (activeSlider !== index) return; // Only move if actively dragging
     const rect = e.currentTarget.getBoundingClientRect();
     const x = e.clientX - rect.left;
     const percentage = (x / rect.width) * 100;
@@ -113,6 +114,7 @@ const BeforeAfter = () => {
   };
 
   const handleTouchMove = (index: number, e: React.TouchEvent<HTMLDivElement>) => {
+    if (activeSlider !== index) return; // Only move if actively dragging
     const touch = e.touches[0];
     const rect = e.currentTarget.getBoundingClientRect();
     const x = touch.clientX - rect.left;
