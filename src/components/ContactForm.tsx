@@ -48,7 +48,7 @@ const ContactForm = () => {
                   </div>
                   <div>
                     <h3 className="font-bold text-foreground mb-1">Phone</h3>
-                    <p className="text-muted-foreground">+44 (0) 123 456 7890</p>
+                    <p className="text-muted-foreground">0794 343 2855</p>
                   </div>
                 </div>
 
@@ -58,7 +58,7 @@ const ContactForm = () => {
                   </div>
                   <div>
                     <h3 className="font-bold text-foreground mb-1">Email</h3>
-                    <p className="text-muted-foreground">hello@signads.co.uk</p>
+                    <p className="text-muted-foreground">hello@signad.co.uk</p>
                   </div>
                 </div>
 
@@ -68,7 +68,7 @@ const ContactForm = () => {
                   </div>
                   <div>
                     <h3 className="font-bold text-foreground mb-1">Location</h3>
-                    <p className="text-muted-foreground">London, United Kingdom</p>
+                    <p className="text-muted-foreground">Liverpool, United Kingdom</p>
                   </div>
                 </div>
               </div>

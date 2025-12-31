@@ -44,12 +44,15 @@ import PrintedTray from "./pages/services/print/PrintedTray";
 import VinylLettering from "./pages/services/print/VinylLettering";
 import BespokeCeiling from "./pages/services/print/BespokeCeiling";
 // Vehicle Graphics Sub-pages
-import CarWrap from "./pages/services/vehicle/CarWrap";
 import VanWrap from "./pages/services/vehicle/VanWrap";
+import VanLettering from "./pages/services/vehicle/VanLettering";
 import TruckWrap from "./pages/services/vehicle/TruckWrap";
 import FoodTruckWrap from "./pages/services/vehicle/FoodTruckWrap";
-import LorryHGVWrap from "./pages/services/vehicle/LorryHGVWrap";
-import BusWrap from "./pages/services/vehicle/BusWrap";
+// New Service Pages
+import PVCBanners from "./pages/services/print/PVCBanners";
+import LEDCircularSigns from "./pages/services/exterior/LEDCircularSigns";
+import ShopFrontACM from "./pages/services/exterior/ShopFrontACM";
+import SwingerABoards from "./pages/services/promotional/SwingerABoards";
 // Exhibition Sub-pages
 import PopUpBanners from "./pages/services/exhibition/PopUpBanners";
 import StandardExhibitionDisplay from "./pages/services/exhibition/StandardExhibitionDisplay";
@@ -114,12 +117,16 @@ const App = () => (
           <Route path="/services/print-signs/bespoke-ceiling" element={<BespokeCeiling />} />
           
           {/* Vehicle Graphics Sub-services */}
-          <Route path="/services/vehicle-graphics/car-wrap" element={<CarWrap />} />
           <Route path="/services/vehicle-graphics/van-wrap" element={<VanWrap />} />
+          <Route path="/services/vehicle-graphics/van-lettering" element={<VanLettering />} />
           <Route path="/services/vehicle-graphics/truck-wrap" element={<TruckWrap />} />
           <Route path="/services/vehicle-graphics/food-truck-wrap" element={<FoodTruckWrap />} />
-          <Route path="/services/vehicle-graphics/lorry-hgv-wrap" element={<LorryHGVWrap />} />
-          <Route path="/services/vehicle-graphics/bus-wrap" element={<BusWrap />} />
+          
+          {/* New Service Routes */}
+          <Route path="/services/print-signs/pvc-banners" element={<PVCBanners />} />
+          <Route path="/services/exterior-signs/led-circular-signs" element={<LEDCircularSigns />} />
+          <Route path="/services/exterior-signs/shop-front-acm" element={<ShopFrontACM />} />
+          <Route path="/services/promotional-signs/swinger-a-boards" element={<SwingerABoards />} />
           
           {/* Digital Signage Sub-services */}
           <Route path="/services/digital-signage/outdoor-digital-signs" element={<OutdoorDigitalSigns />} />

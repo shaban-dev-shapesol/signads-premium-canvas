@@ -7,7 +7,7 @@ interface SEOProps {
 }
 
 const SEO = ({ title, description, canonical }: SEOProps) => {
-  const fullTitle = title.includes("signAds") ? title : `${title} | signAds`;
+  const fullTitle = title.includes("Signad") ? title : `${title} | Signad`;
   
   return (
     <Helmet>

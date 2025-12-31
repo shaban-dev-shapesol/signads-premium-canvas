@@ -14,8 +14,8 @@ const Index = () => {
   return (
     <div className="min-h-screen">
       <SEO 
-        title="signAds - Premium Business Signage & Vehicle Wrapping Solutions"
-        description="Masterful signage solutions, vehicle wraps, and large format printing for ambitious businesses. Quality craftsmanship with express service across the UK."
+        title="Signad - Premium Business Signage & Vehicle Branding Solutions"
+        description="Professional signage solutions, vehicle branding, and large format printing for ambitious businesses. Quality craftsmanship with express service across the UK."
       />
       <Navigation />
       <main>

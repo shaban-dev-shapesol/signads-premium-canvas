@@ -40,10 +40,11 @@ const About = () => {
   ];
 
   const stats = [
-    { number: "15+", label: "Years Experience" },
-    { number: "2,500+", label: "Projects Completed" },
-    { number: "98%", label: "Client Satisfaction" },
-    { number: "50+", label: "Team Members" },
+    { number: "6+", label: "Years in Business" },
+    { number: "30+", label: "Years Industry Experience" },
+    { number: "1000+", label: "Projects Completed" },
+    { number: "99%", label: "Client Satisfaction" },
+    { number: "10+", label: "Team Members" },
   ];
 
   const process = [
@@ -77,8 +78,8 @@ const About = () => {
   return (
     <div className="min-h-screen">
       <SEO 
-        title="About signAds - 15+ Years of Premium Signage Excellence"
-        description="Discover signAds' story of quality craftsmanship, expert installation, and dedicated service. Trusted by 2,500+ businesses across the UK for premium signage solutions."
+        title="About Signad - 30+ Years of Industry Experience"
+        description="Discover Signad's story of quality craftsmanship, expert installation, and dedicated service. Trusted by 1000+ businesses across the UK for premium signage solutions."
       />
       <Navigation />
       
@@ -87,11 +88,11 @@ const About = () => {
         <div className="container mx-auto px-6">
           <div className="max-w-4xl mx-auto text-center">
             <h1 className="text-5xl md:text-6xl font-bold mb-6">
-              About <span className="text-accent">signAds</span>
+              About <span className="text-accent">Signad</span>
             </h1>
             <p className="text-xl text-primary-foreground/80">
-              For over 15 years, we've been helping businesses across the UK make powerful first impressions 
-              with premium signage solutions.
+              Since 2020, we've been helping businesses across the UK make powerful first impressions 
+              with premium signage solutions. With over 30 years of combined industry experience.
             </p>
           </div>
         </div>
@@ -104,9 +105,9 @@ const About = () => {
             <h2 className="text-4xl font-bold text-foreground mb-6">Our Story</h2>
             <div className="prose prose-lg text-muted-foreground space-y-4">
               <p>
-                Founded in 2009, signAds began with a simple mission: to provide businesses with signage 
-                solutions that don't just look good, but drive real results. What started as a small workshop 
-                has grown into a full-service signage company trusted by hundreds of businesses across the UK.
+                Founded in 2020, Signad began with a simple mission: to provide businesses with signage 
+                solutions that don't just look good, but drive real results. With over 30 years of combined 
+                industry experience, our team brings unmatched expertise to every project.
               </p>
               <p>
                 We've built our reputation on three pillars: uncompromising quality, exceptional service, 
@@ -116,7 +117,7 @@ const About = () => {
               </p>
               <p>
                 Today, we're proud to serve clients across retail, corporate, healthcare, education, and 
-                hospitality sectors. Our state-of-the-art facility combines traditional craftsmanship with 
+                hospitality sectors from our base in Liverpool. Our facility combines traditional craftsmanship with 
                 cutting-edge technology, enabling us to deliver projects of any scale and complexity.
               </p>
             </div>
@@ -127,7 +128,7 @@ const About = () => {
       {/* Stats Section */}
       <section className="py-24 bg-secondary">
         <div className="container mx-auto px-6">
-          <div className="max-w-6xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-8">
+          <div className="max-w-6xl mx-auto grid grid-cols-2 md:grid-cols-5 gap-8">
             {stats.map((stat, index) => (
               <div key={index} className="text-center">
                 <div className="text-5xl md:text-6xl font-bold text-accent mb-2">

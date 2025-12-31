@@ -5,26 +5,23 @@ import Footer from "@/components/Footer";
 import { Link } from "react-router-dom";
 import SEO from "@/components/SEO";
 
-import vehicleCar from "@/assets/gallery/vehicle-car-wrap-1.jpg";
 import vehicleVan from "@/assets/gallery/vehicle-van-wrap-1.jpg";
 import vehicleTruck from "@/assets/gallery/vehicle-truck-wrap-1.jpg";
 import vehicleFoodTruck from "@/assets/gallery/vehicle-food-truck-1.jpg";
-import vehicleLorry from "@/assets/gallery/vehicle-lorry-wrap-1.jpg";
-import vehicleBus from "@/assets/gallery/vehicle-bus-wrap-1.jpg";
 
 const VehicleGraphics = () => {
   const services = [
-    {
-      title: "Car Wrap",
-      description: "Transform your vehicle into a mobile billboard.",
-      image: vehicleCar,
-      link: "/services/vehicle-graphics/car-wrap",
-    },
     {
       title: "Van Wrap",
       description: "Full and partial wrap options for commercial vans.",
       image: vehicleVan,
       link: "/services/vehicle-graphics/van-wrap",
+    },
+    {
+      title: "Van Lettering Branding",
+      description: "Professional vinyl lettering for vans and commercial vehicles.",
+      image: vehicleVan,
+      link: "/services/vehicle-graphics/van-lettering",
     },
     {
       title: "Truck Wrap",
@@ -37,18 +34,6 @@ const VehicleGraphics = () => {
       description: "Eye-catching designs that attract customers.",
       image: vehicleFoodTruck,
       link: "/services/vehicle-graphics/food-truck-wrap",
-    },
-    {
-      title: "Lorry & HGV Wrap",
-      description: "Heavy goods vehicle wraps for maximum exposure.",
-      image: vehicleLorry,
-      link: "/services/vehicle-graphics/lorry-hgv-wrap",
-    },
-    {
-      title: "Bus Wrap",
-      description: "Full bus wraps for transit and tour operators.",
-      image: vehicleBus,
-      link: "/services/vehicle-graphics/bus-wrap",
     },
   ];
 

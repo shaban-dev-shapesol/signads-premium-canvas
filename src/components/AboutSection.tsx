@@ -29,7 +29,7 @@ const AboutSection = () => {
                 </div>
                 {/* Stats Badge */}
                 <div className="absolute -bottom-6 -right-6 bg-primary text-primary-foreground px-6 py-4 rounded-lg shadow-lg">
-                  <p className="text-3xl font-bold">500+</p>
+                  <p className="text-3xl font-bold">1000+</p>
                   <p className="text-sm opacity-90">Projects Completed</p>
                 </div>
               </div>
@@ -56,7 +56,7 @@ const AboutSection = () => {
             
             {/* Heading */}
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mt-4 mb-6 leading-tight">
-              Crafting Visual Identity Since 2009
+              Crafting Visual Identity Since 2020
             </h2>
             
             {/* Orange Accent Line */}
