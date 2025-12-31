@@ -161,14 +161,8 @@ const Navigation = () => {
     return () => document.removeEventListener("mousedown", handleClickOutside);
   }, []);
 
-  const scrollToContact = (e: React.MouseEvent) => {
-    e.preventDefault();
-    if (location.pathname !== '/') {
-      window.location.href = '/#contact';
-    } else {
-      const contactSection = document.getElementById('contact');
-      contactSection?.scrollIntoView({ behavior: 'smooth' });
-    }
+  const goToContact = () => {
+    window.location.href = '/contact';
   };
 
   return (
@@ -315,7 +309,7 @@ const Navigation = () => {
             <Button 
               variant={scrolled ? "premium" : "ghost"} 
               size="default" 
-              onClick={scrollToContact}
+              onClick={goToContact}
               className={!scrolled ? "border-2 border-white text-white bg-transparent hover:bg-white hover:text-primary font-semibold" : ""}
             >
               Get Quote
