@@ -11,6 +11,8 @@ import serviceVehicle from "@/assets/service-vehicle.jpg";
 import servicePrinting from "@/assets/service-printing.jpg";
 import serviceExhibition from "@/assets/service-exhibition.jpg";
 import serviceDigital from "@/assets/service-digital.jpg";
+import serviceLightbox from "@/assets/service-lightbox.jpg";
+import servicePromotional from "@/assets/service-promotional.jpg";
 
 const Services = () => {
   const services = [
@@ -66,7 +68,7 @@ const Services = () => {
       icon: Lightbulb,
       title: "Light Boxes",
       description: "Eye-catching illuminated displays that make your brand shine day and night.",
-      image: serviceExterior,
+      image: serviceLightbox,
       link: "/services/light-boxes",
       features: [
         "Flex Face Light Box Signs",
@@ -79,7 +81,7 @@ const Services = () => {
       icon: Flag,
       title: "Promotional Signs",
       description: "Versatile promotional solutions designed for maximum visibility and engagement.",
-      image: servicePrinting,
+      image: servicePromotional,
       link: "/services/promotional-signs",
       features: [
         "Custom Flags",
