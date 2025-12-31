@@ -139,9 +139,22 @@ const Navigation = () => {
     }
   ];
 
+  // Determine which service category is active based on current URL
+  const getActiveServiceFromUrl = () => {
+    const path = location.pathname;
+    return serviceCategories.find(category => 
+      path.startsWith(category.href) || 
+      category.items.some(item => path === item.href)
+    );
+  };
+
+  const urlActiveService = getActiveServiceFromUrl();
+  
   const activeCategory = hoveredCategory 
     ? serviceCategories.find(c => c.name === hoveredCategory) 
-    : serviceCategories[0];
+    : (urlActiveService || serviceCategories[0]);
+  
+  const defaultHighlightedCategory = hoveredCategory || urlActiveService?.name || serviceCategories[0].name;
 
   useEffect(() => {
     const handleScroll = () => {
@@ -208,7 +221,7 @@ const Navigation = () => {
                                 key={category.name}
                                 to={category.href}
                                 className={`flex items-center justify-between p-3 rounded-lg transition-all duration-200 group ${
-                                  hoveredCategory === category.name || (!hoveredCategory && category.name === serviceCategories[0].name)
+                                  category.name === defaultHighlightedCategory
                                     ? 'bg-accent text-accent-foreground'
                                     : 'hover:bg-muted text-foreground'
                                 }`}
@@ -217,7 +230,7 @@ const Navigation = () => {
                               >
                                 <span className="font-medium">{category.name}</span>
                                 <ArrowRight className={`w-4 h-4 transition-transform ${
-                                  hoveredCategory === category.name || (!hoveredCategory && category.name === serviceCategories[0].name)
+                                  category.name === defaultHighlightedCategory
                                     ? 'translate-x-1'
                                     : 'opacity-0 group-hover:opacity-100'
                                 }`} />
