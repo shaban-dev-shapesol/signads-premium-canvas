@@ -1,4 +1,4 @@
-import { Store, Briefcase, GraduationCap, Heart, Truck, Building, Hotel, ShoppingBag, Utensils, Dumbbell } from "lucide-react";
+import { Store, Briefcase, GraduationCap, Heart, Truck, Building, Hotel, Utensils } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
@@ -25,10 +25,10 @@ const Industries = () => {
       title: "Corporate & Office",
       description: "Project professionalism and strengthen brand identity with premium office signage, from lobby statements to workspace graphics that inspire.",
       solutions: [
+        "Light Box Signs",
+        "Foamex Cut Letters",
         "Reception and lobby signs",
         "Corporate wall graphics",
-        "Meeting room signage",
-        "Employee recognition walls",
         "Directional wayfinding"
       ],
       caseStudy: "Transformed a corporate headquarters with cohesive branding across 5 floors, enhancing professional image."
@@ -61,16 +61,16 @@ const Industries = () => {
     },
     {
       icon: Truck,
-      title: "Transport & Logistics",
-      description: "Maximize brand visibility with fleet graphics, warehouse signage, and durable exterior solutions built for demanding environments.",
+      title: "Trade Services",
+      description: "Professional van branding and signage for tradespeople. Get noticed on every job site with clear, effective vehicle graphics.",
       solutions: [
-        "Fleet vehicle wraps",
-        "Warehouse safety signage",
-        "Loading bay markers",
-        "Facility identification",
-        "Promotional vehicle graphics"
+        "Van Wraps Only",
+        "Van Lettering Branding",
+        "Site signage",
+        "Magnetic vehicle signs",
+        "Promotional materials"
       ],
-      caseStudy: "Wrapped 50-vehicle fleet for logistics company, generating 10M+ impressions annually."
+      caseStudy: "Branded fleet of 20 trade vans with consistent lettering, increasing brand recognition across the region."
     },
     {
       icon: Building,
@@ -90,10 +90,10 @@ const Industries = () => {
       title: "Hospitality",
       description: "Enhance guest experiences with elegant signage solutions that blend functionality with your brand's unique character and ambiance.",
       solutions: [
+        "LED Neon Signs",
         "Exterior hotel signage",
         "Wayfinding and directories",
         "Room identification",
-        "Event space signage",
         "Menu boards and displays"
       ],
       caseStudy: "Designed cohesive signage package for boutique hotel group across 8 locations."
@@ -112,30 +112,17 @@ const Industries = () => {
       caseStudy: "Increased restaurant visibility and orders by 35% with new LED signage and menu boards."
     },
     {
-      icon: Dumbbell,
-      title: "Fitness & Wellness",
-      description: "Motivating, energetic signage that reflects your brand's vitality and creates inspiring spaces for members and clients.",
+      icon: Truck,
+      title: "Transport & Logistics",
+      description: "Professional van lettering and branding for delivery and logistics businesses. Make your fleet work harder with visible branding.",
       solutions: [
-        "Facility exterior signs",
-        "Motivational wall graphics",
-        "Class schedule boards",
-        "Wayfinding and zones",
-        "Promotional displays"
+        "Van Lettering Branding",
+        "Van Wraps",
+        "Warehouse signage",
+        "Loading bay markers",
+        "Facility identification"
       ],
-      caseStudy: "Branded new fitness center with motivational graphics, helping attract 500+ new members."
-    },
-    {
-      icon: ShoppingBag,
-      title: "Shopping Centers",
-      description: "Comprehensive signage systems that guide shoppers, promote tenants, and create cohesive brand experiences across retail destinations.",
-      solutions: [
-        "Main identification signage",
-        "Directional wayfinding",
-        "Tenant directories",
-        "Promotional displays",
-        "Car park signage"
-      ],
-      caseStudy: "Implemented full wayfinding system for shopping center with 100+ retail units."
+      caseStudy: "Branded 30-vehicle delivery fleet with consistent lettering, generating thousands of daily impressions."
     },
   ];
 

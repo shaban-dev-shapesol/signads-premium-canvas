@@ -11,7 +11,7 @@ const Industries = () => {
     {
       icon: Briefcase,
       title: "Corporate & Office",
-      description: "Professional branding for modern workspaces",
+      description: "Light box signs and foamex cut letters for professional branding",
     },
     {
       icon: GraduationCap,
@@ -25,13 +25,13 @@ const Industries = () => {
     },
     {
       icon: Truck,
-      title: "Transport & Logistics",
-      description: "Fleet graphics and warehouse signage",
+      title: "Trade Services",
+      description: "Van wraps and lettering for tradespeople",
     },
     {
       icon: Building,
       title: "Hospitality",
-      description: "Premium signage for hotels and restaurants",
+      description: "LED neon and premium signage for hotels and restaurants",
     },
   ];
 

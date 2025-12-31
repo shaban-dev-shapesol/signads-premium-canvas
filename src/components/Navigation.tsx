@@ -42,6 +42,8 @@ const Navigation = () => {
         { name: "Built up 3D letters", href: "/services/exterior-signs/built-up-3d-letters" },
         { name: "Fascia Sign Tray", href: "/services/exterior-signs/fascia-sign-tray" },
         { name: "Flex face LightBox Sign", href: "/services/exterior-signs/flex-face-lightbox" },
+        { name: "LED Circular Signs", href: "/services/exterior-signs/led-circular-signs" },
+        { name: "Shop Front ACM Signs", href: "/services/exterior-signs/shop-front-acm" },
         { name: "Projection Sign", href: "/services/exterior-signs/projection-sign" },
         { name: "Totem Sign Solutions", href: "/services/exterior-signs/totem-sign" },
         { name: "Site Hoarding Boards", href: "/services/exterior-signs/site-hoarding-boards" }
@@ -66,6 +68,7 @@ const Navigation = () => {
       image: printImg,
       description: "High-quality print solutions",
       items: [
+        { name: "PVC Banners", href: "/services/print-signs/pvc-banners" },
         { name: "Printed tray", href: "/services/print-signs/printed-tray" },
         { name: "Vinyl lettering", href: "/services/print-signs/vinyl-lettering" },
         { name: "Banner Printing", href: "/services/print-signs/banner-printing" },
@@ -92,7 +95,7 @@ const Navigation = () => {
       description: "Eye-catching promotional displays",
       items: [
         { name: "Custom Flags", href: "/services/promotional-signs/custom-flags" },
-        { name: "Pavement sign", href: "/services/promotional-signs/pavement-sign" },
+        { name: "Pavement Signs & A-Boards", href: "/services/promotional-signs/swinger-a-boards" },
         { name: "Projection Sign", href: "/services/exterior-signs/projection-sign" },
         { name: "Window Graphics", href: "/services/print-signs/window-graphics" },
         { name: "Light boxes", href: "/services/light-boxes/promotional-lightbox" }

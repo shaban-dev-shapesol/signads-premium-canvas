@@ -17,6 +17,12 @@ import exteriorHoarding from "@/assets/gallery/exterior-hoarding-1.jpg";
 const PrintSigns = () => {
   const services = [
     {
+      title: "PVC Banners",
+      description: "Durable, weather-resistant vinyl banners for any occasion.",
+      image: printBanner,
+      link: "/services/print-signs/pvc-banners",
+    },
+    {
       title: "Printed Tray",
       description: "High-quality printed tray signage for storefronts.",
       image: printTray,
