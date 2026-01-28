@@ -38,7 +38,7 @@ const LEDCircularSigns = () => {
             <p className="text-xl text-primary-foreground/80 mb-8">
               Eye-catching round projecting signs that grab attention day and night. Perfect for retail and hospitality.
             </p>
-            <Link to="/#contact">
+            <Link to="/contact">
               <Button variant="hero" size="xl">
                 Get Custom Quote
               </Button>

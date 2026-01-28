@@ -38,7 +38,7 @@ const WindowFrosting = () => {
             <p className="text-xl text-primary-foreground/80 mb-8">
               Privacy, style, and brand integration for office glazing. Transform plain glass into elegant, functional design elements.
             </p>
-            <Link to="/#contact">
+            <Link to="/contact">
               <Button variant="hero" size="xl">
                 Get Custom Quote
               </Button>
@@ -187,7 +187,7 @@ const WindowFrosting = () => {
               <p className="text-xl text-primary-foreground/80 mb-8 max-w-2xl mx-auto">
                 Get a quote for your office window frosting project.
               </p>
-              <Link to="/#contact">
+              <Link to="/contact">
                 <Button variant="hero" size="xl">
                   Request Quote
                 </Button>

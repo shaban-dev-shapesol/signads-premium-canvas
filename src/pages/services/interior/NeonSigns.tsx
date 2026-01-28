@@ -38,7 +38,7 @@ const NeonSigns = () => {
             <p className="text-xl text-primary-foreground/80 mb-8">
               Contemporary LED neon signs that add character and vibrant ambiance to modern spaces. Energy-efficient and fully customizable.
             </p>
-            <Link to="/#contact">
+            <Link to="/contact">
               <Button variant="hero" size="xl">
                 Get Custom Quote
               </Button>
@@ -201,7 +201,7 @@ const NeonSigns = () => {
               <p className="text-xl text-primary-foreground/80 mb-8 max-w-2xl mx-auto">
                 Create a stunning focal point with custom LED neon signage.
               </p>
-              <Link to="/#contact">
+              <Link to="/contact">
                 <Button variant="hero" size="xl">
                   Design Your Neon Sign
                 </Button>

@@ -38,7 +38,7 @@ const SiteHoardingBoards = () => {
             <p className="text-xl text-primary-foreground/80 mb-8">
               Transform construction barriers into powerful advertising space. Professional site hoarding graphics that promote your project and enhance street appeal.
             </p>
-            <Link to="/#contact">
+            <Link to="/contact">
               <Button variant="hero" size="xl">
                 Get Custom Quote
               </Button>
@@ -187,7 +187,7 @@ const SiteHoardingBoards = () => {
               <p className="text-xl text-primary-foreground/80 mb-8 max-w-2xl mx-auto">
                 Get a quote for professional hoarding board graphics that make an impact.
               </p>
-              <Link to="/#contact">
+              <Link to="/contact">
                 <Button variant="hero" size="xl">
                   Request Quote
                 </Button>

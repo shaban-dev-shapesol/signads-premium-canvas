@@ -38,7 +38,7 @@ const VanLettering = () => {
             <p className="text-xl text-primary-foreground/80 mb-8">
               Professional vinyl lettering for vans and commercial vehicles. Simple, effective, and affordable branding that works.
             </p>
-            <Link to="/#contact">
+            <Link to="/contact">
               <Button variant="hero" size="xl">
                 Get Custom Quote
               </Button>
@@ -209,7 +209,7 @@ const VanLettering = () => {
               <p className="text-xl text-primary-foreground/80 mb-8 max-w-2xl mx-auto">
                 Get professional lettering that turns your van into a moving advertisement.
               </p>
-              <Link to="/#contact">
+              <Link to="/contact">
                 <Button variant="hero" size="xl">
                   Request a Quote
                 </Button>

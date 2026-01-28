@@ -38,7 +38,7 @@ const ShopWindowDisplay = () => {
             <p className="text-xl text-primary-foreground/80 mb-8">
               Transform your storefront into an attention-grabbing digital showcase. High-brightness displays that captivate passersby and drive foot traffic 24/7.
             </p>
-            <Link to="/#contact">
+            <Link to="/contact">
               <Button variant="hero" size="xl">
                 Get Custom Quote
               </Button>
@@ -187,7 +187,7 @@ const ShopWindowDisplay = () => {
               <p className="text-xl text-primary-foreground/80 mb-8 max-w-2xl mx-auto">
                 Schedule a consultation to see how digital displays can transform your storefront.
               </p>
-              <Link to="/#contact">
+              <Link to="/contact">
                 <Button variant="hero" size="xl">
                   Book Consultation
                 </Button>

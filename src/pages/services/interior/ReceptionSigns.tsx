@@ -38,7 +38,7 @@ const ReceptionSigns = () => {
             <p className="text-xl text-primary-foreground/80 mb-8">
               Make a powerful first impression with premium lobby signage that reflects your brand's values and professionalism.
             </p>
-            <Link to="/#contact">
+            <Link to="/contact">
               <Button variant="hero" size="xl">
                 Get Custom Quote
               </Button>
@@ -190,7 +190,7 @@ const ReceptionSigns = () => {
               <p className="text-xl text-primary-foreground/80 mb-8 max-w-2xl mx-auto">
                 Let our design team create a reception sign that makes a lasting impression.
               </p>
-              <Link to="/#contact">
+              <Link to="/contact">
                 <Button variant="hero" size="xl">
                   Schedule Design Consultation
                 </Button>

@@ -31,7 +31,7 @@ const FloorGraphics = () => {
             <p className="text-xl text-primary-foreground/80 mb-8">
               Eye-catching, durable floor decals that capture attention at ground level. Anti-slip and perfect for high-traffic areas.
             </p>
-            <Link to="/#contact">
+            <Link to="/contact">
               <Button variant="hero" size="xl">
                 Get Custom Quote
               </Button>
@@ -227,7 +227,7 @@ const FloorGraphics = () => {
               <p className="text-xl text-primary-foreground/80 mb-8 max-w-2xl mx-auto">
                 Create memorable brand experiences with custom floor graphics that demand attention.
               </p>
-              <Link to="/#contact">
+              <Link to="/contact">
                 <Button variant="hero" size="xl">
                   Design Floor Graphics
                 </Button>

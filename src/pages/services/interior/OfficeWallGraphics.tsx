@@ -38,7 +38,7 @@ const OfficeWallGraphics = () => {
             <p className="text-xl text-primary-foreground/80 mb-8">
               Transform your workspace with inspiring wall graphics that reinforce company culture and create memorable environments for employees and visitors.
             </p>
-            <Link to="/#contact">
+            <Link to="/contact">
               <Button variant="hero" size="xl">
                 Get Custom Quote
               </Button>
@@ -187,7 +187,7 @@ const OfficeWallGraphics = () => {
               <p className="text-xl text-primary-foreground/80 mb-8 max-w-2xl mx-auto">
                 Let's discuss your office wall graphics vision.
               </p>
-              <Link to="/#contact">
+              <Link to="/contact">
                 <Button variant="hero" size="xl">
                   Start Your Project
                 </Button>

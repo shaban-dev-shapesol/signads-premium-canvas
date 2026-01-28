@@ -31,7 +31,7 @@ const BannerPrinting = () => {
             <p className="text-xl text-primary-foreground/80 mb-8">
               High-quality, versatile banners for indoor and outdoor use. Fast turnaround with professional finishing and competitive pricing.
             </p>
-            <Link to="/#contact">
+            <Link to="/contact">
               <Button variant="hero" size="xl">
                 Get Custom Quote
               </Button>
@@ -211,7 +211,7 @@ const BannerPrinting = () => {
               <p className="text-xl text-primary-foreground/80 mb-8 max-w-2xl mx-auto">
                 Get instant quotes and same-day printing for urgent requirements.
               </p>
-              <Link to="/#contact">
+              <Link to="/contact">
                 <Button variant="hero" size="xl">
                   Get Instant Quote
                 </Button>

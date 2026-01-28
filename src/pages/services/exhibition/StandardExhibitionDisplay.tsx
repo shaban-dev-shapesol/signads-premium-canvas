@@ -38,7 +38,7 @@ const StandardExhibitionDisplay = () => {
             <p className="text-xl text-primary-foreground/80 mb-8">
               Professional, portable exhibition stands that set up in minutes. Cost-effective solutions for trade shows, conferences, and promotional events.
             </p>
-            <Link to="/#contact">
+            <Link to="/contact">
               <Button variant="hero" size="xl">
                 Get Custom Quote
               </Button>
@@ -187,7 +187,7 @@ const StandardExhibitionDisplay = () => {
               <p className="text-xl text-primary-foreground/80 mb-8 max-w-2xl mx-auto">
                 Get expert advice on the perfect exhibition package for your needs.
               </p>
-              <Link to="/#contact">
+              <Link to="/contact">
                 <Button variant="hero" size="xl">
                   Get Started
                 </Button>

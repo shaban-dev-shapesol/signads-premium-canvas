@@ -210,7 +210,7 @@ const Industries = () => {
               Don't see your industry listed? We work with businesses across all sectors. 
               Let's discuss how we can help yours.
             </p>
-            <Link to="/#contact">
+            <Link to="/contact">
               <Button variant="premium" size="xl">
                 Discuss Your Project
               </Button>

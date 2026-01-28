@@ -93,7 +93,7 @@ const PrintSigns = () => {
             <p className="text-xl text-primary-foreground/80 mb-8">
               Cutting-edge printing technology delivering stunning visual impact at any scale.
             </p>
-            <Link to="/#contact">
+            <Link to="/contact">
               <Button variant="hero" size="xl">
                 Get Custom Quote
               </Button>
@@ -140,7 +140,7 @@ const PrintSigns = () => {
               <p className="text-xl text-primary-foreground/80 mb-8 max-w-2xl mx-auto">
                 Experience superior print quality with fast turnaround times.
               </p>
-              <Link to="/#contact">
+              <Link to="/contact">
                 <Button variant="hero" size="xl">
                   Request a Quote
                 </Button>

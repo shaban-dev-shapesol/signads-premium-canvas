@@ -31,7 +31,7 @@ const BusWrap = () => {
             <p className="text-xl text-primary-foreground/80 mb-8">
               Transform buses into moving billboards with full or partial wraps. Maximum urban exposure for your brand on high-traffic routes.
             </p>
-            <Link to="/#contact">
+            <Link to="/contact">
               <Button variant="hero" size="xl">
                 Get Custom Quote
               </Button>
@@ -180,7 +180,7 @@ const BusWrap = () => {
               <p className="text-xl text-primary-foreground/80 mb-8 max-w-2xl mx-auto">
                 Get pricing and campaign advice for your bus wrap project.
               </p>
-              <Link to="/#contact">
+              <Link to="/contact">
                 <Button variant="hero" size="xl">
                   Start Your Campaign
                 </Button>

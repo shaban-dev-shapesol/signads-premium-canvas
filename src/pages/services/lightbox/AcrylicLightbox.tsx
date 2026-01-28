@@ -38,7 +38,7 @@ const AcrylicLightbox = () => {
             <p className="text-xl text-primary-foreground/80 mb-8">
               Premium illuminated displays with crystal-clear acrylic faces. Perfect for high-end retail environments and modern interiors.
             </p>
-            <Link to="/#contact">
+            <Link to="/contact">
               <Button variant="hero" size="xl">
                 Get Custom Quote
               </Button>
@@ -246,7 +246,7 @@ const AcrylicLightbox = () => {
               <p className="text-xl text-primary-foreground/80 mb-8 max-w-2xl mx-auto">
                 Crystal-clear acrylic displays that showcase your brand in stunning detail.
               </p>
-              <Link to="/#contact">
+              <Link to="/contact">
                 <Button variant="hero" size="xl">
                   Request Custom Quote
                 </Button>

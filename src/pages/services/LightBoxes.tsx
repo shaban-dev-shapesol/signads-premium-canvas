@@ -51,7 +51,7 @@ const LightBoxes = () => {
             <p className="text-xl text-primary-foreground/80 mb-8">
               Illuminate your brand with energy-efficient LED lightbox solutions.
             </p>
-            <Link to="/#contact">
+            <Link to="/contact">
               <Button variant="hero" size="xl">
                 Get Custom Quote
               </Button>
@@ -98,7 +98,7 @@ const LightBoxes = () => {
               <p className="text-xl text-primary-foreground/80 mb-8 max-w-2xl mx-auto">
                 Energy-efficient, eye-catching lightbox solutions that work around the clock.
               </p>
-              <Link to="/#contact">
+              <Link to="/contact">
                 <Button variant="hero" size="xl">
                   Request a Quote
                 </Button>

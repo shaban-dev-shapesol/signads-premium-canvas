@@ -38,7 +38,7 @@ const FlexFaceLightBox = () => {
             <p className="text-xl text-primary-foreground/80 mb-8">
               Large-format illuminated signage with durable fabric face. Perfect for high-impact outdoor advertising and building facades.
             </p>
-            <Link to="/#contact">
+            <Link to="/contact">
               <Button variant="hero" size="xl">
                 Get Custom Quote
               </Button>
@@ -164,7 +164,7 @@ const FlexFaceLightBox = () => {
               <p className="text-xl text-primary-foreground/80 mb-8 max-w-2xl mx-auto">
                 Get a detailed quote for your flex face light box project
               </p>
-              <Link to="/#contact">
+              <Link to="/contact">
                 <Button variant="hero" size="xl">
                   Request Quote
                 </Button>

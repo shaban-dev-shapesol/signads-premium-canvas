@@ -8,7 +8,7 @@ const Testimonials = () => {
   
   const testimonials = [
     {
-      quote: "signAds transformed our brand presence with stunning exterior signage. The quality and attention to detail exceeded our expectations. Our foot traffic increased by 40% within the first month.",
+      quote: "signad transformed our brand presence with stunning exterior signage. The quality and attention to detail exceeded our expectations. Our foot traffic increased by 40% within the first month.",
       author: "Sarah Mitchell",
       timeAgo: "1 week ago",
       avatar: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=100&h=100&fit=crop&crop=face",
@@ -20,7 +20,7 @@ const Testimonials = () => {
       avatar: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&h=100&fit=crop&crop=face",
     },
     {
-      quote: "Working with signAds on our office interior signage was seamless. Their dedicated account manager made the entire process effortless, delivering results that perfectly matched our vision.",
+      quote: "Working with signad on our office interior signage was seamless. Their dedicated account manager made the entire process effortless, delivering results that perfectly matched our vision.",
       author: "Emily Chen",
       timeAgo: "3 weeks ago",
       avatar: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=100&h=100&fit=crop&crop=face",
@@ -32,7 +32,7 @@ const Testimonials = () => {
       avatar: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=100&h=100&fit=crop&crop=face",
     },
     {
-      quote: "From design consultation to final installation, the signAds team was professional and creative. Our exhibition stand was the talk of the trade show. Highly recommend!",
+      quote: "From design consultation to final installation, the signad team was professional and creative. Our exhibition stand was the talk of the trade show. Highly recommend!",
       author: "Lisa Thompson",
       timeAgo: "1 month ago",
       avatar: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=100&h=100&fit=crop&crop=face",

@@ -31,7 +31,7 @@ const VinylLettering = () => {
             <p className="text-xl text-primary-foreground/80 mb-8">
               Crisp, clean cut vinyl graphics for windows, walls, and vehicles. The versatile, cost-effective solution for professional signage.
             </p>
-            <Link to="/#contact">
+            <Link to="/contact">
               <Button variant="hero" size="xl">
                 Get Custom Quote
               </Button>
@@ -180,7 +180,7 @@ const VinylLettering = () => {
               <p className="text-xl text-primary-foreground/80 mb-8 max-w-2xl mx-auto">
                 Get a quote for your vinyl lettering project.
               </p>
-              <Link to="/#contact">
+              <Link to="/contact">
                 <Button variant="hero" size="xl">
                   Request Quote
                 </Button>

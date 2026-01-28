@@ -31,7 +31,7 @@ const TruckWrap = () => {
             <p className="text-xl text-primary-foreground/80 mb-8">
               Transform your fleet trucks into mobile billboards with professional full or partial wraps. Maximum impact for your brand on every journey.
             </p>
-            <Link to="/#contact">
+            <Link to="/contact">
               <Button variant="hero" size="xl">
                 Get Custom Quote
               </Button>
@@ -180,7 +180,7 @@ const TruckWrap = () => {
               <p className="text-xl text-primary-foreground/80 mb-8 max-w-2xl mx-auto">
                 Get a detailed quote and see design mockups for your truck.
               </p>
-              <Link to="/#contact">
+              <Link to="/contact">
                 <Button variant="hero" size="xl">
                   Request Quote
                 </Button>

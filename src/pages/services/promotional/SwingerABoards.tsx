@@ -38,7 +38,7 @@ const SwingerABoards = () => {
             <p className="text-xl text-primary-foreground/80 mb-8">
               Grab attention at street level with swinger signs, A-boards, and pavement advertising.
             </p>
-            <Link to="/#contact">
+            <Link to="/contact">
               <Button variant="hero" size="xl">
                 Get Custom Quote
               </Button>

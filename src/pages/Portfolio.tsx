@@ -186,15 +186,15 @@ const Portfolio = () => {
     },
 
     // Vehicle Projects
-    {
-      id: 12,
-      title: "Delivery Fleet Car Wrap",
-      category: "vehicle",
-      industry: "Logistics",
-      image: vehicleCarWrap,
-      description: "Full vehicle wrap for delivery service fleet.",
-      services: ["Car Wraps", "Fleet Graphics"],
-    },
+    // {
+    //   id: 12,
+    //   title: "Delivery Fleet Car Wrap",
+    //   category: "vehicle",
+    //   industry: "Logistics",
+    //   image: vehicleCarWrap,
+    //   description: "Full vehicle wrap for delivery service fleet.",
+    //   services: ["Car Wraps", "Fleet Graphics"],
+    // },
     {
       id: 13,
       title: "Plumber Van Wrap",
@@ -231,15 +231,15 @@ const Portfolio = () => {
       description: "Vibrant food truck wrap attracting customers.",
       services: ["Food Truck Wraps", "Menu Graphics"],
     },
-    {
-      id: 17,
-      title: "National Lorry Fleet",
-      category: "vehicle",
-      industry: "Logistics",
-      image: vehicleLorryWrap,
-      description: "Branded HGV fleet covering nationwide routes.",
-      services: ["Lorry Wraps", "Fleet Branding"],
-    },
+    // {
+    //   id: 17,
+    //   title: "National Lorry Fleet",
+    //   category: "vehicle",
+    //   industry: "Logistics",
+    //   image: vehicleLorryWrap,
+    //   description: "Branded HGV fleet covering nationwide routes.",
+    //   services: ["Lorry Wraps", "Fleet Branding"],
+    // },
 
     // Exhibition Projects
     {
@@ -517,7 +517,7 @@ const Portfolio = () => {
                   <p className="text-xl text-primary-foreground/80 mb-8">
                     Let's create signage solutions that showcase your brand and drive results.
                   </p>
-                  <Link to="/#contact">
+                  <Link to="/contact">
                     <Button variant="hero" size="xl">
                       Start Your Project
                     </Button>

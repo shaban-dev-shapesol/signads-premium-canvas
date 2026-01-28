@@ -38,7 +38,7 @@ const DigitalTakeawayMenu = () => {
             <p className="text-xl text-primary-foreground/80 mb-8">
               Dynamic digital menu boards for restaurants and takeaways. Update pricing and specials instantly, showcase mouth-watering imagery, and increase order values.
             </p>
-            <Link to="/#contact">
+            <Link to="/contact">
               <Button variant="hero" size="xl">
                 Get Custom Quote
               </Button>
@@ -187,7 +187,7 @@ const DigitalTakeawayMenu = () => {
               <p className="text-xl text-primary-foreground/80 mb-8 max-w-2xl mx-auto">
                 Get a demo and quote for digital menu board solutions.
               </p>
-              <Link to="/#contact">
+              <Link to="/contact">
                 <Button variant="hero" size="xl">
                   Book Demo
                 </Button>

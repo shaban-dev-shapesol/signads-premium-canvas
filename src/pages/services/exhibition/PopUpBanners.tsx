@@ -38,7 +38,7 @@ const PopUpBanners = () => {
             <p className="text-xl text-primary-foreground/80 mb-8">
               Portable, professional exhibition displays that set up in seconds. Perfect for trade shows, events, and presentations.
             </p>
-            <Link to="/#contact">
+            <Link to="/contact">
               <Button variant="hero" size="xl">
                 Get Custom Quote
               </Button>
@@ -258,7 +258,7 @@ const PopUpBanners = () => {
               <p className="text-xl text-primary-foreground/80 mb-8 max-w-2xl mx-auto">
                 Professional pop-up banners delivered fast with exceptional print quality.
               </p>
-              <Link to="/#contact">
+              <Link to="/contact">
                 <Button variant="hero" size="xl">
                   Order Your Banners
                 </Button>

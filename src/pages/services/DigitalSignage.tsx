@@ -58,7 +58,7 @@ const DigitalSignage = () => {
             <p className="text-xl text-primary-foreground/80 mb-8">
               Engage audiences with dynamic digital displays and instant content updates.
             </p>
-            <Link to="/#contact">
+            <Link to="/contact">
               <Button variant="hero" size="xl">
                 Get Custom Quote
               </Button>
@@ -105,7 +105,7 @@ const DigitalSignage = () => {
               <p className="text-xl text-primary-foreground/80 mb-8 max-w-2xl mx-auto">
                 Transform your communication with cutting-edge digital signage solutions.
               </p>
-              <Link to="/#contact">
+              <Link to="/contact">
                 <Button variant="hero" size="xl">
                   Request a Quote
                 </Button>

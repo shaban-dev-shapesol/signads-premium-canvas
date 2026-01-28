@@ -31,7 +31,7 @@ const FoodTruckWrap = () => {
             <p className="text-xl text-primary-foreground/80 mb-8">
               Eye-catching food truck graphics that make mouths water and draw hungry customers. Stand out at every location with appetite-inspiring designs.
             </p>
-            <Link to="/#contact">
+            <Link to="/contact">
               <Button variant="hero" size="xl">
                 Get Custom Quote
               </Button>
@@ -180,7 +180,7 @@ const FoodTruckWrap = () => {
               <p className="text-xl text-primary-foreground/80 mb-8 max-w-2xl mx-auto">
                 Get a custom design mockup and quote for your food truck wrap.
               </p>
-              <Link to="/#contact">
+              <Link to="/contact">
                 <Button variant="hero" size="xl">
                   Start Your Design
                 </Button>

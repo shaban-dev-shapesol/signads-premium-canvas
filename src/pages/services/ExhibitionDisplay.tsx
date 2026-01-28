@@ -51,7 +51,7 @@ const ExhibitionDisplay = () => {
             <p className="text-xl text-primary-foreground/80 mb-8">
               Stand out at trade shows with professional exhibition systems designed for impact.
             </p>
-            <Link to="/#contact">
+            <Link to="/contact">
               <Button variant="hero" size="xl">
                 Get Custom Quote
               </Button>
@@ -98,7 +98,7 @@ const ExhibitionDisplay = () => {
               <p className="text-xl text-primary-foreground/80 mb-8 max-w-2xl mx-auto">
                 Professional exhibition solutions that help you stand out from the competition.
               </p>
-              <Link to="/#contact">
+              <Link to="/contact">
                 <Button variant="hero" size="xl">
                   Request a Quote
                 </Button>

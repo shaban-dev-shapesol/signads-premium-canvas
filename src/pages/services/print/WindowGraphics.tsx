@@ -31,7 +31,7 @@ const WindowGraphics = () => {
             <p className="text-xl text-primary-foreground/80 mb-8">
               Transform your storefront windows into powerful marketing assets with custom printed window graphics and frosting solutions.
             </p>
-            <Link to="/#contact">
+            <Link to="/contact">
               <Button variant="hero" size="xl">
                 Get Custom Quote
               </Button>
@@ -158,7 +158,7 @@ const WindowGraphics = () => {
               <p className="text-xl text-primary-foreground/80 mb-8 max-w-2xl mx-auto">
                 Get expert advice and a quote for your window graphics project
               </p>
-              <Link to="/#contact">
+              <Link to="/contact">
                 <Button variant="hero" size="xl">
                   Get Started
                 </Button>

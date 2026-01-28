@@ -31,7 +31,7 @@ const VanWrap = () => {
             <p className="text-xl text-primary-foreground/80 mb-8">
               Transform your commercial van into a mobile advertising powerhouse. Generate thousands of daily impressions with professional van wraps.
             </p>
-            <Link to="/#contact">
+            <Link to="/contact">
               <Button variant="hero" size="xl">
                 Get Custom Quote
               </Button>
@@ -217,7 +217,7 @@ const VanWrap = () => {
               <p className="text-xl text-primary-foreground/80 mb-8 max-w-2xl mx-auto">
                 Turn your vans into powerful marketing tools with professional vehicle wraps.
               </p>
-              <Link to="/#contact">
+              <Link to="/contact">
                 <Button variant="hero" size="xl">
                   Get Fleet Quote
                 </Button>

@@ -38,7 +38,7 @@ const OfficeLightBoxes = () => {
             <p className="text-xl text-primary-foreground/80 mb-8">
               Elegant illuminated signage for interior spaces. Perfect for corporate lobbies, retail displays, and branded environments.
             </p>
-            <Link to="/#contact">
+            <Link to="/contact">
               <Button variant="hero" size="xl">
                 Get Custom Quote
               </Button>
@@ -187,7 +187,7 @@ const OfficeLightBoxes = () => {
               <p className="text-xl text-primary-foreground/80 mb-8 max-w-2xl mx-auto">
                 Get expert advice on light box solutions for your space.
               </p>
-              <Link to="/#contact">
+              <Link to="/contact">
                 <Button variant="hero" size="xl">
                   Request Quote
                 </Button>

@@ -228,7 +228,7 @@ const About = () => {
             <p className="text-xl text-muted-foreground mb-8">
               Ready to elevate your brand with premium signage? Get in touch today.
             </p>
-            <Link to="/#contact">
+            <Link to="/contact">
               <Button variant="premium" size="xl">
                 Get Started
               </Button>

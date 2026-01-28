@@ -58,7 +58,7 @@ const VehicleGraphics = () => {
             <p className="text-xl text-primary-foreground/80 mb-8">
               Transform your fleet into mobile billboards that generate thousands of impressions daily.
             </p>
-            <Link to="/#contact">
+            <Link to="/contact">
               <Button variant="hero" size="xl">
                 Get Custom Quote
               </Button>
@@ -105,7 +105,7 @@ const VehicleGraphics = () => {
               <p className="text-xl text-primary-foreground/80 mb-8 max-w-2xl mx-auto">
                 Professional vehicle wraps that protect your investment while promoting your brand.
               </p>
-              <Link to="/#contact">
+              <Link to="/contact">
                 <Button variant="hero" size="xl">
                   Request a Quote
                 </Button>

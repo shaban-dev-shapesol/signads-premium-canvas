@@ -38,7 +38,7 @@ const TotemSign = () => {
             <p className="text-xl text-primary-foreground/80 mb-8">
               Freestanding monolith signs that create a commanding presence at your location. Perfect for business parks, retail centers, and corporate campuses.
             </p>
-            <Link to="/#contact">
+            <Link to="/contact">
               <Button variant="hero" size="xl">
                 Get Custom Quote
               </Button>
@@ -163,7 +163,7 @@ const TotemSign = () => {
               <p className="text-xl text-primary-foreground/80 mb-8 max-w-2xl mx-auto">
                 Discuss your totem sign requirements with our signage specialists
               </p>
-              <Link to="/#contact">
+              <Link to="/contact">
                 <Button variant="hero" size="xl">
                   Get Started
                 </Button>

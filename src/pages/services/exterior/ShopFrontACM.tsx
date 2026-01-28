@@ -38,7 +38,7 @@ const ShopFrontACM = () => {
             <p className="text-xl text-primary-foreground/80 mb-8">
               Clean, professional aluminium composite signage with vinyl graphics. The smart choice for budget-conscious businesses.
             </p>
-            <Link to="/#contact">
+            <Link to="/contact">
               <Button variant="hero" size="xl">
                 Get Custom Quote
               </Button>

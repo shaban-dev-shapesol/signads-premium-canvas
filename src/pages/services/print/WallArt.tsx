@@ -31,7 +31,7 @@ const WallArt = () => {
             <p className="text-xl text-primary-foreground/80 mb-8">
               Transform blank walls into inspiring brand experiences with custom-printed wall art, murals, and environmental graphics.
             </p>
-            <Link to="/#contact">
+            <Link to="/contact">
               <Button variant="hero" size="xl">
                 Get Custom Quote
               </Button>
@@ -170,7 +170,7 @@ const WallArt = () => {
               <p className="text-xl text-primary-foreground/80 mb-8 max-w-2xl mx-auto">
                 Let's discuss your wall art vision and bring it to life
               </p>
-              <Link to="/#contact">
+              <Link to="/contact">
                 <Button variant="hero" size="xl">
                   Start Your Project
                 </Button>

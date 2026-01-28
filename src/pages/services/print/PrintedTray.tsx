@@ -31,7 +31,7 @@ const PrintedTray = () => {
             <p className="text-xl text-primary-foreground/80 mb-8">
               Cost-effective alternative to built-up letters. Printed dibond or acrylic trays that deliver professional impact with faster turnaround times.
             </p>
-            <Link to="/#contact">
+            <Link to="/contact">
               <Button variant="hero" size="xl">
                 Get Custom Quote
               </Button>
@@ -180,7 +180,7 @@ const PrintedTray = () => {
               <p className="text-xl text-primary-foreground/80 mb-8 max-w-2xl mx-auto">
                 Get a quote for your printed tray signage project.
               </p>
-              <Link to="/#contact">
+              <Link to="/contact">
                 <Button variant="hero" size="xl">
                   Request Quote
                 </Button>

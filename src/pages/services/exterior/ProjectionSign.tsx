@@ -38,7 +38,7 @@ const ProjectionSign = () => {
             <p className="text-xl text-primary-foreground/80 mb-8">
               Eye-catching perpendicular signage that projects from buildings for maximum visibility from multiple angles.
             </p>
-            <Link to="/#contact">
+            <Link to="/contact">
               <Button variant="hero" size="xl">
                 Get Custom Quote
               </Button>
@@ -164,7 +164,7 @@ const ProjectionSign = () => {
               <p className="text-xl text-primary-foreground/80 mb-8 max-w-2xl mx-auto">
                 Get expert advice on projection sign solutions for your location
               </p>
-              <Link to="/#contact">
+              <Link to="/contact">
                 <Button variant="hero" size="xl">
                   Contact Us Today
                 </Button>

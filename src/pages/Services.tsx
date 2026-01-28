@@ -155,7 +155,7 @@ const Services = () => {
             <p className="text-xl text-primary-foreground/80 mb-8">
               Comprehensive signage solutions designed to elevate your brand and drive business growth.
             </p>
-            <Link to="/#contact">
+            <Link to="/contact">
               <Button variant="hero" size="xl">
                 Get a Custom Quote
               </Button>
@@ -240,7 +240,7 @@ const Services = () => {
               Let's discuss your project and create signage solutions that drive results.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link to="/#contact">
+              <Link to="/contact">
                 <Button variant="hero" size="xl">
                   Request a Quote
                 </Button>

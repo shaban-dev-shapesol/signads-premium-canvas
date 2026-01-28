@@ -31,7 +31,7 @@ const BespokeCeiling = () => {
             <p className="text-xl text-primary-foreground/80 mb-8">
               Transform overlooked ceiling space into stunning visual experiences. Custom-printed acoustic or stretch ceiling systems that inspire and impress.
             </p>
-            <Link to="/#contact">
+            <Link to="/contact">
               <Button variant="hero" size="xl">
                 Get Custom Quote
               </Button>
@@ -180,7 +180,7 @@ const BespokeCeiling = () => {
               <p className="text-xl text-primary-foreground/80 mb-8 max-w-2xl mx-auto">
                 Let's create an unforgettable ceiling experience for your space.
               </p>
-              <Link to="/#contact">
+              <Link to="/contact">
                 <Button variant="hero" size="xl">
                   Start Your Project
                 </Button>

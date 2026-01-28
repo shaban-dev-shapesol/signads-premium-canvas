@@ -31,7 +31,7 @@ const LorryHGVWrap = () => {
             <p className="text-xl text-primary-foreground/80 mb-8">
               Large-scale vehicle graphics for lorries and HGVs. Maximize your brand's motorway visibility with professional fleet wraps.
             </p>
-            <Link to="/#contact">
+            <Link to="/contact">
               <Button variant="hero" size="xl">
                 Get Custom Quote
               </Button>
@@ -180,7 +180,7 @@ const LorryHGVWrap = () => {
               <p className="text-xl text-primary-foreground/80 mb-8 max-w-2xl mx-auto">
                 Get a fleet wrapping quote and see your brand on the road.
               </p>
-              <Link to="/#contact">
+              <Link to="/contact">
                 <Button variant="hero" size="xl">
                   Request Fleet Quote
                 </Button>

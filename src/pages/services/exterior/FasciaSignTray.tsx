@@ -38,7 +38,7 @@ const FasciaSignTray = () => {
             <p className="text-xl text-primary-foreground/80 mb-8">
               Eye-catching tray signs that provide a professional backdrop for your brand. Perfect for retail and commercial frontages.
             </p>
-            <Link to="/#contact">
+            <Link to="/contact">
               <Button variant="hero" size="xl">
                 Get Custom Quote
               </Button>
@@ -165,7 +165,7 @@ const FasciaSignTray = () => {
               <p className="text-xl text-primary-foreground/80 mb-8 max-w-2xl mx-auto">
                 Create a professional, illuminated presence that attracts customers 24/7.
               </p>
-              <Link to="/#contact">
+              <Link to="/contact">
                 <Button variant="hero" size="xl">
                   Request Detailed Quote
                 </Button>

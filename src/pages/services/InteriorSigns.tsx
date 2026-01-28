@@ -65,7 +65,7 @@ const InteriorSigns = () => {
             <p className="text-xl text-primary-foreground/80 mb-8">
               Transform your interior spaces with sophisticated signage that reinforces brand identity.
             </p>
-            <Link to="/#contact">
+            <Link to="/contact">
               <Button variant="hero" size="xl">
                 Get Custom Quote
               </Button>
@@ -112,7 +112,7 @@ const InteriorSigns = () => {
               <p className="text-xl text-primary-foreground/80 mb-8 max-w-2xl mx-auto">
                 Create memorable experiences with professionally designed interior signage.
               </p>
-              <Link to="/#contact">
+              <Link to="/contact">
                 <Button variant="hero" size="xl">
                   Request a Quote
                 </Button>

@@ -86,7 +86,7 @@ const ExteriorSigns = () => {
             <p className="text-xl text-primary-foreground/80 mb-8">
               Make a lasting impression with premium exterior signage that commands attention 24/7.
             </p>
-            <Link to="/#contact">
+            <Link to="/contact">
               <Button variant="hero" size="xl">
                 Get Custom Quote
               </Button>
@@ -133,7 +133,7 @@ const ExteriorSigns = () => {
               <p className="text-xl text-primary-foreground/80 mb-8 max-w-2xl mx-auto">
                 Our expert team will help you choose the perfect exterior signage solution.
               </p>
-              <Link to="/#contact">
+              <Link to="/contact">
                 <Button variant="hero" size="xl">
                   Request a Quote
                 </Button>

@@ -38,7 +38,7 @@ const OutdoorDigitalSigns = () => {
             <p className="text-xl text-primary-foreground/80 mb-8">
               High-brightness LED displays designed for maximum visibility in any weather. Update content instantly and captivate audiences 24/7.
             </p>
-            <Link to="/#contact">
+            <Link to="/contact">
               <Button variant="hero" size="xl">
                 Get Custom Quote
               </Button>
@@ -200,7 +200,7 @@ const OutdoorDigitalSigns = () => {
               <p className="text-xl text-primary-foreground/80 mb-8 max-w-2xl mx-auto">
                 Transform your outdoor advertising with state-of-the-art digital signage.
               </p>
-              <Link to="/#contact">
+              <Link to="/contact">
                 <Button variant="hero" size="xl">
                   Request Technical Consultation
                 </Button>

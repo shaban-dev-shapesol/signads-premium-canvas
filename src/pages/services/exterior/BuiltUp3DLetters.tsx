@@ -38,7 +38,7 @@ const BuiltUp3DLetters = () => {
             <p className="text-xl text-primary-foreground/80 mb-8">
               Premium dimensional lettering that creates depth and lasting impact. Perfect for making your brand stand out with sophisticated 3D signage.
             </p>
-            <Link to="/#contact">
+            <Link to="/contact">
               <Button variant="hero" size="xl">
                 Get Custom Quote
               </Button>
@@ -209,7 +209,7 @@ const BuiltUp3DLetters = () => {
               <p className="text-xl text-primary-foreground/80 mb-8 max-w-2xl mx-auto">
                 Let our experts help you design the perfect dimensional signage for your space.
               </p>
-              <Link to="/#contact">
+              <Link to="/contact">
                 <Button variant="hero" size="xl">
                   Request Detailed Quote
                 </Button>

@@ -72,7 +72,7 @@ const PromotionalSigns = () => {
             <p className="text-xl text-primary-foreground/80 mb-8">
               Maximize your promotional impact with versatile signage solutions.
             </p>
-            <Link to="/#contact">
+            <Link to="/contact">
               <Button variant="hero" size="xl">
                 Get Custom Quote
               </Button>
@@ -119,7 +119,7 @@ const PromotionalSigns = () => {
               <p className="text-xl text-primary-foreground/80 mb-8 max-w-2xl mx-auto">
                 Flexible, impactful promotional signage that drives results.
               </p>
-              <Link to="/#contact">
+              <Link to="/contact">
                 <Button variant="hero" size="xl">
                   Request a Quote
                 </Button>

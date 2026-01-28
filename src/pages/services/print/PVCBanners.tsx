@@ -38,7 +38,7 @@ const PVCBanners = () => {
             <p className="text-xl text-primary-foreground/80 mb-8">
               Durable, weather-resistant vinyl banners for any occasion. Perfect for events, promotions, and outdoor advertising.
             </p>
-            <Link to="/#contact">
+            <Link to="/contact">
               <Button variant="hero" size="xl">
                 Get Custom Quote
               </Button>

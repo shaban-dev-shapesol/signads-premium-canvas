@@ -38,7 +38,7 @@ const BespokeExhibitionDisplay = () => {
             <p className="text-xl text-primary-foreground/80 mb-8">
               Custom-designed exhibition stands that make unforgettable impressions. From concept to completion, we create unique displays that dominate show floors.
             </p>
-            <Link to="/#contact">
+            <Link to="/contact">
               <Button variant="hero" size="xl">
                 Get Custom Quote
               </Button>
@@ -187,7 +187,7 @@ const BespokeExhibitionDisplay = () => {
               <p className="text-xl text-primary-foreground/80 mb-8 max-w-2xl mx-auto">
                 Discuss your vision with our exhibition design specialists.
               </p>
-              <Link to="/#contact">
+              <Link to="/contact">
                 <Button variant="hero" size="xl">
                   Schedule Consultation
                 </Button>

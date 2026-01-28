@@ -31,7 +31,7 @@ const CarWrap = () => {
             <p className="text-xl text-primary-foreground/80 mb-8">
               Transform your vehicle into a mobile billboard with premium vinyl wraps. High-impact branding that generates thousands of impressions daily.
             </p>
-            <Link to="/#contact">
+            <Link to="/contact">
               <Button variant="hero" size="xl">
                 Get Custom Quote
               </Button>
@@ -215,7 +215,7 @@ const CarWrap = () => {
               <p className="text-xl text-primary-foreground/80 mb-8 max-w-2xl mx-auto">
                 Turn your car into a powerful marketing asset with a professional vehicle wrap.
               </p>
-              <Link to="/#contact">
+              <Link to="/contact">
                 <Button variant="hero" size="xl">
                   Get Free Design Consultation
                 </Button>
